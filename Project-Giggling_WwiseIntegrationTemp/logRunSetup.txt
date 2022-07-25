@@ -1,0 +1,42 @@
+[LicensingClient] Error: Code 10 while verifying Licensing Client signature (process Id: 19504, path: "G:/unityGE/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation
+[LicensingClient] Channel doesn't exist: "LicenseClient-ZS-2020.3.26"
+[Licensing::Module] Successfully launched the LicensingClient (PId: 22072)
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-ZS-2020.3.26" (connect: 3.05s, validation: 0.07s, handshake: 3.73s)
+[Licensing::Module] Connected to LicensingClient (PId: 22072, launch time: 0.03, total connection time: 6.85s)
+Entitlement-based licensing initiated
+[LicensingClient] Licenses updated successfully
+
+LICENSE SYSTEM [2022725 12:33:52] Next license update check is after 2022-07-26T04:15:31
+
+
+LICENSE SYSTEM [2022725 12:33:52] Current license is already valid and activated. Skipping license activation process (Provided username/password will be ignored).
+Built from '2020.3/staging' branch; Version is '2020.3.26f1 (7298b473bc1a) revision 7510196'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'zh' Physical Memory: 16274 MB
+[Licensing::Module] Serial number assigned to: "F4-G3RW-X7BY-WZ3C-ED6E-XXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+[Package Manager] Server::Start -- Port 11877 was selected
+
+COMMAND LINE ARGUMENTS:
+G:\unity\Editor\Unity.exe
+-batchmode
+-nographics
+-logFile
+logRunSetup.txt
+-projectPath
+G:\demo\Project-Giggling\Project-Giggling_WwiseIntegrationTemp
+-executeMethod
+WwiseSetupWizard.RunSetup
+-quit
+Successfully changed project path to: G:\demo\Project-Giggling\Project-Giggling_WwiseIntegrationTemp
+G:/demo/Project-Giggling/Project-Giggling_WwiseIntegrationTemp
+Using Asset Import Pipeline V2.
+Rebuilding Library because the asset database could not be found!
+[Package Manager] Done resolving packages in 24.04s seconds
+An error occurred while resolving packages:
+  Project has invalid dependencies:
+    com.unity.feature.2d: Package [com.unity.feature.2d@1.0.0] cannot be found
+    com.unity.render-pipelines.universal: Package [com.unity.render-pipelines.universal@12.1.7] cannot be found
+
+A re-import of the project may be required to fix the issue or a manual modification of G:/demo/Project-Giggling/Project-Giggling_WwiseIntegrationTemp/Packages/manifest.json file.
+Exiting without the bug reporter. Application will terminate with return code 1
