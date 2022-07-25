@@ -1,5 +1,0 @@
-# Wwise cache file
-/.cache/
-/*.validationcache
-/*.wsettings
-/GeneratedSoundBanks/Windows/DecodedBanks/*.bnk
