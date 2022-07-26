@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Base;
 
 [RequireComponent(typeof(PlayerInput))]
-public class InputHandler : MonoBehaviour
+public class InputHandler : SingletonMono<InputHandler>
 {
     private PlayerInput _playerInput;
 
@@ -10,26 +11,23 @@ public class InputHandler : MonoBehaviour
     private InputActionMap _cameraMap;
     private InputActionMap _lockPickMap;
 
-    private InputAction _move;
-    
-    private InputAction _rotate;
-    
     // Player
-    public Vector2 RawMoveInput { get; private set; }
-    public int NormInputX { get; private set; }
-    public int NormInputY { get; private set; }
+    public static Vector2 RawMoveInput { get; private set; }
+    public static int NormInputX { get; private set; }
+    public static int NormInputY { get; private set; }
     
     // Camera
-    public bool InteractInput { get; private set; }
-    public bool ExitInput { get; private set; }
+    public static bool InteractInput { get; private set; }
+    public static bool ExitInput { get; private set; }
     
     // Lock Pick
-    public bool PryInput { get; private set; }
-    public bool PickInput { get; private set; }
+    public static bool PryInput { get; private set; }
+    public static bool PickInput { get; private set; }
 
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
+        
         _playerMap = _playerInput.actions.FindActionMap("Player", true);
         _cameraMap = _playerInput.actions.FindActionMap("SurveillanceCam", true);
         _lockPickMap = _playerInput.actions.FindActionMap("Lock Pick", true);
@@ -39,10 +37,10 @@ public class InputHandler : MonoBehaviour
     {
         // Player
         _playerMap.actionTriggered += OnPlayerMoveInput;
-        _playerMap.actionTriggered += OnCamRotateInput;
+        _playerMap.actionTriggered += OnInteractInput;
         
         // Camera
-        _cameraMap.actionTriggered += OnInteractInput;
+        _cameraMap.actionTriggered += OnCamRotateInput;
         _cameraMap.actionTriggered += OnExitInput;
 
         // Lock Pick
@@ -55,7 +53,7 @@ public class InputHandler : MonoBehaviour
     // Player
     private void OnPlayerMoveInput(InputAction.CallbackContext context)
     {
-        if (context.action != _move) return;
+        if (context.action.name != "Move") return;
         RawMoveInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMoveInput.x);
         NormInputY = Mathf.RoundToInt(RawMoveInput.y);
@@ -83,6 +81,7 @@ public class InputHandler : MonoBehaviour
         ExitInput = context.performed;
     }
 
+    // Lock Pick
     private void OnPryInput(InputAction.CallbackContext context)
     {
         if (context.action.name != "Pry") return;
