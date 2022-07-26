@@ -1,12 +1,12 @@
 namespace Base.FSM
 {
-    public class State
+    public class BaseState
     {
-        protected StateMachine stateMachine;
-        
-        public State(StateMachine stateMachine)
+        protected BaseStateMachine StateMachine { get; private set; }
+
+        protected BaseState(BaseStateMachine stateMachine)
         {
-            this.stateMachine = stateMachine;
+            StateMachine = stateMachine;
         }
     
         public virtual void Enter() {}
