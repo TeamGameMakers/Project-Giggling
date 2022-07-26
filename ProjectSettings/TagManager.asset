@@ -44,3 +44,6 @@ TagManager:
   - name: Player
     uniqueID: 3862288395
     locked: 0
+  - name: Camera
+    uniqueID: 3902817503
+    locked: 0
