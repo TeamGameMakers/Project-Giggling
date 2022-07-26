@@ -30,9 +30,9 @@ public class InputHandler : MonoBehaviour
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
-        _playerMap = _playerInput.actions.FindActionMap("Player");
-        _cameraMap = _playerInput.actions.FindActionMap("SurveillanceCam");
-        _lockPickMap = _playerInput.actions.FindActionMap("Lock Pick");
+        _playerMap = _playerInput.actions.FindActionMap("Player", true);
+        _cameraMap = _playerInput.actions.FindActionMap("SurveillanceCam", true);
+        _lockPickMap = _playerInput.actions.FindActionMap("Lock Pick", true);
     }
 
     private void Start()
@@ -101,4 +101,5 @@ public class InputHandler : MonoBehaviour
 
     public void SwitchToPlayer() => _playerInput.SwitchCurrentActionMap("Player");
     public void SwitchToCamera() => _playerInput.SwitchCurrentActionMap("SurveillanceCam");
+    public void SwitchToLockPick() => _playerInput.SwitchCurrentActionMap("Lock Pick");
 }
