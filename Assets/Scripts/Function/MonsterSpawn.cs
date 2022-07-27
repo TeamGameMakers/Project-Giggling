@@ -48,7 +48,7 @@ public static class MonsterSpawn
         }
     }
 
-    public static IEnumerator RandomDataPAsync<T>(IList<T> positions, [NotNull] Action<T> callback, [NotNull] IFilter<T> filter, 
+    public static IEnumerator RandomDataPAsync<T>(IList<T> positions, Action<T> callback, IFilter<T> filter, 
         T def = default(T), int randomPerFrame = 8)
     {
         int index;
