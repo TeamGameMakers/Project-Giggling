@@ -36,7 +36,7 @@ namespace Player
 
         public override void LogicUpdate()
         {
-            InputVec2 = input.RawMoveInput;
+            InputVec2 = InputHandler.RawMoveInput;
         }
 
         public override void Exit()
