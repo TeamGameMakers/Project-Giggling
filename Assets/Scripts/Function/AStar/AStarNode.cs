@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace Function
 {
-    public class AStarNode
+    public class AStarNode : IComparable<AStarNode>
     {
         // 实际坐标
         public Vector2 worldPos;
@@ -10,21 +11,22 @@ namespace Function
         public int gridX;
         public int gridY;
         // 寻路消耗
-        public float Cost => startCost + endCost;
+        public int Cost => startCost + endCost;
         // 至起点消耗
-        public float startCost;
+        public int startCost;
         // 至终点消耗
-        public float endCost;
+        public int endCost;
         // 能否通过
         public bool walkable;
         // 父格子
         public AStarNode parent;
 
-        public AStarNode(int gridX, int gridY, Vector2 worldPos)
+        public AStarNode(int gridX, int gridY, Vector2 worldPos, bool walkable)
         {
             this.gridX = gridX;
             this.gridY = gridY;
             this.worldPos = worldPos;
+            this.walkable = walkable;
         }
         
         // 用于排序的比较器
