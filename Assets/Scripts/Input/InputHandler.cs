@@ -1,48 +1,76 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Base;
 
 [RequireComponent(typeof(PlayerInput))]
-public class InputHandler : MonoBehaviour
+public class InputHandler : SingletonMono<InputHandler>
 {
-    private PlayerInput _playerInput;
+    private static PlayerInput _playerInput;
 
     private InputActionMap _playerMap;
     private InputActionMap _cameraMap;
     private InputActionMap _lockPickMap;
+    
+    #region Value Getter
+    
+    /// <summary>
+    /// 二位输入值
+    /// </summary>
+    public static Vector2 RawMoveInput { get; private set; }
+    
+    /// <summary>
+    /// x轴标准化的输入值
+    /// </summary>
+    public static int NormInputX { get; private set; }
+    
+    /// <summary>
+    /// y轴标准化的输入值
+    /// </summary>
+    public static int NormInputY { get; private set; }
+    
+    /// <summary>
+    /// 按下交互按钮
+    /// </summary>
+    public static bool InteractPressed { get; private set; }
+    
+    /// <summary>
+    /// 按下退出按钮
+    /// </summary>
+    public static bool ExitPressed { get; private set; }
+    
+    /// <summary>
+    /// 按下顶锁按钮
+    /// </summary>
+    public static bool PryInput { get; private set; }
+    
+    /// <summary>
+    /// 按下开锁按钮
+    /// </summary>
+    public static bool PickPressed { get; private set; }
+    
+    #endregion
 
-    private InputAction _move;
-    
-    private InputAction _rotate;
-    
-    // Player
-    public Vector2 RawMoveInput { get; private set; }
-    public int NormInputX { get; private set; }
-    public int NormInputY { get; private set; }
-    
-    // Camera
-    public bool InteractInput { get; private set; }
-    public bool ExitInput { get; private set; }
-    
-    // Lock Pick
-    public bool PryInput { get; private set; }
-    public bool PickInput { get; private set; }
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        
         _playerInput = GetComponent<PlayerInput>();
+        
         _playerMap = _playerInput.actions.FindActionMap("Player", true);
         _cameraMap = _playerInput.actions.FindActionMap("SurveillanceCam", true);
         _lockPickMap = _playerInput.actions.FindActionMap("Lock Pick", true);
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         // Player
         _playerMap.actionTriggered += OnPlayerMoveInput;
-        _playerMap.actionTriggered += OnCamRotateInput;
+        _playerMap.actionTriggered += OnInteractInput;
         
         // Camera
-        _cameraMap.actionTriggered += OnInteractInput;
+        _cameraMap.actionTriggered += OnCamRotateInput;
         _cameraMap.actionTriggered += OnExitInput;
 
         // Lock Pick
@@ -50,12 +78,12 @@ public class InputHandler : MonoBehaviour
         _lockPickMap.actionTriggered += OnPickInput;
     }
 
-    #region Actions
+    #region Action Trigger Functions
     
     // Player
     private void OnPlayerMoveInput(InputAction.CallbackContext context)
     {
-        if (context.action != _move) return;
+        if (context.action.name != "Move") return;
         RawMoveInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMoveInput.x);
         NormInputY = Mathf.RoundToInt(RawMoveInput.y);
@@ -65,7 +93,7 @@ public class InputHandler : MonoBehaviour
     {
         if (context.action.name != "Interact") return;
 
-        InteractInput = context.performed;
+        InteractPressed = context.performed;
     }
     
     // Surveillance Camera
@@ -80,9 +108,10 @@ public class InputHandler : MonoBehaviour
     {
         if (context.action.name != "Exit") return;
 
-        ExitInput = context.performed;
+        ExitPressed = context.performed;
     }
 
+    // Lock Pick
     private void OnPryInput(InputAction.CallbackContext context)
     {
         if (context.action.name != "Pry") return;
@@ -94,12 +123,27 @@ public class InputHandler : MonoBehaviour
     {
         if (context.action.name != "Pick") return;
 
-        PickInput = context.performed;
+        PickPressed = context.performed;
     }
     
     #endregion
-
-    public void SwitchToPlayer() => _playerInput.SwitchCurrentActionMap("Player");
-    public void SwitchToCamera() => _playerInput.SwitchCurrentActionMap("SurveillanceCam");
-    public void SwitchToLockPick() => _playerInput.SwitchCurrentActionMap("Lock Pick");
+    
+    # region Map Switcher
+    
+    /// <summary>
+    /// 切换到玩家控制状态的输入
+    /// </summary>
+    public static void SwitchToPlayer() => _playerInput.SwitchCurrentActionMap("Player");
+    
+    /// <summary>
+    /// 切换到摄像头控制状态的输入
+    /// </summary>
+    public static void SwitchToCamera() => _playerInput.SwitchCurrentActionMap("SurveillanceCam");
+    
+    /// <summary>
+    /// 切换到开锁状态的输入
+    /// </summary>
+    public static void SwitchToLockPick() => _playerInput.SwitchCurrentActionMap("Lock Pick");
+    
+    #endregion
 }
