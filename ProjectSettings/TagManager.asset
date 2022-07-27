@@ -47,3 +47,6 @@ TagManager:
   - name: Camera
     uniqueID: 3902817503
     locked: 0
+  - name: Test
+    uniqueID: 3016847361
+    locked: 0
