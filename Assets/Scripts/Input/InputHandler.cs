@@ -5,27 +5,55 @@ using Base;
 [RequireComponent(typeof(PlayerInput))]
 public class InputHandler : SingletonMono<InputHandler>
 {
-    private PlayerInput _playerInput;
+    private static PlayerInput _playerInput;
 
     private InputActionMap _playerMap;
     private InputActionMap _cameraMap;
     private InputActionMap _lockPickMap;
-
-    // Player
+    
+    #region Value Getter
+    
+    /// <summary>
+    /// 二位输入值
+    /// </summary>
     public static Vector2 RawMoveInput { get; private set; }
+    
+    /// <summary>
+    /// x轴标准化的输入值
+    /// </summary>
     public static int NormInputX { get; private set; }
+    
+    /// <summary>
+    /// y轴标准化的输入值
+    /// </summary>
     public static int NormInputY { get; private set; }
     
-    // Camera
-    public static bool InteractInput { get; private set; }
-    public static bool ExitInput { get; private set; }
+    /// <summary>
+    /// 按下交互按钮
+    /// </summary>
+    public static bool InteractPressed { get; private set; }
     
-    // Lock Pick
+    /// <summary>
+    /// 按下退出按钮
+    /// </summary>
+    public static bool ExitPressed { get; private set; }
+    
+    /// <summary>
+    /// 按下顶锁按钮
+    /// </summary>
     public static bool PryInput { get; private set; }
-    public static bool PickInput { get; private set; }
+    
+    /// <summary>
+    /// 按下开锁按钮
+    /// </summary>
+    public static bool PickPressed { get; private set; }
+    
+    #endregion
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        
         _playerInput = GetComponent<PlayerInput>();
         
         _playerMap = _playerInput.actions.FindActionMap("Player", true);
@@ -33,8 +61,10 @@ public class InputHandler : SingletonMono<InputHandler>
         _lockPickMap = _playerInput.actions.FindActionMap("Lock Pick", true);
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         // Player
         _playerMap.actionTriggered += OnPlayerMoveInput;
         _playerMap.actionTriggered += OnInteractInput;
@@ -48,7 +78,7 @@ public class InputHandler : SingletonMono<InputHandler>
         _lockPickMap.actionTriggered += OnPickInput;
     }
 
-    #region Actions
+    #region Action Trigger Functions
     
     // Player
     private void OnPlayerMoveInput(InputAction.CallbackContext context)
@@ -63,7 +93,7 @@ public class InputHandler : SingletonMono<InputHandler>
     {
         if (context.action.name != "Interact") return;
 
-        InteractInput = context.performed;
+        InteractPressed = context.performed;
     }
     
     // Surveillance Camera
@@ -78,7 +108,7 @@ public class InputHandler : SingletonMono<InputHandler>
     {
         if (context.action.name != "Exit") return;
 
-        ExitInput = context.performed;
+        ExitPressed = context.performed;
     }
 
     // Lock Pick
@@ -93,12 +123,27 @@ public class InputHandler : SingletonMono<InputHandler>
     {
         if (context.action.name != "Pick") return;
 
-        PickInput = context.performed;
+        PickPressed = context.performed;
     }
     
     #endregion
-
-    public void SwitchToPlayer() => _playerInput.SwitchCurrentActionMap("Player");
-    public void SwitchToCamera() => _playerInput.SwitchCurrentActionMap("SurveillanceCam");
-    public void SwitchToLockPick() => _playerInput.SwitchCurrentActionMap("Lock Pick");
+    
+    # region Map Switcher
+    
+    /// <summary>
+    /// 切换到玩家控制状态的输入
+    /// </summary>
+    public static void SwitchToPlayer() => _playerInput.SwitchCurrentActionMap("Player");
+    
+    /// <summary>
+    /// 切换到摄像头控制状态的输入
+    /// </summary>
+    public static void SwitchToCamera() => _playerInput.SwitchCurrentActionMap("SurveillanceCam");
+    
+    /// <summary>
+    /// 切换到开锁状态的输入
+    /// </summary>
+    public static void SwitchToLockPick() => _playerInput.SwitchCurrentActionMap("Lock Pick");
+    
+    #endregion
 }
