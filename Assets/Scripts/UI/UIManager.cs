@@ -10,19 +10,30 @@ namespace UI
 {
     public class UIManager : Singleton<UIManager>
     {
-        public string resourceDir = "";
+        public string resourceDir = "Prefabs/UI";
         
         public readonly Dictionary<string, BasePanel> panelContainer = new Dictionary<string, BasePanel>();
 
+        #region 创建实际面板
+
+        public void ShowTip(string content, Vector3 pos, string key = "Tip")
+        {
+            ShowPanel<TipPanel>(key, "Tip", UILayer.Middle, panel => {
+                panel.SetContent(content);
+                panel.transform.position = pos;
+            });
+        }
+        #endregion
+        
         /// <summary>
         /// 显示面板。
         /// </summary>
         /// <typeparam name="T">面板脚本类型</typeparam>
-        /// <param name="name">面板名，同时也作为记录的键值</param>
-        /// <param name="subPath">resourceDir 目录下的相对路径，如 "Menu"，不包括预制体名</param>
+        /// <param name="name">记录的键值</param>
+        /// <param name="subPath">resourceDir 目录下的相对路径，包括预制体名，如 "Menu/SettingMenu"</param>
         /// <param name="layer">显示在哪一层</param>
         /// <param name="callBack">面板创建成功后的回调</param>
-        public void ShowPanel<T>(string name, string subPath = "", UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
+        public void ShowPanel<T>(string name, string subPath, UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
         {
             // 该面板已经存在
             if (panelContainer.ContainsKey(name)) {
@@ -34,13 +45,13 @@ namespace UI
             }
 
             // 面板不存在，则加载预制体
-            ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath + "/" + name, (obj) =>
+            ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath, (obj) =>
             {
                 Transform father = RootCanvas.Instance.GetLayerRoot(layer);
 
                 // 设置父对象
                 obj.transform.SetParent(father);
-
+                
                 // 将相对位置置零
                 obj.transform.localPosition = Vector3.zero;
                 obj.transform.localScale = Vector3.one;
