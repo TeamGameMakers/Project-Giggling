@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c08d8bf96f4b70ba214b9e685559fd, type: 3}
-  m_Name: Surveillance Camera Data
+  m_Script: {fileID: 11500000, guid: b1ec5b01000751247981befeef28ba36, type: 3}
+  m_Name: Security Camera Data
   m_EditorClassIdentifier: 
   rotationSpeed: 0
   minAngle: 0
