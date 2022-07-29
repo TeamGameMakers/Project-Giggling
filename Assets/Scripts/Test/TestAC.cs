@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Save;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class TestAC : MonoBehaviour
@@ -12,8 +13,7 @@ public class TestAC : MonoBehaviour
     
     void Start()
     {
-        Debug.Log(int.Parse("5"));
-        Debug.Log(bool.Parse("True"));
+        UIManager.Instance.ShowPanel<BasePanel>("ClosePanel", "ClosePanel");
     }
 
     private void Update()
@@ -28,10 +28,10 @@ public class TestAC : MonoBehaviour
         if (Keyboard.current.numpad1Key.wasPressedThisFrame)
         {
             Debug.Log("按下 1");
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            dic["test1"] = "测试1";
-            dic["test2"] = "测试2";
-            SaveManager.Persistence.Write(dic, SaveManager.GetFullFilePath("test"));
+            foreach (var VARIABLE in UIManager.Instance.panelContainer)
+            {
+                Debug.Log($"{VARIABLE.Key}--{VARIABLE.Value}");
+            }
         }
         else if (Keyboard.current.numpad2Key.wasPressedThisFrame)
         {
