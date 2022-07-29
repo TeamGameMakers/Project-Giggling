@@ -1,7 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.XR;
-
 namespace Puzzle
 {
     public class PinLockPuzzleController : PuzzleController
