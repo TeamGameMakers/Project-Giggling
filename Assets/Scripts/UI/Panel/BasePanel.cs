@@ -55,7 +55,7 @@ namespace UI
 
         protected virtual void OnClick(string btnName)
         {
-
+            Debug.Log("点击按键：" + btnName);
         }
 
         protected virtual void OnValueChanged(string toggleName, bool value)

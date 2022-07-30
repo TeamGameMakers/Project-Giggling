@@ -13,7 +13,7 @@ public class TestAC : MonoBehaviour
     
     void Start()
     {
-        UIManager.Instance.ShowPanel<BasePanel>("ClosePanel", "ClosePanel");
+        
     }
 
     private void Update()

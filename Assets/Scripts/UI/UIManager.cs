@@ -17,11 +17,12 @@ namespace UI
 
         #region 创建实际面板
 
-        public void ShowTip(string content, Vector3 pos, string key = "Tip")
+        public void CreateFade(float duration = 0.5f, float originalAlpha = 1, float targetAlpha = 0)
         {
-            ShowPanel<TipPanel>(key, "Tip", UILayer.Middle, panel => {
-                panel.SetContent(content);
-                panel.transform.position = pos;
+            UIManager.Instance.ShowPanel<FaderPanel>("Fader", "FaderPanel", UILayer.Top, panel => {
+                panel.fader.Alpha = originalAlpha;
+                panel.fader.fadeDuration = duration;
+                panel.fader.Fade(targetAlpha);
             });
         }
         
@@ -32,10 +33,10 @@ namespace UI
         /// </summary>
         /// <typeparam name="T">面板脚本类型</typeparam>
         /// <param name="name">记录的键值</param>
-        /// <param name="subPath">resourceDir 目录下的相对路径，包括预制体名，如 "Menu/SettingMenu"</param>
+        /// <param name="subPath">resourceDir 目录下的相对路径，包括预制体名，如 "Menu/SettingMenu". 为空则直接使用 name</param>
         /// <param name="layer">显示在哪一层</param>
         /// <param name="callBack">面板创建成功后的回调</param>
-        public void ShowPanel<T>(string name, string subPath, UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
+        public void ShowPanel<T>(string name, string subPath = "", UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
         {
             // 该面板已经存在
             if (panelContainer.ContainsKey(name)) 
@@ -47,8 +48,18 @@ namespace UI
                 return;
             }
 
+            if (string.IsNullOrEmpty(subPath))
+            {
+                subPath = name;
+            }
             // 面板不存在，则加载预制体
             ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath, (obj) => {
+                if (obj == null)
+                {
+                    Debug.LogWarning($"资源'{subPath}`加载失败");
+                    return;
+                }
+                
                 obj.name = name;
                 Transform father = RootCanvas.Instance.GetLayerRoot(layer);
 
