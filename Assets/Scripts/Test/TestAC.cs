@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Save;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class TestAC : MonoBehaviour
@@ -11,17 +13,40 @@ public class TestAC : MonoBehaviour
     
     void Start()
     {
+        UIManager.Instance.ShowPanel<BasePanel>("ClosePanel", "ClosePanel");
     }
 
     private void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame) {
-            Debug.Log("左键点击:" + Mouse.current.position.ReadValue());
-            UIManager.Instance.ShowTip("提示测试", tagPoint.position);
+            
         }
         else if (Mouse.current.rightButton.wasPressedThisFrame) {
-            Debug.Log("右键点击:" + Mouse.current.position.ReadValue());
-            UIManager.Instance.HidePanel("Tip", true);
+            
+        }
+
+        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
+        {
+            Debug.Log("按下 1");
+            foreach (var VARIABLE in UIManager.Instance.panelContainer)
+            {
+                Debug.Log($"{VARIABLE.Key}--{VARIABLE.Value}");
+            }
+        }
+        else if (Keyboard.current.numpad2Key.wasPressedThisFrame)
+        {
+            Debug.Log("按下 2");
+            Dictionary<string, string> dic = 
+                SaveManager.Persistence.Read<Dictionary<string, string>>(SaveManager.GetFullFilePath("test"));
+            foreach (var VARIABLE in dic)
+            {
+                Debug.Log($"{VARIABLE.Key}--{VARIABLE.Value}");
+            }
+        }
+        else if (Keyboard.current.numpad3Key.wasPressedThisFrame)
+        {
+            Debug.Log("按下 3");
+            
         }
     }
 }

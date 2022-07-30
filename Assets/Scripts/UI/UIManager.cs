@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Base;
+using Base.Mono;
 using Base.Resource;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,8 +24,9 @@ namespace UI
                 panel.transform.position = pos;
             });
         }
-        #endregion
         
+        #endregion
+
         /// <summary>
         /// 显示面板。
         /// </summary>
@@ -36,7 +38,8 @@ namespace UI
         public void ShowPanel<T>(string name, string subPath, UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
         {
             // 该面板已经存在
-            if (panelContainer.ContainsKey(name)) {
+            if (panelContainer.ContainsKey(name)) 
+            {
                 panelContainer[name].ShowMe();
                 // 面板创建完成后回调
                 callBack?.Invoke(panelContainer[name] as T);
@@ -45,8 +48,8 @@ namespace UI
             }
 
             // 面板不存在，则加载预制体
-            ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath, (obj) =>
-            {
+            ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath, (obj) => {
+                obj.name = name;
                 Transform father = RootCanvas.Instance.GetLayerRoot(layer);
 
                 // 设置父对象
@@ -55,8 +58,8 @@ namespace UI
                 // 将相对位置置零
                 obj.transform.localPosition = Vector3.zero;
                 obj.transform.localScale = Vector3.one;
-                //(obj.transform as RectTransform).offsetMax = Vector2.zero;
-                //(obj.transform as RectTransform).offsetMin = Vector2.zero;
+                (obj.transform as RectTransform).offsetMax = Vector2.zero;
+                (obj.transform as RectTransform).offsetMin = Vector2.zero;
 
                 T panel = obj.GetComponent<T>();
                 // 面板创建完成后回调
@@ -76,9 +79,11 @@ namespace UI
         /// <param name="destroy">是否同时销毁面板</param>
         public void HidePanel(string name, bool destroy = false)
         {
-            if (panelContainer.ContainsKey(name)) {
+            if (panelContainer.ContainsKey(name)) 
+            {
                 panelContainer[name].HideMe();
-                if (destroy) {
+                if (destroy) 
+                {
                     GameObject.Destroy(panelContainer[name].gameObject);
                     panelContainer.Remove(name);
                 }
@@ -106,7 +111,7 @@ namespace UI
         {
             EventTrigger trigger = control.GetComponent<EventTrigger>();
             if (trigger == null) {
-                control.gameObject.AddComponent<EventTrigger>();
+                trigger = control.gameObject.AddComponent<EventTrigger>();
             }
 
             // 添加事件
