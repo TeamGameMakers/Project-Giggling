@@ -47,6 +47,11 @@ public class InputHandler : SingletonMono<InputHandler>
     /// 按下开锁按钮
     /// </summary>
     public static bool PickPressed { get; private set; }
+
+    /// <summary>
+    /// 按下任意键
+    /// </summary>
+    public static bool AnyKeyPressed => Keyboard.current.anyKey.wasPressedThisFrame;
     
     #endregion
 
