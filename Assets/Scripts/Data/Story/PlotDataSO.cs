@@ -9,9 +9,17 @@ namespace Data.Story
     [CreateAssetMenu(fileName = "PlotData", menuName = "Data/Plot Data")]
     public class PlotDataSO : ScriptableObject
     {
+        // 用于选择时显示
+        public string name;
+        
         public List<PlotSection> sections;
 
         public int Count => sections.Count;
+        
+        public PlotSection this[int i] {
+            get => sections[i];
+            set => sections[i] = value;
+        }
         
         public void Add(PlotSection section)
         {
