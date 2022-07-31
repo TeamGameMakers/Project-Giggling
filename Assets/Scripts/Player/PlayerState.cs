@@ -9,29 +9,27 @@ namespace Player
     {
         private int _animBoolHash;
     
-        protected readonly Player player;
-        protected readonly Animator anim;
-        protected readonly InputHandler input;
-        protected readonly GameCore core;
-        protected readonly PlayerDataSO data;
+        protected readonly Player _player;
+        protected readonly Animator _anim;
+        protected readonly GameCore _core;
+        protected readonly PlayerDataSO _data;
 
         protected Vector2 InputVec2 { get; private set; }
 
         public PlayerState(Player player, string name) : base(player.StateMachine)
         {
-            this.player = player;
+            this._player = player;
             _animBoolHash = Animator.StringToHash(name);
 
-            anim = player.Anim;
-            input = player.InputHandler;
-            core = player.Core;
-            data = player.data;
+            _anim = player.Anim;
+            _core = player.Core;
+            _data = player.data;
         }
 
 
         public override void Enter()
         {
-            anim.SetBool(_animBoolHash, true);
+            _anim.SetBool(_animBoolHash, true);
         }
 
         public override void LogicUpdate()
@@ -41,7 +39,7 @@ namespace Player
 
         public override void Exit()
         {
-            anim.SetBool(_animBoolHash, false);
+            _anim.SetBool(_animBoolHash, false);
         }
     }
 }
