@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Base;
+using Base.Mono;
 using Base.Resource;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,27 +17,30 @@ namespace UI
 
         #region 创建实际面板
 
-        public void ShowTip(string content, Vector3 pos, string key = "Tip")
+        public void CreateFade(float duration = 0.5f, float originalAlpha = 1, float targetAlpha = 0)
         {
-            ShowPanel<TipPanel>(key, "Tip", UILayer.Middle, panel => {
-                panel.SetContent(content);
-                panel.transform.position = pos;
+            UIManager.Instance.ShowPanel<FaderPanel>("Fader", "FaderPanel", UILayer.Top, panel => {
+                panel.fader.Alpha = originalAlpha;
+                panel.fader.fadeDuration = duration;
+                panel.fader.Fade(targetAlpha);
             });
         }
-        #endregion
         
+        #endregion
+
         /// <summary>
         /// 显示面板。
         /// </summary>
         /// <typeparam name="T">面板脚本类型</typeparam>
         /// <param name="name">记录的键值</param>
-        /// <param name="subPath">resourceDir 目录下的相对路径，包括预制体名，如 "Menu/SettingMenu"</param>
+        /// <param name="subPath">resourceDir 目录下的相对路径，包括预制体名，如 "Menu/SettingMenu". 为空则直接使用 name</param>
         /// <param name="layer">显示在哪一层</param>
         /// <param name="callBack">面板创建成功后的回调</param>
-        public void ShowPanel<T>(string name, string subPath, UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
+        public void ShowPanel<T>(string name, string subPath = "", UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
         {
             // 该面板已经存在
-            if (panelContainer.ContainsKey(name)) {
+            if (panelContainer.ContainsKey(name)) 
+            {
                 panelContainer[name].ShowMe();
                 // 面板创建完成后回调
                 callBack?.Invoke(panelContainer[name] as T);
@@ -44,9 +48,19 @@ namespace UI
                 return;
             }
 
-            // 面板不存在，则加载预制体
-            ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath, (obj) =>
+            if (string.IsNullOrEmpty(subPath))
             {
+                subPath = name;
+            }
+            // 面板不存在，则加载预制体
+            ResourceLoader.LoadAsync<GameObject>( resourceDir + "/" + subPath, (obj) => {
+                if (obj == null)
+                {
+                    Debug.LogWarning($"资源'{subPath}`加载失败");
+                    return;
+                }
+                
+                obj.name = name;
                 Transform father = RootCanvas.Instance.GetLayerRoot(layer);
 
                 // 设置父对象
@@ -55,8 +69,8 @@ namespace UI
                 // 将相对位置置零
                 obj.transform.localPosition = Vector3.zero;
                 obj.transform.localScale = Vector3.one;
-                //(obj.transform as RectTransform).offsetMax = Vector2.zero;
-                //(obj.transform as RectTransform).offsetMin = Vector2.zero;
+                (obj.transform as RectTransform).offsetMax = Vector2.zero;
+                (obj.transform as RectTransform).offsetMin = Vector2.zero;
 
                 T panel = obj.GetComponent<T>();
                 // 面板创建完成后回调
@@ -76,9 +90,11 @@ namespace UI
         /// <param name="destroy">是否同时销毁面板</param>
         public void HidePanel(string name, bool destroy = false)
         {
-            if (panelContainer.ContainsKey(name)) {
+            if (panelContainer.ContainsKey(name)) 
+            {
                 panelContainer[name].HideMe();
-                if (destroy) {
+                if (destroy) 
+                {
                     GameObject.Destroy(panelContainer[name].gameObject);
                     panelContainer.Remove(name);
                 }
@@ -106,7 +122,7 @@ namespace UI
         {
             EventTrigger trigger = control.GetComponent<EventTrigger>();
             if (trigger == null) {
-                control.gameObject.AddComponent<EventTrigger>();
+                trigger = control.gameObject.AddComponent<EventTrigger>();
             }
 
             // 添加事件

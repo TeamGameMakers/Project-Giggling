@@ -55,7 +55,7 @@ namespace UI
 
         protected virtual void OnClick(string btnName)
         {
-
+            Debug.Log("点击按键：" + btnName);
         }
 
         protected virtual void OnValueChanged(string toggleName, bool value)
@@ -95,7 +95,8 @@ namespace UI
             for (int i = 0; i < coms.Length; ++i) {
                 
                 // 将获取到的组件，按照对象区分存入
-                string objName = coms[i].gameObject.name;
+                // 去除 (Clone)
+                string objName = coms[i].gameObject.name.Split('(')[0];
                 if (controlContainer.ContainsKey(objName))
                     controlContainer[objName].Add(coms[i]);
                 else
