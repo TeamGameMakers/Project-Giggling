@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Data.Story;
 using Save;
 using UI;
 using UnityEngine;
@@ -10,10 +11,14 @@ using UnityEngine.InputSystem;
 public class TestAC : MonoBehaviour
 {
     public Transform tagPoint;
+
+    public PlotDataSO plot;
     
     void Start()
     {
-        
+        UIManager.Instance.ShowPanel<StoryPanel>("StoryPanel", callBack: panel => {
+            panel.EnterStory(plot);
+        });
     }
 
     private void Update()

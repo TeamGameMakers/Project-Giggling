@@ -13,7 +13,8 @@ namespace Data.Story
         // 剧情文本
         public string text;
         // 剧情立绘
-        public Sprite sprite;
+        public Sprite leftSprite;
+        public Sprite rightSprite;
         // 特殊事件
         public UnityAction action;
         // 剧情选择
