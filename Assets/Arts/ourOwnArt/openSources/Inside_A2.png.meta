@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +46,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +68,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1247,61 +1246,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Inside_A2_27: -94625332
-      Inside_A2_29: 743066539
-      Inside_A2_8: 1518330770
-      Inside_A2_35: -1180254241
-      Inside_A2_39: -482823735
-      Inside_A2_37: -663452561
-      Inside_A2_7: -9992600
-      Inside_A2_1: 1721847218
-      Inside_A2_41: 922743033
-      Inside_A2_22: -1411688681
-      Inside_A2_47: -1811314368
-      Inside_A2_53: -983748761
-      Inside_A2_14: -552557693
-      Inside_A2_10: -1367075129
-      Inside_A2_15: -1810005367
-      Inside_A2_40: -2015948313
-      Inside_A2_31: 1125491931
-      Inside_A2_45: -70362872
-      Inside_A2_18: 867979981
-      Inside_A2_21: -902021975
-      Inside_A2_13: -522153815
-      Inside_A2_19: 908825592
-      Inside_A2_32: -1260064565
-      Inside_A2_51: -1883348004
-      Inside_A2_52: 291653814
-      Inside_A2_20: -1275230898
-      Inside_A2_28: -1629140805
-      Inside_A2_12: 44220953
-      Inside_A2_24: -1867668645
-      Inside_A2_0: -1093312901
-      Inside_A2_38: 95349806
-      Inside_A2_9: -1249517179
-      Inside_A2_4: -400096879
-      Inside_A2_36: 73913247
-      Inside_A2_17: -1766783638
-      Inside_A2_11: -1225308393
-      Inside_A2_49: -572817880
-      Inside_A2_6: 1700780375
-      Inside_A2_23: -413893639
-      Inside_A2_30: 1714034157
-      Inside_A2_43: 1735638068
-      Inside_A2_25: 1457148284
-      Inside_A2_5: 540425918
-      Inside_A2_2: -996804914
-      Inside_A2_34: 41431950
-      Inside_A2_16: -178023392
-      Inside_A2_26: -855069062
-      Inside_A2_33: -1302999753
-      Inside_A2_3: -531063884
-      Inside_A2_48: 1945330284
-      Inside_A2_44: 612879361
-      Inside_A2_46: -1043393585
-      Inside_A2_50: 376553690
-      Inside_A2_42: 279545398
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

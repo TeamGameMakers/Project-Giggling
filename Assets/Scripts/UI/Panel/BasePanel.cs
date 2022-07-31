@@ -55,7 +55,7 @@ namespace UI
 
         protected virtual void OnClick(string btnName)
         {
-
+            Debug.Log("点击按键：" + btnName);
         }
 
         protected virtual void OnValueChanged(string toggleName, bool value)
@@ -72,7 +72,9 @@ namespace UI
         public virtual T GetControl<T>(string controlName) where T : UIBehaviour
         {
             if (controlContainer.ContainsKey(controlName)) {
+                
                 for (int i = 0; i < controlContainer[controlName].Count; ++i) {
+                    
                     if (controlContainer[controlName][i] is T)
                         return controlContainer[controlName][i] as T;
                 }
@@ -91,27 +93,22 @@ namespace UI
         {
             T[] coms = this.GetComponentsInChildren<T>();
             for (int i = 0; i < coms.Length; ++i) {
+                
                 // 将获取到的组件，按照对象区分存入
-                string objName = coms[i].gameObject.name;
+                // 去除 (Clone)
+                string objName = coms[i].gameObject.name.Split('(')[0];
                 if (controlContainer.ContainsKey(objName))
                     controlContainer[objName].Add(coms[i]);
                 else
                     controlContainer.Add(objName, new List<UIBehaviour>() { coms[i] });
 
                 // 如果是按钮控件
-                if (coms[i] is Button) {
-                    (coms[i] as Button).onClick.AddListener(() =>
-                    {
-                        OnClick(objName);
-                    });
-                }
+                if (coms[i] is Button)
+                    (coms[i] as Button).onClick.AddListener(() => OnClick(objName)); 
+                
                 // 如果是单选框或者多选框
-                else if (coms[i] is Toggle) {
-                    (coms[i] as Toggle).onValueChanged.AddListener((value) =>
-                    {
-                        OnValueChanged(objName, value);
-                    });
-                }
+                else if (coms[i] is Toggle)
+                    (coms[i] as Toggle).onValueChanged.AddListener(value => OnValueChanged(objName, value));
             }
         }
     }

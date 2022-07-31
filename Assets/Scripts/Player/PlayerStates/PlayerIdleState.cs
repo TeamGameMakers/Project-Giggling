@@ -9,7 +9,7 @@ namespace Player
         public override void Enter()
         {
             base.Enter();
-            core.Movement.SetVelocity(Vector2.zero);
+            _core.Movement.SetVelocity(Vector2.zero);
         }
 
         public override void PhysicsUpdate()
@@ -23,7 +23,7 @@ namespace Player
             base.LogicUpdate();
 
             if (InputVec2 != Vector2.zero) 
-                StateMachine.ChangeState(player.MoveState);
+                StateMachine.ChangeState(_player.MoveState);
         }
     }
 }

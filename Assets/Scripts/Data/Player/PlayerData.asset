@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4145cda34d415944ae16fe148b5d6cc, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  moveVelocity: 5
+  walkVelocity: 5
+  runVelocity: 8
+  healthPoint: 0
+  hasFlashLight: 0
+  batteryNum: 0

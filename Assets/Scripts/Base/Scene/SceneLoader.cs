@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Base.Mono;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,13 +34,13 @@ namespace Base.Scene
             AfterLoadedActions?.Invoke();
         }
 
-        public static void LoadSceneAsync(string name)
+        public static void LoadSceneAsync(string name, Action callback = null)
         {
             // 开启加载协程
-            MonoManager.Instance.StartCoroutine(LoadSceneAsyncCoroutine(name));
+            MonoManager.Instance.StartCoroutine(LoadSceneAsyncCoroutine(name, callback));
         }
 
-        private static IEnumerator LoadSceneAsyncCoroutine(string name)
+        private static IEnumerator LoadSceneAsyncCoroutine(string name, Action callback)
         {
             BeforeLoadedActions?.Invoke();
 
@@ -50,8 +51,9 @@ namespace Base.Scene
                 LoadingActions?.Invoke(ao.progress);
                 yield return ao;
             }
-
+            
             AfterLoadedActions?.Invoke();
+            callback?.Invoke();
         }
         #endregion
 
@@ -69,32 +71,42 @@ namespace Base.Scene
             MonoManager.Instance.StartCoroutine(SwitchSceneAsyncCoroutine(from, to));
         }
 
-        private static IEnumerator SwitchSceneAsyncCoroutine(string from, string to)
+        public static IEnumerator SwitchSceneAsyncCoroutine(string from, string to)
+        {
+            // 加载目标场景
+            yield return SwitchSceneLoadCoroutine(to);
+
+            // 切换场景
+            yield return SwitchSceneSwitchCoroutine(from, to);
+        }
+        #endregion
+
+        public static IEnumerator SwitchSceneLoadCoroutine(string name)
         {
             BeforeLoadedActions?.Invoke();
 
-            // 加载目标场景
-            AsyncOperation ao = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
+            AsyncOperation ao = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
             while (!ao.isDone) {
                 // 向外分发进度
                 LoadingActions?.Invoke(ao.progress);
                 yield return ao;
             }
+        }
 
-            // 激活目标场景
+        public static IEnumerator SwitchSceneSwitchCoroutine(string from, string to)
+        {
             UnityEngine.SceneManagement.Scene newScene = SceneManager.GetSceneByName(to);
             SceneManager.SetActiveScene(newScene);
 
             // 卸载原场景
             if (!string.IsNullOrEmpty(from)) {
-                yield return UnloadSceneAsync(from);
+                yield return SwitchSceneSceneUnloadCoroutine(from);
             }
-
+            
             AfterLoadedActions?.Invoke();
         }
-        #endregion
 
-        private static IEnumerator UnloadSceneAsync(string name)
+        private static IEnumerator SwitchSceneSceneUnloadCoroutine(string name)
         {
             UnityEngine.SceneManagement.Scene s = SceneManager.GetSceneByName(name);
             if (s.IsValid()) {
