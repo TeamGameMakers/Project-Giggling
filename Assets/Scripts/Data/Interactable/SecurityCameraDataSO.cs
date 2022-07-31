@@ -7,7 +7,6 @@ namespace Data
     {
         [Header("Security Camera Settings")]
         public float rotationSpeed;
-        public float minAngle;
         public float maxAngle;
     }
 }

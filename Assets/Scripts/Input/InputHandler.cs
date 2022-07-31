@@ -29,22 +29,27 @@ public class InputHandler : SingletonMono<InputHandler>
     public static int NormInputY { get; private set; }
     
     /// <summary>
-    /// 按下交互按钮
+    /// 按下冲刺键
+    /// </summary>
+    public static bool SprintPressed { get; private set; }
+    
+    /// <summary>
+    /// 按下交互键
     /// </summary>
     public static bool InteractPressed { get; private set; }
     
     /// <summary>
-    /// 按下退出按钮
+    /// 按下退出键
     /// </summary>
     public static bool ExitPressed { get; private set; }
     
     /// <summary>
-    /// 按下顶锁按钮
+    /// 按下顶锁键
     /// </summary>
     public static bool PryInput { get; private set; }
     
     /// <summary>
-    /// 按下开锁按钮
+    /// 按下开锁键
     /// </summary>
     public static bool PickPressed { get; private set; }
 
@@ -71,8 +76,9 @@ public class InputHandler : SingletonMono<InputHandler>
         base.Start();
         
         // Player
-        _playerMap.actionTriggered += OnPlayerMoveInput;
+        _playerMap.actionTriggered += OnMoveInput;
         _playerMap.actionTriggered += OnInteractInput;
+        _playerMap.actionTriggered += OnSprintInput;
         
         // Camera
         _cameraMap.actionTriggered += OnCamRotateInput;
@@ -86,12 +92,19 @@ public class InputHandler : SingletonMono<InputHandler>
     #region Action Trigger Functions
     
     // Player
-    private void OnPlayerMoveInput(InputAction.CallbackContext context)
+    private void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.action.name != "Move") return;
         RawMoveInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(RawMoveInput.x);
         NormInputY = Mathf.RoundToInt(RawMoveInput.y);
+    }
+
+    private void OnSprintInput(InputAction.CallbackContext context)
+    {
+        if (context.action.name != "Sprint") return;
+
+        SprintPressed = context.performed;
     }
     
     private void OnInteractInput(InputAction.CallbackContext context)

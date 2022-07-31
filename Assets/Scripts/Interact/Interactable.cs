@@ -11,7 +11,7 @@ namespace Interact
     {
         private SpriteRenderer _spriteRenderer;
         
-        [SerializeField] private InteractableDataSO _data;
+        [SerializeField] protected InteractableDataSO _data;
         [SerializeField] private Transform _checkPoint;
 
         protected virtual void Awake()
