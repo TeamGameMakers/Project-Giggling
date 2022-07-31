@@ -2,24 +2,33 @@ using System;
 using System.Collections.Generic;
 using Base.Resource;
 using TMPro;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Story
 {
-    public class ChoicePanel : BasePanel, IChoiceList
+    /// <summary>
+    /// 自动生成剧情选择按键，并绑定点击事件。
+    /// </summary>
+    public class PlotChoice : IChoiceList
     {
+        protected Transform parent;
         protected List<Button> buttons = new List<Button>();
         protected Action<int> choose;
 
+        public PlotChoice(Transform parent)
+        {
+            this.parent = parent;
+        }
+        
         public void ShowChoices(List<string> choices)
         {
-            // 创建按钮并绑定事件
             for (int i = 0; i < choices.Count; ++i)
             {
                 GameObject go = ResourceLoader.Load<GameObject>("Prefabs/UI/Component/PlotBtn");
                 go.name += i;
-                go.transform.SetParent(transform);
+                go.transform.SetParent(parent);
                 Button btn = go.GetComponent<Button>();
                 TextMeshProUGUI tmp = btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
                 tmp.SetText(choices[i]);
@@ -33,14 +42,13 @@ namespace UI
             }
         }
 
-        public void HideSelf()
+        public void HideChoices()
         {
             for (int i = buttons.Count - 1; i >= 0; --i)
             {
-                Destroy(buttons[i]);
+                GameObject.Destroy(buttons[i]);
             }
             buttons.Clear();
-            gameObject.SetActive(false);
         }
 
         public void RegisterChoose(Action<int> chooseActions)

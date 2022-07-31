@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class PlotController : IStoryProcessor
+    /// <summary>
+    /// 持有 UI 控件，处理剧情。
+    /// </summary>
+    public class PlotProcessor : IStoryProcessor
     {
         protected string panelName;
         protected Image leftImage;
@@ -20,12 +23,12 @@ namespace UI
         protected GameObject cListGo;
         protected PlotSection currentSecion;
 
-        public PlotController(string panelName)
+        public PlotProcessor(string panelName)
         {
             this.panelName = panelName;
         }
         
-        public void Register(Image image, bool left, GameObject parentGo = null)
+        public virtual void Register(Image image, bool left, GameObject parentGo = null)
         {
             if (left)
             {
@@ -39,19 +42,20 @@ namespace UI
             }
         }
 
-        public void Register(TextMeshProUGUI tmp, GameObject parentGo = null)
+        public virtual void Register(TextMeshProUGUI tmp, GameObject parentGo = null)
         {
             this.tmp = tmp;
             tmpGo = (parentGo ? parentGo : tmp.gameObject);
         }
 
-        public void Register(IChoiceList list, GameObject parentGo)
+        public virtual void Register(IChoiceList list, GameObject parentGo)
         {
             cList = list;
             cListGo = parentGo;
+            cList.RegisterChoose(Choose);
         }
         
-        public void Process(PlotSection section)
+        public virtual void Process(PlotSection section)
         {
             currentSecion = section;
             section.action?.Invoke();
@@ -90,18 +94,20 @@ namespace UI
                 }
                 cListGo.SetActive(true);
                 cList.ShowChoices(strs);
-                cList.RegisterChoose(Choose);
             }
             else
-                cList.HideSelf();
+            {
+                cList.HideChoices();
+                cListGo.SetActive(false);
+            }
         }
 
-        public void End()
+        public virtual void End()
         {
-            UIManager.Instance.HidePanel(panelName);
+            // 暂时没想到有什么
         }
 
-        public void Choose(int i)
+        public virtual void Choose(int i)
         {
             Debug.Log("剧情选择了:" + i);
             StoryManager.Instance.EnterStory(currentSecion.choices[i], this);

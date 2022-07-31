@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Data.Story;
 using Save;
+using Story;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,9 +17,7 @@ public class TestAC : MonoBehaviour
     
     void Start()
     {
-        UIManager.Instance.ShowPanel<StoryPanel>("StoryPanel", callBack: panel => {
-            panel.EnterStory(plot);
-        });
+        StoryManager.Instance.StartStory(plot);
     }
 
     private void Update()

@@ -10,7 +10,7 @@ namespace UI
     {
         void ShowChoices(List<string> choices);
 
-        void HideSelf();
+        void HideChoices();
 
         void RegisterChoose(Action<int> chooseActions);
     }
