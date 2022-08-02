@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-namespace Player
+namespace Characters.Player
 {
     public sealed class PlayerIdleState: PlayerState
     {
-        public PlayerIdleState(global::Player.Player player, string name) : base(player, name) { }
+        public PlayerIdleState(global::Characters.Player.Player player, string name) : base(player, name) { }
 
         public override void Enter()
         {

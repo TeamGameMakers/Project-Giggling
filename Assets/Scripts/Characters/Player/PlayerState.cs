@@ -3,11 +3,11 @@ using Core;
 using Data;
 using UnityEngine;
 
-namespace Player
+namespace Characters.Player
 {
     public class PlayerState : BaseState
     {
-        private int _animBoolHash;
+        private readonly int _animBoolHash;
     
         protected readonly Player _player;
         protected readonly Animator _anim;
@@ -16,7 +16,7 @@ namespace Player
 
         protected Vector2 InputVec2 { get; private set; }
 
-        public PlayerState(Player player, string name) : base(player.StateMachine)
+        protected PlayerState(Player player, string name) : base(player.StateMachine)
         {
             this._player = player;
             _animBoolHash = Animator.StringToHash(name);

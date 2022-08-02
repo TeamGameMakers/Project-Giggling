@@ -3,7 +3,7 @@ using Core;
 using Data;
 using UnityEngine;
 
-namespace Player
+namespace Characters.Player
 {
     public class Player : Entity
     {

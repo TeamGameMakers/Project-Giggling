@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-namespace Player
+namespace Characters.Player
 {
     public class PlayerMoveState: PlayerState
     {
         private readonly int _animHashFloatX = Animator.StringToHash("velocityX");
         private readonly int _animHashFloatY = Animator.StringToHash("velocityY");
         
-        public PlayerMoveState(Player player, string name) : base(player, name) { }
+        public PlayerMoveState(Characters.Player.Player player, string name) : base(player, name) { }
 
         public override void Enter()
         {
