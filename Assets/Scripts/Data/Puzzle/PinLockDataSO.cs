@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Data
 {
     [CreateAssetMenu(fileName = "PinLockData", menuName = "Data/Pin Lock Data")]
-    public class PinLockDataSO : ScriptableObject
+    public class PinLockDataSO : PuzzleDataSO
     {
         // 推针最大高度
         public float maxHeight;
