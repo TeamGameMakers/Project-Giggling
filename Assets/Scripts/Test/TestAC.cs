@@ -20,7 +20,7 @@ public class TestAC : MonoBehaviour
     
     void Start()
     {
-        UIManager.Instance.ShowPanel<ItemInfoPanel>("ItemInfoPanel", callBack: panel => panel.UpdateInfo(item));
+
     }
 
     private void Update()

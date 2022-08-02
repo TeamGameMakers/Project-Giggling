@@ -10,9 +10,9 @@ namespace Data.Story
     public class PlotDataSO : ScriptableObject
     {
         // 用于选择时显示
-        public string name;
+        public new string name;
         
-        public List<PlotSection> sections;
+        public List<PlotSection> sections = new List<PlotSection>();
 
         public int Count => sections.Count;
         
