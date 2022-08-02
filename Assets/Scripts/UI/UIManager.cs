@@ -78,7 +78,13 @@ namespace UI
 
                 panel.ShowMe();
 
-                //把面板存起来
+                // 因为异步原因，会出现重复存在的情况
+                if (panelContainer.ContainsKey(name))
+                {
+                    Debug.LogWarning("面板已存在");
+                    HidePanel(name, true);
+                }
+                // 把面板存起来
                 panelContainer.Add(name, panel);
             });
         }
