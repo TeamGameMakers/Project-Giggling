@@ -50,3 +50,6 @@ TagManager:
   - name: Test
     uniqueID: 3016847361
     locked: 0
+  - name: Puzzle
+    uniqueID: 3892964085
+    locked: 0
