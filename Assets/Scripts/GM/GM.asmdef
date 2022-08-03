@@ -1,3 +1,17 @@
 {
-	"name": "GM"
+    "name": "GM",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4ef41cce978bd02438bc292ccbfe5b9e",
+        "GUID:b7df1af399791d144862020fea8877bd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
