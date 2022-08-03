@@ -14,6 +14,7 @@ namespace Characters.Monsters
         internal MonsterStateMachine StateMachine { get; private set; }
         internal GameCore Core { get; private set; }
         internal MonsterDataSo Data => _data;
+        internal Collider2D detected;
         
         public MonsterIdleState IdleState { get; private set; }
         public MonsterChaseState ChaseState { get; private set; }

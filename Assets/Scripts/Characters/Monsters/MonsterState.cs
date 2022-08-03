@@ -13,8 +13,6 @@ namespace Characters.Monsters
         protected readonly MonsterDataSo _data;
         protected readonly int _animBoolHash;
 
-        protected Collider2D _detected;
-
         protected MonsterState(Monster monster, string name) : base(monster.StateMachine)
         {
             _monster = monster;
@@ -30,7 +28,7 @@ namespace Characters.Monsters
 
         public override void PhysicsUpdate()
         {
-            _detected = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
+            _monster.detected = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
                 _data.checkAngle, _data.checkLayer);
         }
 

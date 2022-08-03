@@ -16,7 +16,7 @@ namespace Characters.Monsters.MonsterStates
         {
             base.LogicUpdate();
 
-            if (_detected) StateMachine.ChangeState(_monster.ChaseState);
+            if (_monster.detected) StateMachine.ChangeState(_monster.ChaseState);
         }
     }
 }

@@ -9,15 +9,15 @@ namespace Characters.Monsters.MonsterStates
         public override void Enter()
         {
             base.Enter();
-            _core.AIMovement.CurrentDestination = _detected.transform;
+            _core.AIMovement.CurrentDestination = _monster.detected.transform;
             _core.AIMovement.SetSpeed(_data.chaseSpeed);
         }
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            
-            if (!_detected) StateMachine.ChangeState(_monster.IdleState);
+
+            if (!_monster.detected) StateMachine.ChangeState(_monster.IdleState);
         }
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestMonsterData
   m_EditorClassIdentifier: 
   walkSpeed: 0
-  chaseSpeed: 5
+  chaseSpeed: 1
   healthPoint: 0
   checkRadius: 5
   checkAngle: 180
