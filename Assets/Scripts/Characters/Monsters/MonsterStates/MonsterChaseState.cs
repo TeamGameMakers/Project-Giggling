@@ -1,3 +1,4 @@
+using Data;
 using UnityEngine;
 
 namespace Characters.Monsters
@@ -9,16 +10,24 @@ namespace Characters.Monsters
         public override void Enter()
         {
             base.Enter();
-            _core.AIMovement.CurrentDestination = _monster.target.transform;
-            _core.AIMovement.SetSpeed(_data.chaseSpeed);
+
+            if (_monster.Hit && _monster.HitByPlayer)
+                _core.AIMovement.CurrentDestination = GM.GameManager.Player;
+            else
+                _core.AIMovement.CurrentDestination = _monster.target.transform;
         }
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
             
+            _core.Detection.LookAtTarget(_monster.target.transform);
+            
+            if (_data.monsterType != MonsterDataSo.MonsterType.Boss)
+                _core.AIMovement.SetSpeed(_monster.Hit? _data.hitSpeed : _data.chaseSpeed);
+
             if (!_monster.target) StateMachine.ChangeState(_monster.IdleState);
-            else _core.Detection.LookAtTarget(_monster.target.transform);
+            
         }
     }
 }

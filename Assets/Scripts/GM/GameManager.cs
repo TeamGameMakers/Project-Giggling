@@ -23,6 +23,8 @@ namespace GM
 
         public static event Action<GameState> SwitchStateEvent;
 
+        public static Transform Player { get; private set; }
+
         public static void SwitchGameState(GameState state)
         {
             Debug.Log("进入: " + state);
@@ -47,5 +49,7 @@ namespace GM
 
             SwitchStateEvent?.Invoke(m_state);
         }
+
+        public static void SetPlayerTransform(Transform player) => Player = player;
     }
 }

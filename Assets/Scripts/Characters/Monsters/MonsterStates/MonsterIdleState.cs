@@ -14,7 +14,7 @@ namespace Characters.Monsters
             base.Enter();
             _core.AIMovement.CurrentDestination = _monster.transform;
             
-            if (_data.patrol)
+            if (_monster.Patrol)
             {
                 _canPatrol = false;
                 _monster.StartCoroutine(StopTimer(_data._patrolStopTime));
@@ -35,7 +35,7 @@ namespace Characters.Monsters
         {
             base.Exit();
             
-            if (_monster.target && _data.patrol)
+            if (_monster.target && _monster.Patrol)
                 _monster.StopCoroutine(StopTimer(_data._patrolStopTime));
         }
 

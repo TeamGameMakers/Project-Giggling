@@ -10,9 +10,6 @@ namespace Characters.Monsters
     public class Monster: Entity
     {
         [SerializeField] private MonsterDataSo _data;
-        [SerializeField] private bool _patrol;
-        [SerializeField] private List<Transform> patrolPoints;
-
         private Animator _anim;
         
         internal MonsterStateMachine StateMachine { get; private set; }
@@ -23,9 +20,13 @@ namespace Characters.Monsters
         public MonsterIdleState IdleState { get; private set; }
         public MonsterChaseState ChaseState { get; private set; }
         public MonsterPatrolState PatrolState { get; private set; }
+        public MonsterDieState DieState { get; private set; }
         
-        public List<Transform> PatrolPoints => patrolPoints;
-        public bool Patrol => _patrol;
+        public List<Transform> PatrolPoints { get; private set; }
+        public bool Patrol { get; private set; }
+        public bool Hit { get; private set; }
+        public bool HitByPlayer { get; private set; }
+        public int Damage { get; private set; }
 
         private void Awake()
         {
@@ -36,11 +37,17 @@ namespace Characters.Monsters
             IdleState = new MonsterIdleState(this, "idle");
             ChaseState = new MonsterChaseState(this, "chase");
             PatrolState = new MonsterPatrolState(this, "patrol");
+            DieState = new MonsterDieState(this, "die");
         }
 
         private void Start()
         {
-            StateMachine.Initialize(IdleState);
+            Patrol = CheckPatrol();
+            
+            if (_data.isDead)
+                MonsterDie();
+            
+            StateMachine.Initialize(DieState);
         }
 
         private void FixedUpdate()
@@ -56,6 +63,39 @@ namespace Characters.Monsters
         internal void SetAnimBool(int hash, bool value)
         {
             _anim.SetBool(hash, value);
+        }
+
+        private bool CheckPatrol()
+        {
+            if (transform.parent.childCount < 2) return false;
+            var points = transform.parent.GetChild(1);
+            
+            PatrolPoints = new List<Transform>();
+            for (int i = 0; i < points.childCount; i++)
+                PatrolPoints.Add(points.GetChild(i));
+            
+            return true;
+        }
+        
+        /// <summary>
+        /// 怪进入光
+        /// </summary>
+        public void MonsterEnterLight(int damage, bool hitByPlayer = false)
+        {
+            Hit = true;
+            Damage = damage;
+            HitByPlayer = hitByPlayer;
+        }
+
+        /// <summary>
+        /// 怪离开光
+        /// </summary>
+        public void MonsterExitLight() => Hit = false;
+        
+        public void MonsterDie()
+        {
+            _data.isDead = true;
+            Destroy(Patrol ? transform.parent.gameObject : transform.gameObject);
         }
 
 #if UNITY_EDITOR
