@@ -25,11 +25,11 @@ namespace SceneTrigger
 
         protected virtual void OnTriggerEnter2D(Collider2D col)
         {
-            if (!used && col.CompareTag("Player"))
+            if (!used && TriggerFilter(col))
             {
                 Debug.Log("触发场景触发器：" + gameObject.name);
 
-                TriggerEvent();
+                TriggerEvent(col);
 
                 if (triggerOnce)
                 {
@@ -39,6 +39,8 @@ namespace SceneTrigger
             }
         }
 
-        protected abstract void TriggerEvent();
+        protected abstract bool TriggerFilter(Collider2D col);
+        
+        protected abstract void TriggerEvent(Collider2D col);
     }
 }
