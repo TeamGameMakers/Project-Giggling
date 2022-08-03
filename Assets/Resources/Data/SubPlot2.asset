@@ -9,17 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ee522a1c864a12a86575cd8d36e308, type: 3}
-  m_Name: TestMonsterData
+  m_Script: {fileID: 11500000, guid: 0b663912763e87d4f827b7722ba48074, type: 3}
+  m_Name: SubPlot2
   m_EditorClassIdentifier: 
-  monsterType: 0
-  walkSpeed: 0
-  chaseSpeed: 3
-  healthPoint: 0
-  checkRadius: 4
-  checkAngle: 35
-  checkLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  patrol: 1
-  _patrolStopTime: 2
+  name: SubPlot2
+  sections:
+  - text: "\u5B50\u5267\u60C52"
+    leftSprite: {fileID: 0}
+    rightSprite: {fileID: 0}
+    choices: []

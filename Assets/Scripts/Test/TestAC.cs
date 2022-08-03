@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Data;
 using Data.Story;
 using Save;
 using Story;
@@ -14,13 +13,11 @@ public class TestAC : MonoBehaviour
 {
     public Transform tagPoint;
 
-    public ItemDataSO item;
-    
     public PlotDataSO plot;
     
     void Start()
     {
-
+        StoryManager.Instance.StartStory(plot);
     }
 
     private void Update()

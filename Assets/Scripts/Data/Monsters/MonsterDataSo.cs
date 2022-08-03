@@ -6,9 +6,7 @@ namespace Data
     [CreateAssetMenu(fileName = "MonsterData", menuName = "Data/Monster")]
     public class MonsterDataSo: ScriptableObject
     {
-        [Header("Type")] 
         public MonsterType monsterType;
-        public bool patrol;
 
         [Header("Attribute")]
         public float walkSpeed;
@@ -19,6 +17,10 @@ namespace Data
         public float checkRadius;
         public float checkAngle;
         public LayerMask checkLayer;
+        
+        [Header("Patrol")]
+        public bool patrol;
+        public float _patrolStopTime;
         
         public enum MonsterType
         {
