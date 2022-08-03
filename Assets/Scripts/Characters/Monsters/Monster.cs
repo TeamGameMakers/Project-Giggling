@@ -24,6 +24,9 @@ namespace Characters.Monsters
         
         public List<Transform> PatrolPoints { get; private set; }
         public bool Patrol { get; private set; }
+        public bool Hit { get; private set; }
+        public bool HitByPlayer { get; private set; }
+        public int Damage { get; private set; }
 
         private void Awake()
         {
@@ -73,7 +76,22 @@ namespace Characters.Monsters
             
             return true;
         }
+        
+        /// <summary>
+        /// 怪进入光
+        /// </summary>
+        public void MonsterEnterLight(int damage, bool hitByPlayer = false)
+        {
+            Hit = true;
+            Damage = damage;
+            HitByPlayer = hitByPlayer;
+        }
 
+        /// <summary>
+        /// 怪离开光
+        /// </summary>
+        public void MonsterExitLight() => Hit = false;
+        
         public void MonsterDie()
         {
             _data.isDead = true;

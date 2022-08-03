@@ -13,6 +13,7 @@ namespace Data
         [Header("Attribute")]
         public float walkSpeed;
         public float chaseSpeed;
+        public float hitSpeed;
         public int healthPoint;
 
         [Header("Detection")] 

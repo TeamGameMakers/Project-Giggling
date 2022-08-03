@@ -28,13 +28,17 @@ namespace Characters.Monsters
 
         public override void PhysicsUpdate()
         {
-            _monster.target = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
-                _data.checkAngle, _data.checkLayer);
+            if (!_monster.Hit)
+                _monster.target = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
+                    _data.checkAngle, _data.checkLayer);
         }
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+            
+            if (_data.healthPoint > 0 && _monster.Hit)
+                StateMachine.ChangeState(_monster.ChaseState);
             
             if (_data.monsterType != MonsterDataSo.MonsterType.Boss && _data.healthPoint <= 0)
                 StateMachine.ChangeState(_monster.DieState);
