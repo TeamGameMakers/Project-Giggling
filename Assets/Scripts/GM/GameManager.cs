@@ -8,7 +8,11 @@ namespace GM
         // 游玩
         Playing,
         // 剧情
-        Story
+        Story,
+        // 解谜
+        Puzzle,
+        // 推针
+        PinLock
     }
     
     public static class GameManager
@@ -21,8 +25,25 @@ namespace GM
 
         public static void SwitchGameState(GameState state)
         {
+            Debug.Log("进入: " + state);
             m_state = state;
-            // TODO: 切换 map
+            // 切换 map
+            switch (m_state)
+            {
+                case GameState.Playing:
+                    InputHandler.SwitchToPlayer();
+                    break;
+                case GameState.Story:
+                    // TODO: 剧情 map
+                    InputHandler.SwitchToPlayer();
+                    break;
+                case GameState.Puzzle:
+                    InputHandler.SwitchToPlayer();
+                    break;
+                case GameState.PinLock:
+                    InputHandler.SwitchToLockPick();
+                    break;
+            }
 
             SwitchStateEvent?.Invoke(m_state);
         }
