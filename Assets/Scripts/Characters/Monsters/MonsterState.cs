@@ -28,7 +28,7 @@ namespace Characters.Monsters
 
         public override void PhysicsUpdate()
         {
-            _monster.detected = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
+            _monster.target = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
                 _data.checkAngle, _data.checkLayer);
         }
 

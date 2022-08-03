@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Characters.Monsters.MonsterStates
+namespace Characters.Monsters
 {
     public class MonsterChaseState: MonsterState
     {
@@ -9,7 +9,7 @@ namespace Characters.Monsters.MonsterStates
         public override void Enter()
         {
             base.Enter();
-            _core.AIMovement.CurrentDestination = _monster.detected.transform;
+            _core.AIMovement.CurrentDestination = _monster.target.transform;
             _core.AIMovement.SetSpeed(_data.chaseSpeed);
         }
 
@@ -17,7 +17,9 @@ namespace Characters.Monsters.MonsterStates
         {
             base.LogicUpdate();
 
-            if (!_monster.detected) StateMachine.ChangeState(_monster.IdleState);
+            Debug.Log(_monster.target);
+            if (!_monster.target) StateMachine.ChangeState(_monster.IdleState);
+            else _core.Detection.LookAtTarget(_monster.target.transform);
         }
     }
 }

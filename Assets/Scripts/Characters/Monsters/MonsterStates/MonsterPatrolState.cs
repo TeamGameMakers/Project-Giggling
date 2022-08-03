@@ -1,4 +1,4 @@
-namespace Characters.Monsters.MonsterStates
+namespace Characters.Monsters
 {
     public class MonsterPatrolState: MonsterState
     {

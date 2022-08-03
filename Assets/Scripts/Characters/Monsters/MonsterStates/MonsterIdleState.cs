@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Characters.Monsters.MonsterStates
+namespace Characters.Monsters
 {
     public class MonsterIdleState: MonsterState
     {
@@ -16,7 +14,7 @@ namespace Characters.Monsters.MonsterStates
         {
             base.LogicUpdate();
 
-            if (_monster.detected) StateMachine.ChangeState(_monster.ChaseState);
+            if (_monster.target) StateMachine.ChangeState(_monster.ChaseState);
         }
     }
 }

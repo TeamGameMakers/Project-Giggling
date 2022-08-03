@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using Base.FSM;
-using Characters.Monsters.MonsterStates;
 using Core;
 using Data;
+using Utilities;
 using UnityEngine;
 
 namespace Characters.Monsters
@@ -9,12 +10,15 @@ namespace Characters.Monsters
     public class Monster: Entity
     {
         [SerializeField] private MonsterDataSo _data;
+        [SerializeField] private bool patrol;
+        [SerializeField] private List<Transform> patrolPositions;
+        
         private Animator _anim;
         
         internal MonsterStateMachine StateMachine { get; private set; }
         internal GameCore Core { get; private set; }
         internal MonsterDataSo Data => _data;
-        internal Collider2D detected;
+        internal Collider2D target;
         
         public MonsterIdleState IdleState { get; private set; }
         public MonsterChaseState ChaseState { get; private set; }
@@ -48,5 +52,15 @@ namespace Characters.Monsters
         {
             _anim.SetBool(hash, value);
         }
+
+#if UNITY_EDITOR
+        
+        private void OnDrawGizmos()
+        {
+            var origin = Application.isPlaying ? Core.Detection.transform : transform;
+            Utils.DrawWireArc2D(origin, _data.checkRadius, _data.checkAngle, Color.green);
+        }
+        
+#endif
     }
 }

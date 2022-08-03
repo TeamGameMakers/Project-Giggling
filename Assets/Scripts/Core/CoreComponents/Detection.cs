@@ -25,7 +25,7 @@ namespace Core
         public Collider2D CircleDetection(Transform origin, float radius, LayerMask layer) 
             => Physics2D.OverlapCircle(origin.position, radius, layer);
 
-            /// <summary>
+        /// <summary>
         /// 扇形检测
         /// </summary>
         /// <param name="origin"></param>
@@ -41,7 +41,8 @@ namespace Core
             
             for (int i = 0; i < _num; i++)
             {
-                if (Utils.IsInArcSector(origin.position, _objects[i].transform.position, angle))
+                if (Utils.IsInArcSector(transform.forward, 
+                        _objects[i].transform.position - transform.position, angle))
                     result.Add(_objects[i]);
             }
 
@@ -52,10 +53,16 @@ namespace Core
         {
             var coll = CircleDetection(origin, radius, layer);
 
-            if (coll && !Utils.IsInArcSector(origin.position, coll.transform.position, angle)) 
+            if (!coll || !Utils.IsInArcSector(transform.right, 
+                    coll.transform.position - transform.position, angle)) 
                 coll = null;
             
             return coll;
+        }
+
+        public void LookAtTarget(Transform target)
+        {
+            transform.right = (target.position - transform.position).normalized;
         }
 
     }
