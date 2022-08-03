@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagPoint: {fileID: 467623481}
+  item: {fileID: 11400000, guid: 34d2d369beb2a8f4699b19081038c42b, type: 2}
   plot: {fileID: 11400000, guid: 9e786236e7523d941a8ad36409a55a6a, type: 2}
 --- !u!4 &1969601917
 Transform:
