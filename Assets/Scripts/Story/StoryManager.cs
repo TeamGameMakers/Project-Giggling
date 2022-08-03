@@ -1,6 +1,7 @@
 using Base;
 using Base.Mono;
 using Data.Story;
+using GM;
 using UI;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -25,7 +26,8 @@ namespace Story
 
         public void StartStory(PlotDataSO plot)
         {
-            // TODO: 改变游戏状态
+            // 改变游戏状态
+            GameManager.SwitchGameState(GameState.Story);
             // 创建必要组件
             PlotProcessor pp = new PlotProcessor(panelName);
             // 显示 UI 面板
@@ -72,7 +74,8 @@ namespace Story
         {
             // 结束输入监听
             MonoManager.Instance.RemoveUpdateListener(InputDetection);
-            // TODO: 改变游戏状态
+            // 改变游戏状态
+            GameManager.SwitchGameState(GameState.Playing);
             // 关闭 UI 面板
             UIManager.Instance.HidePanel(panelName, true);
         }
