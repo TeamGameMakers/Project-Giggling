@@ -10,9 +10,9 @@ namespace Characters.Monsters
     public class Monster: Entity
     {
         [SerializeField] private MonsterDataSo _data;
-        [SerializeField] private bool patrol;
-        [SerializeField] private List<Transform> patrolPositions;
-        
+        [SerializeField] private bool _patrol;
+        [SerializeField] private List<Transform> patrolPoints;
+
         private Animator _anim;
         
         internal MonsterStateMachine StateMachine { get; private set; }
@@ -22,6 +22,10 @@ namespace Characters.Monsters
         
         public MonsterIdleState IdleState { get; private set; }
         public MonsterChaseState ChaseState { get; private set; }
+        public MonsterPatrolState PatrolState { get; private set; }
+        
+        public List<Transform> PatrolPoints => patrolPoints;
+        public bool Patrol => _patrol;
 
         private void Awake()
         {
@@ -31,6 +35,7 @@ namespace Characters.Monsters
             StateMachine = new MonsterStateMachine();
             IdleState = new MonsterIdleState(this, "idle");
             ChaseState = new MonsterChaseState(this, "chase");
+            PatrolState = new MonsterPatrolState(this, "patrol");
         }
 
         private void Start()

@@ -11,7 +11,7 @@ namespace Characters.Monsters
         protected readonly Monster _monster;
         protected readonly GameCore _core;
         protected readonly MonsterDataSo _data;
-        protected readonly int _animBoolHash;
+        private readonly int _animBoolHash;
 
         protected MonsterState(Monster monster, string name) : base(monster.StateMachine)
         {
