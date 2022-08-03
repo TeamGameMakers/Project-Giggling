@@ -90,6 +90,11 @@ namespace Save
         {
             return Data.GetItem(key);
         }
+
+        public static bool GetBool(string key)
+        {
+            return Data.GetBool(key);
+        }
         
         /// <summary>
         /// 取出指定的对象。
@@ -139,6 +144,12 @@ namespace Save
         /// <param name="obj">除非是 ScriptableObject, 否则要添加 Serializable 特性</param>
         public static void Register(string key, object obj)
         {
+            if (string.IsNullOrEmpty(key))
+            {
+                Debug.LogWarning("存档不可注册空键");
+                return;
+            }
+            
             Type type = obj.GetType();
             if (type.IsValueType)
             {
@@ -150,14 +161,24 @@ namespace Save
             }
         }
 
+        public static void RegisterBool(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                Debug.LogWarning("存档不可注册空键");
+                return;
+            }
+            
+            Data.AddBool(key);
+        }
+
         // 存储
         public static void Save()
         {
             // --构建 SaveData--
-            m_data = new SaveData();
-            m_data.name = saveName;
+            Data.name = saveName;
             // 场景名
-            m_data.Add("SceneName", SceneLoader.CurrentScene);
+            Data.Add("SceneName", SceneLoader.CurrentScene);
             
             BeforeSaveActions?.Invoke();
 

@@ -8,13 +8,13 @@ namespace Puzzle
     /// 提供谜题数据，及谜题本身的运行逻辑。
     /// 提供操作谜题的方法，但不处理用户操作。
     /// </summary>
-    public abstract class PuzzleModel : MonoBehaviour
+    public abstract class PuzzleModel : PuzzleBase
     {
-        private PuzzleDataSO m_dataPrefab;
+        public PuzzleDataSO dataPrefab;
 
         protected T GetData<T>() where T : PuzzleDataSO
         {
-            return ScriptableObject.Instantiate(m_dataPrefab) as T;
+            return ScriptableObject.Instantiate(dataPrefab) as T;
         }
     }
 }
