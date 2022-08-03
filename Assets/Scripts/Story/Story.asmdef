@@ -1,4 +1,20 @@
 {
-	"name": "Story",
-	"references":[ "GUID:b7df1af399791d144862020fea8877bd", "GUID:2cb500a4dee1f854f97113afa6f24136" ]
+    "name": "Story",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b7df1af399791d144862020fea8877bd",
+        "GUID:2cb500a4dee1f854f97113afa6f24136",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:965d75d2e0ef1254f9d0f5599df70cee",
+        "GUID:4ef41cce978bd02438bc292ccbfe5b9e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
