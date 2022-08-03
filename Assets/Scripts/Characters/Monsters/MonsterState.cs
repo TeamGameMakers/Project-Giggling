@@ -32,6 +32,14 @@ namespace Characters.Monsters
                 _data.checkAngle, _data.checkLayer);
         }
 
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+            
+            if (_data.monsterType != MonsterDataSo.MonsterType.Boss && _data.healthPoint <= 0)
+                StateMachine.ChangeState(_monster.DieState);
+        }
+
         public override void Exit()
         {
             _monster.SetAnimBool(_animBoolHash, false);

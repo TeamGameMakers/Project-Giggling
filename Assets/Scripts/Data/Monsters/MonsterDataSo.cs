@@ -7,6 +7,8 @@ namespace Data
     public class MonsterDataSo: ScriptableObject
     {
         public MonsterType monsterType;
+        public bool isDead;
+        public float fadeTime;
 
         [Header("Attribute")]
         public float walkSpeed;
@@ -19,7 +21,6 @@ namespace Data
         public LayerMask checkLayer;
         
         [Header("Patrol")]
-        public bool patrol;
         public float _patrolStopTime;
         
         public enum MonsterType
