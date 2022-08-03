@@ -10,11 +10,11 @@ namespace Puzzle
     /// </summary>
     public abstract class PuzzleModel : PuzzleBase
     {
-        public PuzzleDataSO dataPrefab;
-
-        protected T GetData<T>() where T : PuzzleDataSO
-        {
-            return ScriptableObject.Instantiate(dataPrefab) as T;
-        }
+        // public PuzzleDataSO dataPrefab;
+        //
+        // protected T GetData<T>() where T : PuzzleDataSO
+        // {
+        //     return ScriptableObject.Instantiate(dataPrefab) as T;
+        // }
     }
 }
