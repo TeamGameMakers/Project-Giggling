@@ -2,17 +2,17 @@ namespace Characters.Monsters
 {
     public class MonsterPatrolState: MonsterState
     {
-        private readonly int _maxPointNum;
+        private int _maxPointNum;
         private int _pointIndex;
         public MonsterPatrolState(Monster monster, string name) : base(monster, name)
         {
             _pointIndex = 0;
-            _maxPointNum = _monster.PatrolPoints.Count;
         }
 
         public override void Enter()
         {
             base.Enter();
+            _maxPointNum = _monster.PatrolPoints.Count;
             _core.AIMovement.CurrentDestination = _monster.PatrolPoints[_pointIndex];
         }
 

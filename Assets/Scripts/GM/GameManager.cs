@@ -25,6 +25,8 @@ namespace GM
 
         public static event Action<GameState> SwitchStateEvent;
 
+        public static Transform Player { get; private set; }
+
         public static void BackGameState()
         {
             SwitchGameState(m_lastState);
@@ -55,5 +57,7 @@ namespace GM
 
             SwitchStateEvent?.Invoke(m_state);
         }
+
+        public static void SetPlayerTransform(Transform player) => Player = player;
     }
 }

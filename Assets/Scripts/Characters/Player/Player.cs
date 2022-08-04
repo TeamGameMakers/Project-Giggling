@@ -35,6 +35,7 @@ namespace Characters.Player
         private void Start()
         {
             StateMachine.Initialize(IdleState);
+            GM.GameManager.SetPlayerTransform(transform);
         }
 
         private void FixedUpdate()
