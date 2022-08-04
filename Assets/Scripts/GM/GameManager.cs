@@ -18,14 +18,21 @@ namespace GM
     public static class GameManager
     {
         private static GameState m_state = GameState.Playing;
-
+        private static GameState m_lastState = GameState.Playing;
+        
         public static GameState State => m_state;
 
         public static event Action<GameState> SwitchStateEvent;
 
+        public static void BackGameState()
+        {
+            SwitchGameState(m_lastState);
+        }
+        
         public static void SwitchGameState(GameState state)
         {
             Debug.Log("进入: " + state);
+            m_lastState = m_state;
             m_state = state;
             // 切换 map
             switch (m_state)

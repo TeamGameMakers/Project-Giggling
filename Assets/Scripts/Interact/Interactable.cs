@@ -9,7 +9,7 @@ namespace Interact
     /// </summary>
     public abstract class Interactable: MonoBehaviour
     {
-        private SpriteRenderer _spriteRenderer;
+        protected SpriteRenderer _spriteRenderer;
         
         [SerializeField] protected InteractableDataSO _data;
         [SerializeField] private Transform _checkPoint;
