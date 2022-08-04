@@ -48,5 +48,21 @@ namespace Characters.Player
             Core.LogicUpdate();
             StateMachine.CurrentState.LogicUpdate();
         }
+        
+        /// <summary>
+        /// 进入光
+        /// </summary>
+        public void PlayerEnterLight(int damage)
+        {
+            Debug.Log("玩家进入光");
+        }
+
+        /// <summary>
+        /// 离开光
+        /// </summary>
+        public void PlayerExitLight()
+        {
+            Debug.Log("玩家离开光");
+        }
     }
 }
