@@ -37,7 +37,7 @@ namespace UI
         {
             Instance.HidePanel("HintPanel");
         }
-        
+
         #endregion
 
         /// <summary>

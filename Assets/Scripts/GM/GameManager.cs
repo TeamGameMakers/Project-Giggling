@@ -12,7 +12,8 @@ namespace GM
         // 解谜
         Puzzle,
         // 推针
-        PinLock
+        PinLock,
+        CG
     }
     
     public static class GameManager

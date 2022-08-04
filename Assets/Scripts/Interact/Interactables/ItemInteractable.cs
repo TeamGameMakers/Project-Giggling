@@ -8,6 +8,7 @@ namespace Interact
     public class ItemInteractable : Interactable
     {
         public ItemDataSO item;
+
         public string SaveKey => "pick_item_" + item.name;
         
         protected override void Start()

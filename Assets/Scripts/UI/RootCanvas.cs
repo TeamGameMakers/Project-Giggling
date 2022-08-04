@@ -70,5 +70,21 @@ namespace UI
             }
             return null;
         }
+
+        public void ShowAll()
+        {
+            bottom.gameObject.SetActive(true);
+            middle.gameObject.SetActive(true);
+            top.gameObject.SetActive(true);
+            system.gameObject.SetActive(true);
+        }
+
+        public void HideAll()
+        {
+            bottom.gameObject.SetActive(false);
+            middle.gameObject.SetActive(false);
+            top.gameObject.SetActive(false);
+            system.gameObject.SetActive(false);
+        }
     }
 }
