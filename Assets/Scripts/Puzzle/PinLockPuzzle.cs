@@ -24,12 +24,6 @@ namespace Puzzle
 
         protected virtual void Start()
         {
-            // TODO: 应该在触发器处直接禁止触发
-            if (SaveManager.GetBool(ctrl.saveKey))
-            {
-                Destroy(gameObject);
-            }
-
             fBottom = bottom.position.y;
             fTop = top.position.y;
             model.maxHeight = fTop - fBottom;
