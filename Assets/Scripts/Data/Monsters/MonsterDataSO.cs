@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Data
 {
     [CreateAssetMenu(fileName = "MonsterData", menuName = "Data/Monster")]
-    public class MonsterDataSo: ScriptableObject
+    public class MonsterDataSO: ScriptableObject
     {
         public MonsterType monsterType;
         public bool isDead;
