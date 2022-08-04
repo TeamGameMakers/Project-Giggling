@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96eeaac8e53faef498aa6721addb4765, type: 3}
+  m_Name: streetElement_05
+  m_EditorClassIdentifier: 
+  name: "\u6B8B\u7834\u7684\u62A5\u7EB8-3"
+  info: "\u6709\u4EBA\u4F20\u51FA\uFF0C\u5728\u5982\u4ECA\u88AB\u67E5\u5904\u505C\u529E\u540E\uFF0C\u84DD\u5929\u4E2D\u5B66\u6821\u56ED\u5185\u65F6\u5E38\u4F1A\u51FA\u73B0\u4E00\u4E9B\u5947\u602A\u7684\u9ED1\u5F71\uFF0C\u751A\u81F3\u8FD8\u65F6\u4E0D\u65F6\u4F34\u6709\u8BE1\u5F02\u7684\u5973\u6027\u7B11\u58F0\u3002\u800C\u8FD9\u7B11\u58F0\u6B63\u6765\u81EA\u4E8E\u53D7\u5BB3\u8005\u4E4B\u4E00\u7684\u4E00\u540D\u5973\u540C\u5B66\u2026\u2026\u53EF\u8FD9\u540D\u5973\u540C\u5B66\u5982\u4ECA\u6B63\u5904\u4E8E\u660F\u8FF7\u72B6\u6001\uFF0C\u5728\u5E02\u4EBA\u6C11\u533B\u9662\u8FDB\u884C\u6CBB\u7597\u3002"
+  icon: {fileID: 21300000, guid: fbddc7210953fa6428143d2f757db7d7, type: 3}
+  canPick: 0
