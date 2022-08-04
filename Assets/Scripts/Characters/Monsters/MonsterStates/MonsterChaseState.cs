@@ -16,8 +16,7 @@ namespace Characters.Monsters
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-
-            Debug.Log(_monster.target);
+            
             if (!_monster.target) StateMachine.ChangeState(_monster.IdleState);
             else _core.Detection.LookAtTarget(_monster.target.transform);
         }

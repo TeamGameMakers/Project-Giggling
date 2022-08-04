@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: TestMonsterData
   m_EditorClassIdentifier: 
   monsterType: 0
-  patrol: 0
   walkSpeed: 0
   chaseSpeed: 3
   healthPoint: 0
@@ -22,3 +21,5 @@ MonoBehaviour:
   checkLayer:
     serializedVersion: 2
     m_Bits: 128
+  patrol: 1
+  _patrolStopTime: 2
