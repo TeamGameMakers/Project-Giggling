@@ -10,7 +10,7 @@ namespace Characters.Monsters
     {
         protected readonly Monster _monster;
         protected readonly GameCore _core;
-        protected readonly MonsterDataSo _data;
+        protected readonly MonsterDataSO _data;
         private readonly int _animBoolHash;
 
         protected MonsterState(Monster monster, string name) : base(monster.StateMachine)
@@ -40,7 +40,7 @@ namespace Characters.Monsters
             if (_data.healthPoint > 0 && _monster.Hit)
                 StateMachine.ChangeState(_monster.ChaseState);
             
-            if (_data.monsterType != MonsterDataSo.MonsterType.Boss && _data.healthPoint <= 0)
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss && _data.healthPoint <= 0)
                 StateMachine.ChangeState(_monster.DieState);
         }
 
