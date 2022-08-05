@@ -24,7 +24,7 @@ namespace UI
         protected override void OnClick(string btnName)
         {
             base.OnClick(btnName);
-            // TODO: 开始界面完善
+            
             switch (btnName)
             {
                 case "ContinueBtn":

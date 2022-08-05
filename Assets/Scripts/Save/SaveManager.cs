@@ -124,6 +124,11 @@ namespace Save
 
             return def;
         }
+
+        public static int GetGameClear()
+        {
+            return PlayerPrefs.GetInt(m_gameClear, 0);
+        }
         
         #endregion
 
@@ -134,6 +139,8 @@ namespace Save
         private static SaveData m_data;
 
         private static SaveData Data => m_data ??= new SaveData();
+
+        private static string m_gameClear = "giggling_game_clear";
 
         // 注册数据
         /// <summary>
@@ -184,6 +191,13 @@ namespace Save
 
             // --持久化--
             Write(m_data);
+        }
+
+        // 储存游戏通关
+        public static void GameClearRecord()
+        {
+            PlayerPrefs.SetInt(m_gameClear, 1);
+            PlayerPrefs.Save();
         }
         
         #endregion
