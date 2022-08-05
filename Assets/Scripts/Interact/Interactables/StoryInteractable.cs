@@ -14,13 +14,11 @@ namespace Interact
         public bool triggerOnce = true;
 
         protected Collider2D coll;
-        protected Interactable itrt;
 
         protected override void Awake()
         {
             base.Awake();
             coll = GetComponent<Collider2D>();
-            itrt = GetComponent<Interactable>();
         }
 
         protected override void Start()
@@ -45,7 +43,7 @@ namespace Interact
         protected virtual void DisableSelf()
         {
             coll.enabled = false;
-            itrt.enabled = false;
+            enabled = false;
         }
     }
 }

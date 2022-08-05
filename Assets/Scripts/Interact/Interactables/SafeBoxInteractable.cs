@@ -16,6 +16,7 @@ namespace Interact
         public Sprite finishSprite;
 
         protected SpriteRenderer sr;
+        protected Collider2D coll;
         
         public string saveKey;
 
@@ -26,6 +27,7 @@ namespace Interact
         {
             base.Awake();
             sr = GetComponent<SpriteRenderer>();
+            coll = GetComponent<Collider2D>();
         }
 
         protected override void Start()
@@ -45,7 +47,6 @@ namespace Interact
 
         public override void Interact(Interactor interactor)
         {
-            //GameManager.SwitchGameState(GameState.PinLock);
             pinLock = Instantiate(prefab);
             // 移动到屏幕中心
             Vector3 mid = camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
@@ -66,10 +67,9 @@ namespace Interact
             SaveManager.RegisterBool(saveKey);
             
             Destroy(pinLock);
-            //GameManager.BackGameState();
-            
-            enabled = false;
-            sr.sprite = finishSprite;
+
+            DisableSelf();
+            //sr.sprite = finishSprite;
 
             // TODO: 开锁成功出现其他物品
         }
@@ -77,11 +77,17 @@ namespace Interact
         protected void Fail()
         {
             Debug.Log("进入开锁失败事件");
-            //GameManager.BackGameState();
             
-            enabled = false;
+            Destroy(pinLock);
             
-            // TODO: 开锁失败
+            DisableSelf();
+            
+            // TODO: 开锁失败，刷新 Boss
+        }
+
+        protected void DisableSelf()
+        {
+            gameObject.SetActive(false);
         }
     }
 }
