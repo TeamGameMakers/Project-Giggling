@@ -6,8 +6,6 @@ namespace UI
 {
     public class TipPanel : BasePanel
     {
-        public GameState switchState = GameState.Playing;
-        
         protected TextMeshProUGUI tmp;
 
         public TextMeshProUGUI Tmp {
@@ -25,18 +23,10 @@ namespace UI
             Tmp.SetText(content);
         }
 
-        public override void ShowMe()
-        {
-            base.ShowMe();
-            GameManager.BackGameState();
-            gameObject.SetActive(true);
-        }
-
         public override void HideMe()
         {
             base.HideMe();
             gameObject.SetActive(false);
-            GameManager.BackGameState();
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GM;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -17,6 +18,8 @@ namespace UI
         // 通过里式转换原则 来存储所有的控件
         protected readonly Dictionary<string, List<UIBehaviour>> controlContainer = new Dictionary<string, List<UIBehaviour>>();
 
+        public bool switchState = true;
+        
         protected virtual void Awake()
         {
             FindChildrenControl<Button>();
@@ -34,7 +37,8 @@ namespace UI
         /// </summary>
         protected virtual void Start()
         {
-
+            if (switchState)
+                GameManager.SwitchGameState(GameState.UI);
         }
 
         /// <summary>
@@ -51,7 +55,7 @@ namespace UI
         /// </summary>
         public virtual void ShowMe()
         {
-
+            gameObject.SetActive(true);
         }
 
         /// <summary>
@@ -59,7 +63,8 @@ namespace UI
         /// </summary>
         public virtual void HideMe()
         {
-
+            if (switchState)
+                GameManager.BackGameState();
         }
 
         protected virtual void OnClick(string btnName)

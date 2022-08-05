@@ -13,12 +13,6 @@ namespace UI
         [SerializeField]
         protected List<GameObject> panelObjs = new List<GameObject>();
 
-        protected override void Start()
-        {
-            base.Start();
-            GameManager.SwitchGameState(GameState.UI);
-        }
-
         protected override void OnClick(string btnName)
         {
             base.OnClick(btnName);
@@ -44,12 +38,6 @@ namespace UI
             panelObjs[index].gameObject.SetActive(false);
             index = i;
             panelObjs[index].gameObject.SetActive(true);
-        }
-
-        public override void HideMe()
-        {
-            base.HideMe();
-            GameManager.SwitchGameState(GameState.Playing);
         }
     }
 }
