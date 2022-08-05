@@ -13,17 +13,20 @@ namespace Characters.Monsters
         protected readonly MonsterDataSO _data;
         private readonly int _animBoolHash;
 
-        protected MonsterState(Monster monster, string name) : base(monster.StateMachine)
+        protected MonsterState(Monster monster, string name = null) : base(monster.StateMachine)
         {
             _monster = monster;
             _core = monster.Core;
             _data = monster.Data;
-            _animBoolHash = Animator.StringToHash(name);
+            
+            if (name != null)
+                _animBoolHash = Animator.StringToHash(name);
         }
 
         public override void Enter()
         {
-            _monster.SetAnimBool(_animBoolHash, true);
+            if (_animBoolHash != 0)
+                _monster.SetAnimBool(_animBoolHash, true);
         }
 
         public override void PhysicsUpdate()
@@ -46,7 +49,8 @@ namespace Characters.Monsters
 
         public override void Exit()
         {
-            _monster.SetAnimBool(_animBoolHash, false);
+            if (_animBoolHash != 0)
+                _monster.SetAnimBool(_animBoolHash, false);
         }
     }
 }

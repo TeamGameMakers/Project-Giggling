@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Utilities;
 
 namespace Characters.Monsters
 {
@@ -7,7 +8,7 @@ namespace Characters.Monsters
     {
         private bool _canPatrol;
         
-        public MonsterIdleState(Monster monster, string name) : base(monster, name) { }
+        public MonsterIdleState(Monster monster, string name = null) : base(monster, name) { }
 
         public override void Enter()
         {
@@ -27,8 +28,17 @@ namespace Characters.Monsters
 
             if (_monster.target) 
                 StateMachine.ChangeState(_monster.ChaseState);
+            
             else if (_canPatrol)
                 StateMachine.ChangeState(_monster.PatrolState);
+           
+            else if (!Utils.IsArriveAtDestination(_monster.transform, _monster.SpawnTransform, 0.01f))
+            {
+                _core.AIMovement.CurrentDestination = _monster.SpawnTransform;
+                _core.Detection.LookAtTarget(_monster.SpawnTransform);
+            }
+            else
+                _core.Detection.LookAtTarget(_monster.SpawnTransform.right);
         }
 
         public override void Exit()

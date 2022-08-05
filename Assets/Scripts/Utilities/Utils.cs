@@ -32,7 +32,7 @@ namespace Utilities
                 Gizmos.DrawLine(origin.position + offset, currentPos);
 
         }
-        
+
         /// <summary>
         /// 绘制2D圆弧Gizmos
         /// </summary>
@@ -63,8 +63,9 @@ namespace Utilities
         /// <summary>
         /// 在场景创建文字
         /// </summary>
-        public static TextMesh CreateWorldText(Transform parent, string text, Vector3 position, TextAnchor textAnchor, TextAlignment textAlignment,
-            int fontSize, float characterSize, Color color, int sortingOrder = 5000) 
+        public static TextMesh CreateWorldText(Transform parent, string text, Vector3 position, TextAnchor textAnchor,
+            TextAlignment textAlignment,
+            int fontSize, float characterSize, Color color, int sortingOrder = 5000)
         {
             GameObject gameObject = new GameObject("World_Text", typeof(TextMesh));
             Transform transform = gameObject.transform;
@@ -81,21 +82,22 @@ namespace Utilities
             return textMesh;
         }
 
-        public static Vector3 GetMouseWorldPositionWithZ(Vector2 screenPosition, Camera worldCamera) 
+        public static Vector3 GetMouseWorldPositionWithZ(Vector2 screenPosition, Camera worldCamera)
             => worldCamera.ScreenToWorldPoint(screenPosition);
 
         public static Vector3 GetMouseWorldPositionWithZ(Camera worldCamera = null)
         {
             Vector2 mousePosition;
 
-            #if ENABLE_INPUT_SYSTEM
+#if ENABLE_INPUT_SYSTEM
             mousePosition = Mouse.current.position.ReadValue();
-            #else
+#else
             mousePosition = Input.mousePosition;
-            #endif
+#endif
 
-            return worldCamera ? GetMouseWorldPositionWithZ(mousePosition, worldCamera)
-                    : GetMouseWorldPositionWithZ(mousePosition, Camera.main);
+            return worldCamera
+                ? GetMouseWorldPositionWithZ(mousePosition, worldCamera)
+                : GetMouseWorldPositionWithZ(mousePosition, Camera.main);
         }
 
 
@@ -105,7 +107,7 @@ namespace Utilities
             vec.z = 0f;
             return vec;
         }
-        
+
         /// <summary>
         /// 判断目标是否在扇形区域内
         /// </summary>
@@ -115,5 +117,18 @@ namespace Utilities
         /// <returns></returns>
         public static bool IsInArcSector(Vector3 faceDirection, Vector3 targetDirection, float angle)
             => Vector3.Dot(faceDirection, targetDirection.normalized) > Mathf.Cos(angle * Mathf.Deg2Rad);
+
+        /// <summary>
+        /// 判断是否到达目标位置
+        /// </summary>
+        /// <param name="current"></param>
+        /// <param name="destination"></param>
+        /// <param name="error">误差</param>
+        /// <returns></returns>
+        public static bool IsArriveAtDestination(Vector3 current, Vector3 destination, float error)
+            => (current - destination).sqrMagnitude < error;
+        
+        public static bool IsArriveAtDestination(Transform current, Transform destination, float error)
+            => (current.position - destination.position).sqrMagnitude < error;
     }
 }

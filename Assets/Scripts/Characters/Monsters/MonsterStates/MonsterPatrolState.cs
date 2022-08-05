@@ -4,7 +4,7 @@ namespace Characters.Monsters
     {
         private int _maxPointNum;
         private int _pointIndex;
-        public MonsterPatrolState(Monster monster, string name) : base(monster, name)
+        public MonsterPatrolState(Monster monster, string name = null) : base(monster, name)
         {
             _pointIndex = 0;
         }

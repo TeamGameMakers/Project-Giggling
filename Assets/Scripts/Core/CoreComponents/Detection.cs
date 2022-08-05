@@ -60,10 +60,11 @@ namespace Core
             return coll;
         }
 
-        public void LookAtTarget(Transform target)
-        {
-            transform.right = (target.position - transform.position).normalized;
-        }
+        public void LookAtTarget(Transform target) 
+            => transform.right = (target.position - transform.position).normalized;
+
+        public void LookAtTarget(Vector3 direction) => transform.right = direction;
+        
 
     }
 }
