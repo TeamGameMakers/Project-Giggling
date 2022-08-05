@@ -90,7 +90,7 @@ namespace UI
                 List<string> strs = new List<string>();
                 foreach (var item in section.choices)
                 {
-                    strs.Add(item.name);
+                    strs.Add(item.plotName);
                 }
                 cListGo.SetActive(true);
                 cList.ShowChoices(strs);

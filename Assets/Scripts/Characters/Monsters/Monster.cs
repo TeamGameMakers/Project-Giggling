@@ -9,13 +9,14 @@ namespace Characters.Monsters
 {
     public class Monster: Entity
     {
-        [SerializeField] private MonsterDataSo _data;
+        [SerializeField] private MonsterDataSO _data;
         private Animator _anim;
         
         internal MonsterStateMachine StateMachine { get; private set; }
         internal GameCore Core { get; private set; }
-        internal MonsterDataSo Data => _data;
+        internal MonsterDataSO Data => _data;
         internal Collider2D target;
+        internal Transform SpawnTransform { get; private set; }
         
         public MonsterIdleState IdleState { get; private set; }
         public MonsterChaseState ChaseState { get; private set; }
@@ -34,20 +35,26 @@ namespace Characters.Monsters
             _anim = GetComponent<Animator>();
             
             StateMachine = new MonsterStateMachine();
-            IdleState = new MonsterIdleState(this, "idle");
-            ChaseState = new MonsterChaseState(this, "chase");
-            PatrolState = new MonsterPatrolState(this, "patrol");
-            DieState = new MonsterDieState(this, "die");
+            IdleState = new MonsterIdleState(this);
+            ChaseState = new MonsterChaseState(this);
+            PatrolState = new MonsterPatrolState(this);
+            DieState = new MonsterDieState(this);
         }
 
         private void Start()
         {
             Patrol = CheckPatrol();
-            
+
+            if (!Patrol)
+            {
+                SpawnTransform = Instantiate(new GameObject("Spawn Point"), transform.parent).transform;
+                SpawnTransform.right = Core.Detection.transform.right;
+            }
+
             if (_data.isDead)
                 MonsterDie();
             
-            StateMachine.Initialize(DieState);
+            StateMachine.Initialize(IdleState);
         }
 
         private void FixedUpdate()
@@ -69,6 +76,7 @@ namespace Characters.Monsters
         {
             if (transform.parent.childCount < 2) return false;
             var points = transform.parent.GetChild(1);
+            if (points.childCount < 2) return false;
             
             PatrolPoints = new List<Transform>();
             for (int i = 0; i < points.childCount; i++)

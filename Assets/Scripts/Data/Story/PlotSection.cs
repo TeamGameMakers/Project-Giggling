@@ -11,6 +11,7 @@ namespace Data.Story
     public class PlotSection
     {
         // 剧情文本
+        [TextArea]
         public string text;
         // 剧情立绘
         public Sprite leftSprite;
