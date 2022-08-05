@@ -8,6 +8,8 @@ namespace Interact
 {
     public class SafeBoxInteractable : Interactable
     {
+        public Camera camera;
+        
         public GameObject prefab;
         protected GameObject pinLock;
 
@@ -17,8 +19,8 @@ namespace Interact
         
         public string saveKey;
 
-        protected string successEvent = "PinLockUnlockEvent";
-        protected string failEvent = "PinLockUnlockEvent";
+        protected string successEvent = "PinLockSuccessEvent";
+        protected string failEvent = "PinLockFailEvent";
 
         protected override void Awake()
         {
@@ -44,8 +46,12 @@ namespace Interact
         public override void Interact(Interactor interactor)
         {
             GameManager.SwitchGameState(GameState.PinLock);
+            GameManager.lastState = GameState.Playing;
             pinLock = Instantiate(prefab);
-            // TODO: 移动到屏幕中心
+            // 移动到屏幕中心
+            Vector3 mid = camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+            mid.z = 0;
+            pinLock.transform.position = mid;
         }
 
         protected virtual void OnDisable()
@@ -62,8 +68,10 @@ namespace Interact
             
             Destroy(pinLock);
             GameManager.BackGameState();
-            sr.sprite = finishSprite;
             
+            enabled = false;
+            sr.sprite = finishSprite;
+
             // TODO: 开锁成功出现其他物品
         }
 
@@ -71,6 +79,9 @@ namespace Interact
         {
             Debug.Log("进入开锁失败事件");
             GameManager.BackGameState();
+            
+            enabled = false;
+            
             // TODO: 开锁失败
         }
     }

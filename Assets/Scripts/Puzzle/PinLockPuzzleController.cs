@@ -12,13 +12,12 @@ namespace Puzzle
     {
         private PinLockPuzzleModel m_model;
         
-        protected string successEvent = "PinLockUnlockEvent";
-        protected string failEvent = "PinLockUnlockEvent";
+        protected string successEvent = "PinLockSuccessEvent";
+        protected string failEvent = "PinLockFailEvent";
         
         private void Start()
         {
             m_model = GetModel<PinLockPuzzleModel>();
-            GameManager.SwitchGameState(GameState.PinLock);
         }
 
         private void Update()
@@ -26,7 +25,6 @@ namespace Puzzle
             // 点击任意区域退出
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
-                // TODO: 恢复模式不成功
                 GameManager.BackGameState();
                 Destroy(gameObject);
                 return;

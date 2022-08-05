@@ -19,7 +19,6 @@ namespace GM
     public static class GameManager
     {
         private static GameState m_state = GameState.Playing;
-        private static GameState m_lastState = GameState.Playing;
         
         public static GameState State => m_state;
 
@@ -27,15 +26,18 @@ namespace GM
 
         public static Transform Player { get; private set; }
 
+        // 最好手动设置
+        public static GameState lastState = GameState.Playing;
+        // 该方法自动记录，容易出错
         public static void BackGameState()
         {
-            SwitchGameState(m_lastState);
+            SwitchGameState(lastState);
         }
         
         public static void SwitchGameState(GameState state)
         {
             Debug.Log("进入: " + state);
-            m_lastState = m_state;
+            //lastState = m_state;
             m_state = state;
             // 切换 map
             switch (m_state)
