@@ -67,3 +67,7 @@ crashlytics-build.properties
 
 # Rider
 .idea/
+
+# Font
+*SDF.asset
+*SDF.asset.meta
