@@ -46,7 +46,6 @@ namespace Interact
         public override void Interact(Interactor interactor)
         {
             GameManager.SwitchGameState(GameState.PinLock);
-            GameManager.lastState = GameState.Playing;
             pinLock = Instantiate(prefab);
             // 移动到屏幕中心
             Vector3 mid = camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));

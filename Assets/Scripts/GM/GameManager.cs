@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GM
@@ -26,20 +27,30 @@ namespace GM
         public static event Action<GameState> SwitchStateEvent;
 
         public static Transform Player { get; private set; }
+        
+        private static Stack<GameState> stateStake = new Stack<GameState>();
 
-        // 最好手动设置
-        public static GameState lastState = GameState.Playing;
-        // 该方法自动记录，容易出错
-        // 该方法应该由一个栈进行维护
-        public static void BackGameState()
+        public static void ClearStateRecord()
         {
-            SwitchGameState(lastState);
+            stateStake.Clear();
+        }
+        
+        /// <summary>
+        /// 返回上一个状态。
+        /// </summary>
+        /// <param name="def">没有记录时设置的默认状态</param>
+        public static void BackGameState(GameState def = GameState.Playing)
+        {
+            if (stateStake.Count == 0)
+                SwitchGameState(def);
+            else
+                SwitchGameState(stateStake.Pop());
         }
         
         public static void SwitchGameState(GameState state)
         {
             Debug.Log("进入: " + state);
-            lastState = m_state;
+            stateStake.Push(m_state);
             m_state = state;
             // 切换 map
             switch (m_state)
