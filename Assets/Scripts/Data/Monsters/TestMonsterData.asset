@@ -17,10 +17,10 @@ MonoBehaviour:
   fadeTime: 0.5
   walkSpeed: 0
   chaseSpeed: 3
+  hitSpeed: 0
   healthPoint: 0
   checkRadius: 4
   checkAngle: 35
   checkLayer:
-    serializedVersion: 2
     m_Bits: 128
   _patrolStopTime: 2

@@ -9,12 +9,12 @@ namespace Characters.Monsters
 {
     public class Monster: Entity
     {
-        [SerializeField] private MonsterDataSo _data;
+        [SerializeField] private MonsterDataSO _data;
         private Animator _anim;
         
         internal MonsterStateMachine StateMachine { get; private set; }
         internal GameCore Core { get; private set; }
-        internal MonsterDataSo Data => _data;
+        internal MonsterDataSO Data => _data;
         internal Collider2D target;
         
         public MonsterIdleState IdleState { get; private set; }
@@ -47,7 +47,7 @@ namespace Characters.Monsters
             if (_data.isDead)
                 MonsterDie();
             
-            StateMachine.Initialize(DieState);
+            StateMachine.Initialize(IdleState);
         }
 
         private void FixedUpdate()

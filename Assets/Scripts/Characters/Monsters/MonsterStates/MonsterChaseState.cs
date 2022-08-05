@@ -23,7 +23,7 @@ namespace Characters.Monsters
             
             _core.Detection.LookAtTarget(_monster.target.transform);
             
-            if (_data.monsterType != MonsterDataSo.MonsterType.Boss)
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss)
                 _core.AIMovement.SetSpeed(_monster.Hit? _data.hitSpeed : _data.chaseSpeed);
 
             if (!_monster.target) StateMachine.ChangeState(_monster.IdleState);
