@@ -38,6 +38,15 @@ namespace UI
         }
 
         /// <summary>
+        /// 判断面板是否已经显示。
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool ShowNow()
+        {
+            return gameObject.activeSelf;
+        }
+
+        /// <summary>
         /// 显示自己。
         /// </summary>
         public virtual void ShowMe()

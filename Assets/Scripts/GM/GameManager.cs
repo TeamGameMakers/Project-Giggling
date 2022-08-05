@@ -13,7 +13,8 @@ namespace GM
         Puzzle,
         // 推针
         PinLock,
-        CG
+        CG,
+        UI
     }
     
     public static class GameManager
@@ -29,6 +30,7 @@ namespace GM
         // 最好手动设置
         public static GameState lastState = GameState.Playing;
         // 该方法自动记录，容易出错
+        // 该方法应该由一个栈进行维护
         public static void BackGameState()
         {
             SwitchGameState(lastState);
@@ -46,14 +48,14 @@ namespace GM
                     InputHandler.SwitchToPlayer();
                     break;
                 case GameState.Story:
-                    // TODO: 剧情 map
-                    InputHandler.SwitchToPlayer();
-                    break;
-                case GameState.Puzzle:
-                    InputHandler.SwitchToPlayer();
+                    // 切成 UI map, 无输入，直接读取任意键
+                    InputHandler.SwitchToUI();
                     break;
                 case GameState.PinLock:
                     InputHandler.SwitchToLockPick();
+                    break;
+                case GameState.UI:
+                    InputHandler.SwitchToUI();
                     break;
             }
 

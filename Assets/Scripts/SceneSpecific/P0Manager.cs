@@ -21,6 +21,7 @@ namespace SceneSpecific
         private void Start()
         {
             UIManager.Instance.ShowPanel<StartPanel>("StartPanel");
+            UIManager.Instance.HidePanel("GamePanel", true);
             // 设置图片
             if (SaveManager.GetGameClear() == 1)
             {
