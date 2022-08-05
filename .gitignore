@@ -69,5 +69,5 @@ crashlytics-build.properties
 .idea/
 
 # Font
-*.SDF.asset
-*.SDF.asset.meta
+*SDF.asset
+*SDF.asset.meta
