@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: TestMonsterData
   m_EditorClassIdentifier: 
   monsterType: 0
-  isDead: 1
-  fadeTime: 0.5
-  walkSpeed: 0
-  chaseSpeed: 3
-  healthPoint: 0
+  isDead: 0
+  fadeSpeed: 0.5
+  walkSpeed: 3
+  chaseSpeed: 5
+  hitSpeed: 2
+  healthPoint: 10
   checkRadius: 4
   checkAngle: 35
   checkLayer:
