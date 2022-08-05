@@ -155,8 +155,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5267\u60C5\u6587\u672C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
-  m_sharedMaterial: {fileID: 135747345876087102, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
+  m_sharedMaterial: {fileID: -7142593387730105476, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50562381742375d4e82452a3b074c1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchState: 1
   contentPanel: {fileID: 8044578583234936373}
   choicePanel: {fileID: 8044578582389774527}
 --- !u!1 &8044578582389774527
