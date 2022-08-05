@@ -20,7 +20,7 @@ namespace Interact
             {
                 _selected = _colliders[0].GetComponent<Interactable>();
 
-                _selected.HighlightTip();
+                _selected.ShowTip();
 
                 if (InputHandler.InteractPressed)
                     _selected.Interact(this);
