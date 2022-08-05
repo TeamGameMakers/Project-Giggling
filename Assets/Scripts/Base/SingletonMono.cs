@@ -24,6 +24,7 @@ namespace Base
             }
             else {
                 Destroy(gameObject);
+                return;
             }
         }
 

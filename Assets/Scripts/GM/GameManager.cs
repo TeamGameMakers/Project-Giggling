@@ -37,7 +37,7 @@ namespace GM
         public static void SwitchGameState(GameState state)
         {
             Debug.Log("进入: " + state);
-            //lastState = m_state;
+            lastState = m_state;
             m_state = state;
             // 切换 map
             switch (m_state)
