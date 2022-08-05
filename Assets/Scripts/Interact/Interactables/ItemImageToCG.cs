@@ -13,6 +13,10 @@ namespace Interact
         public Sprite sprite;
         public CGPlayer cgPlayer;
 
+        public bool setNativeSize = true;
+        
+        public Vector3 scale = Vector3.one;
+        
         protected VideoPlayer player;
 
         protected override void Awake()
@@ -24,7 +28,7 @@ namespace Interact
         public override void Interact(Interactor interactor)
         {
             UIManager.Instance.ShowPanel<ItemImagePanel>("ItemImagePanel", callBack: panel => {
-                panel.SetImage(sprite, true);
+                panel.SetImage(sprite, scale, setNativeSize);
                 // 绑定关闭后事件
                 if (!SaveManager.GetBool(cgPlayer.SaveKey))
                 {

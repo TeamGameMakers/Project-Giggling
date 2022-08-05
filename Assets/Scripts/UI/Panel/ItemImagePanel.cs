@@ -6,8 +6,8 @@ namespace UI
     public class ItemImagePanel : BasePanel
     {
         protected Image image;
-
-        public void SetImage(Sprite sprite, bool setNativeSize = false)
+        
+        public void SetImage(Sprite sprite, Vector3 scale, bool setNativeSize = false)
         {
             if (image == null)
                 image = GetControl<Image>("ItemImage");
@@ -15,6 +15,8 @@ namespace UI
             
             if (setNativeSize)
                 image.SetNativeSize();
+
+            image.transform.localScale = scale;
         }
     }
 }
