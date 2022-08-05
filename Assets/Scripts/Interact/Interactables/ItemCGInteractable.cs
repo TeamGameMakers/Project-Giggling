@@ -30,7 +30,6 @@ namespace Interact
                     Debug.Log("开始播放 CG");
                     Button cgBtn = panel.transform.Find("CloseBgBtn").GetComponent<Button>();
                     cgBtn.onClick.AddListener(() => {
-                        GameManager.SwitchGameState(GameState.CG);
                         RootCanvas.Instance.HideAll();
                         player.loopPointReached += source => RootCanvas.Instance.ShowAll();
                         SaveManager.RegisterBool(cgPlayer.SaveKey);

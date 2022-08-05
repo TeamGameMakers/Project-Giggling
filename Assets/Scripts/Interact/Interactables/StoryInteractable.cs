@@ -13,12 +13,22 @@ namespace Interact
 
         public bool triggerOnce = true;
 
+        protected Collider2D coll;
+        protected Interactable itrt;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            coll = GetComponent<Collider2D>();
+            itrt = GetComponent<Interactable>();
+        }
+
         protected override void Start()
         {
             base.Start();
             if (triggerOnce && SaveManager.GetBool(SaveKey))
             {
-                gameObject.SetActive(false);
+                DisableSelf();
             }
         }
 
@@ -28,8 +38,14 @@ namespace Interact
             if (triggerOnce)
             {
                 SaveManager.RegisterBool(SaveKey);
-                gameObject.SetActive(false);
+                DisableSelf();
             }
+        }
+
+        protected virtual void DisableSelf()
+        {
+            coll.enabled = false;
+            itrt.enabled = false;
         }
     }
 }

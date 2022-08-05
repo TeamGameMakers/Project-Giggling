@@ -25,7 +25,7 @@ namespace Puzzle
             // 点击任意区域退出
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
-                GameManager.BackGameState();
+                //GameManager.BackGameState();
                 Destroy(gameObject);
                 return;
             }

@@ -42,15 +42,20 @@ namespace GM
         public static void BackGameState(GameState def = GameState.Playing)
         {
             if (stateStake.Count == 0)
-                SwitchGameState(def);
+            {
+                Debug.Log("无状态可恢复");
+                SwitchGameState(def, false);
+            }
             else
-                SwitchGameState(stateStake.Pop());
+                SwitchGameState(stateStake.Pop(), false);
         }
         
-        public static void SwitchGameState(GameState state)
+        public static void SwitchGameState(GameState state, bool pushInStack = true)
         {
             Debug.Log("进入: " + state);
-            stateStake.Push(m_state);
+            
+            if (pushInStack)
+                stateStake.Push(m_state);
             m_state = state;
             // 切换 map
             switch (m_state)
@@ -66,6 +71,9 @@ namespace GM
                     InputHandler.SwitchToLockPick();
                     break;
                 case GameState.UI:
+                    InputHandler.SwitchToUI();
+                    break;
+                case GameState.CG:
                     InputHandler.SwitchToUI();
                     break;
             }
