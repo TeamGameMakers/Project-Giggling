@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GM;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,6 +12,12 @@ namespace UI
         // 面板列表
         [SerializeField]
         protected List<GameObject> panelObjs = new List<GameObject>();
+
+        protected override void Start()
+        {
+            base.Start();
+            GameManager.SwitchGameState(GameState.UI);
+        }
 
         protected override void OnClick(string btnName)
         {
@@ -37,6 +44,12 @@ namespace UI
             panelObjs[index].gameObject.SetActive(false);
             index = i;
             panelObjs[index].gameObject.SetActive(true);
+        }
+
+        public override void HideMe()
+        {
+            base.HideMe();
+            GameManager.SwitchGameState(GameState.Playing);
         }
     }
 }

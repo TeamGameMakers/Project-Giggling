@@ -28,7 +28,7 @@ namespace UI
         public override void ShowMe()
         {
             base.ShowMe();
-            GameManager.SwitchGameState(switchState);
+            GameManager.BackGameState();
             gameObject.SetActive(true);
         }
 

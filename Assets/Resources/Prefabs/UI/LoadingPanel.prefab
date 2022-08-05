@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fa65066676b824784e80a00d98d86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitInput: 0
+  waitInput: 1
 --- !u!1 &2230465673355898313
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_text: "\u52A0\u8F7D\u5185\u5BB9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
-  m_sharedMaterial: {fileID: 3116745527123263474, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
+  m_sharedMaterial: {fileID: 135747345876087102, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
