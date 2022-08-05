@@ -7,7 +7,7 @@ namespace Data
     {
         public MonsterType monsterType;
         public bool isDead;
-        public float fadeTime;
+        public float fadeSpeed;
 
         [Header("Attribute")]
         public float walkSpeed;

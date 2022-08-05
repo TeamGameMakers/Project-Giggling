@@ -57,7 +57,7 @@ public class InputHandler : SingletonMono<InputHandler>
     /// 按下任意键
     /// </summary>
     public static bool AnyKeyPressed => Keyboard.current.anyKey.wasPressedThisFrame;
-    
+
     #endregion
 
     protected override void Awake()
@@ -110,7 +110,7 @@ public class InputHandler : SingletonMono<InputHandler>
     private void OnInteractInput(InputAction.CallbackContext context)
     {
         if (context.action.name != "Interact") return;
-
+        
         InteractPressed = context.performed;
     }
     
