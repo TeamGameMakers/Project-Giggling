@@ -24,15 +24,15 @@ namespace Interact
             Debug.Log("与 CG 道具互动");
             UIManager.Instance.ShowPanel<ItemInfoPanel>("ItemInfoPanel", callBack: panel => {
                 panel.UpdateInfo(item);
-                Debug.Log(SaveManager.GetBool(cgPlayer.SaveKey));
+                
                 if (!SaveManager.GetBool(cgPlayer.SaveKey))
                 {
-                    Debug.Log("开始播放 CG");
                     Button cgBtn = panel.transform.Find("CloseBgBtn").GetComponent<Button>();
                     cgBtn.onClick.AddListener(() => {
                         RootCanvas.Instance.HideAll();
-                        player.loopPointReached += source => RootCanvas.Instance.ShowAll();
                         SaveManager.RegisterBool(cgPlayer.SaveKey);
+                        player.loopPointReached += source => RootCanvas.Instance.ShowAll();
+                        GameManager.SwitchGameState(GameState.CG);
                         player.Play();
                     });
                 }
