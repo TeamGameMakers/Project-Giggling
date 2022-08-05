@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Puzzle
 {
+    /// <summary>
+    /// 处理实际的对象状态。
+    /// </summary>
     public class PinLockPuzzle : PuzzleBase
     {
         public Transform pin;

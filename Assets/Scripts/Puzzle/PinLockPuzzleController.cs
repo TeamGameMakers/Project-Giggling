@@ -18,6 +18,7 @@ namespace Puzzle
         private void Start()
         {
             m_model = GetModel<PinLockPuzzleModel>();
+            GameManager.SwitchGameState(GameState.PinLock);
         }
 
         private void Update()
@@ -25,7 +26,7 @@ namespace Puzzle
             // 点击任意区域退出
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
-                //GameManager.BackGameState();
+                GameManager.BackGameState();
                 Destroy(gameObject);
                 return;
             }
@@ -39,6 +40,7 @@ namespace Puzzle
                     // 下落时检查解锁
                     if (InputHandler.PickPressed)
                     {
+                        GameManager.BackGameState();
                         if (m_model.TryUnlock())
                         {
                             Debug.Log("解谜成功");
