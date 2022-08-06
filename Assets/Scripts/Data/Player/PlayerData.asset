@@ -17,7 +17,7 @@ MonoBehaviour:
   maxHealthPoint: 20
   healthPoint: 20
   hpRestoreSpeed: 2
-  hasFlashLight: 1
+  hasFlashLight: 0
   powerUsingSpeed: 1
   lightRadius: 3
   lightAngle: 100
