@@ -30,7 +30,10 @@ namespace UI
                 case "ContinueBtn":
                     // 加载存档进入游戏
                     SaveManager.Load();
-                    // TODO: 根据存档加载场景
+                    // 根据存档加载场景
+                    string json = SaveManager.GetValue("SceneName");
+                    if (!string.IsNullOrEmpty(json))
+                        EnterLoadingPanel(json);
                     break;
                 case "NewGameBtn":
                     // 检查存档并做出提示

@@ -12,7 +12,17 @@ namespace Story
 
         protected virtual void Start()
         {
-            EventCenter.Instance.AddEventListener(eventName, () => StoryManager.Instance.StartStory(plot));
+            EventCenter.Instance.AddEventListener(eventName, Callback);
+        }
+
+        protected virtual void OnDisable()
+        {
+            EventCenter.Instance.RemoveEventListener(eventName, Callback);
+        }
+
+        protected virtual void Callback()
+        {
+            StoryManager.Instance.StartStory(plot);
         }
     }
 }

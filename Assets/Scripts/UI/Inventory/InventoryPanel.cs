@@ -31,8 +31,8 @@ namespace UI.Inventory
             _key2 = GetControl<Button>("Key2");
             
             EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
-            EventCenter.Instance.AddEventListener<int, bool>("PickUpBattery", PickUpBattery);
-            EventCenter.Instance.AddEventListener<float, bool>("UseBatteryPower", UseBatteryPower);
+            EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
+            EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
         private void Update()
@@ -43,8 +43,8 @@ namespace UI.Inventory
         private void OnDestroy()
         {
             EventCenter.Instance.RemoveEventListener("UseBattery", UseBattery);
-            EventCenter.Instance.RemoveEventListener<int, bool>("PickUpBattery", PickUpBattery);
-            EventCenter.Instance.RemoveEventListener<float, bool>("UseBatteryPower", UseBatteryPower);
+            EventCenter.Instance.RemoveFuncListener<int, bool>("PickUpBattery", PickUpBattery);
+            EventCenter.Instance.RemoveFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
         private void RefreshUI()

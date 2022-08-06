@@ -44,12 +44,12 @@ namespace Puzzle
                         if (m_model.TryUnlock())
                         {
                             Debug.Log("解谜成功");
-                            EventCenter.Instance.EventTrigger(successEvent);
+                            EventCenter.Instance.FuncTrigger(successEvent);
                         }
                         else
                         {
                             Debug.Log("解谜失败");
-                            EventCenter.Instance.EventTrigger(failEvent);
+                            EventCenter.Instance.FuncTrigger(failEvent);
                         }
                     }
                     break;
