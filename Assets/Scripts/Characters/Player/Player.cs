@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using Base.Event;
 using Base.FSM;
+using Characters.Monsters;
 using Core;
 using Data;
 using UnityEngine;
@@ -15,8 +18,10 @@ namespace Characters.Player
 
         private Light2D _flashLight;
         private bool _powerRemaining;
-        
+        private List<Collider2D> _monstersColl;
+
         public PlayerDataSO data;
+        public RuntimeAnimatorController playerWithFlashLight;
 
         #region States
     
@@ -34,6 +39,7 @@ namespace Characters.Player
             StateMachine = new PlayerStateMachine();
             IdleState = new PlayerIdleState(this, "idle");
             MoveState = new PlayerMoveState(this, "move");
+            _monstersColl = new List<Collider2D>();
         }
 
         private void Start()
@@ -41,6 +47,12 @@ namespace Characters.Player
             _flashLight.enabled = false;
             StateMachine.Initialize(IdleState);
             GM.GameManager.SetPlayerTransform(transform);
+            EventCenter.Instance.AddEventListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
+            
+            if (data.hasFlashLight) Anim.runtimeAnimatorController = playerWithFlashLight;
+            _flashLight.pointLightOuterRadius = data.lightRadius;
+            _flashLight.pointLightOuterAngle = data.lightAngle;
+            _flashLight.pointLightInnerAngle = data.lightAngle - 10;
         }
 
         private void FixedUpdate()
@@ -54,6 +66,20 @@ namespace Characters.Player
             StateMachine.CurrentState.LogicUpdate();
 
             FlashLightControl();
+
+            if (_flashLight.enabled)
+            {
+                _monstersColl = Core.Detection.ArcDetectionAll(_flashLight.transform, 
+                    data.lightRadius, data.lightAngle, data.layer);
+                
+                foreach (var coll in _monstersColl)
+                    Monster.Monsters[coll.GetInstanceID()].MonsterEnterLight(data.lightDamage, true);
+            }
+        }
+
+        private void OnDisable()
+        {
+            EventCenter.Instance.RemoveEventListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
         }
 
         private void FlashLightControl()
@@ -82,13 +108,16 @@ namespace Characters.Player
             if (InputHandler.RawMoveInput != Vector2.zero)
                 _flashLight.transform.up = InputHandler.RawMoveInput;
         }
-        
+
+        private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);
+
         /// <summary>
         /// 进入光
         /// </summary>
-        public void PlayerEnterLight(int damage)
+        public void PlayerEnterLight(float damage)
         {
             Debug.Log("玩家进入光");
+            data.healthPoint -= damage * Time.deltaTime;
         }
 
         /// <summary>

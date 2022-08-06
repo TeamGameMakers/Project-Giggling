@@ -27,7 +27,7 @@ namespace GM
         public static event Action<GameState> SwitchStateEvent;
 
         public static Transform Player { get; private set; }
-        
+
         private static Stack<GameState> stateStake = new Stack<GameState>();
 
         public static void ClearStateRecord()

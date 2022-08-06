@@ -74,6 +74,12 @@ namespace Base.Event
             }
         }
 
+        public void RemoveEventListener<T1, T2>(string name, Func<T1, T2> callback)
+        {
+            if (eventContainer.ContainsKey(name))
+                (eventContainer[name] as EventFunc<T1, T2>).funcs -= callback;
+        }
+
         /// <summary>
         /// 事件触发。
         /// </summary>

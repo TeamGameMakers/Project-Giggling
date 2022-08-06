@@ -1,3 +1,4 @@
+using System;
 using Base.Event;
 using Data;
 using TMPro;
@@ -37,6 +38,12 @@ namespace UI.Inventory
         private void Update()
         {
             RefreshUI();
+        }
+
+        private void OnDestroy()
+        {
+            EventCenter.Instance.RemoveEventListener("UseBattery", UseBattery);
+            EventCenter.Instance.RemoveEventListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
         private void RefreshUI()

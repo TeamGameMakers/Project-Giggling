@@ -17,3 +17,9 @@ MonoBehaviour:
   healthPoint: 0
   hasFlashLight: 1
   powerUsingSpeed: 1
+  lightRadius: 3
+  lightAngle: 100
+  lightDamage: 1
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
