@@ -12,12 +12,13 @@ namespace Interact
         public int damageToPlayer = 5;
         public int damageToMonster = 5;
         
-        protected virtual void OnTriggerEnter2D(Collider2D col)
+        protected virtual void OnTriggerStay2D(Collider2D col)
         {
+            Debug.Log("Damage");
             if (col.CompareTag("Player"))
             {
                 player = col.gameObject.GetComponent<Player>();
-                player.PlayerEnterLight(damageToPlayer);
+                player.PlayerStayLight(damageToPlayer);
             }
         }
 
