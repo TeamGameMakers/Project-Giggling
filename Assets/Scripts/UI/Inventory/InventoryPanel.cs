@@ -1,3 +1,4 @@
+using Base.Event;
 using Data;
 using TMPro;
 using UnityEngine;
@@ -28,6 +29,9 @@ namespace UI.Inventory
             _powerRemaining = GetControl<Image>("Remaining");
             _key1 = GetControl<Button>("Key1");
             _key2 = GetControl<Button>("Key2");
+            
+            EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
+            EventCenter.Instance.AddEventListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
         private void Update()
@@ -44,14 +48,14 @@ namespace UI.Inventory
             _key2.gameObject.SetActive(_data.hasKey2);
         }
 
-        public void UseBattery()
+        private void UseBattery()
         {
             if (_data.batteryNum <= 0) return;
             _data.batteryNum--;
             _data.powerRemaining = _maxPower;
         }
 
-        public bool UseBatteryPower(float speed)
+        private bool UseBatteryPower(float speed)
         {
             _data.powerRemaining -= speed * Time.deltaTime;
 

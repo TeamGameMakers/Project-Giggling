@@ -10,6 +10,6 @@ namespace Data
         public int healthPoint;
 
         public bool hasFlashLight;
-        public int batteryNum;
+        public float powerUsingSpeed;
     }
 }

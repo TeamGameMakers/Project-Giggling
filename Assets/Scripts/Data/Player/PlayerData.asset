@@ -15,5 +15,5 @@ MonoBehaviour:
   walkVelocity: 5
   runVelocity: 8
   healthPoint: 0
-  hasFlashLight: 0
-  batteryNum: 0
+  hasFlashLight: 1
+  powerUsingSpeed: 1
