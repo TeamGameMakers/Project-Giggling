@@ -15,4 +15,5 @@ MonoBehaviour:
   name: "\u624B\u7535\u7B52\u7535\u6C60"
   info: "\u624B\u7535\u7B52\u6240\u9700\u8981\u7684\u5317\u6C89\u7535\u6C60\u3002\u4E00\u8282\u66F4\u6BD4\u516D\u8282\u5F3A\u3002"
   icon: {fileID: -7349307584020560450, guid: 5983f34daaa23104eaf057e9a3396758, type: 3}
-  canPick: 0
+  canPick: 1
+  firstPlot: {fileID: 11400000, guid: 64f978ef82a07e042a3be8d635ecd6ef, type: 2}

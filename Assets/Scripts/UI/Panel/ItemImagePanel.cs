@@ -5,8 +5,17 @@ namespace UI
 {
     public class ItemImagePanel : BasePanel
     {
-        protected Image image;
+        protected Button cgBtn;
+        public Button CgBtn => cgBtn;
         
+        protected Image image;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            cgBtn = transform.Find("CloseBgBtn").GetComponent<Button>();
+        }
+
         public void SetImage(Sprite sprite, Vector3 scale, bool setNativeSize = false)
         {
             if (image == null)

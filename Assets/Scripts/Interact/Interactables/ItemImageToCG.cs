@@ -32,8 +32,7 @@ namespace Interact
                 // 绑定关闭后事件
                 if (!SaveManager.GetBool(cgPlayer.SaveKey))
                 {
-                    Button cgBtn = panel.transform.Find("CloseBgBtn").GetComponent<Button>();
-                    cgBtn.onClick.AddListener(() => {
+                    panel.CgBtn.onClick.AddListener(() => {
                         RootCanvas.Instance.HideAll();
                         SaveManager.RegisterBool(cgPlayer.SaveKey);
                         player.loopPointReached += source => RootCanvas.Instance.ShowAll();

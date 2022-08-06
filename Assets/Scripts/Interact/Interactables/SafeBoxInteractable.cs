@@ -8,7 +8,7 @@ namespace Interact
 {
     public class SafeBoxInteractable : Interactable
     {
-        public Camera camera;
+        public new Camera camera;
         
         public GameObject prefab;
         protected GameObject pinLock;
