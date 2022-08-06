@@ -106,12 +106,6 @@ namespace Characters.Player
             if (_flashLight.enabled)
                 _powerRemaining = EventCenter.Instance.
                     EventTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
-
-            if (InputHandler.RawMoveInput != Vector2.zero)
-            {
-                _flashLight.transform.up = InputHandler.RawMoveInput.normalized;
-                Core.Detection.transform.right = InputHandler.RawMoveInput.normalized;
-            }
         }
 
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);
@@ -119,7 +113,7 @@ namespace Characters.Player
         /// <summary>
         /// 进入光
         /// </summary>
-        public void PlayerEnterLight(float damage)
+        public void PlayerStayLight(float damage)
         {
             StopCoroutine(RestoreHp());
             data.healthPoint -= damage * Time.deltaTime;
