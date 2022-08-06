@@ -17,8 +17,8 @@ MonoBehaviour:
   fadeSpeed: 0.5
   walkSpeed: 3
   chaseSpeed: 5
-  hitSpeed: 2
-  healthPoint: 10
+  hitSpeed: 1.5
+  healthPoint: 20
   checkRadius: 4
   checkAngle: 35
   checkLayer:

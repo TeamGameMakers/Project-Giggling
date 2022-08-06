@@ -13,7 +13,7 @@ namespace Data
 
         public int batteryNum;
         public float powerRemaining;
-        
+
         /// <summary>
         /// 储藏室的钥匙
         /// </summary>

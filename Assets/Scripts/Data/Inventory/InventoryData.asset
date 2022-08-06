@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: InventoryData
   m_EditorClassIdentifier: 
   batteryNum: 4
-  powerRemaining: 30
+  powerRemaining: 2000
   hasKey1: 1
   hasKey2: 1
