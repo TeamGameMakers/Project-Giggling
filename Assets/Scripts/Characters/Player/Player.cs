@@ -50,7 +50,6 @@ namespace Characters.Player
             EventCenter.Instance.AddEventListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             
             // 手电筒
-            if (data.hasFlashLight) Anim.runtimeAnimatorController = playerWithFlashLight;
             _flashLight.pointLightOuterRadius = data.lightRadius;
             _flashLight.pointLightOuterAngle = data.lightAngle;
             _flashLight.pointLightInnerAngle = data.lightAngle - 10;
@@ -65,6 +64,8 @@ namespace Characters.Player
         {
             Core.LogicUpdate();
             StateMachine.CurrentState.LogicUpdate();
+            
+            if (data.hasFlashLight) Anim.runtimeAnimatorController = playerWithFlashLight;
 
             FlashLightControl();
             
