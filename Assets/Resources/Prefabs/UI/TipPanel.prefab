@@ -143,8 +143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u63D0\u793A\u5185\u5BB9"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
-  m_sharedMaterial: {fileID: 3116745527123263474, guid: fc38ada0706d6a346a08db9f8cdc2bac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
+  m_sharedMaterial: {fileID: -7142593387730105476, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8e95cc22484304183f118eb9f1513c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchState: 1
 --- !u!1001 &1189944375110425837
 PrefabInstance:
   m_ObjectHideFlags: 0

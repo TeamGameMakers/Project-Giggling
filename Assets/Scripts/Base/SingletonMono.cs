@@ -15,7 +15,7 @@ namespace Base
             }
         }
 
-        public bool dontDestroy = false;
+        public bool dontDestroy = true;
 
         protected virtual void Awake()
         {
@@ -24,6 +24,7 @@ namespace Base
             }
             else {
                 Destroy(gameObject);
+                return;
             }
         }
 

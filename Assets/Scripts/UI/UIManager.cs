@@ -51,11 +51,15 @@ namespace UI
         public void ShowPanel<T>(string name, string subPath = "", UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
         {
             // 该面板已经存在
-            if (panelContainer.ContainsKey(name)) 
+            if (panelContainer.ContainsKey(name))
             {
-                panelContainer[name].ShowMe();
+                T panel = panelContainer[name] as T;
+                // 已经显示了
+                if (panel.ShowNow())
+                    return;
+                panel.ShowMe();
                 // 面板创建完成后回调
-                callBack?.Invoke(panelContainer[name] as T);
+                callBack?.Invoke(panel);
                 // 直接结束
                 return;
             }

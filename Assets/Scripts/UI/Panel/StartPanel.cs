@@ -24,27 +24,25 @@ namespace UI
         protected override void OnClick(string btnName)
         {
             base.OnClick(btnName);
-            // TODO: 开始界面完善
+            
             switch (btnName)
             {
                 case "ContinueBtn":
                     // 加载存档进入游戏
                     SaveManager.Load();
                     // 加载场景
+                    EnterLoadingPanel();
                     break;
                 case "NewGameBtn":
                     // 检查存档并做出提示
-                    UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel", callBack: panel => {
-                        panel.waitInput = true;
-                        panel.LoadScene("Test2");
-                    });
                     if (existsSave)
                     {
-                        // 提示会覆盖存档
+                        // TODO: 提示会覆盖存档
                     }
                     else
                     {
                         // 加载场景
+                        EnterLoadingPanel();
                     }
                     break;
                 case "SettingBtn":
@@ -59,6 +57,14 @@ namespace UI
 #endif
                     break;
             }
+        }
+
+        protected void EnterLoadingPanel()
+        {
+            UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel", callBack: panel => {
+                panel.LoadScene("01_Phase_1");
+            });
+            UIManager.Instance.HidePanel("StartPanel", true);
         }
     }
 }

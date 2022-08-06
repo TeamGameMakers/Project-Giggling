@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GM
@@ -13,29 +14,43 @@ namespace GM
         Puzzle,
         // 推针
         PinLock,
-        CG
+        CG,
+        UI
     }
     
     public static class GameManager
     {
         private static GameState m_state = GameState.Playing;
-        private static GameState m_lastState = GameState.Playing;
         
         public static GameState State => m_state;
 
         public static event Action<GameState> SwitchStateEvent;
 
         public static Transform Player { get; private set; }
+        
+        private static Stack<GameState> stateStake = new Stack<GameState>();
 
-        public static void BackGameState()
+        public static void ClearStateRecord()
         {
-            SwitchGameState(m_lastState);
+            stateStake.Clear();
+        }
+        
+        /// <summary>
+        /// 返回上一个状态。
+        /// </summary>
+        /// <param name="def">没有记录时设置的默认状态</param>
+        public static void BackGameState(GameState def = GameState.Playing)
+        {
+            if (stateStake.Count == 0)
+                SwitchGameState(def);
+            else
+                SwitchGameState(stateStake.Pop());
         }
         
         public static void SwitchGameState(GameState state)
         {
             Debug.Log("进入: " + state);
-            m_lastState = m_state;
+            stateStake.Push(m_state);
             m_state = state;
             // 切换 map
             switch (m_state)
@@ -44,14 +59,14 @@ namespace GM
                     InputHandler.SwitchToPlayer();
                     break;
                 case GameState.Story:
-                    // TODO: 剧情 map
-                    InputHandler.SwitchToPlayer();
-                    break;
-                case GameState.Puzzle:
-                    InputHandler.SwitchToPlayer();
+                    // 切成 UI map, 无输入，直接读取任意键
+                    InputHandler.SwitchToUI();
                     break;
                 case GameState.PinLock:
                     InputHandler.SwitchToLockPick();
+                    break;
+                case GameState.UI:
+                    InputHandler.SwitchToUI();
                     break;
             }
 
