@@ -342,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158851761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.08, y: -4.04, z: 75.51205}
+  m_LocalPosition: {x: 5.73, y: -3.46, z: 75.51205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1709706452}
@@ -358,12 +358,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 158851761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 9c30fa1bbf384ff45a76ff4caf169358, type: 2}
   _checkPoint: {fileID: 158851762}
   item: {fileID: 11400000, guid: 0864c084da246db4aa2f9c77758f5d14, type: 2}
+  cgPlayer: {fileID: 1446451711}
 --- !u!58 &158851764
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -374,7 +375,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -458,7 +459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189972625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.63999987, y: -5.3, z: 75.51205}
+  m_LocalPosition: {x: -0.75, y: -5.51, z: 75.51205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1224113810}
@@ -474,12 +475,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 189972625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 49ba9d3a717d60944ba61d3c34ea2d92, type: 2}
   _checkPoint: {fileID: 189972626}
   item: {fileID: 11400000, guid: 983a9e1e7c89b8840902af7e4a2fa607, type: 2}
+  cgPlayer: {fileID: 500086142}
 --- !u!58 &189972628
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -490,7 +492,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -574,7 +576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244330577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.19, y: -3.97, z: 75.51205}
+  m_LocalPosition: {x: 3.29, y: -3.34, z: 75.51205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 928659073}
@@ -590,12 +592,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 244330577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: a71a962ca2fc94a499cad50bf77b25a4, type: 2}
   _checkPoint: {fileID: 244330578}
   item: {fileID: 11400000, guid: e372998fa82f1424b8b2cc2a1458c425, type: 2}
+  cgPlayer: {fileID: 1446451711}
 --- !u!58 &244330580
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -606,7 +609,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -998,7 +1001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392644885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.44, y: -5.4300003, z: 75.51205}
+  m_LocalPosition: {x: 4.07, y: -5.4300003, z: 75.51205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1514960158}
@@ -1014,12 +1017,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 392644885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 67e0c4d60bbc9dd4186e2ad1a6ba5e3b, type: 2}
   _checkPoint: {fileID: 392644886}
   item: {fileID: 11400000, guid: 3bd22b240009f6949bbc8cbd509ba7d4, type: 2}
+  cgPlayer: {fileID: 500086142}
 --- !u!58 &392644888
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1030,7 +1034,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18974,7 +18978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38edd7acd70b4f5799251861e08bea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plot: {fileID: 0}
+  plot: {fileID: 11400000, guid: 2a6f88594f8386e41b16cc3a0d9cb6f4, type: 2}
   eventName: cg_streetDialog_05
 --- !u!328 &500086144
 VideoPlayer:
@@ -19607,12 +19611,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 769223206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 54f933697ed04ae4f9f467d3769b6d5f, type: 2}
   _checkPoint: {fileID: 769223207}
   item: {fileID: 11400000, guid: 95fb016997619c44c959f473a5c298e0, type: 2}
+  cgPlayer: {fileID: 500086142}
 --- !u!58 &769223209
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19623,7 +19628,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -20029,7 +20034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951114328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.04, y: -5.4300003, z: 75.51205}
+  m_LocalPosition: {x: 6.56, y: -5.38, z: 75.51205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1537541548}
@@ -20045,12 +20050,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 951114328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 32a1caf2a2d7e814cb69ada0979f7275, type: 2}
   _checkPoint: {fileID: 951114329}
   item: {fileID: 11400000, guid: 01130b3c2df4d3645872fc11ceafd18c, type: 2}
+  cgPlayer: {fileID: 500086142}
 --- !u!58 &951114331
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20061,7 +20067,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -20684,7 +20690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268058960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4299998, y: -3.97, z: 75.51205}
+  m_LocalPosition: {x: 1.14, y: -3.26, z: 75.51205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1244704945}
@@ -20751,12 +20757,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1268058960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a77afbbe4d5a8da488b6b21b2fe20bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 14aecea019e81e442af4d773c6a81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: db8514204b4e260459f8d85fd7a191f4, type: 2}
   _checkPoint: {fileID: 1268058961}
   item: {fileID: 11400000, guid: 1429017d8ecf8944d88db2ed20646baa, type: 2}
+  cgPlayer: {fileID: 1446451711}
 --- !u!58 &1268058964
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20767,7 +20774,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -21142,7 +21149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38edd7acd70b4f5799251861e08bea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plot: {fileID: 0}
+  plot: {fileID: 11400000, guid: 2802823a9c044aa4e99ece98c1d5e231, type: 2}
   eventName: cg_streetDialog_04
 --- !u!328 &1446451713
 VideoPlayer:
