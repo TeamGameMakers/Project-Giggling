@@ -1,6 +1,7 @@
+using Base.Event;
 using GM;
-using Save;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Puzzle
 {
@@ -9,9 +10,10 @@ namespace Puzzle
     /// </summary>
     public class PinLockPuzzleController : PuzzleController
     {
-        public string saveKey = "PinLock";
-        
         private PinLockPuzzleModel m_model;
+        
+        protected string successEvent = "PinLockSuccessEvent";
+        protected string failEvent = "PinLockFailEvent";
         
         private void Start()
         {
@@ -21,6 +23,14 @@ namespace Puzzle
 
         private void Update()
         {
+            // 点击任意区域退出
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                GameManager.BackGameState();
+                Destroy(gameObject);
+                return;
+            }
+            
             switch (m_model.PuzzleState)
             {
                 case PinLockPuzzleModel.State.Rising:
@@ -30,20 +40,16 @@ namespace Puzzle
                     // 下落时检查解锁
                     if (InputHandler.PickPressed)
                     {
+                        GameManager.BackGameState();
                         if (m_model.TryUnlock())
                         {
                             Debug.Log("解谜成功");
-                            // 解锁成功的逻辑
-                            GameManager.SwitchGameState(GameState.Playing);
-                            Destroy(gameObject);
-                            // 存档
-                            SaveManager.RegisterBool(saveKey);
-                            // TODO: 成功事件
+                            EventCenter.Instance.EventTrigger(successEvent);
                         }
                         else
                         {
                             Debug.Log("解谜失败");
-                            // TODO: 解锁失败的逻辑
+                            EventCenter.Instance.EventTrigger(failEvent);
                         }
                     }
                     break;

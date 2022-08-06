@@ -189,6 +189,11 @@ public class InputHandler : SingletonMono<InputHandler>
     /// 切换到开锁状态的输入
     /// </summary>
     public static void SwitchToLockPick() => _playerInput.SwitchCurrentActionMap("Lock Pick");
-    
+
+    /// <summary>
+    /// 切换到 UI 状态的输入，即没有输入
+    /// </summary>
+    public static void SwitchToUI() => _playerInput.SwitchCurrentActionMap("UI");
+
     #endregion
 }

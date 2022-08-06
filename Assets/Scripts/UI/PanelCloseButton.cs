@@ -33,7 +33,6 @@ namespace UI
             }
             
             button.onClick.AddListener(() => {
-                GameManager.BackGameState();
                 UIManager.Instance.HidePanel(closePanel.gameObject.name, destroyPanel);
             });
         }
