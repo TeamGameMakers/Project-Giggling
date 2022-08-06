@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkVelocity: 5
   runVelocity: 8
-  healthPoint: 0
+  maxHealthPoint: 20
+  healthPoint: 20
+  hpRestoreSpeed: 2
   hasFlashLight: 1
   powerUsingSpeed: 1
   lightRadius: 3

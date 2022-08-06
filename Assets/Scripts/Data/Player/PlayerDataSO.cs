@@ -7,7 +7,9 @@ namespace Data
     {
         public float walkVelocity;
         public float runVelocity;
+        public float maxHealthPoint;
         public float healthPoint;
+        public float hpRestoreSpeed;
 
         public bool hasFlashLight;
         public float powerUsingSpeed;
