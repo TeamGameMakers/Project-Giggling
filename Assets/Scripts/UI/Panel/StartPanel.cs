@@ -30,13 +30,27 @@ namespace UI
                 case "ContinueBtn":
                     // 加载存档进入游戏
                     SaveManager.Load();
-                    // TODO: 根据存档加载场景
+                    // 根据存档加载场景
+                    string json = SaveManager.GetValue("SceneName");
+                    if (!string.IsNullOrEmpty(json))
+                        EnterLoadingPanel(json);
                     break;
                 case "NewGameBtn":
                     // 检查存档并做出提示
                     if (existsSave)
                     {
-                        // TODO: 提示会覆盖存档
+                        // 提示会覆盖存档
+                        UIManager.Instance.ShowPanel<TipConfirmPanel>("TipConfirmPanel", callBack: panel => {
+                            panel.SetContent("新游戏将会覆盖存档!");
+                            panel.AddButtonEvent(() => {
+                                // 删除存档
+                                SaveManager.Delete(SaveManager.saveName);
+                                // 关闭自身
+                                UIManager.Instance.HidePanel("TipConfirmPanel");
+                                // 加载场景
+                                EnterLoadingPanel("01_Phase_1");
+                            });
+                        });
                     }
                     else
                     {

@@ -36,7 +36,7 @@ namespace Story
                 if (!string.IsNullOrEmpty(plotEvent))
                 {
                     m_player.loopPointReached += source => {
-                        EventCenter.Instance.EventTrigger(plotEvent);
+                        EventCenter.Instance.FuncTrigger(plotEvent);
                     };
                 }
             }

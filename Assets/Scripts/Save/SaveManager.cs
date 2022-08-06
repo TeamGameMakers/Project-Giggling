@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using Base.Event;
 using Base.Persistence;
 using Base.Scene;
 using UnityEngine;
@@ -187,6 +188,10 @@ namespace Save
             Data.name = saveName;
             // 场景名
             Data.Add("SceneName", SceneLoader.CurrentScene);
+            
+            // 记录玩家位置，要获取玩家位置
+            string playerPos = EventCenter.Instance.FuncTrigger<string>("GetPlayerPosition");
+            Data.Add("PlayerPosition", playerPos);
             
             BeforeSaveActions?.Invoke();
 

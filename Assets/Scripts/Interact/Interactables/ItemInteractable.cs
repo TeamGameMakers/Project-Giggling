@@ -42,7 +42,7 @@ namespace Interact
                         if (checkPickable)
                         {
                             // 成功拾取，才销毁物品
-                            if (EventCenter.Instance.EventTrigger<int, bool>(afterPickEvent, 1))
+                            if (EventCenter.Instance.FuncTrigger<int, bool>(afterPickEvent, 1))
                             {
                                 // 销毁自己
                                 Destroy(gameObject);
@@ -54,7 +54,7 @@ namespace Interact
                         }
                         else
                         {
-                            EventCenter.Instance.EventTrigger(afterPickEvent);
+                            EventCenter.Instance.FuncTrigger(afterPickEvent);
                             // 销毁自己
                             Destroy(gameObject);
                             // 记录拾取道具
