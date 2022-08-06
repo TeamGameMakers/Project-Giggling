@@ -57,6 +57,9 @@ namespace UI
                 // 已经显示了
                 if (panel.ShowNow())
                     return;
+                
+                Transform father = RootCanvas.Instance.GetLayerRoot(layer);
+                panel.transform.SetParent(father);
                 panel.ShowMe();
                 // 面板创建完成后回调
                 callBack?.Invoke(panel);

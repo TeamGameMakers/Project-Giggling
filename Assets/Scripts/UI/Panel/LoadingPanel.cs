@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Base.Scene;
+using GM;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,7 +14,9 @@ namespace UI
         protected bool canClose = false;
         protected bool canFade = false;
 
-        protected TextMeshProUGUI tmp;
+        public TextMeshProUGUI content;
+        public TextMeshProUGUI hint;
+        
         protected CanvasGroupFader panelFader;
         protected CanvasGroupFader contentFader;
 
@@ -25,9 +28,8 @@ namespace UI
 
             panelFader = GetComponent<CanvasGroupFader>();
             contentFader = transform.Find("ContainerPanel").GetComponent<CanvasGroupFader>();
-            // 设置文字
-            tmp = GetControl<TextMeshProUGUI>("Content");
-            tmp.SetText(tmp.text + "  随机选择内容");
+            // TODO: 设置随机文字
+            content.SetText(content.text + "  随机选择内容");
 
             ready = true;
         }
@@ -56,14 +58,18 @@ namespace UI
                 yield return null;
             }
             yield return panelFader.FadeCoroutine(1);
-            // 加载场景
-            yield return SceneLoader.SwitchSceneLoadCoroutine(sceneName);
+            
+            // // 加载场景
+            // yield return SceneLoader.SwitchSceneLoadCoroutine(sceneName);
 
+            // 加载场景
+            yield return SceneLoader.LoadSceneAsyncCoroutine(sceneName, null);
+
+            hint.gameObject.SetActive(true);
             if (waitInput)
             {
                 // 等待切换
                 canClose = true;
-                tmp.SetText("按任意键继续");
                 while (!canFade)
                 {
                     yield return null;
@@ -71,11 +77,14 @@ namespace UI
                 yield return contentFader.FadeCoroutine(0);
             }
             
-            // 切换场景
-            yield return SceneLoader.SwitchSceneSwitchCoroutine(SceneLoader.CurrentScene, sceneName);
+            // // 切换场景
+            // yield return SceneLoader.SwitchSceneSwitchCoroutine(SceneLoader.CurrentScene, sceneName);
             
             // 显示场景
             yield return panelFader.FadeCoroutine(0);
+            
+            // 关闭自己
+            UIManager.Instance.HidePanel("LoadingPanel");
         }
     }
 }

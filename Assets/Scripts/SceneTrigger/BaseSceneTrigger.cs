@@ -8,7 +8,7 @@ namespace SceneTrigger
     public abstract class BaseSceneTrigger : MonoBehaviour
     {
         [SerializeField]
-        [Tooltip("存档键")]
+        [Tooltip("存档键，如果不是只触发一次则无视")]
         protected string key;
 
         [SerializeField]

@@ -7,7 +7,6 @@ namespace UI
     {
         protected Button settingBtn;
         protected Button saveBtn;
-        protected Button backpackBtn;
         
         protected override void Start()
         {
@@ -15,10 +14,8 @@ namespace UI
             // 绑定按钮
             settingBtn = GetControl<Button>("SettingBtn");
             saveBtn = GetControl<Button>("SaveBtn");
-            backpackBtn = GetControl<Button>("BackpackBtn");
             settingBtn.onClick.AddListener(() => UIManager.Instance.ShowPanel<SettingPanel>("SettingPanel"));
             saveBtn.onClick.AddListener(() => SaveManager.Save());
-            // TODO: 出现背包界面
         }
     }
 }
