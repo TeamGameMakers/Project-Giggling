@@ -21,7 +21,11 @@ namespace SceneTrigger
         protected virtual void Start()
         {
             if (triggerOnce)
+            {
                 used = SaveManager.GetBool(key);
+                if (used)
+                    Destroy(gameObject);
+            }
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D col)
@@ -31,13 +35,13 @@ namespace SceneTrigger
                 Debug.Log("触发场景触发器：" + gameObject.name);
                 enter = true;
 
-                TriggerEvent(col);
-
                 if (triggerOnce)
                 {
                     used = true;
                     SaveManager.RegisterBool(key);
                 }
+                
+                TriggerEvent(col);
             }
         }
 
