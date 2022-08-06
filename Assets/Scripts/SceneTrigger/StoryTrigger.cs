@@ -11,6 +11,10 @@ namespace SceneTrigger
         protected override void TriggerEvent(Collider2D col)
         {
             StoryManager.Instance.StartStory(plot);
+            if (triggerOnce && used)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

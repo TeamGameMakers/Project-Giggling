@@ -1,5 +1,6 @@
 using Data;
 using Save;
+using Story;
 using UI;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ namespace Interact
     {
         public ItemDataSO item;
 
-        public string SaveKey => "pick_item_" + item.name;
+        public string SaveKey => "pick_item_" + gameObject.GetInstanceID();
         
         protected override void Start()
         {
@@ -18,14 +19,31 @@ namespace Interact
             // 记录拾取，需要在 UI 或背包中实现
             if (SaveManager.GetBool(SaveKey))
             {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
 
         public override void Interact(Interactor interactor)
         {
             Debug.Log("与道具交互");
-            UIManager.Instance.ShowPanel<ItemInfoPanel>("ItemInfoPanel", callBack: panel => panel.UpdateInfo(item));
+            UIManager.Instance.ShowPanel<ItemInfoPanel>("ItemInfoPanel", callBack: panel => {
+                panel.UpdateInfo(item, SaveKey);
+
+                panel.AfterPickEvent += () => {
+                    // 销毁自己
+                    Destroy(gameObject);
+                };
+                
+                if (item.firstPlot != null && !SaveManager.GetBool(item.FirstSaveKey))
+                {
+                    panel.AfterPickEvent += () => {
+                        // 记录第一次拾取
+                        SaveManager.RegisterBool(item.FirstSaveKey);
+                        // 开始剧情
+                        StoryManager.Instance.StartStory(item.firstPlot);
+                    };
+                }
+            });
         }
     }
 }
