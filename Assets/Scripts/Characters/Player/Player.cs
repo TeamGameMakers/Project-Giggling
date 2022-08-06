@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using Base.Event;
 using Base.FSM;
@@ -34,7 +34,7 @@ namespace Characters.Player
         {
             Anim = GetComponent<Animator>();
             Core = GetComponentInChildren<GameCore>();
-            _flashLight = GetComponentInChildren<Light2D>();
+            _flashLight = transform.GetChild(2).GetComponent<Light2D>();
 
             StateMachine = new PlayerStateMachine();
             IdleState = new PlayerIdleState(this, "idle");
@@ -49,6 +49,7 @@ namespace Characters.Player
             GM.GameManager.SetPlayerTransform(transform);
             EventCenter.Instance.AddEventListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             
+            // 手电筒
             if (data.hasFlashLight) Anim.runtimeAnimatorController = playerWithFlashLight;
             _flashLight.pointLightOuterRadius = data.lightRadius;
             _flashLight.pointLightOuterAngle = data.lightAngle;
@@ -66,7 +67,8 @@ namespace Characters.Player
             StateMachine.CurrentState.LogicUpdate();
 
             FlashLightControl();
-
+            
+            // 手电伤害判定
             if (_flashLight.enabled)
             {
                 _monstersColl = Core.Detection.ArcDetectionAll(_flashLight.transform, 
@@ -104,9 +106,12 @@ namespace Characters.Player
             if (_flashLight.enabled)
                 _powerRemaining = EventCenter.Instance.
                     EventTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
-            
+
             if (InputHandler.RawMoveInput != Vector2.zero)
-                _flashLight.transform.up = InputHandler.RawMoveInput;
+            {
+                _flashLight.transform.up = InputHandler.RawMoveInput.normalized;
+                Core.Detection.transform.right = InputHandler.RawMoveInput.normalized;
+            }
         }
 
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);
@@ -116,16 +121,23 @@ namespace Characters.Player
         /// </summary>
         public void PlayerEnterLight(float damage)
         {
-            Debug.Log("玩家进入光");
+            StopCoroutine(RestoreHp());
             data.healthPoint -= damage * Time.deltaTime;
         }
 
         /// <summary>
         /// 离开光
         /// </summary>
-        public void PlayerExitLight()
+        public void PlayerExitLight() => StartCoroutine(RestoreHp());
+        
+
+        private IEnumerator RestoreHp()
         {
-            Debug.Log("玩家离开光");
+            while (data.healthPoint < data.maxHealthPoint)
+            {
+                data.healthPoint += data.hpRestoreSpeed * Time.deltaTime;
+                yield return null;
+            }
         }
     }
 }
