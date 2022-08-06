@@ -1,5 +1,6 @@
 using Base;
 using UI;
+using UI.Inventory;
 using UnityEngine;
 
 namespace SceneSpecific
@@ -11,6 +12,7 @@ namespace SceneSpecific
             base.Start();
 
             UIManager.Instance.ShowPanel<GamePanel>("GamePanel");
+            UIManager.Instance.ShowPanel<InventoryPanel>("Inventory Panel");
         }
     }
 }
