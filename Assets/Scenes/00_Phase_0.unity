@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Input Handler
       objectReference: {fileID: 0}
+    - target: {fileID: 3184816558360224279, guid: a0708af0451a41e42b44ec710abc6cd3, type: 3}
+      propertyPath: dontDestroy
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0708af0451a41e42b44ec710abc6cd3, type: 3}
 --- !u!1 &503061609

@@ -60,7 +60,7 @@ namespace UI
 
         protected void EnterLoadingPanel(string scene)
         {
-            UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel", callBack: panel => {
+            UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel" , "", UILayer.System, panel => {
                 panel.LoadScene(scene);
             });
             UIManager.Instance.HidePanel("StartPanel", true);

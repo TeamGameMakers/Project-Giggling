@@ -117,8 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchState: 1
+  content: {fileID: 2230465673355898319}
+  hint: {fileID: 9072562279947647970}
   waitInput: 1
-  inputHandler: {fileID: 0}
 --- !u!1 &2230465673355898313
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6551714679913600835
 RectTransform:
   m_ObjectHideFlags: 0

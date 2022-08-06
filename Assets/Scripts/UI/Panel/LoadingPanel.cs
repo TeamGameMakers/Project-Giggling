@@ -14,8 +14,9 @@ namespace UI
         protected bool canClose = false;
         protected bool canFade = false;
 
-        protected TextMeshProUGUI content;
-        protected TextMeshProUGUI hint;
+        public TextMeshProUGUI content;
+        public TextMeshProUGUI hint;
+        
         protected CanvasGroupFader panelFader;
         protected CanvasGroupFader contentFader;
 
@@ -28,8 +29,6 @@ namespace UI
             panelFader = GetComponent<CanvasGroupFader>();
             contentFader = transform.Find("ContainerPanel").GetComponent<CanvasGroupFader>();
             // TODO: 设置随机文字
-            content = GetControl<TextMeshProUGUI>("Content");
-            hint = GetControl<TextMeshProUGUI>("Hint");
             content.SetText(content.text + "  随机选择内容");
 
             ready = true;
@@ -65,7 +64,8 @@ namespace UI
 
             // 加载场景
             yield return SceneLoader.LoadSceneAsyncCoroutine(sceneName, null);
-            
+
+            hint.gameObject.SetActive(true);
             if (waitInput)
             {
                 // 等待切换
