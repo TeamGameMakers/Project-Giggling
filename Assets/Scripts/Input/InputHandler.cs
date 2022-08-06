@@ -10,7 +10,7 @@ public class InputHandler : SingletonMono<InputHandler>
     private InputActionMap _playerMap;
     private InputActionMap _cameraMap;
     private InputActionMap _lockPickMap;
-    
+
     #region Value Getter
     
     /// <summary>
@@ -37,6 +37,16 @@ public class InputHandler : SingletonMono<InputHandler>
     /// 按下交互键
     /// </summary>
     public static bool InteractPressed { get; private set; }
+    
+    /// <summary>
+    /// 按下手电按钮
+    /// </summary>
+    public static bool LightPressed { get; private set; }
+    
+    /// <summary>
+    /// 按下换电池按钮
+    /// </summary>
+    public static bool ReloadPressed { get; private set; }
     
     /// <summary>
     /// 按下退出键
@@ -79,6 +89,8 @@ public class InputHandler : SingletonMono<InputHandler>
         _playerMap.actionTriggered += OnMoveInput;
         _playerMap.actionTriggered += OnInteractInput;
         _playerMap.actionTriggered += OnSprintInput;
+        _playerMap.actionTriggered += OnLightInput;
+        _playerMap.actionTriggered += OnReloadInput;
         
         // Camera
         _cameraMap.actionTriggered += OnCamRotateInput;
@@ -88,6 +100,8 @@ public class InputHandler : SingletonMono<InputHandler>
         _lockPickMap.actionTriggered += OnPryInput;
         _lockPickMap.actionTriggered += OnPickInput;
     }
+
+    public static void UseLightInput() => LightPressed = false;
 
     #region Action Trigger Functions
     
@@ -112,6 +126,19 @@ public class InputHandler : SingletonMono<InputHandler>
         if (context.action.name != "Interact") return;
         
         InteractPressed = context.performed;
+    }
+
+    private void OnLightInput(InputAction.CallbackContext context)
+    {
+        if (context.action.name != "Light") return;
+        LightPressed = context.performed;
+    }
+    
+    private void OnReloadInput(InputAction.CallbackContext context)
+    {
+        if (context.action.name != "Reload") return;
+        
+        ReloadPressed = context.performed;
     }
     
     // Surveillance Camera
@@ -145,7 +172,7 @@ public class InputHandler : SingletonMono<InputHandler>
     }
     
     #endregion
-    
+
     # region Map Switcher
     
     /// <summary>

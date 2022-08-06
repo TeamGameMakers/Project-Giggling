@@ -26,7 +26,7 @@ namespace Characters.Monsters
         {
             base.LogicUpdate();
 
-            if (_monster.target) 
+            if (_monster.target || _monster.HitByPlayer) 
                 StateMachine.ChangeState(_monster.ChaseState);
             
             else if (_canPatrol)
