@@ -53,6 +53,9 @@ namespace Characters.Player
             _flashLight.pointLightOuterRadius = data.lightRadius;
             _flashLight.pointLightOuterAngle = data.lightAngle;
             _flashLight.pointLightInnerAngle = data.lightAngle - 10;
+
+            // 注册拾取事件
+            RegisterEvent();
         }
 
         private void FixedUpdate()
@@ -134,5 +137,29 @@ namespace Characters.Player
                 yield return null;
             }
         }
+
+        #region 手电筒拾取
+
+        public const string PickFlashLightEvent = "PickFlashLight";
+        
+        private void RegisterEvent()
+        {
+            EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
+        }
+
+        private void PickFlashLight()
+        {
+            Debug.Log("玩家获得手电筒");
+            data.hasFlashLight = true;
+            // TODO: 更改动画，修改左下图标与电量绑定
+            // TODO: 顺带一提，电池数量默认就是 4.
+        }
+
+        public bool HasFlashLight()
+        {
+            return data.hasFlashLight;
+        }
+
+        #endregion
     }
 }

@@ -116,6 +116,8 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 7ee4b90315c07c04883c6cd9493006e6, type: 2}
   _checkPoint: {fileID: 1458446128631658516}
   item: {fileID: 11400000, guid: fdf6551ef27d51940ab1ea1013221440, type: 2}
+  checkPickable: 1
+  afterPickEvent: PickUpBattery
 --- !u!1001 &1458446128211448835
 PrefabInstance:
   m_ObjectHideFlags: 0

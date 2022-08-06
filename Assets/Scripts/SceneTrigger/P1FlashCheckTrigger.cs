@@ -12,12 +12,9 @@ namespace SceneTrigger
 
         public Player player;
 
-        protected PlayerDataSO data;
-        
         protected override void Start()
         {
             base.Start();
-            data = player.data;
             // 检查手电筒状态设置初始状态
             if (CheckTrigger())
                 Destroy(gameObject);
@@ -25,7 +22,7 @@ namespace SceneTrigger
 
         protected override bool CheckTrigger()
         {
-            return data.hasFlashLight;
+            return player.HasFlashLight();
         }
 
         protected override void PassCheck()
