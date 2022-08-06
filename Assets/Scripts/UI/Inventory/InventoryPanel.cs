@@ -1,4 +1,3 @@
-using System;
 using Base.Event;
 using Data;
 using TMPro;
@@ -32,6 +31,7 @@ namespace UI.Inventory
             _key2 = GetControl<Button>("Key2");
             
             EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
+            EventCenter.Instance.AddEventListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.AddEventListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
@@ -43,6 +43,7 @@ namespace UI.Inventory
         private void OnDestroy()
         {
             EventCenter.Instance.RemoveEventListener("UseBattery", UseBattery);
+            EventCenter.Instance.RemoveEventListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.RemoveEventListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
@@ -53,6 +54,15 @@ namespace UI.Inventory
 
             _key1.gameObject.SetActive(_data.hasKey1);
             _key2.gameObject.SetActive(_data.hasKey2);
+        }
+
+        private bool PickUpBattery(int num = 1)
+        {
+            if (_data.batteryNum >= _maxBatteryNum)
+                return false;
+
+            _data.batteryNum += num;
+            return true;
         }
 
         private void UseBattery()

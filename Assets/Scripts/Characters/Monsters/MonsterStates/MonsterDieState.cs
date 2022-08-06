@@ -21,7 +21,7 @@ namespace Characters.Monsters
         private IEnumerator MonsterFade(float fadeSpeed)
         {
             var fadeColor = Color.white;
-            
+            _core.AIMovement.StopMoving();
             while (_spriteRenderer.color.a > 0)
             {
                 fadeColor.a -= fadeSpeed * Time.deltaTime;

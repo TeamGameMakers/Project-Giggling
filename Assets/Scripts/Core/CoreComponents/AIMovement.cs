@@ -50,5 +50,6 @@ namespace Core
         }
 
         public void SetSpeed(float speed) => _ai.maxSpeed = speed;
+        public void StopMoving() => _ai.isStopped = true;
     }
 }
