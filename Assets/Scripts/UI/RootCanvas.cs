@@ -19,8 +19,14 @@ namespace UI
     /// </summary>
     public class RootCanvas : SingletonMono<RootCanvas>
     {
-        [Tooltip("为空会在该对象上自行获取")]
-        public RectTransform canvas;
+        protected RectTransform canvas;
+        public RectTransform Canvas {
+            get {
+                if (canvas == null)
+                    canvas = GetComponent<RectTransform>();
+                return canvas;
+            }
+        }
 
         // Bottom 层级物体名
         public string bottomName = "Bottom";
@@ -40,15 +46,11 @@ namespace UI
         {
             base.Awake();
 
-            if (canvas == null) {
-                canvas = GetComponent<RectTransform>();
-            }
-            
             // 找到各层
-            bottom = canvas.Find(bottomName);
-            middle = canvas.Find(middleName);
-            top = canvas.Find(topName);
-            system = canvas.Find(systemName);
+            bottom = Canvas.Find(bottomName);
+            middle = Canvas.Find(middleName);
+            top = Canvas.Find(topName);
+            system = Canvas.Find(systemName);
         }
 
         /// <summary>

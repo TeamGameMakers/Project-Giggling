@@ -30,8 +30,7 @@ namespace UI
                 case "ContinueBtn":
                     // 加载存档进入游戏
                     SaveManager.Load();
-                    // 加载场景
-                    EnterLoadingPanel();
+                    // TODO: 根据存档加载场景
                     break;
                 case "NewGameBtn":
                     // 检查存档并做出提示
@@ -42,7 +41,7 @@ namespace UI
                     else
                     {
                         // 加载场景
-                        EnterLoadingPanel();
+                        EnterLoadingPanel("01_Phase_1");
                     }
                     break;
                 case "SettingBtn":
@@ -59,10 +58,10 @@ namespace UI
             }
         }
 
-        protected void EnterLoadingPanel()
+        protected void EnterLoadingPanel(string scene)
         {
             UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel", callBack: panel => {
-                panel.LoadScene("01_Phase_1");
+                panel.LoadScene(scene);
             });
             UIManager.Instance.HidePanel("StartPanel", true);
         }
