@@ -20,7 +20,7 @@ MonoBehaviour:
   hitSpeed: 0.5
   healthPoint: 200
   catchDistance: 0.5
-  checkRadius: 2.8
+  checkRadius: 2.22
   checkAngle: 180
   checkLayer:
     serializedVersion: 2
