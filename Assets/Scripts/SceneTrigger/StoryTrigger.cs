@@ -1,4 +1,5 @@
 using Data.Story;
+using Save;
 using Story;
 using UnityEngine;
 
@@ -10,10 +11,13 @@ namespace SceneTrigger
 
         protected override void TriggerEnterEvent(Collider2D col)
         {
-            StoryManager.Instance.StartStory(plot);
-            if (triggerOnce && used)
+            if (!SaveManager.GetBool(key))
             {
-                Destroy(gameObject);
+                StoryManager.Instance.StartStory(plot);
+                if (triggerOnce && used)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
