@@ -13,7 +13,7 @@ namespace Characters.Monsters
         [SerializeField] private MonsterDataSO _data;
         private Animator _anim;
         private Collider2D _coll;
-        
+
         public static readonly Dictionary<int, Monster> Monsters;
         
         internal MonsterStateMachine StateMachine { get; private set; }
@@ -104,8 +104,11 @@ namespace Characters.Monsters
         /// <summary>
         /// 怪进入光
         /// </summary>
-        public void MonsterEnterLight(float damage, bool hitByPlayer = false)
+        public void MonsterStayLight(float damage, bool hitByPlayer = false)
         {
+            if (!hitByPlayer) 
+                AkSoundEngine.PostEvent("Monster_burn", gameObject);
+            
             Hit = true;
             _data.healthPoint -= damage * Time.deltaTime;
             HitByPlayer = hitByPlayer;
@@ -119,6 +122,7 @@ namespace Characters.Monsters
             if (EventCenter.Instance.FuncTrigger<Collider2D, bool>("LightOnMonster", _coll)) return;
             Hit = false;
             HitByPlayer = false;
+            AkSoundEngine.PostEvent("MonsterStopBurn", gameObject);
         }
         
         /// <summary>

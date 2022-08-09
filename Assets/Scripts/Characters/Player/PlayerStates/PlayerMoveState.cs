@@ -12,14 +12,15 @@ namespace Characters.Player
         public override void Enter()
         {
             base.Enter();
+
+            MoveDirection();
         }
 
         public override void PhysicsUpdate()
         {
             base.PhysicsUpdate();
 
-            var curVelocity = InputHandler.SprintPressed ? _data.runVelocity : _data.walkVelocity;
-            _core.Movement.SetVelocity(InputVec2 * curVelocity);
+            MoveDirection();
         }
 
         public override void LogicUpdate()
@@ -30,8 +31,24 @@ namespace Characters.Player
                 StateMachine.ChangeState(_player.IdleState);
             else
             {
-                _anim.SetFloat(_animHashFloatX, InputHandler.NormInputX);
-                _anim.SetFloat(_animHashFloatY, InputHandler.NormInputY);
+                _anim.SetFloat(_animHashFloatX, _core.Movement.CurrentVelocityNorm.x);
+                _anim.SetFloat(_animHashFloatY, _core.Movement.CurrentVelocityNorm.y);
+            }
+        }
+        
+        private void MoveDirection()
+        {
+            var curSpeed = InputHandler.SprintPressed ? _data.runVelocity : _data.walkVelocity;
+            
+            if (InputHandler.NormInputX != 0)
+            {
+                _core.Movement.SetVelocityX(InputHandler.NormInputX * curSpeed);
+                _core.Movement.SetVelocityY(0);
+            }
+            else if (InputHandler.NormInputY != 0)
+            {
+                _core.Movement.SetVelocityY(InputHandler.NormInputY * curSpeed);
+                _core.Movement.SetVelocityX(0);
             }
         }
     }
