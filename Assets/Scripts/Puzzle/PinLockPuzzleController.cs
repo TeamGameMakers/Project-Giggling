@@ -18,7 +18,6 @@ namespace Puzzle
         private void Start()
         {
             m_model = GetModel<PinLockPuzzleModel>();
-            GameManager.SwitchGameState(GameState.PinLock);
         }
 
         private void Update()
@@ -27,7 +26,7 @@ namespace Puzzle
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
                 GameManager.BackGameState();
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 return;
             }
             
