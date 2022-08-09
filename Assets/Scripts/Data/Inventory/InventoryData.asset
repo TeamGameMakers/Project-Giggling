@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a66e216f17f034f86dd9cebe9b03dc, type: 3}
   m_Name: InventoryData
   m_EditorClassIdentifier: 
-  batteryNum: 4
-  powerRemaining: 2000
+  batteryNum: 2
+  powerRemaining: 22.118689
   hasKey1: 1
   hasKey2: 1
