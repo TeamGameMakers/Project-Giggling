@@ -97,7 +97,7 @@ namespace Interact
                 doorBlock.enabled = false;
                 
                 // 在计时时出去就死亡
-                if (timing)
+                if (curTime < 15f)
                 {
                     Debug.Log("GameOver");
                     EventCenter.Instance.EventTrigger("GameOver");
