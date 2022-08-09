@@ -5573,6 +5573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u623F\u95F4\u8FC7\u573A\u5BF9\u8BDD_homeDialog_02"
       objectReference: {fileID: 0}
+    - target: {fileID: 8049363684693957310, guid: fecfe0055b41e154590600cf9ffd5366, type: 3}
+      propertyPath: delay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8049363684693957311, guid: fecfe0055b41e154590600cf9ffd5366, type: 3}
       propertyPath: m_Size.x
       value: 2.5236716
