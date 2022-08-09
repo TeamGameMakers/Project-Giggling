@@ -470,8 +470,8 @@ MonoBehaviour:
         guid: 596eb3c9028b1446a5d1230127b0621b
       Path: Events\Default Work Unit\Monster\B_move
       maxAttenuation: 0
-      maxDuration: 2.327595
-      minDuration: 1.94712
+      maxDuration: 0
+      minDuration: 0
     - name: Battery_ranout
       guid: 80120057b2becd4b9ba7260d9af43528
       id: 2189595490
@@ -1350,7 +1350,7 @@ MonoBehaviour:
       Path: Events\Default Work Unit\Player\Walk
       maxAttenuation: 0
       maxDuration: 0.315016
-      minDuration: 0.22708
+      minDuration: 0.213763
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1602,7 +1602,7 @@ MonoBehaviour:
     m_lastTime: -8585428831284365783
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000080000000a0000000b0000000e0000001200000013000000
+  ExpandedWaapiItemIds: 0600000007000000080000000b0000000e0000001200000013000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
