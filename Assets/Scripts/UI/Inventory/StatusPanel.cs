@@ -20,6 +20,8 @@ namespace UI.Inventory
         private Image _powerRemaining;
         private Image _health;
         private Sprite _healthSprite;
+        private Image _staminaLeft;
+        private Image _staminaRight;
 
         protected override void Awake()
         {
@@ -44,6 +46,7 @@ namespace UI.Inventory
             EventCenter.Instance.RemoveFuncListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.RemoveFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
             EventCenter.Instance.RemoveEventListener<float>("UpdateHealth", UpdateHealth);
+            EventCenter.Instance.RemoveEventListener<float>("UpdateStamina", UpdateStamina);
         }
 
         private void OnDestroy()
@@ -60,11 +63,14 @@ namespace UI.Inventory
             _key1 = GetControl<Button>("Key1");
             _key2 = GetControl<Button>("Key2");
             _health = GetControl<Image>("Health");
+            _staminaLeft = GetControl<Image>("Stamina Left");
+            _staminaRight = GetControl<Image>("Stamina Right");
             
             EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
             EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
             EventCenter.Instance.AddEventListener<float>("UpdateHealth", UpdateHealth);
+            EventCenter.Instance.AddEventListener<float>("UpdateStamina", UpdateStamina);
         }
 
         private void RefreshUI()
@@ -79,9 +85,14 @@ namespace UI.Inventory
         private void UpdateHealth(float percent)
         {
             var color = _health.color;
-            Debug.Log(1 - percent);
             color.a = (1 - percent) * 0.6f;
             _health.color = color;
+        }
+
+        private void UpdateStamina(float percent)
+        {
+            _staminaLeft.fillAmount = percent;
+            _staminaRight.fillAmount = percent;
         }
 
         private bool PickUpBattery(int num = 1)
@@ -96,6 +107,8 @@ namespace UI.Inventory
         private void UseBattery()
         {
             if (_data.batteryNum <= 0) return;
+
+            AkSoundEngine.PostEvent("Readloadflashlight", gameObject);
             _data.batteryNum--;
             _data.powerRemaining = _maxPower;
         }

@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3820798240">
+		<SoundBank Id="1355168291" Language="SFX" Hash="99641057">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="1303318344">
+		<SoundBank Id="2858921253" Language="SFX" Hash="2607060422">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -172,7 +172,7 @@
 					<IncludedMemoryFiles>
 						<File Id="456608687" Language="SFX">
 							<ShortName>box_try.wav</ShortName>
-							<Path>SFX\box_try_62BBB894.wem</Path>
+							<Path>SFX\box_try_0AD06841.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -338,6 +338,49 @@
 						<File Id="320501718" Language="SFX">
 							<ShortName>UI5.wav</ShortName>
 							<Path>SFX\UI5_42025130.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="824317709" Name="MainTheme" ObjectPath="\Events\Default Work Unit\UI\MainTheme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="36439070" Language="SFX">
+							<ShortName>主界面 修改延音.wav</ShortName>
+							<Path>SFX\主界面 修改延音_4BAF6BC3.wem</Path>
+						</File>
+						<File Id="114835131" Language="SFX">
+							<ShortName>女笑6.L.wav</ShortName>
+							<Path>SFX\女笑6.L_10C4C929.wem</Path>
+						</File>
+						<File Id="139778442" Language="SFX">
+							<ShortName>女笑5.L.wav</ShortName>
+							<Path>SFX\女笑5.L_10C4C929.wem</Path>
+						</File>
+						<File Id="160353160" Language="SFX">
+							<ShortName>女笑4.L.wav</ShortName>
+							<Path>SFX\女笑4.L_10C4C929.wem</Path>
+						</File>
+						<File Id="311113761" Language="SFX">
+							<ShortName>女笑1.L.wav</ShortName>
+							<Path>SFX\女笑1.L_10C4C929.wem</Path>
+						</File>
+						<File Id="425832618" Language="SFX">
+							<ShortName>女笑3.L.wav</ShortName>
+							<Path>SFX\女笑3.L_10C4C929.wem</Path>
+						</File>
+						<File Id="542964492" Language="SFX">
+							<ShortName>女笑2.L.wav</ShortName>
+							<Path>SFX\女笑2.L_10C4C929.wem</Path>
+						</File>
+						<File Id="944470100" Language="SFX">
+							<ShortName>女笑9.L.wav</ShortName>
+							<Path>SFX\女笑9.L_10C4C929.wem</Path>
+						</File>
+						<File Id="1036149262" Language="SFX">
+							<ShortName>女笑7.L.wav</ShortName>
+							<Path>SFX\女笑7.L_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
