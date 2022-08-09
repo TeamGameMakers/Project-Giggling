@@ -20,12 +20,14 @@ namespace Interact
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            renderer.sortingLayerName = changeLayer;
+            if (col.IsTouchingLayers(1 << layerMask))
+                renderer.sortingLayerName = changeLayer;
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            renderer.sortingLayerName = defaultLayer;
+            if (other.IsTouchingLayers(1 << layerMask))
+                renderer.sortingLayerName = defaultLayer;
         }
     }
 }
