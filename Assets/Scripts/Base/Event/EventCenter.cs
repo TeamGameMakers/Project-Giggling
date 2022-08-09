@@ -98,7 +98,7 @@ namespace Base.Event
         /// 事件触发。
         /// </summary>
         /// <param name="name">触发的事件名</param>
-        public void FuncTrigger(string name)
+        public void EventTrigger(string name)
         {
             if (eventContainer.ContainsKey(name)) {
                 (eventContainer[name] as EventAction).actions?.Invoke();
@@ -111,7 +111,7 @@ namespace Base.Event
         /// <typeparam name="T">回调函数参数类型</typeparam>
         /// <param name="name">触发的事件名</param>
         /// <param name="info">回调函数参数</param>
-        public void FuncTrigger<T>(string name, T info)
+        public void EventTrigger<T>(string name, T info)
         {
             if (eventContainer.ContainsKey(name)) {
                 (eventContainer[name] as EventAction<T>).actions?.Invoke(info);
