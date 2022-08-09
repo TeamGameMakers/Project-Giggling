@@ -644,8 +644,8 @@ MonoBehaviour:
         guid: 9e4e5f045f89cf4baa66dbbb256cda24
       Path: Events\Default Work Unit\Monster\C_humble
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 2.25
+      minDuration: 1.75
     - name: C_move
       guid: 4cb643f46548684d8d583b0751213d92
       id: 35926800

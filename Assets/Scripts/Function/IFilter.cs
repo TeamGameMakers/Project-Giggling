@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IFilter<T>
+namespace Function
 {
-    public bool Filter(T data);
+    public interface IFilter<T>
+    {
+        public bool Filter(T data);
+    }
 }

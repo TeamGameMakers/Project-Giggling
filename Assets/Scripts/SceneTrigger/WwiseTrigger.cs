@@ -8,15 +8,16 @@ namespace SceneTrigger
     {
         public string wwiseEvent;
 
-        public string actionEvent;
+        [Tooltip("同时触发的事件，可以置空")]
+        public string triggerEvent;
 
         protected override void TriggerEnterEvent(Collider2D col)
         {
             Debug.Log("触发 Wwise");
             AkSoundEngine.PostEvent(wwiseEvent, gameObject);
             
-            if (!string.IsNullOrEmpty(actionEvent))
-                EventCenter.Instance.EventTrigger(actionEvent);
+            if (!string.IsNullOrEmpty(triggerEvent))
+                EventCenter.Instance.EventTrigger(triggerEvent);
         }
     }
 }

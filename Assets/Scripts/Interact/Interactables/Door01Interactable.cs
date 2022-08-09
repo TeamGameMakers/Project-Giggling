@@ -34,7 +34,7 @@ namespace Interact
         private Collider2D m_coll;
         
         // 音效计时开始事件
-        private const string m_soundTimingStart = "wwiseSoundTiming";
+        private const string SoundTimingStart = "wwiseSoundTiming";
         
         protected override void Awake()
         {
@@ -106,12 +106,12 @@ namespace Interact
 
         protected virtual void OnEnable()
         {
-            EventCenter.Instance.AddEventListener(m_soundTimingStart, StartTiming);
+            EventCenter.Instance.AddEventListener(SoundTimingStart, StartTiming);
         }
 
         protected virtual void OnDisable()
         {
-            EventCenter.Instance.RemoveEventListener(m_soundTimingStart, StartTiming);
+            EventCenter.Instance.RemoveEventListener(SoundTimingStart, StartTiming);
         }
 
         public void StartTiming()
@@ -121,6 +121,8 @@ namespace Interact
 
         private void ShowPeek()
         {
+            AkSoundEngine.PostEvent("WatchCatHole", gameObject);
+            
             showImage = true;
             GameManager.SwitchGameState(GameState.UI, false);
             
@@ -132,6 +134,8 @@ namespace Interact
 
         private void HidePeek()
         {
+            AkSoundEngine.PostEvent("StopWatchCatHole", gameObject);
+            
             showImage = false;
             GameManager.SwitchGameState(GameState.Playing, false);
             peekPanel.SetActive(false);
