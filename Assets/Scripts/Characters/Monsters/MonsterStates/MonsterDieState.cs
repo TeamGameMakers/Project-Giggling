@@ -1,4 +1,5 @@
 using System.Collections;
+using Data;
 using UnityEngine;
 
 namespace Characters.Monsters
@@ -18,6 +19,16 @@ namespace Characters.Monsters
             _monster.StartCoroutine(MonsterFade(_data.fadeSpeed));
             _monster.tag = "Untagged";
             AkSoundEngine.PostEvent("MonsterStopBurn", _monster.gameObject);
+
+            switch (_data.monsterType)
+            {
+                case MonsterDataSO.MonsterType.Normal:
+                    AkSoundEngine.PostEvent("C_dead", _monster.gameObject);
+                    break;
+                case MonsterDataSO.MonsterType.Elite:
+                    AkSoundEngine.PostEvent("B_dead", _monster.gameObject);
+                    break;
+            }
         }
 
         private IEnumerator MonsterFade(float fadeSpeed)

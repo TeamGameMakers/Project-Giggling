@@ -107,6 +107,8 @@ namespace UI.Inventory
         private void UseBattery()
         {
             if (_data.batteryNum <= 0) return;
+
+            AkSoundEngine.PostEvent("Readloadflashlight", gameObject);
             _data.batteryNum--;
             _data.powerRemaining = _maxPower;
         }
