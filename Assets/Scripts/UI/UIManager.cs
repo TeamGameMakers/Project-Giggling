@@ -38,6 +38,11 @@ namespace UI
             Instance.HidePanel("HintPanel");
         }
 
+        public void ShowGameOverPanel()
+        {
+            Instance.ShowPanel<GameOverPanel>("GameOverPanel", "", UILayer.Top);
+        }
+
         #endregion
 
         /// <summary>
