@@ -1,5 +1,4 @@
 using System.Collections;
-using Function;
 using UnityEngine;
 
 namespace Characters.Monsters

@@ -6,6 +6,7 @@ using Characters.Monsters;
 using Core;
 using Data;
 using Save;
+using UI;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -38,19 +39,20 @@ namespace Characters.Player
             _flashLight = transform.GetChild(2).GetComponent<Light2D>();
 
             StateMachine = new PlayerStateMachine();
-            IdleState = new PlayerIdleState(this, "idle");
-            MoveState = new PlayerMoveState(this, "move");
             _monstersColl = new List<Collider2D>();
         }
 
         private void Start()
         {
             _flashLight.enabled = false;
-            StateMachine.Initialize(IdleState);
             GM.GameManager.SetPlayerTransform(transform);
 
             data = Instantiate(data);
             data.hasFlashLight = SaveManager.GetBool("hasFlashLight");
+            
+            IdleState = new PlayerIdleState(this, "idle");
+            MoveState = new PlayerMoveState(this, "move");
+            StateMachine.Initialize(IdleState);
 
             EventCenter.Instance.AddFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             
@@ -84,6 +86,9 @@ namespace Characters.Player
             
             // 手电伤害判定
             FlashLightDetect();
+            
+            // 耐力槽
+            StaminaCheck();
         }
 
         private void OnDisable()
@@ -130,7 +135,7 @@ namespace Characters.Player
                 _powerRemaining = EventCenter.Instance.
                     FuncTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
         }
-        
+
         private void FlashLightDetect()
         {
             if (!_flashLight.enabled) return;
@@ -143,6 +148,19 @@ namespace Characters.Player
                 Monster.Monsters[coll.GetInstanceID()].MonsterStayLight(data.lightDamage);
         }
 
+        private void StaminaCheck()
+        {
+            if (InputHandler.SprintPressed && StateMachine.CurrentState != IdleState)
+                data.stamina -= data.staminaSpeed * Time.deltaTime;
+            else
+                data.stamina += data.staminaSpeed * Time.deltaTime;
+
+            data.stamina = Mathf.Clamp(data.stamina, 0, data.maxStamina);
+            data.canSprint = data.stamina > 0;
+            
+            EventCenter.Instance.EventTrigger("UpdateStamina", data.stamina / data.maxStamina);
+        }
+
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);
 
         /// <summary>
@@ -152,7 +170,13 @@ namespace Characters.Player
         {
             StopCoroutine(RestoreHp());
             data.healthPoint -= damage * Time.deltaTime;
+            data.healthPoint = Mathf.Clamp(data.healthPoint, 0f, data.maxHealthPoint);
 
+            if (data.healthPoint == 0)
+            {
+                UIManager.Instance.ShowGameOverPanel();
+            }
+            
             EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
         }
 

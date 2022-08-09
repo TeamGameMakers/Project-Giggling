@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   walkVelocity: 2
-  runVelocity: 3
+  runVelocity: 4
   maxHealthPoint: 20
   healthPoint: 20
   hpRestoreSpeed: 2
+  maxStamina: 5
+  stamina: 5
+  staminaSpeed: 1
+  canSprint: 1
   hasFlashLight: 1
   powerUsingSpeed: 1
   lightRadius: 3
