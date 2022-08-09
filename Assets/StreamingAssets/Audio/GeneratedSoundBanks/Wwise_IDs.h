@@ -15,12 +15,14 @@ namespace AK
     {
         static const AkUniqueID A_HUMBLE = 145651708U;
         static const AkUniqueID A_MOVE = 2393108978U;
+        static const AkUniqueID B_DEAD = 1144085426U;
         static const AkUniqueID B_HUMBLE = 1691311397U;
         static const AkUniqueID B_MOVE = 996361111U;
         static const AkUniqueID BATTERY_RANOUT = 2189595490U;
         static const AkUniqueID BOX_DEFEAT = 680228482U;
         static const AkUniqueID BOX_OPEN = 3460616907U;
         static const AkUniqueID BOX_TRY = 3110322898U;
+        static const AkUniqueID C_DEAD = 750193097U;
         static const AkUniqueID C_HUMBLE = 3520101518U;
         static const AkUniqueID C_MOVE = 35926800U;
         static const AkUniqueID DIA_A = 97531917U;
@@ -51,6 +53,7 @@ namespace AK
         static const AkUniqueID NEIBERHOOD = 4090421712U;
         static const AkUniqueID PICKUP = 3978245845U;
         static const AkUniqueID PLAYERINHALLWAY = 3360399063U;
+        static const AkUniqueID READLOADFLASHLIGHT = 1300721799U;
         static const AkUniqueID RUN = 712161704U;
         static const AkUniqueID SCHOOL_INDOOR = 3394774657U;
         static const AkUniqueID SCHOOL_OUTDOOR = 201640464U;
