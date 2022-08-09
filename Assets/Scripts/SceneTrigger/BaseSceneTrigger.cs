@@ -35,13 +35,13 @@ namespace SceneTrigger
                 Debug.Log("触发场景触发器：" + gameObject.name);
                 enter = true;
 
+                TriggerEnterEvent(col);
+                
                 if (triggerOnce)
                 {
                     used = true;
                     SaveManager.RegisterBool(key);
                 }
-                
-                TriggerEnterEvent(col);
             }
         }
 
