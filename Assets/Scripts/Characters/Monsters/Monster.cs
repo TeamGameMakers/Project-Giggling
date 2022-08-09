@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Base.Event;
 using Base.FSM;
-using Base.Resource;
 using Core;
 using Data;
 using Save;
@@ -141,6 +140,7 @@ namespace Characters.Monsters
         public void MonsterStayRoadLight(float damage)
         {
             Hit = true;
+            HitByPlayer = false;
             _data.healthPoint -= damage * Time.deltaTime;
         }
         
