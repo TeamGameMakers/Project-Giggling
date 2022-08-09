@@ -1,4 +1,4 @@
-using Base.Scene;
+using System;
 using Save;
 using UnityEditor;
 using UnityEngine;
@@ -24,10 +24,11 @@ namespace UI
         protected override void OnClick(string btnName)
         {
             base.OnClick(btnName);
-            
+
             switch (btnName)
             {
                 case "ContinueBtn":
+                    AkSoundEngine.PostEvent("Menu_confirm", gameObject);
                     // 加载存档进入游戏
                     SaveManager.Load();
                     // 根据存档加载场景
@@ -36,6 +37,7 @@ namespace UI
                         EnterLoadingPanel(json);
                     break;
                 case "NewGameBtn":
+                    AkSoundEngine.PostEvent("Menu_confirm", gameObject);
                     // 检查存档并做出提示
                     if (existsSave)
                     {
@@ -59,10 +61,12 @@ namespace UI
                     }
                     break;
                 case "SettingBtn":
+                    AkSoundEngine.PostEvent("Menu_enter", gameObject);
                     // 显示设置面板
                     UIManager.Instance.ShowPanel<SettingPanel>("SettingPanel");
                     break;
                 case "QuitBtn":
+                    AkSoundEngine.PostEvent("Menu_exit", gameObject);
 #if UNITY_EDITOR
                     EditorApplication.isPlaying = false;
 #else

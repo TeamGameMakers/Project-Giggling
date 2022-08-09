@@ -1,10 +1,6 @@
-using System;
 using System.Collections;
 using Base.Scene;
-using GM;
 using TMPro;
-using UnityEngine;
-using UnityEngine.Events;
 
 namespace UI
 {

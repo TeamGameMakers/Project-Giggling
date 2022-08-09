@@ -56,6 +56,7 @@ namespace Puzzle
                     // 静止时检查推针
                     if (InputHandler.PryInput)
                     {
+                        AkSoundEngine.PostEvent("Box_try", gameObject);
                         m_model.PushPin();
                     }
                     break;

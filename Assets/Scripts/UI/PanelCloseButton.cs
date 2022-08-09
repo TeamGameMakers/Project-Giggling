@@ -33,6 +33,7 @@ namespace UI
             }
             
             button.onClick.AddListener(() => {
+                AkSoundEngine.PostEvent("Menu_exit", gameObject);
                 UIManager.Instance.HidePanel(closePanel.gameObject.name, destroyPanel);
             });
         }

@@ -19,12 +19,15 @@ namespace UI
             switch (btnName)
             {
                 case "KeyBtn":
+                    AkSoundEngine.PostEvent("Menu_exit", gameObject);
                     SwitchPanel(0);
                     break;
                 case "SoundBtn":
+                    AkSoundEngine.PostEvent("Menu_exit", gameObject);
                     SwitchPanel(1);
                     break;
                 case "CreditsBtn":
+                    AkSoundEngine.PostEvent("Menu_exit", gameObject);
                     SwitchPanel(2);
                     break;
             }

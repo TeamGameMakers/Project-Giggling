@@ -3,6 +3,7 @@ using Base.Event;
 using GM;
 using Save;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Interact
 {
@@ -52,6 +53,12 @@ namespace Interact
 
         public override void Interact(Interactor interactor)
         {
+            // 先清空再绑定，确保只响应自己的事件
+            EventCenter.Instance.RemoveAllListener(successEvent);
+            EventCenter.Instance.RemoveAllListener(failEvent);
+            EventCenter.Instance.AddEventListener(successEvent, Success);
+            EventCenter.Instance.AddEventListener(failEvent, Fail);
+            
             // 改成激活子物体
             pinLock.SetActive(true);
             GameManager.SwitchGameState(GameState.PinLock);
@@ -61,15 +68,12 @@ namespace Interact
             pinLock.transform.position = mid;
         }
 
-        protected virtual void OnDisable()
-        {
-            EventCenter.Instance.RemoveEventListener(successEvent, Success);
-            EventCenter.Instance.RemoveEventListener(failEvent, Fail);
-        }
-
         protected void Success()
         {
             Debug.Log("进入开锁成功事件");
+
+            AkSoundEngine.PostEvent("Box_open", successObj);
+            
             SaveManager.RegisterBool(saveKey);
             Destroy(pinLock);
             //sr.sprite = finishSprite;
@@ -83,6 +87,9 @@ namespace Interact
         protected void Fail()
         {
             Debug.Log("进入开锁失败事件");
+            
+            AkSoundEngine.PostEvent("Box_defeat", successObj);
+            
             Destroy(pinLock);
             
             // TODO: 开锁失败，刷新 Boss
