@@ -50,12 +50,15 @@ namespace AK
         static const AkUniqueID MONSTERSTOPBURN = 2063961778U;
         static const AkUniqueID NEIBERHOOD = 4090421712U;
         static const AkUniqueID PICKUP = 3978245845U;
+        static const AkUniqueID PLAYERINHALLWAY = 3360399063U;
         static const AkUniqueID RUN = 712161704U;
         static const AkUniqueID SCHOOL_INDOOR = 3394774657U;
         static const AkUniqueID SCHOOL_OUTDOOR = 201640464U;
         static const AkUniqueID STOPCOMBAT = 518172181U;
+        static const AkUniqueID STOPWATCHCATHOLE = 1636873064U;
         static const AkUniqueID TV = 1568083719U;
         static const AkUniqueID WALK = 2108779966U;
+        static const AkUniqueID WATCHCATHOLE = 2295356976U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -82,9 +85,17 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID DIRECT = 3167052178U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MOTION_FACTORY_BUS = 985987111U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID RVB = 695384145U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
