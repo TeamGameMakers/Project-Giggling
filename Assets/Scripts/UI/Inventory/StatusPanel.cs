@@ -1,8 +1,10 @@
+using System;
 using Base.Event;
 using Data;
 using Save;
 using TMPro;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 namespace UI.Inventory
@@ -16,6 +18,8 @@ namespace UI.Inventory
         private Button _key1, _key2;
         private TextMeshProUGUI _batteryNum;
         private Image _powerRemaining;
+        private Image _health;
+        private Sprite _healthSprite;
 
         protected override void Awake()
         {
@@ -34,12 +38,16 @@ namespace UI.Inventory
             RefreshUI();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             EventCenter.Instance.RemoveEventListener("UseBattery", UseBattery);
             EventCenter.Instance.RemoveFuncListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.RemoveFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
-            
+            EventCenter.Instance.RemoveEventListener<float>("UpdateHealth", UpdateHealth);
+        }
+
+        private void OnDestroy()
+        {
             // 存档
             var data = JsonUtility.ToJson(_data);
             SaveManager.Register(this.GetInstanceID().ToString(), data);
@@ -51,10 +59,12 @@ namespace UI.Inventory
             _powerRemaining = GetControl<Image>("Remaining");
             _key1 = GetControl<Button>("Key1");
             _key2 = GetControl<Button>("Key2");
+            _health = GetControl<Image>("Health");
             
             EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
             EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
+            EventCenter.Instance.AddEventListener<float>("UpdateHealth", UpdateHealth);
         }
 
         private void RefreshUI()
@@ -64,6 +74,14 @@ namespace UI.Inventory
 
             _key1.gameObject.SetActive(_data.hasKey1);
             _key2.gameObject.SetActive(_data.hasKey2);
+        }
+
+        private void UpdateHealth(float percent)
+        {
+            var color = _health.color;
+            Debug.Log(1 - percent);
+            color.a = (1 - percent) * 0.6f;
+            _health.color = color;
         }
 
         private bool PickUpBattery(int num = 1)
