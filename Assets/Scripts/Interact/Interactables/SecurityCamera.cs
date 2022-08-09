@@ -1,6 +1,5 @@
 using UnityEngine;
 using Data;
-using TreeEditor;
 
 namespace Interact
 {

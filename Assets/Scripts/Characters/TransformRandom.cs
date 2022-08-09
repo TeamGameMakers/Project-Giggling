@@ -30,7 +30,9 @@ namespace Characters
 
         public Vector3 GetRandomPosition()
         {
-            return RandomSelector.RandomData<Vector3>(positions);
+            Vector3 randomPos = RandomSelector.RandomData<Vector3>(positions);
+            Debug.Log(randomPos);
+            return randomPos;
         }
     }
 }
