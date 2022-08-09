@@ -63,7 +63,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Wwise decoded bank
-/[Aa]sset/streamasset/gen
+/[Aa]sset/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks
 
 # Rider
 .idea/

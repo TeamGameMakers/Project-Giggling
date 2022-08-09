@@ -23,6 +23,8 @@ namespace GM
         static GameManager()
         {
             // 可以进行某些注册
+
+            AkBankManager.LoadBank("AllInOne", true, false);
         }
         
         private static GameState m_state = GameState.Playing;

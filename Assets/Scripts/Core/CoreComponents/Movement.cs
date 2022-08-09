@@ -9,6 +9,7 @@ namespace Core
 
         private Vector2 _currentVelocity;
         public Vector2 CurrentVelocity => _currentVelocity;
+        public Vector2 CurrentVelocityNorm => _currentVelocity.normalized;
         public int FaceDirection { get; private set; }
 
         protected void Awake()
