@@ -20,6 +20,11 @@ namespace GM
     
     public static class GameManager
     {
+        static GameManager()
+        {
+            // 可以进行某些注册
+        }
+        
         private static GameState m_state = GameState.Playing;
         
         public static GameState State => m_state;

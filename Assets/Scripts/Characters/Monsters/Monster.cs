@@ -124,7 +124,7 @@ namespace Characters.Monsters
         /// <summary>
         /// 怪离开路灯
         /// </summary>
-        private void MonsterExitRoadLight()
+        public void MonsterExitRoadLight()
         {
             Hit = false;
             HitByPlayer = false;
