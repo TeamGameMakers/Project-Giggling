@@ -45,9 +45,18 @@ namespace Characters.Monsters
             Monsters.Add(_coll.GetInstanceID(), this);
             
             StateMachine = new MonsterStateMachine();
-            IdleState = new MonsterIdleState(this);
-            ChaseState = new MonsterChaseState(this);
-            PatrolState = new MonsterPatrolState(this);
+            if (_data.monsterType == MonsterDataSO.MonsterType.Boss)
+            {
+                IdleState = new MonsterIdleState(this, "idle");
+                ChaseState = new MonsterChaseState(this, "move");
+                PatrolState = new MonsterPatrolState(this, "move");
+            }
+            else
+            {
+                IdleState = new MonsterIdleState(this);
+                ChaseState = new MonsterChaseState(this);
+                PatrolState = new MonsterPatrolState(this);
+            }
             DieState = new MonsterDieState(this);
         }
 
@@ -74,6 +83,7 @@ namespace Characters.Monsters
 
         private void Update()
         {
+            Core.LogicUpdate();
             StateMachine.CurrentState.LogicUpdate();
             MonsterExitFlashLight();
         }
@@ -86,6 +96,11 @@ namespace Characters.Monsters
         internal void SetAnimBool(int hash, bool value)
         {
             _anim.SetBool(hash, value);
+        }
+
+        internal void SetAnimFloat(int hash, float value)
+        {
+            _anim.SetFloat(hash, value);
         }
 
         private bool CheckPatrol()
@@ -106,8 +121,11 @@ namespace Characters.Monsters
         /// </summary>
         public void MonsterStayLight(float damage, bool hitByPlayer = false)
         {
-            if (!hitByPlayer) 
+            if (!HitByPlayer)
+            {
+                Debug.Log("受伤");
                 AkSoundEngine.PostEvent("Monster_burn", gameObject);
+            }
             
             Hit = true;
             _data.healthPoint -= damage * Time.deltaTime;
@@ -120,9 +138,13 @@ namespace Characters.Monsters
         private void MonsterExitFlashLight()
         {
             if (EventCenter.Instance.FuncTrigger<Collider2D, bool>("LightOnMonster", _coll)) return;
+            
+            if (HitByPlayer)
+                AkSoundEngine.PostEvent("MonsterStopBurn", gameObject);
+            
             Hit = false;
             HitByPlayer = false;
-            AkSoundEngine.PostEvent("MonsterStopBurn", gameObject);
+            
         }
         
         /// <summary>

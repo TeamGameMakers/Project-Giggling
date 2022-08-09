@@ -106,6 +106,7 @@ namespace Characters.Player
                 else
                 {
                     _flashLight.enabled = false;
+                    _monstersColl = new List<Collider2D>();
                     AkSoundEngine.PostEvent("Flashlight_off", gameObject);
                 }
             }

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ee522a1c864a12a86575cd8d36e308, type: 3}
-  m_Name: TestMonsterData
+  m_Name: Boss
   m_EditorClassIdentifier: 
-  monsterType: 1
+  monsterType: 2
   isDead: 0
   fadeSpeed: 0.5
-  walkSpeed: 0.5
-  chaseSpeed: 0.3
+  walkSpeed: 2
+  chaseSpeed: 3
   hitSpeed: 1
-  healthPoint: 277.74863
+  healthPoint: 500
   checkRadius: 4
-  checkAngle: 35
+  checkAngle: 180
   checkLayer:
     serializedVersion: 2
     m_Bits: 128

@@ -34,7 +34,7 @@ namespace Core
 
         internal void LogicUpdate()
         {
-            _currentVelocity = _rb.velocity;
+            _currentVelocity = _ai.desiredVelocity;
         }
         
         private void OnDisable()

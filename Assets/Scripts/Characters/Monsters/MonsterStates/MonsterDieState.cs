@@ -16,6 +16,8 @@ namespace Characters.Monsters
         {
             base.Enter();
             _monster.StartCoroutine(MonsterFade(_data.fadeSpeed));
+            _monster.tag = "Untagged";
+            AkSoundEngine.PostEvent("MonsterStopBurn", _monster.gameObject);
         }
 
         private IEnumerator MonsterFade(float fadeSpeed)
