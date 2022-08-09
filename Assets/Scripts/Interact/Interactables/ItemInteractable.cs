@@ -54,7 +54,7 @@ namespace Interact
                         }
                         else
                         {
-                            EventCenter.Instance.FuncTrigger(afterPickEvent);
+                            EventCenter.Instance.EventTrigger(afterPickEvent);
                             // 销毁自己
                             Destroy(gameObject);
                             // 记录拾取道具
