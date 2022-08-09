@@ -47,8 +47,9 @@ namespace UI
 
         protected virtual void PickUp()
         {
-            Debug.Log("拾取道具: " + itemData.name);
+            Debug.Log("点击拾取按键: " + itemData.name);
 
+            AkSoundEngine.PostEvent("Menu_confirm", gameObject);
             // 关闭面板
             UIManager.Instance.HidePanel("ItemInfoPanel", true);
             

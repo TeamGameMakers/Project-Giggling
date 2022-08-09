@@ -94,6 +94,12 @@ namespace Base.Event
                 (eventContainer[name] as EventFunc<T1, T2>).funcs -= callback;
         }
 
+        public void RemoveAllListener(string name)
+        {
+            if (eventContainer.ContainsKey(name))
+                eventContainer.Remove(name);
+        }
+
         /// <summary>
         /// 事件触发。
         /// </summary>

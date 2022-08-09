@@ -24,6 +24,9 @@ namespace Story
         private bool m_hasChoice;
 
         private string panelName = "StoryPanel";
+        
+        // 用于播放音效的物体
+        private GameObject m_akObj;
 
         public void StartStory(PlotDataSO plot)
         {
@@ -56,6 +59,8 @@ namespace Story
         // 剧情前进
         public void MoveNext()
         {
+            AkSoundEngine.PostEvent("DIA_A", m_akObj);
+            
             if (m_index < m_currentPlot.Count)
             {
                 m_hasChoice = m_currentPlot[m_index].choices.Count > 0;
@@ -90,6 +95,12 @@ namespace Story
             {
                 MoveNext();
             }
+        }
+        
+        // 注册音效播放物体
+        public void RegisterAkObj(GameObject obj)
+        {
+            m_akObj = obj;
         }
     }
 }

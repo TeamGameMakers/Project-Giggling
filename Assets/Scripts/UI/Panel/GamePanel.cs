@@ -17,5 +17,19 @@ namespace UI
             settingBtn.onClick.AddListener(() => UIManager.Instance.ShowPanel<SettingPanel>("SettingPanel"));
             saveBtn.onClick.AddListener(() => SaveManager.Save());
         }
+
+        protected override void OnClick(string btnName)
+        {
+            base.OnClick(btnName);
+            switch (btnName)
+            {
+                case "SettingBtn":
+                    AkSoundEngine.PostEvent("Menu_enter", gameObject);
+                    break;
+                case "SaveBtn":
+                    AkSoundEngine.PostEvent("Menu_confirm", gameObject);
+                    break;
+            }
+        }
     }
 }

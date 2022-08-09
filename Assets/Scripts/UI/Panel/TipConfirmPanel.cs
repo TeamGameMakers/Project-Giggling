@@ -17,6 +17,7 @@ namespace UI
 
         public void AddButtonEvent(UnityAction callback)
         {
+            AkSoundEngine.PostEvent("Menu_confirm", gameObject);
             ConfirmBtn.onClick.AddListener(callback);
         }
     }
