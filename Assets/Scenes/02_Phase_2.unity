@@ -21180,6 +21180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124442924}
   - component: {fileID: 1124442923}
+  - component: {fileID: 1124442925}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -21214,6 +21215,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1124442925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124442922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ae0d0624614f21b66ccd2d8704b089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroy: 0
+  spawnPoints:
+  - {fileID: 404090055}
+  - {fileID: 1319739730}
+  - {fileID: 2139253558}
+  - {fileID: 1437670046}
+  - {fileID: 1303014321}
+  - {fileID: 2055104524}
+  - {fileID: 620385522}
+  - {fileID: 271950215}
+  - {fileID: 1106926015}
+  - {fileID: 2135804582}
+  - {fileID: 1317292147}
+  - {fileID: 1795902145}
+  - {fileID: 905585332}
+  - {fileID: 767174113}
+  - {fileID: 1401024071}
+  - {fileID: 1585725844}
+  - {fileID: 1210749656}
+  - {fileID: 851154164}
+  - {fileID: 1509694578}
+  - {fileID: 247378693}
+  - {fileID: 2055620890}
+  - {fileID: 726767103}
+  - {fileID: 412216261}
+  - {fileID: 870756820}
+  - {fileID: 1134804354}
+  - {fileID: 393160025}
+  - {fileID: 862620295}
+  - {fileID: 1535213219}
+  - {fileID: 1790622993}
+  - {fileID: 525613376}
+  - {fileID: 269558984}
 --- !u!1001 &1134804353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31390,11 +31436,15 @@ PrefabInstance:
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3659641877580508718, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -72,7 +72,7 @@ namespace Interact
             Destroy(pinLock);
             //sr.sprite = finishSprite;
 
-            // TODO: 在原地生成电池
+            // 在原地生成电池
             for (int i = 0; i < num; ++i)
             {
                 GameObject btr = Instantiate(battery, generateRoot);

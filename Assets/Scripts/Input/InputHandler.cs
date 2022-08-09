@@ -10,7 +10,8 @@ public class InputHandler : SingletonMono<InputHandler>
     private InputActionMap _playerMap;
     private InputActionMap _cameraMap;
     private InputActionMap _lockPickMap;
-
+    private InputActionMap _uiMap;
+    
     #region Value Getter
     
     /// <summary>
@@ -79,6 +80,7 @@ public class InputHandler : SingletonMono<InputHandler>
         _playerMap = _playerInput.actions.FindActionMap("Player", true);
         _cameraMap = _playerInput.actions.FindActionMap("SurveillanceCam", true);
         _lockPickMap = _playerInput.actions.FindActionMap("Lock Pick", true);
+        _uiMap = _playerInput.actions.FindActionMap("UI", true);
     }
 
     protected override void Start()
@@ -99,6 +101,9 @@ public class InputHandler : SingletonMono<InputHandler>
         // Lock Pick
         _lockPickMap.actionTriggered += OnPryInput;
         _lockPickMap.actionTriggered += OnPickInput;
+        
+        // UI
+        _uiMap.actionTriggered += OnInteractInput;
     }
 
     public static void UseLightInput() => LightPressed = false;
