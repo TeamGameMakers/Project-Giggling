@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="69843119">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3075593854">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -48,6 +48,21 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="2393108978" Name="A_move" ObjectPath="\Events\Default Work Unit\Monster\A_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1144085426" Name="B_dead" ObjectPath="\Events\Default Work Unit\Monster\B_dead" DurationType="OneShot" DurationMin="2.291667" DurationMax="2.875">
+					<IncludedMemoryFiles>
+						<File Id="205193523" Language="SFX">
+							<ShortName>elidie2-API2500_01-01.wav</ShortName>
+							<Path>SFX\elidie2-API2500_01-01_10C4C929.wem</Path>
+						</File>
+						<File Id="793351484" Language="SFX">
+							<ShortName>elidie1-API2500_01-01.wav</ShortName>
+							<Path>SFX\elidie1-API2500_01-01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
 				<Event Id="1691311397" Name="B_humble" ObjectPath="\Events\Default Work Unit\Monster\B_humble" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="175446988" Language="SFX">
@@ -140,7 +155,48 @@
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="3520101518" Name="C_humble" ObjectPath="\Events\Default Work Unit\Monster\C_humble" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="750193097" Name="C_dead" ObjectPath="\Events\Default Work Unit\Monster\C_dead" DurationType="OneShot" DurationMin="2." DurationMax="3.208333">
+					<IncludedMemoryFiles>
+						<File Id="109042881" Language="SFX">
+							<ShortName>normdie1.wav</ShortName>
+							<Path>SFX\normdie1_10C4C929.wem</Path>
+						</File>
+						<File Id="826203035" Language="SFX">
+							<ShortName>normdie2.wav</ShortName>
+							<Path>SFX\normdie2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3520101518" Name="C_humble" ObjectPath="\Events\Default Work Unit\Monster\C_humble" DurationType="OneShot" DurationMin="1.75" DurationMax="2.25">
+					<IncludedMemoryFiles>
+						<File Id="36187219" Language="SFX">
+							<ShortName>norm5.wav</ShortName>
+							<Path>SFX\norm5_10C4C929.wem</Path>
+						</File>
+						<File Id="83893701" Language="SFX">
+							<ShortName>norm3.wav</ShortName>
+							<Path>SFX\norm3_10C4C929.wem</Path>
+						</File>
+						<File Id="525487108" Language="SFX">
+							<ShortName>norm6.wav</ShortName>
+							<Path>SFX\norm6_10C4C929.wem</Path>
+						</File>
+						<File Id="548706003" Language="SFX">
+							<ShortName>norm2.wav</ShortName>
+							<Path>SFX\norm2_10C4C929.wem</Path>
+						</File>
+						<File Id="633066304" Language="SFX">
+							<ShortName>norm4.wav</ShortName>
+							<Path>SFX\norm4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
 				<Event Id="35926800" Name="C_move" ObjectPath="\Events\Default Work Unit\Monster\C_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="97531917" Name="DIA_A" ObjectPath="\Events\Default Work Unit\UI\DIA_A" DurationType="OneShot" DurationMin="0.629961" DurationMax="0.629961">
 					<IncludedMemoryFiles>
@@ -384,6 +440,17 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="3360399063" Name="PlayerInHallway" ObjectPath="\Events\Default Work Unit\Event\PlayerInHallway" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1300721799" Name="Readloadflashlight" ObjectPath="\Events\Default Work Unit\Event\Readloadflashlight" DurationType="OneShot" DurationMin="0.924354" DurationMax="0.924354">
+					<IncludedMemoryFiles>
+						<File Id="179713164" Language="SFX">
+							<ShortName>reloadflashlight-ProQ3_01-02.wav</ShortName>
+							<Path>SFX\reloadflashlight-ProQ3_01-02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
 				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Player\Run" DurationType="OneShot" DurationMin="0.163905" DurationMax="0.217059">
 					<IncludedMemoryFiles>
 						<File Id="26805767" Language="SFX">
