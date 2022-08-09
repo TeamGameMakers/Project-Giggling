@@ -90,7 +90,9 @@ namespace Characters.Player
         {
             EventCenter.Instance.RemoveFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             EventCenter.Instance.RemoveEventListener(PickFlashLightEvent, PickFlashLight);
-            EventCenter.Instance.RemoveFuncListener(GetPlayerPositionEvent, GetPlayer);
+            EventCenter.Instance.RemoveFuncListener(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.RemoveFuncListener(EventGetPlayerFlashLight, GetPlayerFlashLight);
+
         }
 
         private void FlashLightControl()
@@ -189,18 +191,23 @@ namespace Characters.Player
 
         #endregion
 
-        #region 玩家位置
+        #region 获取玩家数据
 
         public const string GetPlayerPositionEvent = "GetPlayerPosition";
 
-        private Player GetPlayer() => this;
+        private string GetPlayerPosition() => JsonUtility.ToJson(transform.position);
+
+        public const string EventGetPlayerFlashLight = "GetPlayerFlashLight";
+
+        private bool GetPlayerFlashLight() => data.hasFlashLight;
 
         #endregion
         
         private void RegisterEvent()
         {
             EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
-            EventCenter.Instance.AddFuncListener<Player>(GetPlayerPositionEvent, GetPlayer);
+            EventCenter.Instance.AddFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.AddFuncListener<bool>(EventGetPlayerFlashLight, GetPlayerFlashLight);
         }
     }
 }
