@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Save;
 using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace SceneSpecific

@@ -117,7 +117,7 @@ namespace Characters.Player
 
             if (InputHandler.ReloadPressed)
             {
-                EventCenter.Instance.FuncTrigger("UseBattery");
+                EventCenter.Instance.EventTrigger("UseBattery");
                 InputHandler.UseReloadInput();
             }
             

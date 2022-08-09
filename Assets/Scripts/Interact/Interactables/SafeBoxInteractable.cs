@@ -17,6 +17,8 @@ namespace Interact
         protected SpriteRenderer sr;
         protected Collider2D coll;
 
+        public GameObject successObj;
+        
         public string saveKey;
 
         protected string successEvent = "PinLockSuccessEvent";
@@ -37,8 +39,7 @@ namespace Interact
                 // sr.sprite = finishSprite;
                 // enabled = false;
                 
-                // 开关均改为消失
-                // TODO: 未考虑电池
+                // 如果已经打开过则销毁自身
                 DisableSelf();
             }
             else
@@ -73,7 +74,8 @@ namespace Interact
             Destroy(pinLock);
             //sr.sprite = finishSprite;
 
-            // TODO: 开锁成功出现其他物品
+            // 开锁成功出现其他物品
+            successObj.SetActive(true);
             
             DisableSelf();
         }
