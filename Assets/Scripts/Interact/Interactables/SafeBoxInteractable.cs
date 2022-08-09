@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Base.Event;
+using Base.Resource;
+using Data.Story;
 using GM;
 using Save;
+using Story;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,6 +31,9 @@ namespace Interact
         public int num = 1;
         [Tooltip("收纳电池的场景物体")]
         public Transform generateRoot;
+        
+        // Boss 生成相关
+        protected const string EventFirstBossEncounter = "FirstBossEncounter";
 
         protected override void Start()
         {
@@ -91,7 +97,15 @@ namespace Interact
             SaveManager.RegisterBool(SaveKey);
             Destroy(pinLock);
             
-            // TODO: 开锁失败，刷新 Boss
+            // 开锁失败，刷新 Boss
+            // 如果是第一次就触发对话
+            if (!SaveManager.GetBool(EventFirstBossEncounter))
+            {
+                StoryManager.Instance.StartStory(ResourceLoader.Load<PlotDataSO>("Data/Story/streetDialog_03"));
+                SaveManager.RegisterBool(EventFirstBossEncounter);
+            }
+            // 创建 Boss
+            ResourceLoader.LoadAsync<GameObject>("Prefabs/Boss", null);
             
             DisableSelf();
         }

@@ -16,13 +16,13 @@ MonoBehaviour:
   sections:
   - text: "\u54C8\u54C8\u54C8\u54C8\uFF0C\u53C8\u662F\u54EA\u4E2A\u5C0F\u9B3C\u4E2D\u4E86\u5708\u5957\u4E86\uFF1F"
     leftSprite: {fileID: 0}
-    rightSprite: {fileID: 0}
+    rightSprite: {fileID: 21300000, guid: bef956ff851dbe948962d5b6bf58bfe2, type: 3}
     choices: []
   - text: "\u597D\u50CF\u6709\u4EC0\u4E48\u5947\u602A\u7684\u4EBA\u51FA\u73B0\u4E86\u2014\u2014"
-    leftSprite: {fileID: 0}
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
   - text: "\u603B\u611F\u89C9\u4E0D\u4F1A\u662F\u4EC0\u4E48\u597D\u4E8B\uFF0C\u5FEB\u9003\u5427\u3002"
-    leftSprite: {fileID: 0}
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
