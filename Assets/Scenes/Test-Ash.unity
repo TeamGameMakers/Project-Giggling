@@ -2727,6 +2727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750220984}
   - component: {fileID: 750220983}
+  - component: {fileID: 750220980}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -2734,6 +2735,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &750220980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750220979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a54f0ece8e4104eb0d2c115b053340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e58c7b4cf7e73704da06dc0e25969294, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!114 &750220983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3023,6 +3048,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1991154927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1355178976355672117, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
+  m_PrefabInstance: {fileID: 7023061005915625572}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1991154936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991154927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60bd6a13331ad541ab67d58c198c437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Playerwalk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9ebc56f0c29304d41bea64e4e8e0adad, type: 2}
+  Playerrun:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f602ed281ab06b3489a492586b74f7e6, type: 2}
 --- !u!1 &103783139774423784
 GameObject:
   m_ObjectHideFlags: 0
