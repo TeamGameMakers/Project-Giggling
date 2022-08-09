@@ -20,6 +20,8 @@ namespace SceneSpecific
         {
             UIManager.Instance.ShowPanel<StartPanel>("StartPanel");
             UIManager.Instance.HidePanel("GamePanel", true);
+            // 触发音乐
+            AkSoundEngine.PostEvent("MainTheme", gameObject);
             // 设置图片
             if (SaveManager.GetGameClear() == 1)
             {
