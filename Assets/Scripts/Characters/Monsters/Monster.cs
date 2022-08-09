@@ -129,14 +129,21 @@ namespace Characters.Monsters
         /// <summary>
         /// 怪进入光
         /// </summary>
-        public void MonsterStayLight(float damage, bool hitByPlayer = false)
+        public void MonsterStayLight(float damage)
         {
             if (!HitByPlayer) AkSoundEngine.PostEvent("Monster_burn", gameObject);
 
             Hit = true;
             _data.healthPoint -= damage * Time.deltaTime;
-            HitByPlayer = hitByPlayer;
+            HitByPlayer = true;
         }
+
+        public void MonsterStayRoadLight(float damage)
+        {
+            Hit = true;
+            _data.healthPoint -= damage * Time.deltaTime;
+        }
+        
 
         /// <summary>
         /// 怪离开光
@@ -164,8 +171,18 @@ namespace Characters.Monsters
 
         public void MonsterDie()
         {
-            SaveManager.RegisterBool(this.GetInstanceID().ToString());
-            Destroy(Patrol ? transform.parent.gameObject : transform.gameObject);
+            var curTransform = transform;
+            
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss)
+                SaveManager.RegisterBool(this.GetInstanceID().ToString());
+            
+            var parent = curTransform.parent;
+            curTransform.parent = null;
+            
+            Destroy(parent.gameObject);
+            if (!Patrol)
+                Destroy(SpawnTransform.gameObject);
+            Destroy(curTransform.gameObject);
         }
 
 #if UNITY_EDITOR

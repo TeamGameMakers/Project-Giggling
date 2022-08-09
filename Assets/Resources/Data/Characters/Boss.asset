@@ -18,11 +18,11 @@ MonoBehaviour:
   walkSpeed: 2
   chaseSpeed: 3
   hitSpeed: 1
-  healthPoint: 500
+  healthPoint: 10
   catchDistance: 0.5
   checkRadius: 4
   checkAngle: 180
   checkLayer:
     serializedVersion: 2
     m_Bits: 128
-  _patrolStopTime: 2
+  _patrolStopTime: 5
