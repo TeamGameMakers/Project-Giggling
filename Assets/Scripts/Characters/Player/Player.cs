@@ -5,6 +5,7 @@ using Base.FSM;
 using Characters.Monsters;
 using Core;
 using Data;
+using Save;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -47,13 +48,18 @@ namespace Characters.Player
             _flashLight.enabled = false;
             StateMachine.Initialize(IdleState);
             GM.GameManager.SetPlayerTransform(transform);
-            EventCenter.Instance.AddEventListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
+            EventCenter.Instance.AddFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             
             // 手电筒
             _flashLight.pointLightOuterRadius = data.lightRadius;
             _flashLight.pointLightOuterAngle = data.lightAngle;
             _flashLight.pointLightInnerAngle = data.lightAngle - 10;
 
+            // 恢复存档位置
+            string json = SaveManager.GetValue("PlayerPosition");
+            if (!string.IsNullOrEmpty(json))
+                transform.position = JsonUtility.FromJson<Vector3>(json);
+            
             // 注册拾取事件
             RegisterEvent();
         }
@@ -85,7 +91,9 @@ namespace Characters.Player
 
         private void OnDisable()
         {
-            EventCenter.Instance.RemoveEventListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
+            EventCenter.Instance.RemoveFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
+            EventCenter.Instance.RemoveEventListener(PickFlashLightEvent, PickFlashLight);
+            EventCenter.Instance.RemoveFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
         }
 
         private void FlashLightControl()
@@ -93,23 +101,28 @@ namespace Characters.Player
             if (InputHandler.LightPressed && data.hasFlashLight)
             {
                 _powerRemaining = EventCenter.Instance.
-                    EventTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
+                    FuncTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
                 
                 InputHandler.UseLightInput();
-                
+
                 if (_powerRemaining && !_flashLight.enabled)
                     _flashLight.enabled = true;
                 
                 else
                     _flashLight.enabled = false;
             }
-            
             else if (_flashLight.enabled && !_powerRemaining)
                 _flashLight.enabled = false;
+
+            if (InputHandler.ReloadPressed)
+            {
+                EventCenter.Instance.EventTrigger("UseBattery");
+                InputHandler.UseReloadInput();
+            }
             
             if (_flashLight.enabled)
                 _powerRemaining = EventCenter.Instance.
-                    EventTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
+                    FuncTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
         }
 
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);
@@ -142,11 +155,6 @@ namespace Characters.Player
 
         public const string PickFlashLightEvent = "PickFlashLight";
         
-        private void RegisterEvent()
-        {
-            EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
-        }
-
         private void PickFlashLight()
         {
             Debug.Log("玩家获得手电筒");
@@ -161,5 +169,22 @@ namespace Characters.Player
         }
 
         #endregion
+
+        #region 玩家位置
+
+        public const string GetPlayerPositionEvent = "GetPlayerPosition";
+
+        private string GetPlayerPosition()
+        {
+            return JsonUtility.ToJson(transform.position);
+        }
+
+        #endregion
+        
+        private void RegisterEvent()
+        {
+            EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
+            EventCenter.Instance.AddFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
+        }
     }
 }

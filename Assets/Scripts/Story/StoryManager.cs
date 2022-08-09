@@ -4,6 +4,7 @@ using Data.Story;
 using GM;
 using UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
 
 namespace Story
@@ -85,7 +86,7 @@ namespace Story
         // 用户输入检测
         public void InputDetection()
         {
-            if (CanMove() && InputHandler.AnyKeyPressed)
+            if (CanMove() && (InputHandler.AnyKeyPressed || Mouse.current.leftButton.wasPressedThisFrame))
             {
                 MoveNext();
             }

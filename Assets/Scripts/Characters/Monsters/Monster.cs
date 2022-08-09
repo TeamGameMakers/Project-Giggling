@@ -116,7 +116,7 @@ namespace Characters.Monsters
         /// </summary>
         private void MonsterExitFlashLight()
         {
-            if (EventCenter.Instance.EventTrigger<Collider2D, bool>("LightOnMonster", _coll)) return;
+            if (EventCenter.Instance.FuncTrigger<Collider2D, bool>("LightOnMonster", _coll)) return;
             Hit = false;
             HitByPlayer = false;
         }
@@ -124,7 +124,7 @@ namespace Characters.Monsters
         /// <summary>
         /// 怪离开路灯
         /// </summary>
-        private void MonsterExitRoadLight()
+        public void MonsterExitRoadLight()
         {
             Hit = false;
             HitByPlayer = false;

@@ -7,7 +7,7 @@ namespace SceneTrigger
     {
         public string tip;
 
-        protected override void TriggerEvent(Collider2D col)
+        protected override void TriggerEnterEvent(Collider2D col)
         {
             UIManager.Instance.ShowHint(tip);
         }

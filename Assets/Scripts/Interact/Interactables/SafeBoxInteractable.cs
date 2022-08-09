@@ -10,13 +10,14 @@ namespace Interact
     {
         public new Camera camera;
         
-        public GameObject prefab;
-        protected GameObject pinLock;
+        public GameObject pinLock;
 
         public Sprite finishSprite;
 
         protected SpriteRenderer sr;
         protected Collider2D coll;
+
+        public GameObject successObj;
         
         public string saveKey;
 
@@ -35,11 +36,15 @@ namespace Interact
             base.Start();
             if (SaveManager.GetBool(saveKey))
             {
-                sr.sprite = finishSprite;
-                enabled = false;
+                // sr.sprite = finishSprite;
+                // enabled = false;
+                
+                // 如果已经打开过则销毁自身
+                DisableSelf();
             }
             else
             {
+                pinLock.SetActive(false);
                 EventCenter.Instance.AddEventListener(successEvent, Success);
                 EventCenter.Instance.AddEventListener(failEvent, Fail);
             }
@@ -47,7 +52,9 @@ namespace Interact
 
         public override void Interact(Interactor interactor)
         {
-            pinLock = Instantiate(prefab);
+            // 改成激活子物体
+            pinLock.SetActive(true);
+            GameManager.SwitchGameState(GameState.PinLock);
             // 移动到屏幕中心
             Vector3 mid = camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
             mid.z = 0;
@@ -63,31 +70,30 @@ namespace Interact
         protected void Success()
         {
             Debug.Log("进入开锁成功事件");
-            
             SaveManager.RegisterBool(saveKey);
-            
             Destroy(pinLock);
-
-            DisableSelf();
             //sr.sprite = finishSprite;
 
-            // TODO: 开锁成功出现其他物品
+            // 开锁成功出现其他物品
+            successObj.SetActive(true);
+            
+            DisableSelf();
         }
 
         protected void Fail()
         {
             Debug.Log("进入开锁失败事件");
-            
             Destroy(pinLock);
             
-            DisableSelf();
-            
             // TODO: 开锁失败，刷新 Boss
+            
+            DisableSelf();
         }
 
         protected void DisableSelf()
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

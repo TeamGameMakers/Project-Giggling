@@ -41,7 +41,15 @@ namespace Base.Event
             }
         }
 
-        public void AddEventListener<T1, T2>(string name, Func<T1, T2> callback)
+        public void AddFuncListener<T>(string name, Func<T> callback)
+        {
+            if (eventContainer.ContainsKey(name))
+                (eventContainer[name] as EventFunc<T>).funcs += callback;
+            else
+                eventContainer.Add(name, new EventFunc<T>(callback));
+        }
+
+        public void AddFuncListener<T1, T2>(string name, Func<T1, T2> callback)
         {
             if (eventContainer.ContainsKey(name))
                 (eventContainer[name] as EventFunc<T1, T2>).funcs += callback;
@@ -74,7 +82,13 @@ namespace Base.Event
             }
         }
 
-        public void RemoveEventListener<T1, T2>(string name, Func<T1, T2> callback)
+        public void RemoveFuncListener<T>(string name, Func<T> callback)
+        {
+            if (eventContainer.ContainsKey(name))
+                (eventContainer[name] as EventFunc<T>).funcs -= callback;
+        }
+
+        public void RemoveFuncListener<T1, T2>(string name, Func<T1, T2> callback)
         {
             if (eventContainer.ContainsKey(name))
                 (eventContainer[name] as EventFunc<T1, T2>).funcs -= callback;
@@ -104,7 +118,14 @@ namespace Base.Event
             }
         }
 
-        public T2 EventTrigger<T1, T2>(string name, T1 value)
+        public T FuncTrigger<T>(string name)
+        {
+            if (eventContainer.ContainsKey(name))
+                return (eventContainer[name] as EventFunc<T>).funcs.Invoke();
+            return default(T);
+        }
+
+        public T2 FuncTrigger<T1, T2>(string name, T1 value)
         {
             if (eventContainer.ContainsKey(name))
                 return (eventContainer[name] as EventFunc<T1, T2>).funcs.Invoke(value);
@@ -169,6 +190,15 @@ namespace Base.Event
             {
                 return ea.actions;
             }
+        }
+        
+        protected class EventFunc<T> : IEventFunc
+        {
+            public Func<T> funcs;
+
+            public EventFunc(Func<T> func) => funcs += func;
+
+            public static implicit operator Func<T>(EventFunc<T> ef) => ef.funcs;
         }
 
         protected class EventFunc<T1, T2> : IEventFunc

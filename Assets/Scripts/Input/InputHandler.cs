@@ -102,6 +102,7 @@ public class InputHandler : SingletonMono<InputHandler>
     }
 
     public static void UseLightInput() => LightPressed = false;
+    public static void UseReloadInput() => ReloadPressed = false;
 
     #region Action Trigger Functions
     

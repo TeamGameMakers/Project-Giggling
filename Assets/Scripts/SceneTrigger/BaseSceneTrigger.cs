@@ -35,13 +35,13 @@ namespace SceneTrigger
                 Debug.Log("触发场景触发器：" + gameObject.name);
                 enter = true;
 
+                TriggerEnterEvent(col);
+                
                 if (triggerOnce)
                 {
                     used = true;
                     SaveManager.RegisterBool(key);
                 }
-                
-                TriggerEvent(col);
             }
         }
 
@@ -50,7 +50,7 @@ namespace SceneTrigger
             return col.CompareTag("Player");
         }
         
-        protected abstract void TriggerEvent(Collider2D col);
+        protected abstract void TriggerEnterEvent(Collider2D col);
 
         protected virtual void OnTriggerExit2D(Collider2D other)
         {

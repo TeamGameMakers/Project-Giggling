@@ -12,7 +12,7 @@ namespace SceneSpecific
             base.Start();
 
             UIManager.Instance.ShowPanel<GamePanel>("GamePanel");
-            UIManager.Instance.ShowPanel<InventoryPanel>("Inventory Panel");
+            UIManager.Instance.ShowPanel<StatusPanel>("Status Panel");
         }
     }
 }

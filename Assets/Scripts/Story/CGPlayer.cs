@@ -30,13 +30,15 @@ namespace Story
             {
                 m_player.loopPointReached += source => {
                     GameManager.BackGameState();
-                    gameObject.SetActive(false);
                     SaveManager.RegisterBool(SaveKey);
+                    if (string.IsNullOrEmpty(plotEvent))
+                        gameObject.SetActive(false);
                 };
                 if (!string.IsNullOrEmpty(plotEvent))
                 {
                     m_player.loopPointReached += source => {
                         EventCenter.Instance.EventTrigger(plotEvent);
+                        gameObject.SetActive(false);
                     };
                 }
             }
