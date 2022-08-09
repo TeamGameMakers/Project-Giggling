@@ -802,7 +802,7 @@ Transform:
   - {fileID: 525613376}
   - {fileID: 269558984}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &27241924
 GameObject:
@@ -3023,7 +3023,7 @@ Transform:
   - {fileID: 1546864414}
   - {fileID: 2085063070}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &185935434
 GameObject:
@@ -25096,6 +25096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0708af0451a41e42b44ec710abc6cd3, type: 3}
+--- !u!1 &513423748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 937417979248555601, guid: 9bd6c613ca2cf834da5858003a0addd6, type: 3}
+  m_PrefabInstance: {fileID: 467535100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &513866559
 GameObject:
   m_ObjectHideFlags: 0
@@ -27679,7 +27684,7 @@ MonoBehaviour:
   camera: {fileID: 1852418232}
   pinLock: {fileID: 833065222}
   finishSprite: {fileID: 21300000, guid: 07eddee8610e0454d969266d56f809b6, type: 3}
-  successObj: {fileID: 1823695196}
+  successObj: {fileID: 0}
   saveKey: p2_saveBox_open
 --- !u!58 &667896519
 CircleCollider2D:
@@ -28211,7 +28216,7 @@ MonoBehaviour:
   camera: {fileID: 1852418232}
   pinLock: {fileID: 827362225}
   finishSprite: {fileID: 21300000, guid: 07eddee8610e0454d969266d56f809b6, type: 3}
-  successObj: {fileID: 1823695196}
+  successObj: {fileID: 0}
   saveKey: p2_saveBox_open
 --- !u!58 &693076713
 CircleCollider2D:
@@ -28753,9 +28758,9 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: b5f48d011e4aeb44e992c3f11160eed0, type: 2}
   _checkPoint: {fileID: 720637155}
   camera: {fileID: 1852418232}
-  pinLock: {fileID: 0}
+  pinLock: {fileID: 513423748}
   finishSprite: {fileID: 21300000, guid: 07eddee8610e0454d969266d56f809b6, type: 3}
-  successObj: {fileID: 1823695196}
+  successObj: {fileID: 0}
   saveKey: p2_saveBox_open
 --- !u!1001 &726767102
 PrefabInstance:
@@ -29719,7 +29724,7 @@ MonoBehaviour:
   camera: {fileID: 1852418232}
   pinLock: {fileID: 1679370095}
   finishSprite: {fileID: 21300000, guid: 07eddee8610e0454d969266d56f809b6, type: 3}
-  successObj: {fileID: 1823695196}
+  successObj: {fileID: 0}
   saveKey: p2_saveBox_open
 --- !u!58 &778693752
 CircleCollider2D:
@@ -48527,7 +48532,7 @@ MonoBehaviour:
   camera: {fileID: 1852418232}
   pinLock: {fileID: 1956980382}
   finishSprite: {fileID: 21300000, guid: 07eddee8610e0454d969266d56f809b6, type: 3}
-  successObj: {fileID: 2072095789}
+  successObj: {fileID: 0}
   saveKey: p2_saveBox_open
 --- !u!58 &1857123516
 CircleCollider2D:
