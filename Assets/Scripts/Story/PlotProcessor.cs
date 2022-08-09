@@ -72,6 +72,8 @@ namespace UI
             {
                 leftImageGo.SetActive(true);
                 leftImage.sprite = section.leftSprite;
+                // TODO: 适配立绘大小
+                leftImage.SetNativeSize();
             }
             else
                 leftImageGo.SetActive(false);
@@ -80,6 +82,7 @@ namespace UI
             {
                 rightImageGo.SetActive(true);
                 rightImage.sprite = section.rightSprite;
+                rightImage.SetNativeSize();
             }
             else
                 rightImageGo.SetActive(false);

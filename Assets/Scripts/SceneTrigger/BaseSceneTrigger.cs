@@ -41,7 +41,7 @@ namespace SceneTrigger
                     SaveManager.RegisterBool(key);
                 }
                 
-                TriggerEvent(col);
+                TriggerEnterEvent(col);
             }
         }
 
@@ -50,7 +50,7 @@ namespace SceneTrigger
             return col.CompareTag("Player");
         }
         
-        protected abstract void TriggerEvent(Collider2D col);
+        protected abstract void TriggerEnterEvent(Collider2D col);
 
         protected virtual void OnTriggerExit2D(Collider2D other)
         {

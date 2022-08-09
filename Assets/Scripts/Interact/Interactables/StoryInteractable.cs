@@ -44,6 +44,8 @@ namespace Interact
         {
             coll.enabled = false;
             enabled = false;
+            // 隐藏 tip
+            transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 }
