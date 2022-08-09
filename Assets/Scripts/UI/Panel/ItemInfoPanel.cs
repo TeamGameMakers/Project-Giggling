@@ -49,6 +49,11 @@ namespace UI
         {
             Debug.Log("点击拾取按键: " + itemData.name);
 
+            if (itemData.name == "手电筒")
+            {
+                SaveManager.RegisterBool("hasFlashLight");
+            }
+            
             AkSoundEngine.PostEvent("Menu_confirm", gameObject);
             // 关闭面板
             UIManager.Instance.HidePanel("ItemInfoPanel", true);
