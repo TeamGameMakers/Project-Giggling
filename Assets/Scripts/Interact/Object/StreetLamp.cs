@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Interact
 {
-    // TODO: 添加怪物受伤
     public class StreetLamp : MonoBehaviour
     {
         protected Player player;
