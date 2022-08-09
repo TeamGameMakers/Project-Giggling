@@ -4,7 +4,7 @@ namespace SceneTrigger
 {
     public abstract class CheckSceneTrigger : BaseSceneTrigger
     {
-        protected override void TriggerEvent(Collider2D col)
+        protected override void TriggerEnterEvent(Collider2D col)
         {
             if (CheckTrigger())
                 PassCheck();
