@@ -26,6 +26,8 @@ namespace Interact
         public List<Transform> generatePosition;
         [Tooltip("电池数量")]
         public int num = 1;
+        [Tooltip("收纳电池的场景物体")]
+        public Transform generateRoot;
 
         protected override void Start()
         {
@@ -38,6 +40,8 @@ namespace Interact
             else
             {
                 pinLock.SetActive(false);
+                // 限制 num
+                num = Mathf.Clamp(num, 0, generatePosition.Count);
             }
         }
 
@@ -71,7 +75,7 @@ namespace Interact
             // TODO: 在原地生成电池
             for (int i = 0; i < num; ++i)
             {
-                GameObject btr = Instantiate(battery);
+                GameObject btr = Instantiate(battery, generateRoot);
                 btr.transform.position = generatePosition[i].position;
             }
             
