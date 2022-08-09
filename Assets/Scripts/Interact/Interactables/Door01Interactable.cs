@@ -67,7 +67,7 @@ namespace Interact
             }
 
             // 按左键也可关闭窥探
-            if (showImage && (Mouse.current.leftButton.wasPressedThisFrame || Keyboard.current.qKey.wasPressedThisFrame))
+            if (showImage && Mouse.current.leftButton.wasPressedThisFrame)
             {
                 HidePeek();
             }
@@ -75,6 +75,7 @@ namespace Interact
 
         public override void Interact(Interactor interactor)
         {
+            Debug.Log("交互");
             if (Keyboard.current.qKey.wasPressedThisFrame)
             {
                 if (!showImage)
