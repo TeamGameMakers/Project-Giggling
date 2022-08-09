@@ -104,16 +104,21 @@ namespace Characters.Player
                     FuncTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
                 
                 InputHandler.UseLightInput();
-                
+
                 if (_powerRemaining && !_flashLight.enabled)
                     _flashLight.enabled = true;
                 
                 else
                     _flashLight.enabled = false;
             }
-            
             else if (_flashLight.enabled && !_powerRemaining)
                 _flashLight.enabled = false;
+
+            if (InputHandler.ReloadPressed)
+            {
+                EventCenter.Instance.FuncTrigger("UseBattery");
+                InputHandler.UseReloadInput();
+            }
             
             if (_flashLight.enabled)
                 _powerRemaining = EventCenter.Instance.
