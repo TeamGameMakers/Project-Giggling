@@ -11,12 +11,15 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3253373601">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4262466208">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3121984839">
+		<SoundBank Id="2858921253" Language="SFX" Hash="69843119">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -40,6 +43,9 @@
 							<Path>SFX\bossxiao2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2393108978" Name="A_move" ObjectPath="\Events\Default Work Unit\Monster\A_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1691311397" Name="B_humble" ObjectPath="\Events\Default Work Unit\Monster\B_humble" DurationType="Infinite">
@@ -65,16 +71,34 @@
 							<Path>SFX\monster humble3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
-				<Event Id="996361111" Name="B_move" ObjectPath="\Events\Default Work Unit\Monster\B_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2189595490" Name="Battery_ranout" ObjectPath="\Events\Default Work Unit\Event\Battery_ranout" DurationType="OneShot" DurationMin="0.62895" DurationMax="0.62895">
+				<Event Id="996361111" Name="B_move" ObjectPath="\Events\Default Work Unit\Monster\B_move" DurationType="OneShot" DurationMin="1.94712" DurationMax="2.327595">
 					<IncludedMemoryFiles>
-						<File Id="386160551" Language="SFX">
-							<ShortName>batteryranout.wav</ShortName>
-							<Path>SFX\batteryranout_9C01B5EB.wem</Path>
+						<File Id="119944362" Language="SFX">
+							<ShortName>monstermove3.wav</ShortName>
+							<Path>SFX\monstermove3_10C4C929.wem</Path>
+						</File>
+						<File Id="237975842" Language="SFX">
+							<ShortName>monstermove1.wav</ShortName>
+							<Path>SFX\monstermove1_10C4C929.wem</Path>
+						</File>
+						<File Id="307519476" Language="SFX">
+							<ShortName>monstermove2.wav</ShortName>
+							<Path>SFX\monstermove2_10C4C929.wem</Path>
+						</File>
+						<File Id="730887965" Language="SFX">
+							<ShortName>monstermove4.wav</ShortName>
+							<Path>SFX\monstermove4_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
+				<Event Id="2189595490" Name="Battery_ranout" ObjectPath="\Events\Default Work Unit\Event\Battery_ranout" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="680228482" Name="Box_defeat" ObjectPath="\Events\Default Work Unit\Interact\Box_defeat" DurationType="OneShot" DurationMin="6.264916" DurationMax="6.264916">
 					<IncludedMemoryFiles>
 						<File Id="26485943" Language="SFX">
@@ -86,6 +110,9 @@
 							<Path>SFX\box（1）音效_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3460616907" Name="Box_open" ObjectPath="\Events\Default Work Unit\Interact\Box_open" DurationType="OneShot" DurationMin="4.588241" DurationMax="4.588241">
 					<IncludedMemoryFiles>
@@ -98,14 +125,20 @@
 							<Path>SFX\box_open_8B58CC43.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
-				<Event Id="3110322898" Name="Box_try" ObjectPath="\Events\Default Work Unit\Interact\Box_try" DurationType="Infinite">
+				<Event Id="3110322898" Name="Box_try" ObjectPath="\Events\Default Work Unit\Interact\Box_try" DurationType="OneShot" DurationMin="0.530771" DurationMax="0.530771">
 					<IncludedMemoryFiles>
-						<File Id="788085661" Language="SFX">
-							<ShortName>spring.wav</ShortName>
-							<Path>SFX\spring_21FC602E.wem</Path>
+						<File Id="456608687" Language="SFX">
+							<ShortName>box_try.wav</ShortName>
+							<Path>SFX\box_try_62BBB894.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3520101518" Name="C_humble" ObjectPath="\Events\Default Work Unit\Monster\C_humble" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="35926800" Name="C_move" ObjectPath="\Events\Default Work Unit\Monster\C_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -116,6 +149,9 @@
 							<Path>SFX\dia2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="97531918" Name="DIA_B" ObjectPath="\Events\Default Work Unit\UI\DIA_B" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<IncludedMemoryFiles>
@@ -124,6 +160,9 @@
 							<Path>SFX\dia2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="445985469" Name="Die" ObjectPath="\Events\Default Work Unit\Player\Die" DurationType="OneShot" DurationMin="5.4" DurationMax="5.4">
 					<IncludedMemoryFiles>
@@ -132,6 +171,9 @@
 							<Path>SFX\ngtvevent1_40D9BF1C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2393724455" Name="Door_notopen" ObjectPath="\Events\Default Work Unit\Interact\Door_notopen" DurationType="OneShot" DurationMin="0.871387" DurationMax="0.871387">
 					<IncludedMemoryFiles>
@@ -140,6 +182,9 @@
 							<Path>SFX\09 Wood Door 9-ProQ3_01-08.L_C8756AAE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="535830432" Name="Door_open" ObjectPath="\Events\Default Work Unit\Interact\Door_open" DurationType="OneShot" DurationMin="0.854579" DurationMax="0.854579">
 					<IncludedMemoryFiles>
@@ -148,6 +193,9 @@
 							<Path>SFX\dooropen_9739BE10.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1126494853" Name="Flashlight_off" ObjectPath="\Events\Default Work Unit\Interact\Flashlight_off" DurationType="OneShot" DurationMin="0.450158" DurationMax="0.450158">
 					<IncludedMemoryFiles>
@@ -156,6 +204,9 @@
 							<Path>SFX\flashlight_F0502883.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2033671033" Name="Flashlight_on" ObjectPath="\Events\Default Work Unit\Interact\Flashlight_on" DurationType="OneShot" DurationMin="0.523439" DurationMax="0.523439">
 					<IncludedMemoryFiles>
@@ -164,6 +215,9 @@
 							<Path>SFX\flashlight_423A3F7B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3704654688" Name="GigglingA" ObjectPath="\Events\Default Work Unit\Amb\GigglingA" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3704654691" Name="GigglingB" ObjectPath="\Events\Default Work Unit\Amb\GigglingB" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -176,6 +230,9 @@
 							<Path>SFX\ZOOM0057_TrLR_08E4BB01.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3181406844" Name="Home" ObjectPath="\Events\Default Work Unit\Amb\Home" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -184,6 +241,9 @@
 							<Path>SFX\安静的室内quiet-room-1_3B806553.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1466384055" Name="Interact" ObjectPath="\Events\Default Work Unit\UI\Interact" DurationType="OneShot" DurationMin="0.429705" DurationMax="0.429705">
 					<IncludedMemoryFiles>
@@ -192,6 +252,9 @@
 							<Path>SFX\UI5_42025130.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2611978780" Name="Meet_Boss" ObjectPath="\Events\Default Work Unit\Monster\Meet_Boss" DurationType="OneShot" DurationMin="1.621375" DurationMax="1.621375">
 					<IncludedMemoryFiles>
@@ -200,6 +263,9 @@
 							<Path>SFX\HIT_Impact_Strings_High_01_02F8453A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1517054675" Name="Meet_Monster" ObjectPath="\Events\Default Work Unit\Monster\Meet_Monster" DurationType="OneShot" DurationMin="1.401531" DurationMax="1.401531">
 					<IncludedMemoryFiles>
@@ -208,6 +274,9 @@
 							<Path>SFX\HIT_Impact_Strings_Low_02_1E2696E5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="757741878" Name="MeetingGirl" ObjectPath="\Events\Default Work Unit\Event\MeetingGirl" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4046753069" Name="Menu_confirm" ObjectPath="\Events\Default Work Unit\UI\Menu_confirm" DurationType="OneShot" DurationMin="0.343836" DurationMax="0.343836">
@@ -217,6 +286,9 @@
 							<Path>SFX\UI_A7967E4C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1952436935" Name="Menu_enter" ObjectPath="\Events\Default Work Unit\UI\Menu_enter" DurationType="OneShot" DurationMin="0.335207" DurationMax="0.335207">
 					<IncludedMemoryFiles>
@@ -225,6 +297,9 @@
 							<Path>SFX\UIA_2A366660.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3663878895" Name="Menu_exit" ObjectPath="\Events\Default Work Unit\UI\Menu_exit" DurationType="OneShot" DurationMin="0.398058" DurationMax="0.398058">
 					<IncludedMemoryFiles>
@@ -233,6 +308,9 @@
 							<Path>SFX\UIA_2AC12E0F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1557303174" Name="Menu_negative" ObjectPath="\Events\Default Work Unit\UI\Menu_negative" DurationType="OneShot" DurationMin="0.385707" DurationMax="0.385707">
 					<IncludedMemoryFiles>
@@ -241,6 +319,9 @@
 							<Path>SFX\UIB_F927295E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2366330294" Name="Menu_positive" ObjectPath="\Events\Default Work Unit\UI\Menu_positive" DurationType="OneShot" DurationMin="0.334279" DurationMax="0.334279">
 					<IncludedMemoryFiles>
@@ -249,6 +330,9 @@
 							<Path>SFX\UIB_D8C2237C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="355512275" Name="Menu_switch" ObjectPath="\Events\Default Work Unit\UI\Menu_switch" DurationType="OneShot" DurationMin="0.362553" DurationMax="0.362553">
 					<IncludedMemoryFiles>
@@ -257,6 +341,9 @@
 							<Path>SFX\UI_AE4BEEBC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2934429447" Name="Monster_burn" ObjectPath="\Events\Default Work Unit\Monster\Monster_burn" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -265,6 +352,9 @@
 							<Path>SFX\campfire_FBA1FF42.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2063961778" Name="MonsterStopBurn" ObjectPath="\Events\Default Work Unit\Monster\MonsterStopBurn" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4090421712" Name="Neiberhood" ObjectPath="\Events\Default Work Unit\Amb\Neiberhood" DurationType="Infinite">
@@ -278,6 +368,9 @@
 							<Path>SFX\nightamb_328E3853.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3978245845" Name="Pickup" ObjectPath="\Events\Default Work Unit\UI\Pickup" DurationType="OneShot" DurationMin="2.666667" DurationMax="2.666667">
 					<IncludedMemoryFiles>
@@ -286,7 +379,11 @@
 							<Path>SFX\pickup_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
+				<Event Id="3360399063" Name="PlayerInHallway" ObjectPath="\Events\Default Work Unit\Event\PlayerInHallway" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="712161704" Name="Run" ObjectPath="\Events\Default Work Unit\Player\Run" DurationType="OneShot" DurationMin="0.163905" DurationMax="0.217059">
 					<IncludedMemoryFiles>
 						<File Id="26805767" Language="SFX">
@@ -314,10 +411,14 @@
 							<Path>SFX\foorstep_907F7981.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="3394774657" Name="School_indoor" ObjectPath="\Events\Default Work Unit\Amb\School_indoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="201640464" Name="School_outdoor" ObjectPath="\Events\Default Work Unit\Amb\School_outdoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="518172181" Name="StopCombat" ObjectPath="\Events\Default Work Unit\Monster\StopCombat" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1636873064" Name="StopWatchCatHole" ObjectPath="\Events\Default Work Unit\Event\StopWatchCatHole" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1568083719" Name="TV" ObjectPath="\Events\Default Work Unit\Event\TV" DurationType="OneShot" DurationMin="36.959999" DurationMax="36.959999">
 					<IncludedMemoryFiles>
 						<File Id="585872743" Language="SFX">
@@ -325,6 +426,9 @@
 							<Path>SFX\电视新闻-ProQ3_01-01.L_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2108779966" Name="Walk" ObjectPath="\Events\Default Work Unit\Player\Walk" DurationType="OneShot" DurationMin="0.213763" DurationMax="0.315016">
 					<IncludedMemoryFiles>
@@ -353,7 +457,11 @@
 							<Path>SFX\foorstep_7769ACC5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
 				</Event>
+				<Event Id="2295356976" Name="WatchCatHole" ObjectPath="\Events\Default Work Unit\Event\WatchCatHole" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

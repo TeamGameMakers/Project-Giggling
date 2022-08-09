@@ -20,9 +20,11 @@ namespace Characters.Monsters
             {
                 case MonsterDataSO.MonsterType.Elite:
                     AkSoundEngine.PostEvent("B_humble", _monster.gameObject);
+                    AkSoundEngine.PostEvent("Meet_Boss", _monster.gameObject);
                     break;
                 case MonsterDataSO.MonsterType.Boss:
                     AkSoundEngine.PostEvent("A_humble", _monster.gameObject);
+                    AkSoundEngine.PostEvent("Meet_Monster", _monster.gameObject);
                     break;
             }
         }
