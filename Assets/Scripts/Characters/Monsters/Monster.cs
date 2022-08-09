@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using Base.Event;
 using Base.FSM;
+using Base.Resource;
 using Core;
 using Data;
+using Save;
 using UnityEngine;
 using Utilities;
 
@@ -45,6 +47,10 @@ namespace Characters.Monsters
             Monsters.Add(_coll.GetInstanceID(), this);
             
             StateMachine = new MonsterStateMachine();
+            
+            _data = Instantiate(_data);
+            _data.isDead =  SaveManager.GetBool(this.GetInstanceID().ToString());
+            
             if (_data.monsterType == MonsterDataSO.MonsterType.Boss)
             {
                 IdleState = new MonsterIdleState(this, "idle");
@@ -121,12 +127,8 @@ namespace Characters.Monsters
         /// </summary>
         public void MonsterStayLight(float damage, bool hitByPlayer = false)
         {
-            if (!HitByPlayer)
-            {
-                Debug.Log("受伤");
-                AkSoundEngine.PostEvent("Monster_burn", gameObject);
-            }
-            
+            if (!HitByPlayer) AkSoundEngine.PostEvent("Monster_burn", gameObject);
+
             Hit = true;
             _data.healthPoint -= damage * Time.deltaTime;
             HitByPlayer = hitByPlayer;
@@ -158,7 +160,7 @@ namespace Characters.Monsters
 
         public void MonsterDie()
         {
-            _data.isDead = true;
+            SaveManager.RegisterBool(this.GetInstanceID().ToString());
             Destroy(Patrol ? transform.parent.gameObject : transform.gameObject);
         }
 
