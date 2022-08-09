@@ -608,6 +608,18 @@ PrefabInstance:
       propertyPath: listenerPosition
       value: 
       objectReference: {fileID: 344564104}
+    - target: {fileID: 1419523672755265841, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+      propertyPath: key
+      value: wwise_home_hallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419523672755265841, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+      propertyPath: wwiseEvent
+      value: Hallway_footstep
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419523672755265841, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+      propertyPath: triggerEvent
+      value: wwiseSoundTiming
+      objectReference: {fileID: 0}
     - target: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
       propertyPath: m_Name
       value: DoorWwiseTrigger
@@ -5425,14 +5437,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TvWwiseTrigger
       objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7346036701706513886, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5477,47 +5481,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: key
-      value: wwise_home_tv
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: wwiseEvent
-      value: TV
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-    - {fileID: 313988768, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
---- !u!1 &7346036701778910565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-  m_PrefabInstance: {fileID: 7346036701778910564}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7346036701778910566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7346036701778910565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e643f166e16a442da51bde32e035e284, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: wwise_home_tv
-  triggerOnce: 1
-  wwiseEvent: TV
-  triggerEvent: 
-  wwiseRtpcKey: TVRange
-  targetPosition: {fileID: 58699951}
-  listenerPosition: {fileID: 344564104}
-  stopTime: 20
 --- !u!1001 &8049363683877142490
 PrefabInstance:
   m_ObjectHideFlags: 0

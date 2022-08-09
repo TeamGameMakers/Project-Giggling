@@ -104,8 +104,8 @@ namespace Interact
                 StoryManager.Instance.StartStory(ResourceLoader.Load<PlotDataSO>("Data/Story/streetDialog_03"));
                 SaveManager.RegisterBool(EventFirstBossEncounter);
             }
-            // TODO: 创建 Boss
-            //ResourceLoader.LoadAsync<GameObject>("Prefabs/");
+            // 创建 Boss
+            ResourceLoader.LoadAsync<GameObject>("Prefabs/Boss", null);
             
             DisableSelf();
         }
