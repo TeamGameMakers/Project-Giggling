@@ -87,6 +87,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	26805767	foorstep_05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_274FA642.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_05		15798
 	29525048	UIB	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UIB_D8C2237C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_positive\UIB		32154
 	36187219	norm5	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm5		196064
+	36439070	主界面 修改延音	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\主界面 修改延音_4BAF6BC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\MainTheme\主界面 修改延音		11668988
 	83893701	norm3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm3		176064
 	91579748	foorstep_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_9F8E5BA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_02		21864
 	95841558	FX_Heartbeat_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Heartbeat_04_50FF3A76.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\FX_Heartbeat_01		3095136
@@ -120,7 +121,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	456608687	box_try	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box_try_0AD06841.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_try\box_try		33488
 	459516214	foorstep_03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_21064BDB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_03		28720
 	467759605	HIT_Impact_Strings_Low_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\HIT_Impact_Strings_Low_02_1E2696E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Meet_Monster\HIT_Impact_Strings_Low_02		616512
-	492091717	轻音乐1-ProQ3_01-03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\轻音乐1-ProQ3_01-03_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\MainTheme\轻音乐1-ProQ3_01-03		12040064
 	493571395	bossxiao4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\laugh\bossxiao4		488064
 	504295279	09 Wood Door 9-ProQ3_01-08_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\09 Wood Door 9-ProQ3_01-08.L_C8756AAE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Door_notopen\09 Wood Door 9-ProQ3_01-08_L		83718
 	525487108	norm6	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm6		216064
