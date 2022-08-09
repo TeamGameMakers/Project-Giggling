@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI.Inventory
 {
-    public class InventoryPanel : BasePanel
+    public class StatusPanel : BasePanel
     {
         [SerializeField] private InventoryDataSO _data;
         [SerializeField] private int _maxBatteryNum;
