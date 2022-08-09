@@ -8,6 +8,7 @@ namespace SceneTrigger
     public class StoryTrigger : BaseSceneTrigger
     {
         public PlotDataSO plot;
+        
 
         protected override void TriggerEnterEvent(Collider2D col)
         {
