@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using Base.Event;
 using GM;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,10 +25,16 @@ namespace Interact
         protected bool timing = false;
         protected float curTime = 0;
         protected bool showImage = false;
-        
+        // 图片切换
+        public List<Sprite> peekSprites = new List<Sprite>();
+        protected float spritePerTime;
+
         // 该交互对象上的所有组件
         private MonoBehaviour[] m_monos;    // 检索不到 Collider
         private Collider2D m_coll;
+        
+        // 音效计时开始事件
+        private const string m_soundTimingStart = "wwiseSoundTiming";
         
         protected override void Awake()
         {
@@ -33,6 +42,12 @@ namespace Interact
             doorBlock = doorRenderer.gameObject.GetComponent<Collider2D>();
             m_monos = GetComponents<MonoBehaviour>();
             m_coll = GetComponent<Collider2D>();
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            spritePerTime = 30f / (peekSprites.Count == 0 ? 1 : peekSprites.Count);
         }
 
         protected override void Update()
@@ -43,7 +58,12 @@ namespace Interact
             if (timing)
             {
                 curTime += Time.deltaTime;
-                // TODO: 根据时间不同，切换图片
+                
+                // 更换图片
+                int curIndex = Mathf.Clamp((int)(curTime / spritePerTime), 0, peekSprites.Count - 1) ;
+                targetRenderer.sprite = peekSprites[curIndex];
+                if (curTime > 30f)
+                    timing = false;
             }
 
             // 按左键也可关闭窥探
@@ -75,8 +95,23 @@ namespace Interact
                 // 关闭碰撞体
                 doorBlock.enabled = false;
                 
-                // TODO: 在不正确的时候打开死亡
+                // 在计时时出去就死亡
+                if (timing)
+                {
+                    Debug.Log("GameOver");
+                    // TODO: 打开 GameOver 图
+                }
             }
+        }
+
+        protected virtual void OnEnable()
+        {
+            EventCenter.Instance.AddEventListener(m_soundTimingStart, StartTiming);
+        }
+
+        protected virtual void OnDisable()
+        {
+            EventCenter.Instance.RemoveEventListener(m_soundTimingStart, StartTiming);
         }
 
         public void StartTiming()

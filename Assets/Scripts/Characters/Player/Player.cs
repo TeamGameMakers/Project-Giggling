@@ -79,14 +79,7 @@ namespace Characters.Player
             FlashLightControl();
             
             // 手电伤害判定
-            if (_flashLight.enabled)
-            {
-                _monstersColl = Core.Detection.ArcDetectionAll(_flashLight.transform, 
-                    data.lightRadius, data.lightAngle, data.layer);
-                
-                foreach (var coll in _monstersColl)
-                    Monster.Monsters[coll.GetInstanceID()].MonsterEnterLight(data.lightDamage, true);
-            }
+            FlashLightDetect();
         }
 
         private void OnDisable()
@@ -106,23 +99,43 @@ namespace Characters.Player
                 InputHandler.UseLightInput();
 
                 if (_powerRemaining && !_flashLight.enabled)
+                {
                     _flashLight.enabled = true;
-                
+                    AkSoundEngine.PostEvent("Flashlight_on", gameObject);
+                }
                 else
+                {
                     _flashLight.enabled = false;
+                    AkSoundEngine.PostEvent("Flashlight_off", gameObject);
+                }
             }
             else if (_flashLight.enabled && !_powerRemaining)
+            {
                 _flashLight.enabled = false;
+                AkSoundEngine.PostEvent("Battery_ranout", gameObject);
+            }
 
             if (InputHandler.ReloadPressed)
             {
-                EventCenter.Instance.FuncTrigger("UseBattery");
+                EventCenter.Instance.EventTrigger("UseBattery");
                 InputHandler.UseReloadInput();
             }
             
             if (_flashLight.enabled)
                 _powerRemaining = EventCenter.Instance.
                     FuncTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
+        }
+        
+        private void FlashLightDetect()
+        {
+            if (!_flashLight.enabled) return;
+            
+            _monstersColl = Core.Detection.ArcDetectionAll(Core.Detection.transform, 
+                data.lightRadius, data.lightAngle * 0.5f, data.layer, "Monster");
+
+            // 伤害判定
+            foreach (var coll in _monstersColl) 
+                Monster.Monsters[coll.GetInstanceID()].MonsterStayLight(data.lightDamage, true);
         }
 
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);

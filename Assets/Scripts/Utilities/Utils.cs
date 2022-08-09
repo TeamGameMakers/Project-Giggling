@@ -130,5 +130,7 @@ namespace Utilities
         
         public static bool IsArriveAtDestination(Transform current, Transform destination, float error)
             => (current.position - destination.position).sqrMagnitude < error;
+        
+        //TODO: LockBool
     }
 }
