@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a99ff4ec8c35754baddebbeeebad5c49
     GuidInternal: 
-    m_lastTime: -8585415771651516817
+    m_lastTime: -8585415590644404175
     List:
     - name: Direct
       guid: 4e3aaacea4c7db48aac3b79cfef3cf12
@@ -419,7 +419,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fb082402d384b745b142b8f6b86e7370
     GuidInternal: 
-    m_lastTime: -8585415854450123918
+    m_lastTime: -8585415590642097772
     List:
     - name: AllInOne
       guid: a8818d988b0bb24d9c9e93aaac10a807
@@ -447,7 +447,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5d23f65229f3604e9a9e75092ee001f1
     GuidInternal: 
-    m_lastTime: -8585415771650817802
+    m_lastTime: -8585415571239301816
     List:
     - name: A_humble
       guid: c61e11cb7507214b94298f53372d2958
@@ -506,6 +506,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: B_dead
+      guid: 3740e7cf5949e44786d31d829300d547
+      id: 1144085426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Monster
+        ObjectType: 4
+        guid: fcee5ffe683d6a4588d8c50ec9505e7e
+      - ElementName: B_dead
+        ObjectType: 3
+        guid: 3740e7cf5949e44786d31d829300d547
+      Path: Events\Default Work Unit\Monster\B_dead
+      maxAttenuation: 0
+      maxDuration: 2.875
+      minDuration: 2.291667
     - name: B_humble
       guid: a298aa7568d86f45b086998302192a1e
       id: 1691311397
@@ -626,6 +646,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.530771
       minDuration: 0.530771
+    - name: C_dead
+      guid: eb76649084434741a5eb06eaaa4db016
+      id: 750193097
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Monster
+        ObjectType: 4
+        guid: fcee5ffe683d6a4588d8c50ec9505e7e
+      - ElementName: C_dead
+        ObjectType: 3
+        guid: eb76649084434741a5eb06eaaa4db016
+      Path: Events\Default Work Unit\Monster\C_dead
+      maxAttenuation: 0
+      maxDuration: 3.208333
+      minDuration: 2
     - name: C_humble
       guid: 9e4e5f045f89cf4baa66dbbb256cda24
       id: 3520101518
@@ -644,8 +684,8 @@ MonoBehaviour:
         guid: 9e4e5f045f89cf4baa66dbbb256cda24
       Path: Events\Default Work Unit\Monster\C_humble
       maxAttenuation: 0
-      maxDuration: 2.25
-      minDuration: 1.75
+      maxDuration: -1
+      minDuration: -1
     - name: C_move
       guid: 4cb643f46548684d8d583b0751213d92
       id: 35926800
@@ -1328,6 +1368,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Readloadflashlight
+      guid: ae923f1a79ff2545bf27eb1e9b850697
+      id: 1300721799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Event
+        ObjectType: 4
+        guid: 6de3688045dfa74986bbf90fec8f1f81
+      - ElementName: Readloadflashlight
+        ObjectType: 3
+        guid: ae923f1a79ff2545bf27eb1e9b850697
+      Path: Events\Default Work Unit\Event\Readloadflashlight
+      maxAttenuation: 0
+      maxDuration: 0.924354
+      minDuration: 0.924354
     - name: Run
       guid: 3a9789d897a31941b05583a5b4e68d9b
       id: 712161704
