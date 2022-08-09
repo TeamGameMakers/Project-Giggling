@@ -106,6 +106,7 @@ namespace Characters.Player
                 else
                 {
                     _flashLight.enabled = false;
+                    _monstersColl = new List<Collider2D>();
                     AkSoundEngine.PostEvent("Flashlight_off", gameObject);
                 }
             }
@@ -135,7 +136,7 @@ namespace Characters.Player
 
             // 伤害判定
             foreach (var coll in _monstersColl) 
-                Monster.Monsters[coll.GetInstanceID()].MonsterStayLight(data.lightDamage, true);
+                Monster.Monsters[coll.GetInstanceID()].MonsterStayLight(data.lightDamage);
         }
 
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);

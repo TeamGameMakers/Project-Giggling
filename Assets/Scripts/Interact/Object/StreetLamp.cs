@@ -24,7 +24,7 @@ namespace Interact
             else if (col.CompareTag("Monster"))
             {
                 monster = col.gameObject.GetComponent<Monster>();
-                monster.MonsterStayLight(damageToMonster);
+                monster.MonsterStayRoadLight(damageToMonster);
             }
         }
 

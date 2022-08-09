@@ -16,13 +16,14 @@ namespace Data
         public float healthPoint;
 
         [Header("Detection")] 
+        public float catchDistance;
         public float checkRadius;
         public float checkAngle;
         public LayerMask checkLayer;
-        
+
         [Header("Patrol")]
         public float _patrolStopTime;
-        
+
         public enum MonsterType
         {
             Normal,

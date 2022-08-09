@@ -14,6 +14,7 @@ namespace Characters.Monsters
             base.Enter();
             _maxPointNum = _monster.PatrolPoints.Count;
             _core.AIMovement.CurrentDestination = _monster.PatrolPoints[_pointIndex];
+            _core.AIMovement.SetSpeed(_data.walkSpeed);
         }
 
         public override void LogicUpdate()
