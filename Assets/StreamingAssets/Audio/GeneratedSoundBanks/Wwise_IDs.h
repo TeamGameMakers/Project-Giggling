@@ -39,6 +39,7 @@ namespace AK
         static const AkUniqueID HALLWAY_FOOTSTEP = 2938572734U;
         static const AkUniqueID HOME = 3181406844U;
         static const AkUniqueID INTERACT = 1466384055U;
+        static const AkUniqueID MAINTHEME = 824317709U;
         static const AkUniqueID MEET_BOSS = 2611978780U;
         static const AkUniqueID MEET_MONSTER = 1517054675U;
         static const AkUniqueID MEETINGGIRL = 757741878U;
