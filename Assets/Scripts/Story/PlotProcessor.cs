@@ -72,7 +72,6 @@ namespace UI
             {
                 leftImageGo.SetActive(true);
                 leftImage.sprite = section.leftSprite;
-                // TODO: 适配立绘大小
                 leftImage.SetNativeSize();
             }
             else

@@ -183,7 +183,6 @@ namespace Save
         // 存储
         public static void Save()
         {
-            // TODO: 完善存档内容
             // --构建 SaveData--
             Data.name = saveName;
             // 场景名
@@ -192,6 +191,13 @@ namespace Save
             // 记录玩家位置，要获取玩家位置
             string playerPos = EventCenter.Instance.FuncTrigger<string>("GetPlayerPosition");
             Data.Add("PlayerPosition", playerPos);
+            
+            // 记录玩家手电筒
+            bool hasFlashLight = EventCenter.Instance.FuncTrigger<bool>("GetPlayerFlashLight");
+            if (hasFlashLight)
+            {
+                RegisterBool("hasFlashLight");
+            }
             
             BeforeSaveActions?.Invoke();
 

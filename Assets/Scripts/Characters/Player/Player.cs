@@ -6,6 +6,7 @@ using Characters.Monsters;
 using Core;
 using Data;
 using Save;
+using UI;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -38,16 +39,21 @@ namespace Characters.Player
             _flashLight = transform.GetChild(2).GetComponent<Light2D>();
 
             StateMachine = new PlayerStateMachine();
-            IdleState = new PlayerIdleState(this, "idle");
-            MoveState = new PlayerMoveState(this, "move");
             _monstersColl = new List<Collider2D>();
         }
 
         private void Start()
         {
             _flashLight.enabled = false;
-            StateMachine.Initialize(IdleState);
             GM.GameManager.SetPlayerTransform(transform);
+
+            data = Instantiate(data);
+            data.hasFlashLight = SaveManager.GetBool("hasFlashLight");
+            
+            IdleState = new PlayerIdleState(this, "idle");
+            MoveState = new PlayerMoveState(this, "move");
+            StateMachine.Initialize(IdleState);
+
             EventCenter.Instance.AddFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             
             // 手电筒
@@ -80,13 +86,18 @@ namespace Characters.Player
             
             // 手电伤害判定
             FlashLightDetect();
+            
+            // 耐力槽
+            StaminaCheck();
         }
 
         private void OnDisable()
         {
             EventCenter.Instance.RemoveFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             EventCenter.Instance.RemoveEventListener(PickFlashLightEvent, PickFlashLight);
-            EventCenter.Instance.RemoveFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.RemoveFuncListener(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.RemoveFuncListener(EventGetPlayerFlashLight, GetPlayerFlashLight);
+
         }
 
         private void FlashLightControl()
@@ -126,7 +137,7 @@ namespace Characters.Player
                 _powerRemaining = EventCenter.Instance.
                     FuncTrigger<float, bool>("UseBatteryPower", data.powerUsingSpeed);
         }
-        
+
         private void FlashLightDetect()
         {
             if (!_flashLight.enabled) return;
@@ -139,6 +150,19 @@ namespace Characters.Player
                 Monster.Monsters[coll.GetInstanceID()].MonsterStayLight(data.lightDamage);
         }
 
+        private void StaminaCheck()
+        {
+            if (InputHandler.SprintPressed && StateMachine.CurrentState != IdleState)
+                data.stamina -= data.staminaSpeed * Time.deltaTime;
+            else
+                data.stamina += data.staminaSpeed * Time.deltaTime;
+
+            data.stamina = Mathf.Clamp(data.stamina, 0, data.maxStamina);
+            data.canSprint = data.stamina > 0;
+            
+            EventCenter.Instance.EventTrigger("UpdateStamina", data.stamina / data.maxStamina);
+        }
+
         private bool LightOnMonster(Collider2D coll) => _monstersColl.Contains(coll);
 
         /// <summary>
@@ -148,6 +172,14 @@ namespace Characters.Player
         {
             StopCoroutine(RestoreHp());
             data.healthPoint -= damage * Time.deltaTime;
+            data.healthPoint = Mathf.Clamp(data.healthPoint, 0f, data.maxHealthPoint);
+
+            if (data.healthPoint == 0)
+            {
+                UIManager.Instance.ShowGameOverPanel();
+            }
+            
+            EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
         }
 
         /// <summary>
@@ -161,6 +193,7 @@ namespace Characters.Player
             while (data.healthPoint < data.maxHealthPoint)
             {
                 data.healthPoint += data.hpRestoreSpeed * Time.deltaTime;
+                EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
                 yield return null;
             }
         }
@@ -173,8 +206,6 @@ namespace Characters.Player
         {
             Debug.Log("玩家获得手电筒");
             data.hasFlashLight = true;
-            // TODO: 更改动画，修改左下图标与电量绑定
-            // TODO: 顺带一提，电池数量默认就是 4.
         }
 
         public bool HasFlashLight()
@@ -184,14 +215,15 @@ namespace Characters.Player
 
         #endregion
 
-        #region 玩家位置
+        #region 获取玩家数据
 
         public const string GetPlayerPositionEvent = "GetPlayerPosition";
 
-        private string GetPlayerPosition()
-        {
-            return JsonUtility.ToJson(transform.position);
-        }
+        private string GetPlayerPosition() => JsonUtility.ToJson(transform.position);
+
+        public const string EventGetPlayerFlashLight = "GetPlayerFlashLight";
+
+        private bool GetPlayerFlashLight() => data.hasFlashLight;
 
         #endregion
         
@@ -199,6 +231,7 @@ namespace Characters.Player
         {
             EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
             EventCenter.Instance.AddFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.AddFuncListener<bool>(EventGetPlayerFlashLight, GetPlayerFlashLight);
         }
     }
 }

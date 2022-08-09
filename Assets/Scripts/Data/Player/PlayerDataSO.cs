@@ -11,6 +11,11 @@ namespace Data
         public float maxHealthPoint;
         public float healthPoint;
         public float hpRestoreSpeed;
+
+        public float maxStamina;
+        public float stamina;
+        public float staminaSpeed;
+        public bool canSprint;
         
         [Header("Flash Light")]
         public bool hasFlashLight;

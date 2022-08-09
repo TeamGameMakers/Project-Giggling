@@ -38,8 +38,8 @@ namespace Characters.Player
         
         private void MoveDirection()
         {
-            var curSpeed = InputHandler.SprintPressed ? _data.runVelocity : _data.walkVelocity;
-            
+            var curSpeed = InputHandler.SprintPressed && _data.canSprint ? _data.runVelocity : _data.walkVelocity;
+
             if (InputHandler.NormInputX != 0)
             {
                 _core.Movement.SetVelocityX(InputHandler.NormInputX * curSpeed);

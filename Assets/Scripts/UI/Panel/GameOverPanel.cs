@@ -44,7 +44,6 @@ namespace UI
             {
                 case "ContinueBtn":
                     AkSoundEngine.PostEvent("Menu_positive", gameObject);
-                    // TODO: 待测试具体效果
                     SceneLoader.LoadScene(SceneLoader.CurrentScene);
                     break;
                 case "QuitBtn":
