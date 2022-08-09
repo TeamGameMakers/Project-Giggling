@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PuzzleKey
   - Monster
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -52,9 +52,19 @@ namespace Characters.Monsters
                 _monster.SetAnimFloat(_animHashVelocityY, _core.AIMovement.CurrentVelocity.y);
             }
             
+            if (!_monster.target && !_monster.HitByPlayer)
+            {
+                if (_data.monsterType != MonsterDataSO.MonsterType.Boss)
+                    StateMachine.ChangeState(_monster.IdleState);
+                else
+                    StateMachine.ChangeState(_monster.TeleportState);
+            }
 
-            if (!_monster.target && !_monster.HitByPlayer) 
-                StateMachine.ChangeState(_monster.IdleState);
+            if (Vector3.Distance(_monster.transform.position, GM.GameManager.Player.position) <= _data.catchDistance)
+            {
+                //TODO: GameOver
+                Debug.Log("游戏结束");
+            }
         }
 
         public override void Exit()

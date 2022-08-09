@@ -19,6 +19,7 @@ MonoBehaviour:
   chaseSpeed: 3
   hitSpeed: 1
   healthPoint: 500
+  catchDistance: 0.5
   checkRadius: 4
   checkAngle: 180
   checkLayer:

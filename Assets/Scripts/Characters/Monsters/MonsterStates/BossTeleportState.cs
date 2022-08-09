@@ -17,19 +17,34 @@ namespace Characters.Monsters
 
             _canTeleport = false;
             _countDowning = false;
+            
+            _monster.transform.position = TransformRandom.Instance.GetRandomPosition();
         }
 
         public override void LogicUpdate()
         {
             base.LogicUpdate();
 
+            if (_data.healthPoint > 0) _data.healthPoint -= Time.deltaTime;
+            
             if (!_countDowning && !_canTeleport)
                 _monster.StartCoroutine(TeleportTimer(_data._patrolStopTime));
 
-            if (_canTeleport)
+            if (_monster.target)
+                StateMachine.ChangeState(_monster.ChaseState);
+
+            else if (_canTeleport)
             {
-                RandomSelector.
+                _monster.transform.position = TransformRandom.Instance.GetRandomPosition();
+                _canTeleport = false;
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            _monster.StopCoroutine(TeleportTimer(_data._patrolStopTime));
         }
 
         private IEnumerator TeleportTimer(float timer)

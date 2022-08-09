@@ -28,6 +28,8 @@ namespace Characters.Monsters
         public MonsterChaseState ChaseState { get; private set; }
         public MonsterPatrolState PatrolState { get; private set; }
         public MonsterDieState DieState { get; private set; }
+
+        public BossTeleportState TeleportState { get; private set; }
         
         public List<Transform> PatrolPoints { get; private set; }
         public bool Patrol { get; private set; }
@@ -53,9 +55,8 @@ namespace Characters.Monsters
             
             if (_data.monsterType == MonsterDataSO.MonsterType.Boss)
             {
-                IdleState = new MonsterIdleState(this, "idle");
+                TeleportState = new BossTeleportState(this);
                 ChaseState = new MonsterChaseState(this, "move");
-                PatrolState = new MonsterPatrolState(this, "move");
             }
             else
             {
@@ -78,8 +79,11 @@ namespace Characters.Monsters
 
             if (_data.isDead)
                 MonsterDie();
-            
-            StateMachine.Initialize(IdleState);
+
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss)
+                StateMachine.Initialize(IdleState);
+            else
+                StateMachine.Initialize(TeleportState);
         }
 
         private void FixedUpdate()
