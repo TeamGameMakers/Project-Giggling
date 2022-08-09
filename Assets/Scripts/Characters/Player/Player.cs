@@ -48,6 +48,10 @@ namespace Characters.Player
             _flashLight.enabled = false;
             StateMachine.Initialize(IdleState);
             GM.GameManager.SetPlayerTransform(transform);
+
+            data = Instantiate(data);
+            data.hasFlashLight = SaveManager.GetBool("hasFlashLight");
+
             EventCenter.Instance.AddFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             
             // 手电筒
@@ -86,7 +90,7 @@ namespace Characters.Player
         {
             EventCenter.Instance.RemoveFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             EventCenter.Instance.RemoveEventListener(PickFlashLightEvent, PickFlashLight);
-            EventCenter.Instance.RemoveFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.RemoveFuncListener(GetPlayerPositionEvent, GetPlayer);
         }
 
         private void FlashLightControl()
@@ -148,6 +152,8 @@ namespace Characters.Player
         {
             StopCoroutine(RestoreHp());
             data.healthPoint -= damage * Time.deltaTime;
+
+            EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
         }
 
         /// <summary>
@@ -161,6 +167,7 @@ namespace Characters.Player
             while (data.healthPoint < data.maxHealthPoint)
             {
                 data.healthPoint += data.hpRestoreSpeed * Time.deltaTime;
+                EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
                 yield return null;
             }
         }
@@ -186,17 +193,14 @@ namespace Characters.Player
 
         public const string GetPlayerPositionEvent = "GetPlayerPosition";
 
-        private string GetPlayerPosition()
-        {
-            return JsonUtility.ToJson(transform.position);
-        }
+        private Player GetPlayer() => this;
 
         #endregion
         
         private void RegisterEvent()
         {
             EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
-            EventCenter.Instance.AddFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.AddFuncListener<Player>(GetPlayerPositionEvent, GetPlayer);
         }
     }
 }

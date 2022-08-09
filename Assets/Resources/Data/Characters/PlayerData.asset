@@ -15,7 +15,7 @@ MonoBehaviour:
   walkVelocity: 2
   runVelocity: 3
   maxHealthPoint: 20
-  healthPoint: 20.00308
+  healthPoint: 20
   hpRestoreSpeed: 2
   hasFlashLight: 1
   powerUsingSpeed: 1
