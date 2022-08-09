@@ -67,7 +67,7 @@ namespace Interact
             }
 
             // 按左键也可关闭窥探
-            if (showImage && Mouse.current.leftButton.wasPressedThisFrame)
+            if (showImage && (Mouse.current.leftButton.wasPressedThisFrame || Keyboard.current.qKey.wasPressedThisFrame))
             {
                 HidePeek();
             }

@@ -31436,11 +31436,15 @@ PrefabInstance:
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3659641877580508718, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
