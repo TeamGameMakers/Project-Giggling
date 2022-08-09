@@ -1,4 +1,6 @@
+using Base.Event;
 using Data;
+using GM;
 using UnityEngine;
 
 namespace Characters.Monsters
@@ -62,8 +64,7 @@ namespace Characters.Monsters
 
             if (Vector3.Distance(_monster.transform.position, GM.GameManager.Player.position) <= _data.catchDistance)
             {
-                //TODO: GameOver
-                Debug.Log("游戏结束");
+                EventCenter.Instance.EventTrigger("GameOver");
             }
         }
 

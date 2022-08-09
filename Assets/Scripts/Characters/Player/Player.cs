@@ -180,8 +180,6 @@ namespace Characters.Player
         {
             Debug.Log("玩家获得手电筒");
             data.hasFlashLight = true;
-            // TODO: 更改动画，修改左下图标与电量绑定
-            // TODO: 顺带一提，电池数量默认就是 4.
         }
 
         public bool HasFlashLight()

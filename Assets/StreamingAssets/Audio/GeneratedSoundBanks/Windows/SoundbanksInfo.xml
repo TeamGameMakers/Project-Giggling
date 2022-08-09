@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4262466208">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3820798240">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,13 +19,17 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3075593854">
+		<SoundBank Id="2858921253" Language="SFX" Hash="1303318344">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
 			<IncludedEvents>
 				<Event Id="145651708" Name="A_humble" ObjectPath="\Events\Default Work Unit\Monster\A_humble" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="95841558" Language="SFX">
+							<ShortName>FX_Heartbeat_04.wav</ShortName>
+							<Path>SFX\FX_Heartbeat_04_50FF3A76.wem</Path>
+						</File>
 						<File Id="204547779" Language="SFX">
 							<ShortName>bossxiao1.wav</ShortName>
 							<Path>SFX\bossxiao1_10C4C929.wem</Path>
@@ -38,9 +42,13 @@
 							<ShortName>bossxiao4.wav</ShortName>
 							<Path>SFX\bossxiao4_10C4C929.wem</Path>
 						</File>
-						<File Id="567522708" Language="SFX">
-							<ShortName>bossxiao2.wav</ShortName>
-							<Path>SFX\bossxiao2_10C4C929.wem</Path>
+						<File Id="861140438" Language="SFX">
+							<ShortName>WULA.wav</ShortName>
+							<Path>SFX\WULA_D79FB2B7.wem</Path>
+						</File>
+						<File Id="952497228" Language="SFX">
+							<ShortName>DONG.wav</ShortName>
+							<Path>SFX\DONG_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -76,6 +84,18 @@
 						<File Id="660499722" Language="SFX">
 							<ShortName>monster humble1.wav</ShortName>
 							<Path>SFX\monster humble1_10C4C929.wem</Path>
+						</File>
+						<File Id="861140438" Language="SFX">
+							<ShortName>WULA.wav</ShortName>
+							<Path>SFX\WULA_D79FB2B7.wem</Path>
+						</File>
+						<File Id="898281037" Language="SFX">
+							<ShortName>FX_Heartbeat_04.wav</ShortName>
+							<Path>SFX\FX_Heartbeat_04_D79FB2B7.wem</Path>
+						</File>
+						<File Id="952497228" Language="SFX">
+							<ShortName>DONG.wav</ShortName>
+							<Path>SFX\DONG_D79FB2B7.wem</Path>
 						</File>
 						<File Id="998919376" Language="SFX">
 							<ShortName>monster humble2.wav</ShortName>
@@ -124,6 +144,10 @@
 							<ShortName>box（1）音效.wav</ShortName>
 							<Path>SFX\box（1）音效_10C4C929.wem</Path>
 						</File>
+						<File Id="567522708" Language="SFX">
+							<ShortName>bossxiao2.wav</ShortName>
+							<Path>SFX\bossxiao2_10C4C929.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
@@ -170,7 +194,7 @@
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="3520101518" Name="C_humble" ObjectPath="\Events\Default Work Unit\Monster\C_humble" DurationType="OneShot" DurationMin="1.75" DurationMax="2.25">
+				<Event Id="3520101518" Name="C_humble" ObjectPath="\Events\Default Work Unit\Monster\C_humble" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="36187219" Language="SFX">
 							<ShortName>norm5.wav</ShortName>
@@ -191,6 +215,14 @@
 						<File Id="633066304" Language="SFX">
 							<ShortName>norm4.wav</ShortName>
 							<Path>SFX\norm4_10C4C929.wem</Path>
+						</File>
+						<File Id="820978956" Language="SFX">
+							<ShortName>CLOCK.wav</ShortName>
+							<Path>SFX\CLOCK_D79FB2B7.wem</Path>
+						</File>
+						<File Id="861140438" Language="SFX">
+							<ShortName>WULA.wav</ShortName>
+							<Path>SFX\WULA_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -530,6 +562,13 @@
 				</Event>
 				<Event Id="2295356976" Name="WatchCatHole" ObjectPath="\Events\Default Work Unit\Event\WatchCatHole" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
+			<IncludedAuxBusses>
+				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+			</IncludedAuxBusses>
+			<GameParameters>
+				<GameParameter Id="1694200294" Name="TVRange" ObjectPath="\Game Parameters\Default Work Unit\TVRange"/>
+				<GameParameter Id="3829906308" Name="DoorRange" ObjectPath="\Game Parameters\Default Work Unit\DoorRange"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

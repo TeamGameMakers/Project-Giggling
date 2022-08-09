@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7346036701706513886}
   - component: {fileID: 7346036701706513880}
-  - component: {fileID: 313988768}
+  - component: {fileID: 1419523672755265841}
   m_Layer: 0
   m_Name: WwiseTrigger
   m_TagString: Untagged
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4614658, y: 2.5382147}
   m_EdgeRadius: 0
---- !u!114 &313988768
+--- !u!114 &1419523672755265841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,14 +67,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7346036701706513885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e643f166e16a442da51bde32e035e284, type: 3}
+  m_Script: {fileID: 11500000, guid: 156f8c9a155363642b89e6986a704036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: wwise_home_door
+  key: wwise_home_tv
   triggerOnce: 1
-  wwiseEvent: Hallway_footstep
-  triggerEvent: wwiseSoundTiming
-  wwiseRtpcKey: DoorRange
-  targetPosition: {fileID: 0}
-  listenerPosition: {fileID: 0}
-  stopTime: 0
+  wwiseEvent: TV
+  triggerEvent: 

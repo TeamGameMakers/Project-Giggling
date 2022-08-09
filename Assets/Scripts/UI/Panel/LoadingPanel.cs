@@ -1,5 +1,6 @@
 using System.Collections;
 using Base.Scene;
+using Data;
 using TMPro;
 
 namespace UI
@@ -18,14 +19,16 @@ namespace UI
 
         public bool waitInput = false;
 
+        public LoadingPanelContent loadingContent;
+
         protected override void Start()
         {
             base.Start();
 
             panelFader = GetComponent<CanvasGroupFader>();
             contentFader = transform.Find("ContainerPanel").GetComponent<CanvasGroupFader>();
-            // TODO: 设置随机文字
-            content.SetText(content.text + "  随机选择内容");
+            // 设置随机文字
+            content.SetText(loadingContent.GetRandom());
 
             ready = true;
         }
