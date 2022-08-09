@@ -120,6 +120,7 @@ MonoBehaviour:
   content: {fileID: 2230465673355898319}
   hint: {fileID: 9072562279947647970}
   waitInput: 1
+  loadingContent: {fileID: 11400000, guid: 6c541627282bc1e4a80756b47b579809, type: 2}
 --- !u!1 &2230465673355898313
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,8 +213,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
