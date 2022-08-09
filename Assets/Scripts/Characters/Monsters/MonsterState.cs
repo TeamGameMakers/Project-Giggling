@@ -40,7 +40,7 @@ namespace Characters.Monsters
         {
             base.LogicUpdate();
 
-            if (_data.healthPoint > 0 && _monster.Hit && StateMachine.CurrentState != _monster.ChaseState)
+            if (_data.healthPoint > 0 && _monster.HitByPlayer && StateMachine.CurrentState != _monster.ChaseState)
                 StateMachine.ChangeState(_monster.ChaseState);
             
             if (_data.healthPoint <= 0)
