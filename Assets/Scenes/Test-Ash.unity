@@ -3262,10 +3262,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8349132450269838944}
     m_Modifications:
-    - target: {fileID: 1492877321, guid: 0c088702749f6f246b1c584dfbe34a39, type: 3}
-      propertyPath: m_Name
-      value: Stamina Right
-      objectReference: {fileID: 0}
     - target: {fileID: 4664950590761718770, guid: 0c088702749f6f246b1c584dfbe34a39, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3349,10 +3345,6 @@ PrefabInstance:
     - target: {fileID: 4664950590761718770, guid: 0c088702749f6f246b1c584dfbe34a39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4669580525832546528, guid: 0c088702749f6f246b1c584dfbe34a39, type: 3}
-      propertyPath: m_Name
-      value: Stamina Left
       objectReference: {fileID: 0}
     - target: {fileID: 8445880895725858790, guid: 0c088702749f6f246b1c584dfbe34a39, type: 3}
       propertyPath: m_Name
