@@ -192,6 +192,13 @@ namespace Save
             string playerPos = EventCenter.Instance.FuncTrigger<string>("GetPlayerPosition");
             Data.Add("PlayerPosition", playerPos);
             
+            // 记录玩家手电筒
+            bool hasFlashLight = EventCenter.Instance.FuncTrigger<bool>("GetPlayerFlashLight");
+            if (hasFlashLight)
+            {
+                RegisterBool("hasFlashLight");
+            }
+            
             BeforeSaveActions?.Invoke();
 
             // --持久化--
