@@ -24,9 +24,6 @@ namespace UI
         [Tooltip("渐变时长")]
         public float fadeDuration = 0.5f;
 
-        [Tooltip("渐变完是否销毁")]
-        public bool destroyAfterFade = false;
-        
         protected virtual void Awake()
         {
             canvasGroup = GetComponent<CanvasGroup>();
@@ -45,14 +42,10 @@ namespace UI
             StartCoroutine(FadeCoroutine(target, callback));
         }
 
-        protected IEnumerator FadeCoroutine(float target, Action<float> callback)
+        public IEnumerator FadeCoroutine(float target, Action<float> callback)
         {
             yield return FadeCoroutine(target);
             callback?.Invoke(target);
-            if (destroyAfterFade)
-            {
-                Destroy(gameObject);
-            }
         }
 
         public IEnumerator FadeCoroutine(float target)

@@ -15,7 +15,7 @@ namespace Base
             }
         }
 
-        public bool dontDestroy = false;
+        public bool dontDestroy = true;
 
         protected virtual void Awake()
         {
@@ -23,6 +23,7 @@ namespace Base
                 m_instance = this as T;
             }
             else {
+                // 直接销毁，会导致 m_instance 置空
                 Destroy(gameObject);
             }
         }
@@ -36,7 +37,9 @@ namespace Base
 
         protected virtual void OnDestroy()
         {
-            m_instance = null;
+            // 要检查是否不销毁，不销毁时不清空，不然在销毁重复的同时会置空单例
+            if (!dontDestroy)
+                m_instance = null;
         }
     }
 }

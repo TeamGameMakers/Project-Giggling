@@ -10,31 +10,47 @@ namespace Characters.Monsters
     {
         protected readonly Monster _monster;
         protected readonly GameCore _core;
-        protected readonly MonsterDataSo _data;
+        protected readonly MonsterDataSO _data;
         private readonly int _animBoolHash;
 
-        protected MonsterState(Monster monster, string name) : base(monster.StateMachine)
+        protected MonsterState(Monster monster, string name = null) : base(monster.StateMachine)
         {
             _monster = monster;
             _core = monster.Core;
             _data = monster.Data;
-            _animBoolHash = Animator.StringToHash(name);
+            
+            if (name != null)
+                _animBoolHash = Animator.StringToHash(name);
         }
 
         public override void Enter()
         {
-            _monster.SetAnimBool(_animBoolHash, true);
+            if (_animBoolHash != 0)
+                _monster.SetAnimBool(_animBoolHash, true);
         }
 
         public override void PhysicsUpdate()
         {
-            _monster.target = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
-                _data.checkAngle, _data.checkLayer);
+            if (!_monster.Hit)
+                _monster.target = _core.Detection.ArcDetection(_monster.transform, _data.checkRadius,
+                    _data.checkAngle, _data.checkLayer);
+        }
+
+        public override void LogicUpdate()
+        {
+            base.LogicUpdate();
+            
+            if (_data.healthPoint > 0 && _monster.Hit)
+                StateMachine.ChangeState(_monster.ChaseState);
+            
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss && _data.healthPoint <= 0)
+                StateMachine.ChangeState(_monster.DieState);
         }
 
         public override void Exit()
         {
-            _monster.SetAnimBool(_animBoolHash, false);
+            if (_animBoolHash != 0)
+                _monster.SetAnimBool(_animBoolHash, false);
         }
     }
 }

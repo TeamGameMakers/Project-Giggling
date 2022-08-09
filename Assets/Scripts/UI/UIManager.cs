@@ -19,13 +19,25 @@ namespace UI
 
         public void CreateFade(float duration = 0.5f, float originalAlpha = 1, float targetAlpha = 0)
         {
-            UIManager.Instance.ShowPanel<FaderPanel>("Fader", "FaderPanel", UILayer.Top, panel => {
+            Instance.ShowPanel<FaderPanel>("Fader", "FaderPanel", UILayer.Top, panel => {
                 panel.fader.Alpha = originalAlpha;
                 panel.fader.fadeDuration = duration;
                 panel.fader.Fade(targetAlpha);
             });
         }
-        
+
+        public void ShowHint(string content)
+        {
+            Instance.ShowPanel<TipPanel>("HintPanel", "HintPanel", UILayer.Top, panel => {
+                panel.SetContent(content);
+            });
+        }
+
+        public void HideHint()
+        {
+            Instance.HidePanel("HintPanel");
+        }
+
         #endregion
 
         /// <summary>
@@ -39,11 +51,18 @@ namespace UI
         public void ShowPanel<T>(string name, string subPath = "", UILayer layer = UILayer.Middle, Action<T> callBack = null) where T : BasePanel
         {
             // 该面板已经存在
-            if (panelContainer.ContainsKey(name)) 
+            if (panelContainer.ContainsKey(name))
             {
-                panelContainer[name].ShowMe();
+                T panel = panelContainer[name] as T;
+                // 已经显示了
+                if (panel.ShowNow())
+                    return;
+                
+                Transform father = RootCanvas.Instance.GetLayerRoot(layer);
+                panel.transform.SetParent(father);
+                panel.ShowMe();
                 // 面板创建完成后回调
-                callBack?.Invoke(panelContainer[name] as T);
+                callBack?.Invoke(panel);
                 // 直接结束
                 return;
             }

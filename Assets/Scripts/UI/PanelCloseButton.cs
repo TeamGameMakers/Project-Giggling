@@ -1,4 +1,7 @@
+using System;
+using GM;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace UI
@@ -15,6 +18,13 @@ namespace UI
 
         public bool destroyPanel = true;
 
+        protected Button button;
+
+        protected virtual void Awake()
+        {
+            button = GetComponent<Button>();
+        }
+
         protected virtual void Start()
         {
             if (closePanel == null)
@@ -22,9 +32,19 @@ namespace UI
                 closePanel = transform.parent.GetComponent<BasePanel>();
             }
             
-            GetComponent<Button>().onClick.AddListener(() => {
+            button.onClick.AddListener(() => {
                 UIManager.Instance.HidePanel(closePanel.gameObject.name, destroyPanel);
             });
+        }
+
+        public void AddButtonListener(UnityAction action)
+        {
+            button.onClick.AddListener(action);
+        }
+
+        public void RemoveButtonListener(UnityAction action)
+        {
+            button.onClick.RemoveListener(action);
         }
     }
 }

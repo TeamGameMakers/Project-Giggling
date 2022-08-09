@@ -41,7 +41,7 @@ namespace Core
             
             for (int i = 0; i < _num; i++)
             {
-                if (Utils.IsInArcSector(transform.forward, 
+                if (Utils.IsInArcSector(transform.right, 
                         _objects[i].transform.position - transform.position, angle))
                     result.Add(_objects[i]);
             }
@@ -60,10 +60,11 @@ namespace Core
             return coll;
         }
 
-        public void LookAtTarget(Transform target)
-        {
-            transform.right = (target.position - transform.position).normalized;
-        }
+        public void LookAtTarget(Transform target) 
+            => transform.right = (target.position - transform.position).normalized;
+
+        public void LookAtTarget(Vector3 direction) => transform.right = direction;
+        
 
     }
 }

@@ -40,7 +40,7 @@ namespace Base.Scene
             MonoManager.Instance.StartCoroutine(LoadSceneAsyncCoroutine(name, callback));
         }
 
-        private static IEnumerator LoadSceneAsyncCoroutine(string name, Action callback)
+        public static IEnumerator LoadSceneAsyncCoroutine(string name, Action callback)
         {
             BeforeLoadedActions?.Invoke();
 

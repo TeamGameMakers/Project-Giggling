@@ -12,13 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b663912763e87d4f827b7722ba48074, type: 3}
   m_Name: homeDialog_02
   m_EditorClassIdentifier: 
-  name: 
+  plotName: 
   sections:
-  - text: "\u8FD9\u662F\u623F\u95F4\u8FC7\u573A\u5BF9\u8BDD"
+  - text: "\u2026\u2026\u8FD9\u662F\u54EA\u513F\uFF1F"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u7B2C\u4E8C\u53E5"
+  - text: "\u597D\u50CF\u2026\u2026\u662F\u6211\u7684\u623F\u95F4\uFF1F"
+    leftSprite: {fileID: 0}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u5947\u602A\uFF0C\u600E\u4E48\u4EC0\u4E48\u90FD\u60F3\u4E0D\u8D77\u6765\u4E86\uFF1F"
+    leftSprite: {fileID: 0}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u770B\u770B\u5468\u56F4\u6709\u6CA1\u6709\u80FD\u591F\u8BA9\u6211\u56DE\u5FC6\u8D77\u4EC0\u4E48\u7684\u4E1C\u897F\u5427\u2026\u2026"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []

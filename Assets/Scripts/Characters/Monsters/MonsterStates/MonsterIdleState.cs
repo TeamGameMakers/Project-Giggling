@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Utilities;
 
 namespace Characters.Monsters
 {
@@ -7,14 +8,14 @@ namespace Characters.Monsters
     {
         private bool _canPatrol;
         
-        public MonsterIdleState(Monster monster, string name) : base(monster, name) { }
+        public MonsterIdleState(Monster monster, string name = null) : base(monster, name) { }
 
         public override void Enter()
         {
             base.Enter();
             _core.AIMovement.CurrentDestination = _monster.transform;
             
-            if (_data.patrol)
+            if (_monster.Patrol)
             {
                 _canPatrol = false;
                 _monster.StartCoroutine(StopTimer(_data._patrolStopTime));
@@ -25,17 +26,26 @@ namespace Characters.Monsters
         {
             base.LogicUpdate();
 
-            if (_monster.target) 
+            if (_monster.target || _monster.HitByPlayer) 
                 StateMachine.ChangeState(_monster.ChaseState);
+            
             else if (_canPatrol)
                 StateMachine.ChangeState(_monster.PatrolState);
+           
+            else if (!Utils.IsArriveAtDestination(_monster.transform, _monster.SpawnTransform, 0.01f))
+            {
+                _core.AIMovement.CurrentDestination = _monster.SpawnTransform;
+                _core.Detection.LookAtTarget(_monster.SpawnTransform);
+            }
+            else
+                _core.Detection.LookAtTarget(_monster.SpawnTransform.right);
         }
 
         public override void Exit()
         {
             base.Exit();
             
-            if (_monster.target && _data.patrol)
+            if (_monster.target && _monster.Patrol)
                 _monster.StopCoroutine(StopTimer(_data._patrolStopTime));
         }
 

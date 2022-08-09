@@ -8,7 +8,7 @@ namespace SceneTrigger
     public abstract class BaseSceneTrigger : MonoBehaviour
     {
         [SerializeField]
-        [Tooltip("存档键")]
+        [Tooltip("存档键，如果不是只触发一次则无视")]
         protected string key;
 
         [SerializeField]
@@ -16,11 +16,16 @@ namespace SceneTrigger
         protected bool triggerOnce = true;
         
         protected bool used;
+        protected bool enter;
         
         protected virtual void Start()
         {
             if (triggerOnce)
+            {
                 used = SaveManager.GetBool(key);
+                if (used)
+                    Destroy(gameObject);
+            }
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D col)
@@ -28,19 +33,37 @@ namespace SceneTrigger
             if (!used && TriggerFilter(col))
             {
                 Debug.Log("触发场景触发器：" + gameObject.name);
-
-                TriggerEvent(col);
+                enter = true;
 
                 if (triggerOnce)
                 {
                     used = true;
                     SaveManager.RegisterBool(key);
                 }
+                
+                TriggerEvent(col);
             }
         }
 
-        protected abstract bool TriggerFilter(Collider2D col);
+        protected virtual bool TriggerFilter(Collider2D col)
+        {
+            return col.CompareTag("Player");
+        }
         
         protected abstract void TriggerEvent(Collider2D col);
+
+        protected virtual void OnTriggerExit2D(Collider2D other)
+        {
+            if (enter && TriggerFilter(other))
+            {
+                enter = false;
+                TriggerExitEvent(other);
+            }
+        }
+
+        protected virtual void TriggerExitEvent(Collider2D col)
+        {
+            
+        }
     }
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96eeaac8e53faef498aa6721addb4765, type: 3}
+  m_Name: homeElement_04
+  m_EditorClassIdentifier: 
+  name: "\u624B\u7535\u7B52"
+  info: "\u624B\u7535\u7B52\u662F\u5728\u9ED1\u6697\u4E2D\u524D\u884C\u7684\uFF0C\u4E0D\u53EF\u7F3A\u5C11\u7684\u5149\u4EAE\u3002"
+  icon: {fileID: 21300000, guid: b54ef3b064b6dcf4d979bb0f15c574d1, type: 3}
+  canPick: 1
+  firstPlot: {fileID: 11400000, guid: 673bb3d749b2bda4a90ee0a98f6fb960, type: 2}
