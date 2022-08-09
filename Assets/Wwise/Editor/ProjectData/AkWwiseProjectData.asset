@@ -303,8 +303,28 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a99ff4ec8c35754baddebbeeebad5c49
     GuidInternal: 
-    m_lastTime: -8585428831116970862
+    m_lastTime: -8585415771651516817
     List:
+    - name: Direct
+      guid: 4e3aaacea4c7db48aac3b79cfef3cf12
+      id: 3167052178
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a99ff4ec8c35754baddebbeeebad5c49
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: ac7d446d9f0af940874554c813c27f0d
+      - ElementName: Direct
+        ObjectType: 2
+        guid: 4e3aaacea4c7db48aac3b79cfef3cf12
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Direct
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -333,6 +353,60 @@ MonoBehaviour:
         ObjectType: 2
         guid: c6b9f92af16ee946b5f2e30c9e602c74
       Path: Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus
+    - name: Music
+      guid: b7df80af7ef4594f96fa0d64b5a127dd
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a99ff4ec8c35754baddebbeeebad5c49
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: b7df80af7ef4594f96fa0d64b5a127dd
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: RVB
+      guid: 7faac586f6fa4f489fb0a0b2b0e7afdd
+      id: 695384145
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a99ff4ec8c35754baddebbeeebad5c49
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: ac7d446d9f0af940874554c813c27f0d
+      - ElementName: RVB
+        ObjectType: 1
+        guid: 7faac586f6fa4f489fb0a0b2b0e7afdd
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB
+    - name: SFX
+      guid: ac7d446d9f0af940874554c813c27f0d
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a99ff4ec8c35754baddebbeeebad5c49
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: ac7d446d9f0af940874554c813c27f0d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -345,7 +419,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fb082402d384b745b142b8f6b86e7370
     GuidInternal: 
-    m_lastTime: -8585416661676424500
+    m_lastTime: -8585415854450123918
     List:
     - name: AllInOne
       guid: a8818d988b0bb24d9c9e93aaac10a807
@@ -373,7 +447,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5d23f65229f3604e9a9e75092ee001f1
     GuidInternal: 
-    m_lastTime: -8585416668680885195
+    m_lastTime: -8585415771650817802
     List:
     - name: A_humble
       guid: c61e11cb7507214b94298f53372d2958
@@ -433,7 +507,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: B_humble
-      guid: 33863e8260a44c4eb0fc6534de35946a
+      guid: a298aa7568d86f45b086998302192a1e
       id: 1691311397
       PathAndIcons:
       - ElementName: Events
@@ -447,11 +521,11 @@ MonoBehaviour:
         guid: fcee5ffe683d6a4588d8c50ec9505e7e
       - ElementName: B_humble
         ObjectType: 3
-        guid: 33863e8260a44c4eb0fc6534de35946a
+        guid: a298aa7568d86f45b086998302192a1e
       Path: Events\Default Work Unit\Monster\B_humble
       maxAttenuation: 0
-      maxDuration: 2.541667
-      minDuration: 1.625
+      maxDuration: -1
+      minDuration: -1
     - name: B_move
       guid: 596eb3c9028b1446a5d1230127b0621b
       id: 996361111
@@ -470,8 +544,8 @@ MonoBehaviour:
         guid: 596eb3c9028b1446a5d1230127b0621b
       Path: Events\Default Work Unit\Monster\B_move
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 2.327595
+      minDuration: 1.94712
     - name: Battery_ranout
       guid: 80120057b2becd4b9ba7260d9af43528
       id: 2189595490
@@ -490,8 +564,8 @@ MonoBehaviour:
         guid: 80120057b2becd4b9ba7260d9af43528
       Path: Events\Default Work Unit\Event\Battery_ranout
       maxAttenuation: 0
-      maxDuration: 0.62895
-      minDuration: 0.62895
+      maxDuration: 0
+      minDuration: 0
     - name: Box_defeat
       guid: 5e34b4da68220843b469f2b794ae51df
       id: 680228482
@@ -550,8 +624,8 @@ MonoBehaviour:
         guid: c8936ad036986b45ac0c9ced91f83d96
       Path: Events\Default Work Unit\Interact\Box_try
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.530771
+      minDuration: 0.530771
     - name: C_humble
       guid: 9e4e5f045f89cf4baa66dbbb256cda24
       id: 3520101518
@@ -1234,6 +1308,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: PlayerInHallway
+      guid: 1a9b622022d2534393a3d4301cb959bd
+      id: 3360399063
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Event
+        ObjectType: 4
+        guid: 6de3688045dfa74986bbf90fec8f1f81
+      - ElementName: PlayerInHallway
+        ObjectType: 3
+        guid: 1a9b622022d2534393a3d4301cb959bd
+      Path: Events\Default Work Unit\Event\PlayerInHallway
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Run
       guid: 3a9789d897a31941b05583a5b4e68d9b
       id: 712161704
@@ -1294,6 +1388,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: StopCombat
+      guid: 057f654687633d4b9f082a9f338496f9
+      id: 518172181
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Monster
+        ObjectType: 4
+        guid: fcee5ffe683d6a4588d8c50ec9505e7e
+      - ElementName: StopCombat
+        ObjectType: 3
+        guid: 057f654687633d4b9f082a9f338496f9
+      Path: Events\Default Work Unit\Monster\StopCombat
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StopWatchCatHole
+      guid: 9af1c8a582fcc94aaece86e0f85d3529
+      id: 1636873064
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Event
+        ObjectType: 4
+        guid: 6de3688045dfa74986bbf90fec8f1f81
+      - ElementName: StopWatchCatHole
+        ObjectType: 3
+        guid: 9af1c8a582fcc94aaece86e0f85d3529
+      Path: Events\Default Work Unit\Event\StopWatchCatHole
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: TV
       guid: 6c9f11445895df4e9d65b692ef4b3ae8
       id: 1568083719
@@ -1351,6 +1485,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.315016
       minDuration: 0.213763
+    - name: WatchCatHole
+      guid: 2f12847c0a36854c8afa64c25040b49d
+      id: 2295356976
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: Event
+        ObjectType: 4
+        guid: 6de3688045dfa74986bbf90fec8f1f81
+      - ElementName: WatchCatHole
+        ObjectType: 3
+        guid: 2f12847c0a36854c8afa64c25040b49d
+      Path: Events\Default Work Unit\Event\WatchCatHole
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
