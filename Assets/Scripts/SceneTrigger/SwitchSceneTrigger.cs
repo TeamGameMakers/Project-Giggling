@@ -18,7 +18,7 @@ namespace SceneTrigger
         [Tooltip("需要在切换场景前销毁的物品")]
         public List<GameObject> destroyObjs = new List<GameObject>();
         
-        protected override void TriggerEvent(Collider2D col)
+        protected override void TriggerEnterEvent(Collider2D col)
         {
             UIManager.Instance.ShowPanel<FaderPanel>("FaderPanel", "", UILayer.System, panel => {
                 fp = panel;

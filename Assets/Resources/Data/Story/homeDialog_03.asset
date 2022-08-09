@@ -15,18 +15,18 @@ MonoBehaviour:
   plotName: 
   sections:
   - text: "\u6211\u53EB\u963F\u7B11\u5417\u2026\u2026\u5979\u662F\u2026\u2026"
-    leftSprite: {fileID: 0}
+    leftSprite: {fileID: 21300000, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
   - text: "\u5C0F\u9759\uFF1F\u8111\u6D77\u91CC\u7A81\u7136\u51FA\u73B0\u4E86\u8FD9\u4E2A\u540D\u5B57\u3002"
-    leftSprite: {fileID: 0}
+    leftSprite: {fileID: 21300000, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
   - text: "\u6211\u548C\u5979\u662F\u5F88\u597D\u7684\u670B\u53CB\u5417\uFF1F"
-    leftSprite: {fileID: 0}
+    leftSprite: {fileID: 21300000, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
   - text: "\u8111\u5B50\u91CC\u8FD8\u662F\u4E00\u56E2\u6D46\u7CCA\u2026\u2026"
-    leftSprite: {fileID: 0}
+    leftSprite: {fileID: 21300000, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []

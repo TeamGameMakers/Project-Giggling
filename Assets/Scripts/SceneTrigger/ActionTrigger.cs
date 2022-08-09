@@ -16,7 +16,7 @@ namespace SceneTrigger
             return col.IsTouchingLayers(layerMask) && col.CompareTag(tagMask);
         }
 
-        protected override void TriggerEvent(Collider2D col)
+        protected override void TriggerEnterEvent(Collider2D col)
         {
             actions?.Invoke(col);
         }

@@ -8,7 +8,7 @@ namespace SceneTrigger
     {
         public PlotDataSO plot;
 
-        protected override void TriggerEvent(Collider2D col)
+        protected override void TriggerEnterEvent(Collider2D col)
         {
             StoryManager.Instance.StartStory(plot);
             if (triggerOnce && used)

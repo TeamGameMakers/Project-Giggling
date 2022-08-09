@@ -7,7 +7,7 @@ namespace SceneTrigger
     {
         public List<GameObject> objects = new List<GameObject>();
 
-        protected override void TriggerEvent(Collider2D col)
+        protected override void TriggerEnterEvent(Collider2D col)
         {
             foreach (var obj in objects)
             {
