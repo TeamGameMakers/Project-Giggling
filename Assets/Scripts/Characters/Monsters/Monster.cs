@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using Base.Event;
 using Base.FSM;
+using Base.Resource;
 using Core;
 using Data;
+using Save;
 using UnityEngine;
 using Utilities;
 
@@ -26,6 +28,8 @@ namespace Characters.Monsters
         public MonsterChaseState ChaseState { get; private set; }
         public MonsterPatrolState PatrolState { get; private set; }
         public MonsterDieState DieState { get; private set; }
+
+        public BossTeleportState TeleportState { get; private set; }
         
         public List<Transform> PatrolPoints { get; private set; }
         public bool Patrol { get; private set; }
@@ -45,9 +49,21 @@ namespace Characters.Monsters
             Monsters.Add(_coll.GetInstanceID(), this);
             
             StateMachine = new MonsterStateMachine();
-            IdleState = new MonsterIdleState(this);
-            ChaseState = new MonsterChaseState(this);
-            PatrolState = new MonsterPatrolState(this);
+            
+            _data = Instantiate(_data);
+            _data.isDead =  SaveManager.GetBool(this.GetInstanceID().ToString());
+            
+            if (_data.monsterType == MonsterDataSO.MonsterType.Boss)
+            {
+                TeleportState = new BossTeleportState(this);
+                ChaseState = new MonsterChaseState(this, "move");
+            }
+            else
+            {
+                IdleState = new MonsterIdleState(this);
+                ChaseState = new MonsterChaseState(this);
+                PatrolState = new MonsterPatrolState(this);
+            }
             DieState = new MonsterDieState(this);
         }
 
@@ -63,8 +79,11 @@ namespace Characters.Monsters
 
             if (_data.isDead)
                 MonsterDie();
-            
-            StateMachine.Initialize(IdleState);
+
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss)
+                StateMachine.Initialize(IdleState);
+            else
+                StateMachine.Initialize(TeleportState);
         }
 
         private void FixedUpdate()
@@ -74,6 +93,7 @@ namespace Characters.Monsters
 
         private void Update()
         {
+            Core.LogicUpdate();
             StateMachine.CurrentState.LogicUpdate();
             MonsterExitFlashLight();
         }
@@ -86,6 +106,11 @@ namespace Characters.Monsters
         internal void SetAnimBool(int hash, bool value)
         {
             _anim.SetBool(hash, value);
+        }
+
+        internal void SetAnimFloat(int hash, float value)
+        {
+            _anim.SetFloat(hash, value);
         }
 
         private bool CheckPatrol()
@@ -104,15 +129,21 @@ namespace Characters.Monsters
         /// <summary>
         /// 怪进入光
         /// </summary>
-        public void MonsterStayLight(float damage, bool hitByPlayer = false)
+        public void MonsterStayLight(float damage)
         {
-            if (!hitByPlayer) 
-                AkSoundEngine.PostEvent("Monster_burn", gameObject);
-            
+            if (!HitByPlayer) AkSoundEngine.PostEvent("Monster_burn", gameObject);
+
             Hit = true;
             _data.healthPoint -= damage * Time.deltaTime;
-            HitByPlayer = hitByPlayer;
+            HitByPlayer = true;
         }
+
+        public void MonsterStayRoadLight(float damage)
+        {
+            Hit = true;
+            _data.healthPoint -= damage * Time.deltaTime;
+        }
+        
 
         /// <summary>
         /// 怪离开光
@@ -120,9 +151,13 @@ namespace Characters.Monsters
         private void MonsterExitFlashLight()
         {
             if (EventCenter.Instance.FuncTrigger<Collider2D, bool>("LightOnMonster", _coll)) return;
+            
+            if (HitByPlayer)
+                AkSoundEngine.PostEvent("MonsterStopBurn", gameObject);
+            
             Hit = false;
             HitByPlayer = false;
-            AkSoundEngine.PostEvent("MonsterStopBurn", gameObject);
+            
         }
         
         /// <summary>
@@ -136,8 +171,18 @@ namespace Characters.Monsters
 
         public void MonsterDie()
         {
-            _data.isDead = true;
-            Destroy(Patrol ? transform.parent.gameObject : transform.gameObject);
+            var curTransform = transform;
+            
+            if (_data.monsterType != MonsterDataSO.MonsterType.Boss)
+                SaveManager.RegisterBool(this.GetInstanceID().ToString());
+            
+            var parent = curTransform.parent;
+            curTransform.parent = null;
+            
+            Destroy(parent.gameObject);
+            if (!Patrol)
+                Destroy(SpawnTransform.gameObject);
+            Destroy(curTransform.gameObject);
         }
 
 #if UNITY_EDITOR

@@ -1,5 +1,6 @@
 using Base.Event;
 using Data;
+using Save;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,20 +20,13 @@ namespace UI.Inventory
         protected override void Awake()
         {
             base.Awake();
-
             Init();
-        }
-
-        private void Init()
-        {
-            _batteryNum = GetControl<TextMeshProUGUI>("Number");
-            _powerRemaining = GetControl<Image>("Remaining");
-            _key1 = GetControl<Button>("Key1");
-            _key2 = GetControl<Button>("Key2");
+            _data = Instantiate(_data);
             
-            EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
-            EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
-            EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
+            // 读档
+            var data = SaveManager.GetValue(this.GetInstanceID().ToString());
+            if (!string.IsNullOrEmpty(data)) 
+                JsonUtility.FromJsonOverwrite(data, _data);
         }
 
         private void Update()
@@ -45,6 +39,22 @@ namespace UI.Inventory
             EventCenter.Instance.RemoveEventListener("UseBattery", UseBattery);
             EventCenter.Instance.RemoveFuncListener<int, bool>("PickUpBattery", PickUpBattery);
             EventCenter.Instance.RemoveFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
+            
+            // 存档
+            var data = JsonUtility.ToJson(_data);
+            SaveManager.Register(this.GetInstanceID().ToString(), data);
+        }
+        
+        private void Init()
+        {
+            _batteryNum = GetControl<TextMeshProUGUI>("Number");
+            _powerRemaining = GetControl<Image>("Remaining");
+            _key1 = GetControl<Button>("Key1");
+            _key2 = GetControl<Button>("Key2");
+            
+            EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
+            EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
+            EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
         }
 
         private void RefreshUI()
