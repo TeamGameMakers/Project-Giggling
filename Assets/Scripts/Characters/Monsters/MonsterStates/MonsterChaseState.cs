@@ -22,12 +22,14 @@ namespace Characters.Monsters
             
             switch (_data.monsterType)
             {
+                case MonsterDataSO.MonsterType.Normal:
+                    AkSoundEngine.PostEvent("C_humble", _monster.gameObject);
+                    break;
                 case MonsterDataSO.MonsterType.Elite:
                     AkSoundEngine.PostEvent("B_humble", _monster.gameObject);
                     AkSoundEngine.PostEvent("Meet_Boss", _monster.gameObject);
                     break;
                 case MonsterDataSO.MonsterType.Boss:
-                    Debug.Log("触发");
                     AkSoundEngine.PostEvent("A_humble", _monster.gameObject);
                     AkSoundEngine.PostEvent("Meet_Monster", _monster.gameObject);
                     break;

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batteryNum: 2
   powerRemaining: 1994.1461
-  hasKey1: 1
-  hasKey2: 1
+  hasKey1: 0
+  hasKey2: 0
