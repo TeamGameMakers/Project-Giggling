@@ -100,7 +100,7 @@ namespace Interact
                 if (timing)
                 {
                     Debug.Log("GameOver");
-                    // TODO: 打开 GameOver 图
+                    EventCenter.Instance.EventTrigger("GameOver");
                 }
             }
         }
