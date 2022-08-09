@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Base.Event;
 using GM;
 using Save;
@@ -13,41 +14,30 @@ namespace Interact
         
         public GameObject pinLock;
 
-        public Sprite finishSprite;
-
-        protected SpriteRenderer sr;
-        protected Collider2D coll;
-
-        public GameObject successObj;
-        
-        public string saveKey;
+        public string SaveKey => "SafeBoxUsed_" + GetInstanceID();
 
         protected string successEvent = "PinLockSuccessEvent";
         protected string failEvent = "PinLockFailEvent";
 
-        protected override void Awake()
-        {
-            base.Awake();
-            sr = GetComponent<SpriteRenderer>();
-            coll = GetComponent<Collider2D>();
-        }
+        [Header("电池生成设置")]
+        [Tooltip("电池预制体")]
+        public GameObject battery;
+        [Tooltip("电池可能的生成位置")]
+        public List<Transform> generatePosition;
+        [Tooltip("电池数量")]
+        public int num = 1;
 
         protected override void Start()
         {
             base.Start();
-            if (SaveManager.GetBool(saveKey))
+            if (SaveManager.GetBool(SaveKey))
             {
-                // sr.sprite = finishSprite;
-                // enabled = false;
-                
                 // 如果已经打开过则销毁自身
                 DisableSelf();
             }
             else
             {
                 pinLock.SetActive(false);
-                EventCenter.Instance.AddEventListener(successEvent, Success);
-                EventCenter.Instance.AddEventListener(failEvent, Fail);
             }
         }
 
@@ -72,14 +62,18 @@ namespace Interact
         {
             Debug.Log("进入开锁成功事件");
 
-            AkSoundEngine.PostEvent("Box_open", successObj);
+            AkSoundEngine.PostEvent("Box_open", camera.gameObject);
             
-            SaveManager.RegisterBool(saveKey);
+            SaveManager.RegisterBool(SaveKey);
             Destroy(pinLock);
             //sr.sprite = finishSprite;
 
-            // 开锁成功出现其他物品
-            successObj.SetActive(true);
+            // TODO: 在原地生成电池
+            for (int i = 0; i < num; ++i)
+            {
+                GameObject btr = Instantiate(battery);
+                btr.transform.position = generatePosition[i].position;
+            }
             
             DisableSelf();
         }
@@ -88,8 +82,9 @@ namespace Interact
         {
             Debug.Log("进入开锁失败事件");
             
-            AkSoundEngine.PostEvent("Box_defeat", successObj);
+            AkSoundEngine.PostEvent("Box_defeat", camera.gameObject);
             
+            SaveManager.RegisterBool(SaveKey);
             Destroy(pinLock);
             
             // TODO: 开锁失败，刷新 Boss

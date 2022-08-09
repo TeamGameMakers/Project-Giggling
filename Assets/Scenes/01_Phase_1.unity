@@ -682,29 +682,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1351354579}
     m_Modifications:
-    - target: {fileID: 7346036701706513880, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Size.x
-      value: 2.4614658
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513880, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Size.y
-      value: 2.5382147
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513880, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.3503704
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513880, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.76910734
-      objectReference: {fileID: 0}
+    - target: {fileID: 313988768, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+      propertyPath: targetPosition
+      value: 
+      objectReference: {fileID: 201735252}
+    - target: {fileID: 313988768, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+      propertyPath: listenerPosition
+      value: 
+      objectReference: {fileID: 344564104}
     - target: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
       propertyPath: m_Name
       value: DoorWwiseTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7346036701706513886, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
       propertyPath: m_RootOrder
@@ -749,22 +737,6 @@ PrefabInstance:
     - target: {fileID: 7346036701706513886, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: key
-      value: wwise_home_door
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: wwiseEvent
-      value: Hallway_footstep
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: actionEvent
-      value: wwiseSoundTiming
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
-      propertyPath: triggerOnce
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
@@ -2602,7 +2574,7 @@ Transform:
   m_Children:
   - {fileID: 70992415}
   m_Father: {fileID: 1351354579}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1004138187
 MonoBehaviour:
@@ -3075,6 +3047,7 @@ Transform:
   m_Children:
   - {fileID: 376306283}
   - {fileID: 313988766}
+  - {fileID: 27554297183419470}
   - {fileID: 370621696}
   - {fileID: 1976096096}
   - {fileID: 3475758891912236245}
@@ -5330,6 +5303,80 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!61 &27554297183419464
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27554297183419469}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3503704, y: -0.76910734}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4614658, y: 2.5382147}
+  m_EdgeRadius: 0
+--- !u!1 &27554297183419469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27554297183419470}
+  - component: {fileID: 27554297183419464}
+  - component: {fileID: 27554297183419471}
+  m_Layer: 0
+  m_Name: HallwayWwiseTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27554297183419470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27554297183419469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.28, y: 11.46, z: 17.20725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1351354579}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27554297183419471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27554297183419469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156f8c9a155363642b89e6986a704036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: wwise_home_hallway
+  triggerOnce: 1
+  wwiseEvent: PlayerInHallway
+  triggerEvent: 
 --- !u!1001 &846695610892466702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5465,7 +5512,7 @@ PrefabInstance:
       objectReference: {fileID: 14294930}
     - target: {fileID: 1879543590394415713, guid: 043b740ad5234994e9e30d3f715c6e41, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1879543590394415713, guid: 043b740ad5234994e9e30d3f715c6e41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5584,7 +5631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7088194845860566134, guid: 792a31e54fba18b4499074a4669ed2e0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7088194845860566134, guid: 792a31e54fba18b4499074a4669ed2e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5780,8 +5827,35 @@ PrefabInstance:
       propertyPath: wwiseEvent
       value: TV
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7346036701706513887, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+    - {fileID: 313988768, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+--- !u!1 &7346036701778910565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7346036701706513885, guid: d96a9301bc2e9f148a9a70e0800bd83c, type: 3}
+  m_PrefabInstance: {fileID: 7346036701778910564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7346036701778910566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346036701778910565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e643f166e16a442da51bde32e035e284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: wwise_home_tv
+  triggerOnce: 1
+  wwiseEvent: TV
+  triggerEvent: 
+  wwiseRtpcKey: TVRange
+  targetPosition: {fileID: 58699951}
+  listenerPosition: {fileID: 344564104}
+  stopTime: 20
 --- !u!1001 &8049363683877142490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5791,7 +5865,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8049363684112859866, guid: fecfe0055b41e154590600cf9ffd5366, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8049363684112859866, guid: fecfe0055b41e154590600cf9ffd5366, type: 3}
       propertyPath: m_LocalPosition.x
