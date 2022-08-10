@@ -1,6 +1,7 @@
 using System;
 using Base;
 using Base.Event;
+using Save;
 using Story;
 using UI;
 using UI.Inventory;
@@ -19,6 +20,9 @@ namespace SceneSpecific
             
             // 绑定音效物体
             StoryManager.Instance.RegisterAkObj(gameObject);
+            
+            // 进入场景就进行一次存档
+            SaveManager.Save();
         }
 
         private void OnEnable()

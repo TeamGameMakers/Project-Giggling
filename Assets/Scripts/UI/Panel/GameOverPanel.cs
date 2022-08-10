@@ -44,7 +44,15 @@ namespace UI
             {
                 case "ContinueBtn":
                     AkSoundEngine.PostEvent("Menu_positive", gameObject);
-                    SceneLoader.LoadScene(SceneLoader.CurrentScene);
+                    // 覆盖当前 SaveData 内容
+                    SaveManager.Load();
+                    // 加载上一个存档
+                    string sceneName = SaveManager.GetValue("SceneName");
+                    if (string.IsNullOrEmpty(sceneName))
+                        sceneName = SceneLoader.CurrentScene;
+                    SceneLoader.LoadScene(sceneName);
+                    // 关闭自身
+                    UIManager.Instance.HidePanel("GameOverPanel", true);
                     break;
                 case "QuitBtn":
                     AkSoundEngine.PostEvent("Menu_negative", gameObject);
