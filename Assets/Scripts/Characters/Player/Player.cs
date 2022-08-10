@@ -87,8 +87,11 @@ namespace Characters.Player
             // 手电伤害判定
             FlashLightDetect();
             
-            // 耐力槽
+            // 耐力槽计算
             StaminaCheck();
+            
+            // 玩家状态UI更新
+            UpdateStatusUI();
         }
 
         private void OnDisable()
@@ -178,8 +181,6 @@ namespace Characters.Player
             {
                 UIManager.Instance.ShowGameOverPanel();
             }
-            
-            EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
         }
 
         /// <summary>
@@ -193,10 +194,16 @@ namespace Characters.Player
             while (data.healthPoint < data.maxHealthPoint)
             {
                 data.healthPoint += data.hpRestoreSpeed * Time.deltaTime;
-                EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
                 yield return null;
             }
         }
+
+        private void UpdateStatusUI()
+        {
+            EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
+            EventCenter.Instance.EventTrigger("UpdateHealth", data.healthPoint / data.maxHealthPoint);
+        }
+        
 
         #region 手电筒拾取
 
