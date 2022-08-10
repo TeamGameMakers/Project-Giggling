@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="4002618172">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3142869524">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -28,27 +28,27 @@
 					<IncludedMemoryFiles>
 						<File Id="95841558" Language="SFX">
 							<ShortName>FX_Heartbeat_04.wav</ShortName>
-							<Path>SFX\FX_Heartbeat_04_50FF3A76.wem</Path>
+							<Path>SFX\FX_Heartbeat_04_D77CFB62.wem</Path>
 						</File>
 						<File Id="204547779" Language="SFX">
 							<ShortName>bossxiao1.wav</ShortName>
-							<Path>SFX\bossxiao1_10C4C929.wem</Path>
+							<Path>SFX\bossxiao1_37AE9D3D.wem</Path>
 						</File>
 						<File Id="428266586" Language="SFX">
 							<ShortName>bossxiao3.wav</ShortName>
-							<Path>SFX\bossxiao3_10C4C929.wem</Path>
+							<Path>SFX\bossxiao3_37AE9D3D.wem</Path>
 						</File>
 						<File Id="493571395" Language="SFX">
 							<ShortName>bossxiao4.wav</ShortName>
-							<Path>SFX\bossxiao4_10C4C929.wem</Path>
+							<Path>SFX\bossxiao4_37AE9D3D.wem</Path>
 						</File>
 						<File Id="861140438" Language="SFX">
 							<ShortName>WULA.wav</ShortName>
-							<Path>SFX\WULA_D79FB2B7.wem</Path>
+							<Path>SFX\WULA_B12E335B.wem</Path>
 						</File>
 						<File Id="952497228" Language="SFX">
 							<ShortName>DONG.wav</ShortName>
-							<Path>SFX\DONG_D79FB2B7.wem</Path>
+							<Path>SFX\DONG_B12E335B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -60,11 +60,11 @@
 					<IncludedMemoryFiles>
 						<File Id="205193523" Language="SFX">
 							<ShortName>elidie2-API2500_01-01.wav</ShortName>
-							<Path>SFX\elidie2-API2500_01-01_10C4C929.wem</Path>
+							<Path>SFX\elidie2-API2500_01-01_37AE9D3D.wem</Path>
 						</File>
 						<File Id="793351484" Language="SFX">
 							<ShortName>elidie1-API2500_01-01.wav</ShortName>
-							<Path>SFX\elidie1-API2500_01-01_10C4C929.wem</Path>
+							<Path>SFX\elidie1-API2500_01-01_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -75,35 +75,35 @@
 					<IncludedMemoryFiles>
 						<File Id="175446988" Language="SFX">
 							<ShortName>monster humble5.wav</ShortName>
-							<Path>SFX\monster humble5_10C4C929.wem</Path>
+							<Path>SFX\monster humble5_37AE9D3D.wem</Path>
 						</File>
 						<File Id="612751255" Language="SFX">
 							<ShortName>monster humble4.wav</ShortName>
-							<Path>SFX\monster humble4_10C4C929.wem</Path>
+							<Path>SFX\monster humble4_37AE9D3D.wem</Path>
 						</File>
 						<File Id="660499722" Language="SFX">
 							<ShortName>monster humble1.wav</ShortName>
-							<Path>SFX\monster humble1_10C4C929.wem</Path>
+							<Path>SFX\monster humble1_37AE9D3D.wem</Path>
 						</File>
 						<File Id="861140438" Language="SFX">
 							<ShortName>WULA.wav</ShortName>
-							<Path>SFX\WULA_D79FB2B7.wem</Path>
+							<Path>SFX\WULA_B12E335B.wem</Path>
 						</File>
 						<File Id="898281037" Language="SFX">
 							<ShortName>FX_Heartbeat_04.wav</ShortName>
-							<Path>SFX\FX_Heartbeat_04_D79FB2B7.wem</Path>
+							<Path>SFX\FX_Heartbeat_04_B12E335B.wem</Path>
 						</File>
 						<File Id="952497228" Language="SFX">
 							<ShortName>DONG.wav</ShortName>
-							<Path>SFX\DONG_D79FB2B7.wem</Path>
+							<Path>SFX\DONG_B12E335B.wem</Path>
 						</File>
 						<File Id="998919376" Language="SFX">
 							<ShortName>monster humble2.wav</ShortName>
-							<Path>SFX\monster humble2_10C4C929.wem</Path>
+							<Path>SFX\monster humble2_37AE9D3D.wem</Path>
 						</File>
 						<File Id="1063521378" Language="SFX">
 							<ShortName>monster humble3.wav</ShortName>
-							<Path>SFX\monster humble3_10C4C929.wem</Path>
+							<Path>SFX\monster humble3_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -114,19 +114,19 @@
 					<IncludedMemoryFiles>
 						<File Id="119944362" Language="SFX">
 							<ShortName>monstermove3.wav</ShortName>
-							<Path>SFX\monstermove3_10C4C929.wem</Path>
+							<Path>SFX\monstermove3_37AE9D3D.wem</Path>
 						</File>
 						<File Id="237975842" Language="SFX">
 							<ShortName>monstermove1.wav</ShortName>
-							<Path>SFX\monstermove1_10C4C929.wem</Path>
+							<Path>SFX\monstermove1_37AE9D3D.wem</Path>
 						</File>
 						<File Id="307519476" Language="SFX">
 							<ShortName>monstermove2.wav</ShortName>
-							<Path>SFX\monstermove2_10C4C929.wem</Path>
+							<Path>SFX\monstermove2_37AE9D3D.wem</Path>
 						</File>
 						<File Id="730887965" Language="SFX">
 							<ShortName>monstermove4.wav</ShortName>
-							<Path>SFX\monstermove4_10C4C929.wem</Path>
+							<Path>SFX\monstermove4_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -138,15 +138,15 @@
 					<IncludedMemoryFiles>
 						<File Id="26485943" Language="SFX">
 							<ShortName>Siege Latch Medium 中等打开门栓 (5).wav</ShortName>
-							<Path>SFX\Siege Latch Medium 中等打开门栓 (5)_9CC32D09.wem</Path>
+							<Path>SFX\Siege Latch Medium 中等打开门栓 (5)_D068A185.wem</Path>
 						</File>
 						<File Id="435978576" Language="SFX">
 							<ShortName>box（1）音效.wav</ShortName>
-							<Path>SFX\box（1）音效_10C4C929.wem</Path>
+							<Path>SFX\box（1）音效_37AE9D3D.wem</Path>
 						</File>
 						<File Id="567522708" Language="SFX">
 							<ShortName>bossxiao2.wav</ShortName>
-							<Path>SFX\bossxiao2_10C4C929.wem</Path>
+							<Path>SFX\bossxiao2_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -157,11 +157,11 @@
 					<IncludedMemoryFiles>
 						<File Id="386274291" Language="SFX">
 							<ShortName>box(2)音效.wav</ShortName>
-							<Path>SFX\box(2)音效_7BD8113D.wem</Path>
+							<Path>SFX\box(2)音效_142CBF49.wem</Path>
 						</File>
 						<File Id="862300579" Language="SFX">
 							<ShortName>box_open.wav</ShortName>
-							<Path>SFX\box_open_8B58CC43.wem</Path>
+							<Path>SFX\box_open_2FC200CF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -172,7 +172,7 @@
 					<IncludedMemoryFiles>
 						<File Id="456608687" Language="SFX">
 							<ShortName>box_try.wav</ShortName>
-							<Path>SFX\box_try_0AD06841.wem</Path>
+							<Path>SFX\box_try_87B27235.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -183,11 +183,11 @@
 					<IncludedMemoryFiles>
 						<File Id="109042881" Language="SFX">
 							<ShortName>normdie1.wav</ShortName>
-							<Path>SFX\normdie1_10C4C929.wem</Path>
+							<Path>SFX\normdie1_37AE9D3D.wem</Path>
 						</File>
 						<File Id="826203035" Language="SFX">
 							<ShortName>normdie2.wav</ShortName>
-							<Path>SFX\normdie2_10C4C929.wem</Path>
+							<Path>SFX\normdie2_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -198,31 +198,31 @@
 					<IncludedMemoryFiles>
 						<File Id="36187219" Language="SFX">
 							<ShortName>norm5.wav</ShortName>
-							<Path>SFX\norm5_10C4C929.wem</Path>
+							<Path>SFX\norm5_37AE9D3D.wem</Path>
 						</File>
 						<File Id="83893701" Language="SFX">
 							<ShortName>norm3.wav</ShortName>
-							<Path>SFX\norm3_10C4C929.wem</Path>
+							<Path>SFX\norm3_37AE9D3D.wem</Path>
 						</File>
 						<File Id="525487108" Language="SFX">
 							<ShortName>norm6.wav</ShortName>
-							<Path>SFX\norm6_10C4C929.wem</Path>
+							<Path>SFX\norm6_37AE9D3D.wem</Path>
 						</File>
 						<File Id="548706003" Language="SFX">
 							<ShortName>norm2.wav</ShortName>
-							<Path>SFX\norm2_10C4C929.wem</Path>
+							<Path>SFX\norm2_37AE9D3D.wem</Path>
 						</File>
 						<File Id="633066304" Language="SFX">
 							<ShortName>norm4.wav</ShortName>
-							<Path>SFX\norm4_10C4C929.wem</Path>
+							<Path>SFX\norm4_37AE9D3D.wem</Path>
 						</File>
 						<File Id="820978956" Language="SFX">
 							<ShortName>CLOCK.wav</ShortName>
-							<Path>SFX\CLOCK_D79FB2B7.wem</Path>
+							<Path>SFX\CLOCK_B12E335B.wem</Path>
 						</File>
 						<File Id="861140438" Language="SFX">
 							<ShortName>WULA.wav</ShortName>
-							<Path>SFX\WULA_D79FB2B7.wem</Path>
+							<Path>SFX\WULA_B12E335B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -230,11 +230,19 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="35926800" Name="C_move" ObjectPath="\Events\Default Work Unit\Monster\C_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461144" Name="CG1" ObjectPath="\Events\Default Work Unit\CG\CG1" DurationType="OneShot" DurationMin="35.183998" DurationMax="35.183998">
+					<IncludedMemoryFiles>
+						<File Id="808740979" Language="SFX">
+							<ShortName>CG1.wav</ShortName>
+							<Path>SFX\CG1_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="97531917" Name="DIA_A" ObjectPath="\Events\Default Work Unit\UI\DIA_A" DurationType="OneShot" DurationMin="0.629961" DurationMax="0.629961">
 					<IncludedMemoryFiles>
 						<File Id="907025861" Language="SFX">
 							<ShortName>dia2.wav</ShortName>
-							<Path>SFX\dia2_10C4C929.wem</Path>
+							<Path>SFX\dia2_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -245,7 +253,7 @@
 					<IncludedMemoryFiles>
 						<File Id="907025861" Language="SFX">
 							<ShortName>dia2.wav</ShortName>
-							<Path>SFX\dia2_10C4C929.wem</Path>
+							<Path>SFX\dia2_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -256,11 +264,11 @@
 					<IncludedMemoryFiles>
 						<File Id="108767914" Language="SFX">
 							<ShortName>FX_Tail_Reverb_Metal_C.wav</ShortName>
-							<Path>SFX\FX_Tail_Reverb_Metal_C_10C4C929.wem</Path>
+							<Path>SFX\FX_Tail_Reverb_Metal_C_37AE9D3D.wem</Path>
 						</File>
 						<File Id="792198012" Language="SFX">
 							<ShortName>ESE - QUANTUM - HIT - JC - Rapture - (Dark).wav</ShortName>
-							<Path>SFX\ESE - QUANTUM - HIT - JC - Rapture - (Dark)_10C4C929.wem</Path>
+							<Path>SFX\ESE - QUANTUM - HIT - JC - Rapture - (Dark)_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -271,7 +279,7 @@
 					<IncludedMemoryFiles>
 						<File Id="504295279" Language="SFX">
 							<ShortName>09 Wood Door 9-ProQ3_01-08.L.wav</ShortName>
-							<Path>SFX\09 Wood Door 9-ProQ3_01-08.L_C8756AAE.wem</Path>
+							<Path>SFX\09 Wood Door 9-ProQ3_01-08.L_DEE761DA.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -282,7 +290,7 @@
 					<IncludedMemoryFiles>
 						<File Id="957534811" Language="SFX">
 							<ShortName>dooropen.wav</ShortName>
-							<Path>SFX\dooropen_9739BE10.wem</Path>
+							<Path>SFX\dooropen_A2F2FA84.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -293,7 +301,7 @@
 					<IncludedMemoryFiles>
 						<File Id="765971540" Language="SFX">
 							<ShortName>flashlight.wav</ShortName>
-							<Path>SFX\flashlight_F0502883.wem</Path>
+							<Path>SFX\flashlight_7204055F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -304,7 +312,7 @@
 					<IncludedMemoryFiles>
 						<File Id="435933024" Language="SFX">
 							<ShortName>flashlight.wav</ShortName>
-							<Path>SFX\flashlight_423A3F7B.wem</Path>
+							<Path>SFX\flashlight_FF4ACD97.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -319,7 +327,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1031345722" Language="SFX">
 							<ShortName>ZOOM0057_TrLR.WAV</ShortName>
-							<Path>SFX\ZOOM0057_TrLR_08E4BB01.wem</Path>
+							<Path>SFX\ZOOM0057_TrLR_97213BF5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -330,7 +338,7 @@
 					<IncludedMemoryFiles>
 						<File Id="947507966" Language="SFX">
 							<ShortName>安静的室内quiet-room-1.wav</ShortName>
-							<Path>SFX\安静的室内quiet-room-1_3B806553.wem</Path>
+							<Path>SFX\安静的室内quiet-room-1_08018C5F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -341,7 +349,7 @@
 					<IncludedMemoryFiles>
 						<File Id="320501718" Language="SFX">
 							<ShortName>UI5.wav</ShortName>
-							<Path>SFX\UI5_42025130.wem</Path>
+							<Path>SFX\UI5_385B4DAC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -352,39 +360,39 @@
 					<IncludedMemoryFiles>
 						<File Id="36439070" Language="SFX">
 							<ShortName>主界面 修改延音.wav</ShortName>
-							<Path>SFX\主界面 修改延音_0C273B78.wem</Path>
+							<Path>SFX\主界面 修改延音_45CF8C74.wem</Path>
 						</File>
 						<File Id="114835131" Language="SFX">
 							<ShortName>女笑6.L.wav</ShortName>
-							<Path>SFX\女笑6.L_10C4C929.wem</Path>
+							<Path>SFX\女笑6.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="139778442" Language="SFX">
 							<ShortName>女笑5.L.wav</ShortName>
-							<Path>SFX\女笑5.L_10C4C929.wem</Path>
+							<Path>SFX\女笑5.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="160353160" Language="SFX">
 							<ShortName>女笑4.L.wav</ShortName>
-							<Path>SFX\女笑4.L_10C4C929.wem</Path>
+							<Path>SFX\女笑4.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="311113761" Language="SFX">
 							<ShortName>女笑1.L.wav</ShortName>
-							<Path>SFX\女笑1.L_10C4C929.wem</Path>
+							<Path>SFX\女笑1.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="425832618" Language="SFX">
 							<ShortName>女笑3.L.wav</ShortName>
-							<Path>SFX\女笑3.L_10C4C929.wem</Path>
+							<Path>SFX\女笑3.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="542964492" Language="SFX">
 							<ShortName>女笑2.L.wav</ShortName>
-							<Path>SFX\女笑2.L_10C4C929.wem</Path>
+							<Path>SFX\女笑2.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="944470100" Language="SFX">
 							<ShortName>女笑9.L.wav</ShortName>
-							<Path>SFX\女笑9.L_10C4C929.wem</Path>
+							<Path>SFX\女笑9.L_37AE9D3D.wem</Path>
 						</File>
 						<File Id="1036149262" Language="SFX">
 							<ShortName>女笑7.L.wav</ShortName>
-							<Path>SFX\女笑7.L_10C4C929.wem</Path>
+							<Path>SFX\女笑7.L_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -395,7 +403,7 @@
 					<IncludedMemoryFiles>
 						<File Id="290433308" Language="SFX">
 							<ShortName>HIT_Impact_Strings_High_01.wav</ShortName>
-							<Path>SFX\HIT_Impact_Strings_High_01_02F8453A.wem</Path>
+							<Path>SFX\HIT_Impact_Strings_High_01_BD753F3E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -406,7 +414,7 @@
 					<IncludedMemoryFiles>
 						<File Id="467759605" Language="SFX">
 							<ShortName>HIT_Impact_Strings_Low_02.wav</ShortName>
-							<Path>SFX\HIT_Impact_Strings_Low_02_1E2696E5.wem</Path>
+							<Path>SFX\HIT_Impact_Strings_Low_02_11DAAF11.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -418,7 +426,7 @@
 					<IncludedMemoryFiles>
 						<File Id="671765230" Language="SFX">
 							<ShortName>UI.wav</ShortName>
-							<Path>SFX\UI_A7967E4C.wem</Path>
+							<Path>SFX\UI_94A07B20.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -429,7 +437,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1055902572" Language="SFX">
 							<ShortName>UIA.wav</ShortName>
-							<Path>SFX\UIA_2A366660.wem</Path>
+							<Path>SFX\UIA_E140843C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -440,7 +448,7 @@
 					<IncludedMemoryFiles>
 						<File Id="391013323" Language="SFX">
 							<ShortName>UIA.wav</ShortName>
-							<Path>SFX\UIA_2AC12E0F.wem</Path>
+							<Path>SFX\UIA_ADD0799B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -451,7 +459,7 @@
 					<IncludedMemoryFiles>
 						<File Id="182132559" Language="SFX">
 							<ShortName>UIB.wav</ShortName>
-							<Path>SFX\UIB_F927295E.wem</Path>
+							<Path>SFX\UIB_8DEBC95A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -462,7 +470,7 @@
 					<IncludedMemoryFiles>
 						<File Id="29525048" Language="SFX">
 							<ShortName>UIB.wav</ShortName>
-							<Path>SFX\UIB_D8C2237C.wem</Path>
+							<Path>SFX\UIB_37A6A1A0.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -473,7 +481,7 @@
 					<IncludedMemoryFiles>
 						<File Id="958072331" Language="SFX">
 							<ShortName>UI.wav</ShortName>
-							<Path>SFX\UI_AE4BEEBC.wem</Path>
+							<Path>SFX\UI_558A39C8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -484,7 +492,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1015811826" Language="SFX">
 							<ShortName>campfire.wav</ShortName>
-							<Path>SFX\campfire_FBA1FF42.wem</Path>
+							<Path>SFX\campfire_733BE17E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -496,11 +504,11 @@
 					<IncludedMemoryFiles>
 						<File Id="289930816" Language="SFX">
 							<ShortName>安静的城市quiet-town-1~1.wav</ShortName>
-							<Path>SFX\安静的城市quiet-town-1~1_48818CE4.wem</Path>
+							<Path>SFX\安静的城市quiet-town-1~1_C4391C88.wem</Path>
 						</File>
 						<File Id="1046951459" Language="SFX">
 							<ShortName>nightamb.wav</ShortName>
-							<Path>SFX\nightamb_328E3853.wem</Path>
+							<Path>SFX\nightamb_D779D24F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -511,7 +519,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1046309437" Language="SFX">
 							<ShortName>pickup.wav</ShortName>
-							<Path>SFX\pickup_10C4C929.wem</Path>
+							<Path>SFX\pickup_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -523,7 +531,7 @@
 					<IncludedMemoryFiles>
 						<File Id="272239073" Language="SFX">
 							<ShortName>ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted).wav</ShortName>
-							<Path>SFX\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)_F2A06B21.wem</Path>
+							<Path>SFX\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)_DB9FC224.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -535,7 +543,7 @@
 					<IncludedMemoryFiles>
 						<File Id="179713164" Language="SFX">
 							<ShortName>reloadflashlight-ProQ3_01-02.wav</ShortName>
-							<Path>SFX\reloadflashlight-ProQ3_01-02_10C4C929.wem</Path>
+							<Path>SFX\reloadflashlight-ProQ3_01-02_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -546,27 +554,27 @@
 					<IncludedMemoryFiles>
 						<File Id="26805767" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_274FA642.wem</Path>
+							<Path>SFX\foorstep_3B10BFFE.wem</Path>
 						</File>
 						<File Id="319647007" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_0EFBABA1.wem</Path>
+							<Path>SFX\foorstep_190D39D5.wem</Path>
 						</File>
 						<File Id="693161991" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_78D106B2.wem</Path>
+							<Path>SFX\foorstep_4C441086.wem</Path>
 						</File>
 						<File Id="843862000" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_115A9F2B.wem</Path>
+							<Path>SFX\foorstep_2DF8D0FF.wem</Path>
 						</File>
 						<File Id="959696462" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_2B0A482F.wem</Path>
+							<Path>SFX\foorstep_29B45C7B.wem</Path>
 						</File>
 						<File Id="979659455" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_907F7981.wem</Path>
+							<Path>SFX\foorstep_B685C6E5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -584,7 +592,7 @@
 					<IncludedMemoryFiles>
 						<File Id="585872743" Language="SFX">
 							<ShortName>电视新闻-ProQ3_01-01.L.wav</ShortName>
-							<Path>SFX\电视新闻-ProQ3_01-01.L_10C4C929.wem</Path>
+							<Path>SFX\电视新闻-ProQ3_01-01.L_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -595,27 +603,27 @@
 					<IncludedMemoryFiles>
 						<File Id="91579748" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_9F8E5BA0.wem</Path>
+							<Path>SFX\foorstep_CE74F46C.wem</Path>
 						</File>
 						<File Id="323504067" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_9430C6DC.wem</Path>
+							<Path>SFX\foorstep_3D2EBEE8.wem</Path>
 						</File>
 						<File Id="383509589" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_FF9BB3A5.wem</Path>
+							<Path>SFX\foorstep_A6876B39.wem</Path>
 						</File>
 						<File Id="455071581" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_066720D9.wem</Path>
+							<Path>SFX\foorstep_07D4C345.wem</Path>
 						</File>
 						<File Id="459516214" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_21064BDB.wem</Path>
+							<Path>SFX\foorstep_433FE177.wem</Path>
 						</File>
 						<File Id="1002573543" Language="SFX">
 							<ShortName>foorstep.wav</ShortName>
-							<Path>SFX\foorstep_7769ACC5.wem</Path>
+							<Path>SFX\foorstep_3C40E311.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
