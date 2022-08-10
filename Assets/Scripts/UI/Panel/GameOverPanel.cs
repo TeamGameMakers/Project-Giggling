@@ -54,15 +54,26 @@ namespace UI
             {
                 case "ContinueBtn":
                     AkSoundEngine.PostEvent("Menu_positive", gameObject);
-                    // 覆盖当前 SaveData 内容
-                    SaveManager.Load();
-                    // 加载上一个存档
-                    string sceneName = SaveManager.GetValue("SceneName");
-                    if (string.IsNullOrEmpty(sceneName))
-                        sceneName = SceneLoader.CurrentScene;
-                    SceneLoader.LoadScene(sceneName);
-                    // 关闭自身
-                    UIManager.Instance.HidePanel("GameOverPanel", true);
+                    
+                    UIManager.Instance.ShowPanel<FaderPanel>("FaderPanel", "", UILayer.System, panel => {
+                        // 设置初始透明度
+                        panel.fader.Alpha = 0;
+                        
+                        panel.fader.Fade(1, f => {
+                            // 覆盖当前 SaveData 内容
+                            SaveManager.Load();
+                            // 加载上一个存档
+                            string sceneName = SaveManager.GetValue("SceneName");
+                            if (string.IsNullOrEmpty(sceneName))
+                                sceneName = SceneLoader.CurrentScene;
+                            SceneLoader.LoadScene(sceneName);
+                            
+                            // 关闭自身
+                            UIManager.Instance.HidePanel("GameOverPanel", true);
+                            
+                            panel.fader.Fade(0, f => UIManager.Instance.HidePanel("FaderPanel", true));
+                        });
+                    });
                     break;
                 case "QuitBtn":
                     AkSoundEngine.PostEvent("Menu_negative", gameObject);
@@ -76,7 +87,7 @@ namespace UI
                             // 关闭自身
                             UIManager.Instance.HidePanel("GameOverPanel", true);
                             
-                            panel.fader.Fade(0, f => UIManager.Instance.HidePanel("FaderPanel"));
+                            panel.fader.Fade(0, f => UIManager.Instance.HidePanel("FaderPanel", true));
                         });
                     });
                     break;

@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID C_DEAD = 750193097U;
         static const AkUniqueID C_HUMBLE = 3520101518U;
         static const AkUniqueID C_MOVE = 35926800U;
+        static const AkUniqueID CG1 = 949461144U;
         static const AkUniqueID DIA_A = 97531917U;
         static const AkUniqueID DIA_B = 97531918U;
         static const AkUniqueID DIE = 445985469U;
