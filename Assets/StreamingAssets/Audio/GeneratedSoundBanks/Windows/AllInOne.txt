@@ -43,12 +43,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	3360399063	PlayerInHallway			\Default Work Unit\Event\PlayerInHallway	
 	3394774657	School_indoor			\Default Work Unit\Amb\School_indoor	
 	3460616907	Box_open			\Default Work Unit\Interact\Box_open	
+	3473477823	PlayerOutOfLight			\Default Work Unit\Event\PlayerOutOfLight	
 	3520101518	C_humble			\Default Work Unit\Monster\C_humble	
 	3663878895	Menu_exit			\Default Work Unit\UI\Menu_exit	
 	3704654688	GigglingA			\Default Work Unit\Amb\GigglingA	
 	3704654690	GigglingC			\Default Work Unit\Amb\GigglingC	
 	3704654691	GigglingB			\Default Work Unit\Amb\GigglingB	
 	3795890362	ScenReloaded			\Default Work Unit\Event\ScenReloaded	
+	3914199708	PlayerInTheLight			\Default Work Unit\Event\PlayerInTheLight	
 	3978245845	Pickup			\Default Work Unit\UI\Pickup	
 	4046753069	Menu_confirm			\Default Work Unit\UI\Menu_confirm	
 	4090421712	Neiberhood			\Default Work Unit\Amb\Neiberhood	
@@ -68,6 +70,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	217166637	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	365179698	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	562712896	Holy (Custom)	Wwise RoomVerb			
+	940901792	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	969731116	Wwise Harmonizer (Custom)	Wwise Harmonizer			
 	992902880	Small_Tiled_Room1	Wwise Matrix Reverb			
 
@@ -102,6 +105,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	204547779	bossxiao1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\laugh\bossxiao1		384064
 	205193523	elidie2-API2500_01-01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\elidie2-API2500_01-01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_dead\B_dead\elidie2-API2500_01-01		276064
 	237975842	monstermove1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove1		192576
+	272239073	ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)_F2A06B21.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\PlayerInTheLight\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)		1238768
 	289930816	安静的城市quiet-town-1~1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的城市quiet-town-1~1_48818CE4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Neiberhood\安静的城市quiet-town-1~1		3998292
 	290433308	HIT_Impact_Strings_High_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\HIT_Impact_Strings_High_01_02F8453A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Meet_Boss\HIT_Impact_Strings_High_01		657472
 	307519476	monstermove2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove2		192576
