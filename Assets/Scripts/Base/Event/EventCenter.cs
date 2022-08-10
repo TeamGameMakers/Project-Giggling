@@ -65,7 +65,10 @@ namespace Base.Event
         public void RemoveEventListener(string name, Action callback)
         {
             if (eventContainer.ContainsKey(name)) {
-                (eventContainer[name] as EventAction).actions -= callback;
+                Action act = (eventContainer[name] as EventAction).actions;
+                act -= callback;
+                if (act == null)
+                    eventContainer.Remove(name);
             }
         }
 
@@ -78,20 +81,33 @@ namespace Base.Event
         public void RemoveEventListener<T>(string name, Action<T> callback)
         {
             if (eventContainer.ContainsKey(name)) {
-                (eventContainer[name] as EventAction<T>).actions -= callback;
+                Action<T> act = (eventContainer[name] as EventAction<T>).actions;
+                act -= callback;
+                if (act == null)
+                    eventContainer.Remove(name);
             }
         }
 
         public void RemoveFuncListener<T>(string name, Func<T> callback)
         {
             if (eventContainer.ContainsKey(name))
-                (eventContainer[name] as EventFunc<T>).funcs -= callback;
+            {
+                Func<T> func = (eventContainer[name] as EventFunc<T>).funcs;
+                func -= callback;
+                if (func == null)
+                    eventContainer.Remove(name);
+            }
         }
 
         public void RemoveFuncListener<T1, T2>(string name, Func<T1, T2> callback)
         {
             if (eventContainer.ContainsKey(name))
-                (eventContainer[name] as EventFunc<T1, T2>).funcs -= callback;
+            {
+                Func<T1, T2> func = (eventContainer[name] as EventFunc<T1, T2>).funcs;
+                func -= callback;
+                if (func == null)
+                    eventContainer.Remove(name);
+            }
         }
 
         public void RemoveAllListener(string name)
@@ -127,14 +143,26 @@ namespace Base.Event
         public T FuncTrigger<T>(string name)
         {
             if (eventContainer.ContainsKey(name))
-                return (eventContainer[name] as EventFunc<T>).funcs.Invoke();
+            {
+                Func<T> func = (eventContainer[name] as EventFunc<T>).funcs;
+                if (func == null)
+                    return default(T);
+                else
+                    return func();
+            }
             return default(T);
         }
 
         public T2 FuncTrigger<T1, T2>(string name, T1 value)
         {
             if (eventContainer.ContainsKey(name))
-                return (eventContainer[name] as EventFunc<T1, T2>).funcs.Invoke(value);
+            {
+                Func<T1, T2> func = (eventContainer[name] as EventFunc<T1, T2>).funcs;
+                if (func == null)
+                    return default(T2);
+                else
+                    return func(value);
+            }
             
             return default(T2);
         }
