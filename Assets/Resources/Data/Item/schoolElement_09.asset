@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96eeaac8e53faef498aa6721addb4765, type: 3}
+  m_Name: schoolElement_09
+  m_EditorClassIdentifier: 
+  name: "\u5B66\u6821\u6587\u4EF6-1"
+  info: "\u6839\u636E\u76D1\u63A7\u663E\u793A\uFF0C\u4E8B\u53D1\u5F53\u5929\uFF0C\u674E\u864E\u3001\u5218\u7532\u3001\u5B8B\u4E59\u4E09\u540D\u5B66\u751F\u80C1\u8FEB\u4F0A\u9759\u3001\u5F20\u7B11\u6765\u5230\u5B66\u6821\u4F53\u80B2\u9986\uFF0C\u5E76\u56E0\u610F\u5916\u5BFC\u81F4\u706B\u707E\u3002"
+  icon: {fileID: 21300000, guid: 0e6daaf55a705b140ab3ee5b9d61c7a9, type: 3}
+  canPick: 1
+  firstPlot: {fileID: 0}

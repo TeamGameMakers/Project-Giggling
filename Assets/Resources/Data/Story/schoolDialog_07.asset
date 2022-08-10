@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b663912763e87d4f827b7722ba48074, type: 3}
+  m_Name: schoolDialog_07
+  m_EditorClassIdentifier: 
+  plotName: 
+  sections:
+  - text: "\u5C0F\u9759\uFF01"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u2026\u2026"
+    leftSprite: {fileID: 0}
+    rightSprite: {fileID: 21300000, guid: 00f794429a07e1241aa38cde2786d7e2, type: 3}
+    choices: []
+  - text: "\u5C0F\u9759\uFF0C\u4F60\u600E\u4E48\u5728\u8FD9\u91CC\uFF01\u4F60\u4E0D\u662F\u5E94\u8BE5\u2026\u2026"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u4F60\u7684\u5934\u53D1\u3001\u773C\u775B\u600E\u4E48\u53D8\u6210\u8FD9\u4E2A\u6837\u5B50\u4E86\uFF1F\u8FD8\u6709\u4F60\u7684\u6821\u670D\u2026\u2026"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u2026\u2026"
+    leftSprite: {fileID: 0}
+    rightSprite: {fileID: 21300000, guid: 00f794429a07e1241aa38cde2786d7e2, type: 3}
+    choices: []
+  - text: "\u5C0F\u9759\uFF01\u53EF\u6076\uFF0C\u542C\u4E0D\u89C1\u6211\u7684\u58F0\u97F3\u5417\uFF1F\u4E3A\u4EC0\u4E48\uFF0C\u4E3A\u4EC0\u4E48\u6211\u8BF4\u4E0D\u51FA\u8BDD\u6765\u2014\u2014"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u8D70\u5F00\uFF0C\u602A\u7269\uFF01"
+    leftSprite: {fileID: 0}
+    rightSprite: {fileID: 21300000, guid: 00f794429a07e1241aa38cde2786d7e2, type: 3}
+    choices: []
+  - text: "\u5C0F\u9759\uFF01\u4F60\u8981\u53BB\u4EC0\u4E48\u5730\u65B9\uFF01"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u602A\u7269......\uFF1F\u662F\u628A\u6211\u5F53\u6210\u90A3\u4E9B\u9ED1\u4E4E\u4E4E\u7684\u4E1C\u897F\u4E86\u5417\uFF0C\u8FD9\u4E5F\u80FD\u770B\u9519\uFF1F"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []
+  - text: "\u4E0D\u7BA1\u4E86\uFF0C\u5148\u8FFD\u4E0A\u5979\u518D\u8BF4\u3002"
+    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
+    rightSprite: {fileID: 0}
+    choices: []

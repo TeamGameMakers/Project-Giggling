@@ -55,6 +55,7 @@ namespace UI
         /// </summary>
         public virtual void ShowMe()
         {
+            Debug.Log(gameObject.name + "显示自身");
             gameObject.SetActive(true);
         }
 
@@ -63,6 +64,7 @@ namespace UI
         /// </summary>
         public virtual void HideMe()
         {
+            Debug.Log(gameObject.name + "隐藏自身");
             if (switchState)
                 GameManager.BackGameState();
         }

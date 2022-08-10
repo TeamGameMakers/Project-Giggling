@@ -183,6 +183,8 @@ namespace Save
         // 存储
         public static void Save()
         {
+            Debug.Log("存档");
+            
             // --构建 SaveData--
             Data.name = saveName;
             // 场景名
