@@ -50,10 +50,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	4046753069	Menu_confirm			\Default Work Unit\UI\Menu_confirm	
 	4090421712	Neiberhood			\Default Work Unit\Amb\Neiberhood	
 
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	1694200294	TVRange			\Default Work Unit\TVRange	
-	3829906308	DoorRange			\Default Work Unit\DoorRange	
-
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	985987111	Motion Factory Bus			\Default Work Unit\Motion Factory Bus	
@@ -87,7 +83,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	26805767	foorstep_05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_274FA642.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_05		15798
 	29525048	UIB	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UIB_D8C2237C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_positive\UIB		32154
 	36187219	norm5	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm5		196064
-	36439070	主界面 修改延音	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\主界面 修改延音_4BAF6BC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\MainTheme\主界面 修改延音		11668988
+	36439070	主界面 修改延音	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\主界面 修改延音_0C273B78.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\MainTheme\主界面 修改延音		11668988
 	83893701	norm3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm3		176064
 	91579748	foorstep_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_9F8E5BA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_02		21864
 	95841558	FX_Heartbeat_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Heartbeat_04_50FF3A76.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\FX_Heartbeat_01		3095136
