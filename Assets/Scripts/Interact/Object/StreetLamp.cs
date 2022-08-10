@@ -1,6 +1,7 @@
 using System;
 using Characters.Monsters;
 using Characters.Player;
+using GM;
 using UnityEngine;
 
 namespace Interact
@@ -20,7 +21,12 @@ namespace Interact
 
         protected virtual void OnTriggerStay2D(Collider2D col)
         {
-            Debug.Log("Damage");
+            // 如果是 UI 或 CG 状态则不计算伤害
+            if (GameManager.State == GameState.UI || GameManager.State == GameState.CG)
+            {
+                return;
+            }
+            
             if (col.CompareTag("Player"))
             {
                 player = col.gameObject.GetComponent<Player>();

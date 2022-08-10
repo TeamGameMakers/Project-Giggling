@@ -586,7 +586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282229006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.56, y: -4.91, z: -10}
+  m_LocalPosition: {x: -5.03, y: -5.55, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 452662432}
@@ -700,11 +700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1355178976355672118, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.58
+      value: -5.05
       objectReference: {fileID: 0}
     - target: {fileID: 1355178976355672118, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.62
+      value: -5.26
       objectReference: {fileID: 0}
     - target: {fileID: 1355178976355672118, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_LocalPosition.z
@@ -880,6 +880,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 0
+  player: {fileID: 0}
+  fromScenes: []
+  enterPoints: []
 --- !u!4 &494136168
 Transform:
   m_ObjectHideFlags: 0
@@ -2422,7 +2425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1004138186
 Transform:
   m_ObjectHideFlags: 0
@@ -2756,7 +2759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077225387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.56, y: -4.91, z: -10}
+  m_LocalPosition: {x: -5.03, y: -5.55, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5375,6 +5378,10 @@ PrefabInstance:
     - target: {fileID: 7188424890950929952, guid: 8e397b01c7bbec3429d726b4110c3cbd, type: 3}
       propertyPath: m_Name
       value: homeCG_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188424890950930011, guid: 8e397b01c7bbec3429d726b4110c3cbd, type: 3}
+      propertyPath: wwiseEvent
+      value: CG1
       objectReference: {fileID: 0}
     - target: {fileID: 7188424890950930014, guid: 8e397b01c7bbec3429d726b4110c3cbd, type: 3}
       propertyPath: m_VideoClip
