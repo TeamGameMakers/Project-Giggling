@@ -43,6 +43,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2611978780	Meet_Boss			\Default Work Unit\Monster\Meet_Boss	
 	2934429447	Monster_burn			\Default Work Unit\Monster\Monster_burn	
 	2938572734	Hallway_footstep			\Default Work Unit\Event\Hallway_footstep	
+	2971282874	CameraLoop			\Default Work Unit\Interact\CameraLoop	
 	3086540886	StopAll			\Default Work Unit\Monster\StopAll	
 	3110322898	Box_try			\Default Work Unit\Interact\Box_try	
 	3181406844	Home			\Default Work Unit\Amb\Home	
@@ -51,6 +52,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3460616907	Box_open			\Default Work Unit\Interact\Box_open	
 	3473477823	PlayerOutOfLight			\Default Work Unit\Event\PlayerOutOfLight	
 	3520101518	C_humble			\Default Work Unit\Monster\C_humble	
+	3637334656	CameraExit			\Default Work Unit\Interact\CameraExit	
 	3663878895	Menu_exit			\Default Work Unit\UI\Menu_exit	
 	3704654688	GigglingA			\Default Work Unit\Amb\GigglingA	
 	3704654690	GigglingC			\Default Work Unit\Amb\GigglingC	
@@ -134,7 +136,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	467759605	HIT_Impact_Strings_Low_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\HIT_Impact_Strings_Low_02_11DAAF11.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Meet_Monster\HIT_Impact_Strings_Low_02		42097
 	493571395	bossxiao4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\laugh\bossxiao4		37392
 	504295279	09 Wood Door 9-ProQ3_01-08_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\09 Wood Door 9-ProQ3_01-08.L_DEE761DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Door_notopen\09 Wood Door 9-ProQ3_01-08_L		9555
-	508397187	cameraloop	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraloop_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\cameraloop		14935
+	508397187	cameraloop	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraloop_7513D50B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\CameraLoop\cameraloop		14935
 	525487108	norm6	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm6_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm6		20047
 	542964492	女笑2_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑2.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑2_L		22842
 	546399365	cameraoff	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraoff_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStop\cameraoff		17113
@@ -155,7 +157,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	820978956	CLOCK	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CLOCK_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\CLOCK		114554
 	826203035	normdie2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\normdie2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_dead\C_dead\normdie2		28782
 	843862000	foorstep	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_2DF8D0FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep		1903
-	847359609	camerastart	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\camerastart_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\camerastart		5367
+	847359609	camerastart	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\camerastart_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\CameraLoop\camerastart		5367
 	861140438	WULA	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\WULA_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\WULA		234345
 	862300579	box_open	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box_open_2FC200CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_open\box_open		14964
 	898281037	FX_Heartbeat_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Heartbeat_04_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\FX_Heartbeat_04		240802
