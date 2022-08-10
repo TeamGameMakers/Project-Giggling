@@ -56,6 +56,7 @@ namespace AK
         static const AkUniqueID PLAYERINHALLWAY = 3360399063U;
         static const AkUniqueID READLOADFLASHLIGHT = 1300721799U;
         static const AkUniqueID RUN = 712161704U;
+        static const AkUniqueID SCENRELOADED = 3795890362U;
         static const AkUniqueID SCHOOL_INDOOR = 3394774657U;
         static const AkUniqueID SCHOOL_OUTDOOR = 201640464U;
         static const AkUniqueID STOPCOMBAT = 518172181U;
