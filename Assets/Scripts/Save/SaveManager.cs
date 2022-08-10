@@ -71,6 +71,32 @@ namespace Save
 
         #endregion
 
+        #region 临时数据
+
+        // 从哪个场景切换过来
+        private static string m_fromScene = "";
+        
+        /// <summary>
+        /// 获得进入该场景的场景名。
+        /// 如果是读档，则返回 string.Empty.
+        /// </summary>
+        /// <returns></returns>
+        public static string GetFromScene()
+        {
+            string res = m_fromScene;
+            if (!string.IsNullOrEmpty(m_fromScene))
+                m_fromScene = string.Empty;
+
+            return res;
+        }
+
+        public static void RegisterFromScene(string sceneName)
+        {
+            m_fromScene = sceneName;
+        }
+
+        #endregion
+        
         #region 获取数据
 
         /// <summary>
@@ -130,7 +156,7 @@ namespace Save
         {
             return PlayerPrefs.GetInt(m_gameClear, 0);
         }
-        
+
         #endregion
 
         #region 游戏存档

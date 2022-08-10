@@ -63,7 +63,6 @@ namespace Characters.Monsters
                     StateMachine.ChangeState(_monster.TeleportState);
             }
 
-            Debug.Log(_monster.transform.position);
             if (Vector3.Distance(_monster.transform.position, GameManager.Player.position) <= _data.catchDistance)
             {
                 EventCenter.Instance.EventTrigger("GameOver");

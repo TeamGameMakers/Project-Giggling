@@ -12,7 +12,12 @@ namespace Interact
 
         public float damageToPlayer = 5;
         public float damageToMonster = 5;
-        
+
+        protected virtual void OnTriggerEnter2D(Collider2D col)
+        {
+            AkSoundEngine.PostEvent("PlayerInTheLight", gameObject);
+        }
+
         protected virtual void OnTriggerStay2D(Collider2D col)
         {
             Debug.Log("Damage");
@@ -30,6 +35,8 @@ namespace Interact
 
         protected virtual void OnTriggerExit2D(Collider2D other)
         {
+            AkSoundEngine.PostEvent("PlayerOutOfLight", gameObject);
+            
             if (other.CompareTag("Player"))
             {
                 player.PlayerExitLight();

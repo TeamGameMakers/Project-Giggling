@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using Base;
 using Base.Event;
+using Characters.Player;
 using Save;
 using Story;
 using UI;
@@ -9,8 +11,14 @@ using UnityEngine;
 
 namespace SceneSpecific
 {
-    public abstract class BasePhaseManager : SingletonMono<BasePhaseManager>
+    public abstract class BasePhaseManager<T> : SingletonMono<T> where T : MonoBehaviour
     {
+        public Transform player;
+
+        public List<string> fromScenes = new List<string>();
+
+        public List<Transform> enterPoints = new List<Transform>();
+
         protected override void Start()
         {
             base.Start();
@@ -21,8 +29,19 @@ namespace SceneSpecific
             // 绑定音效物体
             StoryManager.Instance.RegisterAkObj(gameObject);
             
-            // 进入场景就进行一次存档
-            SaveManager.Save();
+            // 如果是切换场景，则设置位置
+            string fromScene = SaveManager.GetFromScene();
+            if (!string.IsNullOrEmpty(fromScene))
+            {
+                for (int i = 0; i < fromScenes.Count; ++i)
+                {
+                    if (fromScene == fromScenes[i])
+                    {
+                        player.position = enterPoints[i].position;
+                        break;
+                    }
+                }
+            }
         }
 
         private void OnEnable()

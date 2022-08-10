@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Base.Mono;
 using Base.Scene;
+using Save;
 using UI;
 using UnityEngine;
 
@@ -38,6 +39,9 @@ namespace SceneTrigger
             {
                 Destroy(destroyObjs[i]);
             }
+            
+            // 记录切换场景
+            SaveManager.RegisterFromScene(SceneLoader.CurrentScene);
 
             yield return SceneLoader.LoadSceneAsyncCoroutine(toScene, null);
 
