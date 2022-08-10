@@ -23,7 +23,12 @@ namespace Characters
                 }
                 else
                 {
-                    positions.Add(p.Find(spawnSubObj).position);
+                    // 查找子物体，没有子物体则使用自身坐标
+                    Transform subObj = p.Find(spawnSubObj);
+                    if (subObj == null)
+                        positions.Add(p.position);
+                    else
+                        positions.Add(subObj.position);
                 }
             }
         }
