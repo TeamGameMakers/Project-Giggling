@@ -25,7 +25,14 @@ namespace AK
         static const AkUniqueID C_DEAD = 750193097U;
         static const AkUniqueID C_HUMBLE = 3520101518U;
         static const AkUniqueID C_MOVE = 35926800U;
+        static const AkUniqueID CAMERASTART = 4143224900U;
+        static const AkUniqueID CAREMASTOP = 4169407224U;
         static const AkUniqueID CG1 = 949461144U;
+        static const AkUniqueID CG2 = 949461147U;
+        static const AkUniqueID CG3 = 949461146U;
+        static const AkUniqueID CG4 = 949461149U;
+        static const AkUniqueID CG5 = 949461148U;
+        static const AkUniqueID CG6 = 949461151U;
         static const AkUniqueID DIA_A = 97531917U;
         static const AkUniqueID DIA_B = 97531918U;
         static const AkUniqueID DIE = 445985469U;

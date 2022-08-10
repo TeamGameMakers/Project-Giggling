@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3142869524">
+		<SoundBank Id="2858921253" Language="SFX" Hash="144553980">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -230,6 +230,36 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="35926800" Name="C_move" ObjectPath="\Events\Default Work Unit\Monster\C_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4143224900" Name="CameraStart" ObjectPath="\Events\Default Work Unit\Interact\CameraStart" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="508397187" Language="SFX">
+							<ShortName>cameraloop.wav</ShortName>
+							<Path>SFX\cameraloop_B12E335B.wem</Path>
+						</File>
+						<File Id="742460950" Language="SFX">
+							<ShortName>cameraon.wav</ShortName>
+							<Path>SFX\cameraon_37AE9D3D.wem</Path>
+						</File>
+						<File Id="847359609" Language="SFX">
+							<ShortName>camerastart.wav</ShortName>
+							<Path>SFX\camerastart_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4169407224" Name="CaremaStop" ObjectPath="\Events\Default Work Unit\Interact\CaremaStop" DurationType="OneShot" DurationMin="1.791667" DurationMax="1.791667">
+					<IncludedMemoryFiles>
+						<File Id="546399365" Language="SFX">
+							<ShortName>cameraoff.wav</ShortName>
+							<Path>SFX\cameraoff_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
 				<Event Id="949461144" Name="CG1" ObjectPath="\Events\Default Work Unit\CG\CG1" DurationType="OneShot" DurationMin="35.183998" DurationMax="35.183998">
 					<IncludedMemoryFiles>
 						<File Id="808740979" Language="SFX">
@@ -238,6 +268,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="949461147" Name="CG2" ObjectPath="\Events\Default Work Unit\CG\CG2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461146" Name="CG3" ObjectPath="\Events\Default Work Unit\CG\CG3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461149" Name="CG4" ObjectPath="\Events\Default Work Unit\CG\CG4" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461148" Name="CG5" ObjectPath="\Events\Default Work Unit\CG\CG5" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461151" Name="CG6" ObjectPath="\Events\Default Work Unit\CG\CG6" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="97531917" Name="DIA_A" ObjectPath="\Events\Default Work Unit\UI\DIA_A" DurationType="OneShot" DurationMin="0.629961" DurationMax="0.629961">
 					<IncludedMemoryFiles>
 						<File Id="907025861" Language="SFX">
