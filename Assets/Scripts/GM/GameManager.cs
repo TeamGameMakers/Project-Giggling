@@ -54,15 +54,23 @@ namespace GM
                 SwitchGameState(def, false);
             }
             else
-                SwitchGameState(stateStake.Pop(), false);
+            {
+                GameState rState = stateStake.Pop();
+                Debug.Log($"将{rState}出栈");
+                SwitchGameState(rState, false);
+            }
         }
         
         public static void SwitchGameState(GameState state, bool pushInStack = true)
         {
             Debug.Log("进入: " + state);
-            
+
             if (pushInStack)
+            {
                 stateStake.Push(m_state);
+                Debug.Log($"将{m_state}压入栈");
+            }
+
             m_state = state;
             // 切换 map
             switch (m_state)
