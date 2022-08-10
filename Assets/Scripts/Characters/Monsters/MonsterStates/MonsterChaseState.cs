@@ -51,7 +51,6 @@ namespace Characters.Monsters
 
             if (_data.monsterType == MonsterDataSO.MonsterType.Boss)
             {
-                Debug.Log("Update Anim");
                 _monster.SetAnimFloat(_animHashVelocityX, _core.AIMovement.CurrentVelocity.x);
                 _monster.SetAnimFloat(_animHashVelocityY, _core.AIMovement.CurrentVelocity.y);
             }
@@ -64,7 +63,8 @@ namespace Characters.Monsters
                     StateMachine.ChangeState(_monster.TeleportState);
             }
 
-            if (Vector3.Distance(_monster.transform.position, GM.GameManager.Player.position) <= _data.catchDistance)
+            Debug.Log(_monster.transform.position);
+            if (Vector3.Distance(_monster.transform.position, GameManager.Player.position) <= _data.catchDistance)
             {
                 EventCenter.Instance.EventTrigger("GameOver");
             }

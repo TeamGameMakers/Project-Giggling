@@ -35,6 +35,7 @@ namespace Characters.Monsters
             else if (_canTeleport)
             {
                 _monster.transform.position = TransformRandom.Instance.GetRandomPosition();
+                Debug.Log(_monster.transform.position);
                 _canTeleport = false;
             }
         }
