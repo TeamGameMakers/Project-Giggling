@@ -182,6 +182,7 @@ namespace Characters.Player
             StopCoroutine(RestoreHp());
             data.healthPoint -= damage * Time.deltaTime;
             data.healthPoint = Mathf.Clamp(data.healthPoint, 0f, data.maxHealthPoint);
+            AkSoundEngine.PostEvent("PlayerInTheLight", gameObject);
 
             if (data.healthPoint == 0)
             {
@@ -197,6 +198,8 @@ namespace Characters.Player
 
         private IEnumerator RestoreHp()
         {
+            AkSoundEngine.PostEvent("PlayerOutOfLight", gameObject);
+            
             while (data.healthPoint < data.maxHealthPoint)
             {
                 data.healthPoint += data.hpRestoreSpeed * Time.deltaTime;
