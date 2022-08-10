@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3551161089">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4213512808">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3297363614">
+		<SoundBank Id="2858921253" Language="SFX" Hash="4002618172">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -519,6 +519,18 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="3360399063" Name="PlayerInHallway" ObjectPath="\Events\Default Work Unit\Event\PlayerInHallway" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3914199708" Name="PlayerInTheLight" ObjectPath="\Events\Default Work Unit\Event\PlayerInTheLight" DurationType="OneShot" DurationMin="6.451572" DurationMax="6.451572">
+					<IncludedMemoryFiles>
+						<File Id="272239073" Language="SFX">
+							<ShortName>ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted).wav</ShortName>
+							<Path>SFX\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)_F2A06B21.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3473477823" Name="PlayerOutOfLight" ObjectPath="\Events\Default Work Unit\Event\PlayerOutOfLight" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1300721799" Name="Readloadflashlight" ObjectPath="\Events\Default Work Unit\Event\Readloadflashlight" DurationType="OneShot" DurationMin="0.924354" DurationMax="0.924354">
 					<IncludedMemoryFiles>
 						<File Id="179713164" Language="SFX">
@@ -564,6 +576,7 @@
 				<Event Id="3795890362" Name="ScenReloaded" ObjectPath="\Events\Default Work Unit\Event\ScenReloaded" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3394774657" Name="School_indoor" ObjectPath="\Events\Default Work Unit\Amb\School_indoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="201640464" Name="School_outdoor" ObjectPath="\Events\Default Work Unit\Amb\School_outdoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\Monster\StopAll" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="518172181" Name="StopCombat" ObjectPath="\Events\Default Work Unit\Monster\StopCombat" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2596245103" Name="StopFootstep" ObjectPath="\Events\Default Work Unit\Event\StopFootstep" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1636873064" Name="StopWatchCatHole" ObjectPath="\Events\Default Work Unit\Event\StopWatchCatHole" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>

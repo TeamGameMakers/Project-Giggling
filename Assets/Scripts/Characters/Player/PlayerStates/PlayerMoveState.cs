@@ -31,8 +31,16 @@ namespace Characters.Player
                 StateMachine.ChangeState(_player.IdleState);
             else
             {
-                _anim.SetFloat(_animHashFloatX, _core.Movement.CurrentVelocityNorm.x);
-                _anim.SetFloat(_animHashFloatY, _core.Movement.CurrentVelocityNorm.y);
+                if (_core.Movement.CurrentVelocityNorm != Vector2.zero)
+                {
+                    _anim.SetFloat(_animHashFloatX, _core.Movement.CurrentVelocityNorm.x);
+                    _anim.SetFloat(_animHashFloatY, _core.Movement.CurrentVelocityNorm.y);
+                }
+                else
+                {
+                    _anim.SetFloat(_animHashFloatX, InputHandler.NormInputX);
+                    _anim.SetFloat(_animHashFloatY, InputHandler.NormInputY);
+                }
             }
         }
         
@@ -48,6 +56,7 @@ namespace Characters.Player
             else if (InputHandler.NormInputY != 0)
             {
                 _core.Movement.SetVelocityY(InputHandler.NormInputY * curSpeed);
+                
                 _core.Movement.SetVelocityX(0);
             }
         }
