@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3666470150">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3297363614">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -252,11 +252,15 @@
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 					</AuxBusSends>
 				</Event>
-				<Event Id="445985469" Name="Die" ObjectPath="\Events\Default Work Unit\Player\Die" DurationType="OneShot" DurationMin="5.4" DurationMax="5.4">
+				<Event Id="445985469" Name="Die" ObjectPath="\Events\Default Work Unit\Player\Die" DurationType="OneShot" DurationMin="7.925333" DurationMax="7.925333">
 					<IncludedMemoryFiles>
-						<File Id="258012118" Language="SFX">
-							<ShortName>ngtvevent1.wav</ShortName>
-							<Path>SFX\ngtvevent1_40D9BF1C.wem</Path>
+						<File Id="108767914" Language="SFX">
+							<ShortName>FX_Tail_Reverb_Metal_C.wav</ShortName>
+							<Path>SFX\FX_Tail_Reverb_Metal_C_10C4C929.wem</Path>
+						</File>
+						<File Id="792198012" Language="SFX">
+							<ShortName>ESE - QUANTUM - HIT - JC - Rapture - (Dark).wav</ShortName>
+							<Path>SFX\ESE - QUANTUM - HIT - JC - Rapture - (Dark)_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
@@ -561,6 +565,7 @@
 				<Event Id="3394774657" Name="School_indoor" ObjectPath="\Events\Default Work Unit\Amb\School_indoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="201640464" Name="School_outdoor" ObjectPath="\Events\Default Work Unit\Amb\School_outdoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="518172181" Name="StopCombat" ObjectPath="\Events\Default Work Unit\Monster\StopCombat" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2596245103" Name="StopFootstep" ObjectPath="\Events\Default Work Unit\Event\StopFootstep" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1636873064" Name="StopWatchCatHole" ObjectPath="\Events\Default Work Unit\Event\StopWatchCatHole" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1568083719" Name="TV" ObjectPath="\Events\Default Work Unit\Event\TV" DurationType="OneShot" DurationMin="36.959999" DurationMax="36.959999">
 					<IncludedMemoryFiles>
