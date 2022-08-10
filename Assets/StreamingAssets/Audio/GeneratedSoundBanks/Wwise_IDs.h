@@ -54,6 +54,8 @@ namespace AK
         static const AkUniqueID NEIBERHOOD = 4090421712U;
         static const AkUniqueID PICKUP = 3978245845U;
         static const AkUniqueID PLAYERINHALLWAY = 3360399063U;
+        static const AkUniqueID PLAYERINTHELIGHT = 3914199708U;
+        static const AkUniqueID PLAYEROUTOFLIGHT = 3473477823U;
         static const AkUniqueID READLOADFLASHLIGHT = 1300721799U;
         static const AkUniqueID RUN = 712161704U;
         static const AkUniqueID SCENRELOADED = 3795890362U;
