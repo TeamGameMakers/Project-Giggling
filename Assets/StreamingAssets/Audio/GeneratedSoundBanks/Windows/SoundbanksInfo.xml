@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3297363614">
+		<SoundBank Id="2858921253" Language="SFX" Hash="857512519">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -564,6 +564,7 @@
 				<Event Id="3795890362" Name="ScenReloaded" ObjectPath="\Events\Default Work Unit\Event\ScenReloaded" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3394774657" Name="School_indoor" ObjectPath="\Events\Default Work Unit\Amb\School_indoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="201640464" Name="School_outdoor" ObjectPath="\Events\Default Work Unit\Amb\School_outdoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\Monster\StopAll" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="518172181" Name="StopCombat" ObjectPath="\Events\Default Work Unit\Monster\StopCombat" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2596245103" Name="StopFootstep" ObjectPath="\Events\Default Work Unit\Event\StopFootstep" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1636873064" Name="StopWatchCatHole" ObjectPath="\Events\Default Work Unit\Event\StopWatchCatHole" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>

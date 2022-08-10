@@ -59,6 +59,7 @@ namespace AK
         static const AkUniqueID SCENRELOADED = 3795890362U;
         static const AkUniqueID SCHOOL_INDOOR = 3394774657U;
         static const AkUniqueID SCHOOL_OUTDOOR = 201640464U;
+        static const AkUniqueID STOPALL = 3086540886U;
         static const AkUniqueID STOPCOMBAT = 518172181U;
         static const AkUniqueID STOPFOOTSTEP = 2596245103U;
         static const AkUniqueID STOPWATCHCATHOLE = 1636873064U;

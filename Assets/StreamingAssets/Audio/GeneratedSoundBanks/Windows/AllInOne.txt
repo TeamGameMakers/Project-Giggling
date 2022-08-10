@@ -37,6 +37,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2611978780	Meet_Boss			\Default Work Unit\Monster\Meet_Boss	
 	2934429447	Monster_burn			\Default Work Unit\Monster\Monster_burn	
 	2938572734	Hallway_footstep			\Default Work Unit\Event\Hallway_footstep	
+	3086540886	StopAll			\Default Work Unit\Monster\StopAll	
 	3110322898	Box_try			\Default Work Unit\Interact\Box_try	
 	3181406844	Home			\Default Work Unit\Amb\Home	
 	3360399063	PlayerInHallway			\Default Work Unit\Event\PlayerInHallway	
