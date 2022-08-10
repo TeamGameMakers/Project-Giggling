@@ -16,12 +16,17 @@ namespace SceneSpecific
         public List<Sprite> notClearSprites = new List<Sprite>();
         public List<Sprite> clearSprites = new List<Sprite>();
 
+        public bool playBgm = true;
+
         private void Start()
         {
             UIManager.Instance.ShowPanel<StartPanel>("StartPanel");
+            // 可能会从游戏场景回到开始界面，因此要关闭相应界面
             UIManager.Instance.HidePanel("GamePanel", true);
+            UIManager.Instance.HidePanel("Status Panel", true);
             // 触发音乐
-            AkSoundEngine.PostEvent("MainTheme", gameObject);
+            if (playBgm)
+                AkSoundEngine.PostEvent("MainTheme", gameObject);
             // 设置图片
             if (SaveManager.GetGameClear() == 1)
             {
