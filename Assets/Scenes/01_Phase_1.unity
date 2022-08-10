@@ -5360,7 +5360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7088194845860566135, guid: 792a31e54fba18b4499074a4669ed2e0, type: 3}
       propertyPath: tip
-      value: "wsad\u64CD\u4F5C\u73A9\u5BB6\u79FB\u52A8\uFF0Ce\u952E\u4EA4\u4E92\u3002"
+      value: "\u70B9\u51FB\u5DE6\u4E0A\u89D2\u8BBE\u7F6E\u6309\u94AE\u67E5\u770B\u6309\u952E\u64CD\u4F5C\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 7088194845860566135, guid: 792a31e54fba18b4499074a4669ed2e0, type: 3}
       propertyPath: triggerOnce

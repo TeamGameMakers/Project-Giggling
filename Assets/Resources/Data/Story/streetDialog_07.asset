@@ -30,7 +30,7 @@ MonoBehaviour:
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u5BF9\u4E00\u4E9B\u9ED1\u6697\u4E2D\u7684\u5F02\u7269\uFF0C\u5149\u660E\u662F\u6700\u597D\u7684\u6B66\u5668\u3002"
+  - text: "\u5BF9\u4E00\u4E9B\u9ED1\u6697\u4E2D\u7684\u5F02\u7269\uFF0C\u5149\u660E\u662F\u6700\u597D\u7684\u6B66\u5668\u3002\uFF08\u70B9\u51FBR\u952E\u53EF\u66F4\u6362\u7535\u6C60\uFF09"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
