@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Base.Event;
 using Base.FSM;
+using Base.Scene;
 using Characters.Monsters;
 using Core;
 using Data;
@@ -40,6 +41,16 @@ namespace Characters.Player
 
             StateMachine = new PlayerStateMachine();
             _monstersColl = new List<Collider2D>();
+            
+            // 读取到就改变位置
+            string saveScene = SaveManager.GetValue("SceneName");
+            if (saveScene == SceneLoader.CurrentScene)
+            {
+                string json = SaveManager.GetValue("PlayerPosition");
+                if (!string.IsNullOrEmpty(json))
+                    transform.position = JsonUtility.FromJson<Vector3>(json);
+            }
+            // 如果是正常进入场景，之后会由 PhaseManager 在 Start 修改
         }
 
         private void Start()
@@ -61,11 +72,6 @@ namespace Characters.Player
             _flashLight.pointLightOuterAngle = data.lightAngle;
             _flashLight.pointLightInnerAngle = data.lightAngle - 10;
 
-            // 恢复存档位置
-            string json = SaveManager.GetValue("PlayerPosition");
-            if (!string.IsNullOrEmpty(json))
-                transform.position = JsonUtility.FromJson<Vector3>(json);
-            
             // 注册拾取事件
             RegisterEvent();
         }
