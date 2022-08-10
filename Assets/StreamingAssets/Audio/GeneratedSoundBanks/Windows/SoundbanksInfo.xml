@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3630119955">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3463461971">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -230,11 +230,11 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="35926800" Name="C_move" ObjectPath="\Events\Default Work Unit\Monster\C_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3637334656" Name="CameraExit" ObjectPath="\Events\Default Work Unit\Interact\CameraExit" DurationType="OneShot" DurationMin="1.791667" DurationMax="1.791667">
+				<Event Id="3637334656" Name="CameraExit" ObjectPath="\Events\Default Work Unit\Interact\CameraExit" DurationType="OneShot" DurationMin="0.991813" DurationMax="0.991813">
 					<IncludedMemoryFiles>
-						<File Id="546399365" Language="SFX">
-							<ShortName>cameraoff.wav</ShortName>
-							<Path>SFX\cameraoff_37AE9D3D.wem</Path>
+						<File Id="964886069" Language="SFX">
+							<ShortName>cameraoff.1.wav</ShortName>
+							<Path>SFX\cameraoff.1_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
