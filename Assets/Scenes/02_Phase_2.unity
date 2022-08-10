@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 
   triggerOnce: 0
-  toScene: 00_Phase_0
+  toScene: 03_Phase_3_outSide
   fadeDuration: 0.5
   destroyObjs:
   - {fileID: 2090011115}
