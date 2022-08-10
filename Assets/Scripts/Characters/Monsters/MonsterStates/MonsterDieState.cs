@@ -31,6 +31,8 @@ namespace Characters.Monsters
             }
         }
 
+        public override void LogicUpdate() { }
+
         private IEnumerator MonsterFade(float fadeSpeed)
         {
             var fadeColor = Color.white;
