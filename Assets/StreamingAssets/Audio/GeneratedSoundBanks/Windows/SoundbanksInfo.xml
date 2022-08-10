@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="144553980">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3630119955">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -230,26 +230,7 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="35926800" Name="C_move" ObjectPath="\Events\Default Work Unit\Monster\C_move" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="4143224900" Name="CameraStart" ObjectPath="\Events\Default Work Unit\Interact\CameraStart" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="508397187" Language="SFX">
-							<ShortName>cameraloop.wav</ShortName>
-							<Path>SFX\cameraloop_B12E335B.wem</Path>
-						</File>
-						<File Id="742460950" Language="SFX">
-							<ShortName>cameraon.wav</ShortName>
-							<Path>SFX\cameraon_37AE9D3D.wem</Path>
-						</File>
-						<File Id="847359609" Language="SFX">
-							<ShortName>camerastart.wav</ShortName>
-							<Path>SFX\camerastart_37AE9D3D.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
-				</Event>
-				<Event Id="4169407224" Name="CaremaStop" ObjectPath="\Events\Default Work Unit\Interact\CaremaStop" DurationType="OneShot" DurationMin="1.791667" DurationMax="1.791667">
+				<Event Id="3637334656" Name="CameraExit" ObjectPath="\Events\Default Work Unit\Interact\CameraExit" DurationType="OneShot" DurationMin="1.791667" DurationMax="1.791667">
 					<IncludedMemoryFiles>
 						<File Id="546399365" Language="SFX">
 							<ShortName>cameraoff.wav</ShortName>
@@ -260,6 +241,33 @@
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="2971282874" Name="CameraLoop" ObjectPath="\Events\Default Work Unit\Interact\CameraLoop" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="508397187" Language="SFX">
+							<ShortName>cameraloop.wav</ShortName>
+							<Path>SFX\cameraloop_7513D50B.wem</Path>
+						</File>
+						<File Id="847359609" Language="SFX">
+							<ShortName>camerastart.wav</ShortName>
+							<Path>SFX\camerastart_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4143224900" Name="CameraStart" ObjectPath="\Events\Default Work Unit\Interact\CameraStart" DurationType="OneShot" DurationMin="1.166667" DurationMax="1.166667">
+					<IncludedMemoryFiles>
+						<File Id="742460950" Language="SFX">
+							<ShortName>cameraon.wav</ShortName>
+							<Path>SFX\cameraon_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4169407224" Name="CaremaStop" ObjectPath="\Events\Default Work Unit\Interact\CaremaStop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="949461144" Name="CG1" ObjectPath="\Events\Default Work Unit\CG\CG1" DurationType="OneShot" DurationMin="35.183998" DurationMax="35.183998">
 					<IncludedMemoryFiles>
 						<File Id="808740979" Language="SFX">
