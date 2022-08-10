@@ -5379,6 +5379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: homeCG_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7188424890950930011, guid: 8e397b01c7bbec3429d726b4110c3cbd, type: 3}
+      propertyPath: wwiseEvent
+      value: CG1
+      objectReference: {fileID: 0}
     - target: {fileID: 7188424890950930014, guid: 8e397b01c7bbec3429d726b4110c3cbd, type: 3}
       propertyPath: m_VideoClip
       value: 

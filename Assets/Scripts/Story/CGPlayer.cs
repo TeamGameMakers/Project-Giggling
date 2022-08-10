@@ -12,6 +12,8 @@ namespace Story
     {
         public string SaveKey => "cg_" + gameObject.name;
         public string plotEvent;
+
+        public string wwiseEvent;
         
         private VideoPlayer m_player;
         
@@ -28,6 +30,11 @@ namespace Story
             }
             else
             {
+                m_player.started += source => {
+                    if (!string.IsNullOrEmpty(wwiseEvent))
+                        AkSoundEngine.PostEvent(wwiseEvent, gameObject);
+                }; 
+                    
                 m_player.loopPointReached += source => {
                     GameManager.BackGameState();
                     SaveManager.RegisterBool(SaveKey);
