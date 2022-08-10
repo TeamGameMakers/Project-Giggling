@@ -30,6 +30,8 @@ namespace UI
             AkSoundEngine.PostEvent("StopFootstep", gameObject);
 
             AkSoundEngine.PostEvent("Die", gameObject);
+            // 把玩家给失活
+            GameObject.FindWithTag("Player").SetActive(false);
         }
 
         protected virtual void Update()
