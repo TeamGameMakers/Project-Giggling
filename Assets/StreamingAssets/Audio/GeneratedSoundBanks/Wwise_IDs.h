@@ -56,6 +56,7 @@ namespace AK
         static const AkUniqueID PLAYERINHALLWAY = 3360399063U;
         static const AkUniqueID READLOADFLASHLIGHT = 1300721799U;
         static const AkUniqueID RUN = 712161704U;
+        static const AkUniqueID SCENRELOADED = 3795890362U;
         static const AkUniqueID SCHOOL_INDOOR = 3394774657U;
         static const AkUniqueID SCHOOL_OUTDOOR = 201640464U;
         static const AkUniqueID STOPCOMBAT = 518172181U;
@@ -67,7 +68,6 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID DOORRANGE = 3829906308U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID RPM = 796049864U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
@@ -80,7 +80,6 @@ namespace AK
         static const AkUniqueID SS_AIR_STORM = 3715662592U;
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
-        static const AkUniqueID TVRANGE = 1694200294U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

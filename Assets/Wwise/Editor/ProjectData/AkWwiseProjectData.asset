@@ -419,7 +419,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: fb082402d384b745b142b8f6b86e7370
     GuidInternal: 
-    m_lastTime: -8585415590642097772
+    m_lastTime: -8585415507518511272
     List:
     - name: AllInOne
       guid: a8818d988b0bb24d9c9e93aaac10a807
@@ -447,7 +447,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5d23f65229f3604e9a9e75092ee001f1
     GuidInternal: 
-    m_lastTime: -8585415571239301816
+    m_lastTime: -8585415455584145908
     List:
     - name: A_humble
       guid: c61e11cb7507214b94298f53372d2958
@@ -1037,6 +1037,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MainTheme
+      guid: 878a23574b947b4f9975e378f92866cf
+      id: 824317709
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5d23f65229f3604e9a9e75092ee001f1
+      - ElementName: UI
+        ObjectType: 4
+        guid: fd497e67b86cfd42bf0dfaa6a467360e
+      - ElementName: MainTheme
+        ObjectType: 3
+        guid: 878a23574b947b4f9975e378f92866cf
+      Path: Events\Default Work Unit\UI\MainTheme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Meet_Boss
       guid: 6a5615cd898b7d47a047190926e0b486
       id: 2611978780
@@ -1577,8 +1597,36 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 7f30b908d660b3499685212ab5b1a306
     GuidInternal: 
-    m_lastTime: -8585428831282342107
-    List: []
+    m_lastTime: -8585415529167933470
+    List:
+    - name: DoorRange
+      guid: c430a0f2ea1499499ba9be3c3a8ef875
+      id: 3829906308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7f30b908d660b3499685212ab5b1a306
+      - ElementName: DoorRange
+        ObjectType: 13
+        guid: c430a0f2ea1499499ba9be3c3a8ef875
+      Path: Game Parameters\Default Work Unit\DoorRange
+    - name: TVRange
+      guid: 035762a54398c64298f90eadee2f8858
+      id: 1694200294
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7f30b908d660b3499685212ab5b1a306
+      - ElementName: TVRange
+        ObjectType: 13
+        guid: 035762a54398c64298f90eadee2f8858
+      Path: Game Parameters\Default Work Unit\TVRange
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     PathAndIcons:
     - ElementName: Game Parameters

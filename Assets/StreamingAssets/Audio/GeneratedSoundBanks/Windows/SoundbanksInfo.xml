@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="99641057">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3551161089">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="363853515">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3666470150">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -348,7 +348,7 @@
 					<IncludedMemoryFiles>
 						<File Id="36439070" Language="SFX">
 							<ShortName>主界面 修改延音.wav</ShortName>
-							<Path>SFX\主界面 修改延音_4BAF6BC3.wem</Path>
+							<Path>SFX\主界面 修改延音_0C273B78.wem</Path>
 						</File>
 						<File Id="114835131" Language="SFX">
 							<ShortName>女笑6.L.wav</ShortName>
@@ -557,6 +557,7 @@
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="3795890362" Name="ScenReloaded" ObjectPath="\Events\Default Work Unit\Event\ScenReloaded" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3394774657" Name="School_indoor" ObjectPath="\Events\Default Work Unit\Amb\School_indoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="201640464" Name="School_outdoor" ObjectPath="\Events\Default Work Unit\Amb\School_outdoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="518172181" Name="StopCombat" ObjectPath="\Events\Default Work Unit\Monster\StopCombat" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -608,10 +609,6 @@
 			<IncludedAuxBusses>
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
-			<GameParameters>
-				<GameParameter Id="1694200294" Name="TVRange" ObjectPath="\Game Parameters\Default Work Unit\TVRange"/>
-				<GameParameter Id="3829906308" Name="DoorRange" ObjectPath="\Game Parameters\Default Work Unit\DoorRange"/>
-			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
