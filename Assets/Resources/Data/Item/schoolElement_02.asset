@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96eeaac8e53faef498aa6721addb4765, type: 3}
+  m_Name: schoolElement_02
+  m_EditorClassIdentifier: 
+  name: "\u4E0D\u77E5\u662F\u8C01\u7684\u7B14\u8BB0-2"
+  info: "\u90A3\u4E2A\u75AF\u5A46\u5B50\uFF0C\u4EE5\u4E3A\u81EA\u5DF1\u4F1A\u70B9\u8DC6\u62F3\u9053\u5C31\u6CA1\u4EBA\u6CBB\u5F97\u4E86\u5979\u4E86\u662F\u5417\uFF1F\u7B49\u660E\u5929\u627E\u5230\u864E\u54E5\uFF0C\u597D\u597D\u6559\u8BAD\u4E0B\u5979\u548C\u5979\u90A3\u5403\u8F6F\u996D\u7684\u516C\u9E2D\u55D3\uFF0C\u8279\uFF0C\u771F\u7684\u6B20\u6253\u3002"
+  icon: {fileID: 21300000, guid: 32bdac46d14cef441a130bfa99b112ec, type: 3}
+  canPick: 0
+  firstPlot: {fileID: 0}
