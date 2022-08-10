@@ -75,7 +75,6 @@ namespace Interact
 
         public override void Interact(Interactor interactor)
         {
-            Debug.Log("交互");
             if (Keyboard.current.qKey.wasPressedThisFrame)
             {
                 if (!showImage)

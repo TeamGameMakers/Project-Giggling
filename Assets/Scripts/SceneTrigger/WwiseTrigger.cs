@@ -13,7 +13,6 @@ namespace SceneTrigger
 
         protected override void TriggerEnterEvent(Collider2D col)
         {
-            Debug.Log("触发 Wwise");
             AkSoundEngine.PostEvent(wwiseEvent, gameObject);
             
             if (!string.IsNullOrEmpty(triggerEvent))

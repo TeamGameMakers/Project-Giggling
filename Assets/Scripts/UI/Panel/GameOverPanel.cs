@@ -24,6 +24,14 @@ namespace UI
             image = GetControl<Image>("Image");
         }
 
+        protected override void Start()
+        {
+            base.Start();
+            AkSoundEngine.PostEvent("StopFootstep", gameObject);
+
+            AkSoundEngine.PostEvent("Die", gameObject);
+        }
+
         protected virtual void Update()
         {
             curTime += Time.deltaTime;
@@ -56,11 +64,18 @@ namespace UI
                     break;
                 case "QuitBtn":
                     AkSoundEngine.PostEvent("Menu_negative", gameObject);
+                    // 淡入淡出加载开始界面
                     UIManager.Instance.ShowPanel<FaderPanel>("FaderPanel", "", UILayer.System, panel => {
                         // 设置初始透明度
                         panel.fader.Alpha = 0;
                         
-                        panel.fader.Fade(1, f => SceneLoader.LoadScene("00_Phase_0"));
+                        panel.fader.Fade(1, f => {
+                            SceneLoader.LoadScene("00_Phase_0");
+                            // 关闭自身
+                            UIManager.Instance.HidePanel("GameOverPanel", true);
+                            
+                            panel.fader.Fade(0, f => UIManager.Instance.HidePanel("FaderPanel"));
+                        });
                     });
                     break;
             }
