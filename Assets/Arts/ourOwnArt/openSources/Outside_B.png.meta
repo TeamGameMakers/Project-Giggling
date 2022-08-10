@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +68,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -4607,221 +4606,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Outside_B_137: -1950476770
-      Outside_B_6: -44240996
-      Outside_B_66: 1195240951
-      Outside_B_140: 1942419463
-      Outside_B_54: -1354478038
-      Outside_B_8: 688944123
-      Outside_B_170: -543401215
-      Outside_B_188: -2014057997
-      Outside_B_144: 616666609
-      Outside_B_182: -890847454
-      Outside_B_120: -1651119693
-      Outside_B_35: -592347002
-      Outside_B_5: -662746365
-      Outside_B_164: -99220617
-      Outside_B_133: -1211866228
-      Outside_B_39: 1648627535
-      Outside_B_125: 920436121
-      Outside_B_14: -275176521
-      Outside_B_136: -840796514
-      Outside_B_3: -869230057
-      Outside_B_122: -1037315618
-      Outside_B_79: -1967689956
-      Outside_B_65: 119163643
-      Outside_B_82: -1205996588
-      Outside_B_10: 464944410
-      Outside_B_64: 109923856
-      Outside_B_32: -2147344359
-      Outside_B_83: 176547119
-      Outside_B_95: -642434521
-      Outside_B_50: 1816626715
-      Outside_B_58: 1800021065
-      Outside_B_53: 552856360
-      Outside_B_56: 539534533
-      Outside_B_115: 1710088302
-      Outside_B_16: 1388256333
-      Outside_B_106: -1711616574
-      Outside_B_189: -1766151350
-      Outside_B_153: -1660304819
-      Outside_B_109: 1507483761
-      Outside_B_71: -1609393883
-      Outside_B_33: 1568488250
-      Outside_B_46: 77789442
-      Outside_B_80: 1637405376
-      Outside_B_203: -258604581
-      Outside_B_212: 193327484
-      Outside_B_15: -1789303023
-      Outside_B_129: -221472119
-      Outside_B_26: -2068877525
-      Outside_B_185: 1891020727
-      Outside_B_77: -425165756
-      Outside_B_105: -1701163202
-      Outside_B_76: 1734523540
-      Outside_B_23: -1984129865
-      Outside_B_110: 2144281096
-      Outside_B_183: 1070186374
-      Outside_B_9: -194107990
-      Outside_B_57: 1205728000
-      Outside_B_72: -876668830
-      Outside_B_99: -75737882
-      Outside_B_70: 1005583896
-      Outside_B_209: 1006326299
-      Outside_B_61: -502545788
-      Outside_B_97: 1970521225
-      Outside_B_132: 1240683088
-      Outside_B_88: 774110683
-      Outside_B_151: -1234683072
-      Outside_B_150: -1123218310
-      Outside_B_29: -447413967
-      Outside_B_211: 934240057
-      Outside_B_147: 918972741
-      Outside_B_101: -1155071455
-      Outside_B_118: -168702370
-      Outside_B_86: 1964335720
-      Outside_B_163: 1249620650
-      Outside_B_17: 1075460125
-      Outside_B_42: -1744110308
-      Outside_B_117: 405910775
-      Outside_B_135: 1823349477
-      Outside_B_74: -770544178
-      Outside_B_138: -1689153880
-      Outside_B_63: 1445266009
-      Outside_B_87: 1708757603
-      Outside_B_96: 1800623536
-      Outside_B_98: -974486073
-      Outside_B_177: -708473681
-      Outside_B_139: 804268803
-      Outside_B_195: 1835090552
-      Outside_B_90: 694896769
-      Outside_B_113: -194221310
-      Outside_B_84: 1497623800
-      Outside_B_12: -2062609902
-      Outside_B_124: -1314401614
-      Outside_B_194: 1675140163
-      Outside_B_210: 1274544162
-      Outside_B_152: 1834273274
-      Outside_B_27: 1923306459
-      Outside_B_40: 305497239
-      Outside_B_47: -1575710465
-      Outside_B_112: -1703303259
-      Outside_B_20: -392756826
-      Outside_B_146: -1640141035
-      Outside_B_114: 1767378845
-      Outside_B_92: -792945750
-      Outside_B_186: -447578901
-      Outside_B_208: -1146534491
-      Outside_B_207: -348130718
-      Outside_B_78: -1393067277
-      Outside_B_179: 255912246
-      Outside_B_175: -1388202078
-      Outside_B_200: 2117715117
-      Outside_B_21: 652235482
-      Outside_B_171: 594853738
-      Outside_B_191: -909442135
-      Outside_B_193: -753772396
-      Outside_B_159: 1346236714
-      Outside_B_154: -791503288
-      Outside_B_184: 1196852933
-      Outside_B_59: -1203124109
-      Outside_B_145: -1928726680
-      Outside_B_116: 1109571499
-      Outside_B_197: 46966324
-      Outside_B_85: 1464901448
-      Outside_B_7: 1397787417
-      Outside_B_55: -102483044
-      Outside_B_104: -1743307035
-      Outside_B_176: -1306319906
-      Outside_B_81: 1230921530
-      Outside_B_190: 2122091498
-      Outside_B_123: -1923879482
-      Outside_B_0: -1775897642
-      Outside_B_100: 663152611
-      Outside_B_38: -1091949729
-      Outside_B_36: -329121682
-      Outside_B_24: 93583452
-      Outside_B_31: 1941922086
-      Outside_B_161: -905745640
-      Outside_B_30: 1875601822
-      Outside_B_198: 1547333788
-      Outside_B_52: -1626132961
-      Outside_B_91: -1129331566
-      Outside_B_34: 1266280943
-      Outside_B_160: 867064139
-      Outside_B_142: -1202089004
-      Outside_B_94: 1607395529
-      Outside_B_213: -2106462030
-      Outside_B_37: -1168752537
-      Outside_B_141: -1089405960
-      Outside_B_107: -683822872
-      Outside_B_2: -645779283
-      Outside_B_25: 1085989287
-      Outside_B_103: 312519273
-      Outside_B_178: 588930390
-      Outside_B_108: -1201832641
-      Outside_B_134: -365661738
-      Outside_B_41: 1412152049
-      Outside_B_126: 1036977871
-      Outside_B_11: 283760529
-      Outside_B_180: 86848921
-      Outside_B_143: -392001214
-      Outside_B_165: 1416297870
-      Outside_B_155: 1081331389
-      Outside_B_166: -700878417
-      Outside_B_75: -2146033141
-      Outside_B_18: -1370160374
-      Outside_B_67: 841803355
-      Outside_B_172: 474911585
-      Outside_B_1: 1799559089
-      Outside_B_148: -865655970
-      Outside_B_48: -1052978589
-      Outside_B_127: 1027156497
-      Outside_B_149: 172072794
-      Outside_B_162: -440397645
-      Outside_B_156: 1334210480
-      Outside_B_187: 1490124330
-      Outside_B_204: 1119593483
-      Outside_B_43: -1228117379
-      Outside_B_181: -722209687
-      Outside_B_205: -663290594
-      Outside_B_199: 144771869
-      Outside_B_196: -2092326702
-      Outside_B_173: -877069672
-      Outside_B_69: 733799607
-      Outside_B_202: 1134772692
-      Outside_B_51: 50180656
-      Outside_B_128: 630966413
-      Outside_B_131: -1122315904
-      Outside_B_68: 1522827851
-      Outside_B_44: 1654676870
-      Outside_B_13: -283697275
-      Outside_B_119: -1098343450
-      Outside_B_167: -743687072
-      Outside_B_174: 999179381
-      Outside_B_4: 1592098712
-      Outside_B_158: -1557203509
-      Outside_B_62: -383244611
-      Outside_B_206: 836718440
-      Outside_B_130: 1062459588
-      Outside_B_89: 931229803
-      Outside_B_73: 1882766472
-      Outside_B_168: 206237847
-      Outside_B_192: 1363247744
-      Outside_B_19: -348376065
-      Outside_B_93: -976330508
-      Outside_B_102: -888367017
-      Outside_B_49: 124223722
-      Outside_B_45: -239268112
-      Outside_B_22: -1143254719
-      Outside_B_157: 2073122367
-      Outside_B_201: -1454635641
-      Outside_B_28: -424255628
-      Outside_B_121: -1321859713
-      Outside_B_169: -1627372489
-      Outside_B_60: -1358567348
-      Outside_B_111: 467028527
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
