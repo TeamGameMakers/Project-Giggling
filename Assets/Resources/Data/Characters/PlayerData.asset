@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkVelocity: 2
   runVelocity: 4
-  maxHealthPoint: 20
-  healthPoint: 20
-  hpRestoreSpeed: 2
+  maxHealthPoint: 5
+  healthPoint: 5
+  hpRestoreSpeed: 1
   maxStamina: 5
   stamina: 5
   staminaSpeed: 1
   canSprint: 1
-  hasFlashLight: 0
+  hasFlashLight: 1
   powerUsingSpeed: 1
   lightRadius: 3
   lightAngle: 100
