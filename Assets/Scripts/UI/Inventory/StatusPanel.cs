@@ -42,6 +42,7 @@ namespace UI.Inventory
             EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
             EventCenter.Instance.AddEventListener<float>("UpdateHealth", UpdateHealth);
             EventCenter.Instance.AddEventListener<float>("UpdateStamina", UpdateStamina);
+            EventCenter.Instance.AddFuncListener<InventoryDataSO>("GetInventoryData", ProvideInventoryData);
         }
 
         private void Update()
@@ -56,6 +57,7 @@ namespace UI.Inventory
             EventCenter.Instance.RemoveFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
             EventCenter.Instance.RemoveEventListener<float>("UpdateHealth", UpdateHealth);
             EventCenter.Instance.RemoveEventListener<float>("UpdateStamina", UpdateStamina);
+            EventCenter.Instance.RemoveFuncListener<InventoryDataSO>("GetInventoryData", ProvideInventoryData);
         }
 
         private void OnDestroy()
@@ -127,6 +129,11 @@ namespace UI.Inventory
         {
             UIManager.Instance.ShowPanel<ItemInfoPanel>("ItemInfoPanel", 
                 callBack: panel => panel.UpdateInfo(keyData));
+        }
+
+        private InventoryDataSO ProvideInventoryData()
+        {
+            return _data;
         }
     }
 }
