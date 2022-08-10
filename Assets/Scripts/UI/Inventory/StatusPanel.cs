@@ -35,6 +35,15 @@ namespace UI.Inventory
                 JsonUtility.FromJsonOverwrite(data, _data);
         }
 
+        private void OnEnable()
+        {
+            EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
+            EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
+            EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
+            EventCenter.Instance.AddEventListener<float>("UpdateHealth", UpdateHealth);
+            EventCenter.Instance.AddEventListener<float>("UpdateStamina", UpdateStamina);
+        }
+
         private void Update()
         {
             RefreshUI();
@@ -65,12 +74,6 @@ namespace UI.Inventory
             _health = GetControl<Image>("Health");
             _staminaLeft = GetControl<Image>("Stamina Left");
             _staminaRight = GetControl<Image>("Stamina Right");
-            
-            EventCenter.Instance.AddEventListener("UseBattery", UseBattery);
-            EventCenter.Instance.AddFuncListener<int, bool>("PickUpBattery", PickUpBattery);
-            EventCenter.Instance.AddFuncListener<float, bool>("UseBatteryPower", UseBatteryPower);
-            EventCenter.Instance.AddEventListener<float>("UpdateHealth", UpdateHealth);
-            EventCenter.Instance.AddEventListener<float>("UpdateStamina", UpdateStamina);
         }
 
         private void RefreshUI()

@@ -3,6 +3,7 @@ using Base.Event;
 using Base.FSM;
 using Core;
 using Data;
+using GM;
 using Save;
 using UnityEngine;
 using Utilities;
@@ -86,11 +87,15 @@ namespace Characters.Monsters
 
         private void FixedUpdate()
         {
+            if (GameManager.State == GameState.UI) return;
+            
             StateMachine.CurrentState.PhysicsUpdate();
         }
 
         private void Update()
         {
+            if (GameManager.State == GameState.UI) return;
+
             Core.LogicUpdate();
             StateMachine.CurrentState.LogicUpdate();
             MonsterExitFlashLight();
