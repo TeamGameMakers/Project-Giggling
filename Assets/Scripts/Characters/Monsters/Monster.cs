@@ -69,12 +69,11 @@ namespace Characters.Monsters
         private void Start()
         {
             Patrol = CheckPatrol();
-
-            if (!Patrol)
-            {
-                SpawnTransform = Instantiate(new GameObject("Spawn Point"), transform.parent).transform;
-                SpawnTransform.right = Core.Detection.transform.right;
-            }
+            
+            SpawnTransform = new GameObject("Spawn Point").transform;
+            SpawnTransform.parent = transform.parent;
+            SpawnTransform.position = transform.position;
+            SpawnTransform.right = Core.Detection.transform.right;
 
             if (_data.isDead)
                 MonsterDie();
