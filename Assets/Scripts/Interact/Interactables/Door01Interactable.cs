@@ -85,6 +85,7 @@ namespace Interact
             // 按 E 开门，在没有窥探时才行
             else if (!showImage)
             {
+                AkSoundEngine.PostEvent("Door_open", gameObject);
                 // 切换为开门图片
                 doorRenderer.sprite = doorOpen;
                 // 关闭该交互
