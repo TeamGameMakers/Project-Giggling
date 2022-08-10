@@ -46,6 +46,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3704654688	GigglingA			\Default Work Unit\Amb\GigglingA	
 	3704654690	GigglingC			\Default Work Unit\Amb\GigglingC	
 	3704654691	GigglingB			\Default Work Unit\Amb\GigglingB	
+	3795890362	ScenReloaded			\Default Work Unit\Event\ScenReloaded	
 	3978245845	Pickup			\Default Work Unit\UI\Pickup	
 	4046753069	Menu_confirm			\Default Work Unit\UI\Menu_confirm	
 	4090421712	Neiberhood			\Default Work Unit\Amb\Neiberhood	
