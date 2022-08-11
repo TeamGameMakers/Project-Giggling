@@ -37710,7 +37710,7 @@ MonoBehaviour:
   key: trigger_streetDialog_01
   triggerOnce: 1
   plot: {fileID: 11400000, guid: a0e38b1232bbcbc498823bae4aa50de4, type: 2}
-  delay: 2
+  delay: 1
 --- !u!61 &6995345512859782793
 BoxCollider2D:
   m_ObjectHideFlags: 0

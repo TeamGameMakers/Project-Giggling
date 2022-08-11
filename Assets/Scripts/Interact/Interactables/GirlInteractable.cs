@@ -55,6 +55,7 @@ namespace Interact
             yield return panel.fader.FadeCoroutine(0);
             UIManager.Instance.HidePanel("FaderPanel", true);
             
+            AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
             StoryManager.Instance.StartStory(afterPlot);
         }
     }

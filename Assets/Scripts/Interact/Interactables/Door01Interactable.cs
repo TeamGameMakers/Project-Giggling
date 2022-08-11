@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Base.Event;
 using GM;
+using Save;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -36,6 +37,11 @@ namespace Interact
         // 音效计时开始事件
         private const string SoundTimingStart = "wwiseSoundTiming";
         
+        // 开门记录
+        public string OpenSaveKey => "Phase01_OpenDoor";
+        // 音效触发器
+        public GameObject wwiseTrigger;
+
         protected override void Awake()
         {
             base.Awake();
@@ -48,6 +54,13 @@ namespace Interact
         {
             base.Start();
             spritePerTime = 30f / (peekSprites.Count == 0 ? 1 : peekSprites.Count);
+            
+            // 如果已经开门，失活音效触发器，并开门
+            if (SaveManager.GetBool(OpenSaveKey))
+            {
+                OpenDoor();
+                wwiseTrigger.SetActive(false);
+            }
         }
 
         protected override void Update()
@@ -86,22 +99,19 @@ namespace Interact
             else if (!showImage)
             {
                 AkSoundEngine.PostEvent("Door_open", gameObject);
-                // 切换为开门图片
-                doorRenderer.sprite = doorOpen;
-                // 关闭该交互
-                foreach (var m in m_monos)
-                    m.enabled = false;
-                m_coll.enabled = false;
-                transform.GetChild(0).gameObject.SetActive(false);
-                // 关闭碰撞体
-                doorBlock.enabled = false;
                 
                 // 在计时时出去就死亡
                 if (curTime < 15f)
                 {
                     Debug.Log("GameOver");
                     EventCenter.Instance.EventTrigger("GameOver");
+                    return;
                 }
+                
+                OpenDoor();
+                
+                // 记录已经开门
+                SaveManager.RegisterBool(OpenSaveKey);
             }
         }
 
@@ -140,6 +150,22 @@ namespace Interact
             showImage = false;
             GameManager.SwitchGameState(GameState.Playing, false);
             peekPanel.SetActive(false);
+        }
+
+        private void OpenDoor()
+        {
+            // 切换为开门图片
+            doorRenderer.sprite = doorOpen;
+            // 关闭该交互
+            foreach (var m in m_monos)
+                m.enabled = false;
+            m_coll.enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            // 关闭提示
+            transform.Find("HintTrigger").gameObject.SetActive(false);
+            transform.Find("DoorHint").gameObject.SetActive(false);
+            // 关闭碰撞体
+            doorBlock.enabled = false;
         }
     }
 }

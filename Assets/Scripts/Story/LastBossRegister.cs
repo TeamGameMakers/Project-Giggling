@@ -8,6 +8,11 @@ namespace Story
     {
         public string registerKey;
 
+        private void OnEnable()
+        {
+            
+        }
+
         protected virtual void OnDisable()
         {
             SaveManager.RegisterBool(registerKey);
