@@ -50,6 +50,12 @@ TagManager:
   - name: Forward
     uniqueID: 3862288395
     locked: 0
+  - name: PlayerLit
+    uniqueID: 1065778297
+    locked: 0
+  - name: PlayerUnLit
+    uniqueID: 1094765033
+    locked: 0
   - name: Camera
     uniqueID: 3902817503
     locked: 0
