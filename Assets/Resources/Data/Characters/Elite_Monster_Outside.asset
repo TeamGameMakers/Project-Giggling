@@ -18,7 +18,7 @@ MonoBehaviour:
   walkSpeed: 2
   chaseSpeed: 3
   hitSpeed: 1
-  healthPoint: 50
+  healthPoint: 30
   catchDistance: 1
   checkRadius: 4
   checkAngle: 180
