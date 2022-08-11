@@ -20861,7 +20861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plotEvent: cg_streetDialog_05
-  wwiseEvent: 
+  wwiseEvent: CG3
+  wwiseStopEvent: CG3Over
 --- !u!114 &500086143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25921,7 +25922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plotEvent: cg_streetDialog_04
-  wwiseEvent: 
+  wwiseEvent: CG2
+  wwiseStopEvent: CG2Over
 --- !u!114 &1446451712
 MonoBehaviour:
   m_ObjectHideFlags: 0
