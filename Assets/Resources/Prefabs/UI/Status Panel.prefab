@@ -484,7 +484,7 @@ MonoBehaviour:
         m_MethodName: OnKeyClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 2de4a0d39c813a946b01fb54540a327d, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: e30effb7c746a04449b067fb91ae2056, type: 2}
           m_ObjectArgumentAssemblyTypeName: Data.ItemDataSO, Data
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -616,7 +616,7 @@ MonoBehaviour:
         m_MethodName: OnKeyClick
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 72fb7a2b35b656c4d9838fca14be4b6d, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: de0796f6f0e3ff14998476d46ee57751, type: 2}
           m_ObjectArgumentAssemblyTypeName: Data.ItemDataSO, Data
           m_IntArgument: 0
           m_FloatArgument: 0
