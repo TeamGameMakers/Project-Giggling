@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3463461971">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3060443183">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -106,9 +106,6 @@
 							<Path>SFX\monster humble3_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="996361111" Name="B_move" ObjectPath="\Events\Default Work Unit\Monster\B_move" DurationType="OneShot" DurationMin="1.94712" DurationMax="2.327595">
 					<IncludedMemoryFiles>
@@ -129,9 +126,6 @@
 							<Path>SFX\monstermove4_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="2189595490" Name="Battery_ranout" ObjectPath="\Events\Default Work Unit\Event\Battery_ranout" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="680228482" Name="Box_defeat" ObjectPath="\Events\Default Work Unit\Interact\Box_defeat" DurationType="OneShot" DurationMin="6.264916" DurationMax="6.264916">
@@ -224,6 +218,10 @@
 							<ShortName>WULA.wav</ShortName>
 							<Path>SFX\WULA_B12E335B.wem</Path>
 						</File>
+						<File Id="990704384" Language="SFX">
+							<ShortName>FX_Heartbeat_03.wav</ShortName>
+							<Path>SFX\FX_Heartbeat_03_B12E335B.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>
 						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
@@ -268,19 +266,60 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="4169407224" Name="CaremaStop" ObjectPath="\Events\Default Work Unit\Interact\CaremaStop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="949461144" Name="CG1" ObjectPath="\Events\Default Work Unit\CG\CG1" DurationType="OneShot" DurationMin="35.183998" DurationMax="35.183998">
+				<Event Id="949461144" Name="CG1" ObjectPath="\Events\Default Work Unit\CG\CG1" DurationType="OneShot" DurationMin="35.080002" DurationMax="35.080002">
 					<IncludedMemoryFiles>
-						<File Id="808740979" Language="SFX">
-							<ShortName>CG1.wav</ShortName>
-							<Path>SFX\CG1_37AE9D3D.wem</Path>
+						<File Id="863787881" Language="SFX">
+							<ShortName>CG--1.wav</ShortName>
+							<Path>SFX\CG--1_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="949461147" Name="CG2" ObjectPath="\Events\Default Work Unit\CG\CG2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="949461146" Name="CG3" ObjectPath="\Events\Default Work Unit\CG\CG3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="949461149" Name="CG4" ObjectPath="\Events\Default Work Unit\CG\CG4" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="949461148" Name="CG5" ObjectPath="\Events\Default Work Unit\CG\CG5" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="949461151" Name="CG6" ObjectPath="\Events\Default Work Unit\CG\CG6" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2267950358" Name="CG1Over" ObjectPath="\Events\Default Work Unit\CG\CG1Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461147" Name="CG2" ObjectPath="\Events\Default Work Unit\CG\CG2" DurationType="OneShot" DurationMin="63.400002" DurationMax="63.400002">
+					<IncludedMemoryFiles>
+						<File Id="268696100" Language="SFX">
+							<ShortName>CG--2.wav</ShortName>
+							<Path>SFX\CG--2_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="787601361" Name="CG2Over" ObjectPath="\Events\Default Work Unit\CG\CG2Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461146" Name="CG3" ObjectPath="\Events\Default Work Unit\CG\CG3" DurationType="OneShot" DurationMin="102.32" DurationMax="102.32">
+					<IncludedMemoryFiles>
+						<File Id="919107567" Language="SFX">
+							<ShortName>CG-3.wav</ShortName>
+							<Path>SFX\CG-3_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3433025436" Name="CG3Over" ObjectPath="\Events\Default Work Unit\CG\CG3Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461149" Name="CG4" ObjectPath="\Events\Default Work Unit\CG\CG4" DurationType="OneShot" DurationMin="47.32" DurationMax="47.32">
+					<IncludedMemoryFiles>
+						<File Id="330711621" Language="SFX">
+							<ShortName>CG44.wav</ShortName>
+							<Path>SFX\CG44_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1105774063" Name="CG4Over" ObjectPath="\Events\Default Work Unit\CG\CG4Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461148" Name="CG5" ObjectPath="\Events\Default Work Unit\CG\CG5" DurationType="OneShot" DurationMin="53.639999" DurationMax="53.639999">
+					<IncludedMemoryFiles>
+						<File Id="244255942" Language="SFX">
+							<ShortName>CG55.wav</ShortName>
+							<Path>SFX\CG55_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1539269826" Name="CG5Over" ObjectPath="\Events\Default Work Unit\CG\CG5Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="949461151" Name="CG6" ObjectPath="\Events\Default Work Unit\CG\CG6" DurationType="OneShot" DurationMin="79.32" DurationMax="79.32">
+					<IncludedMemoryFiles>
+						<File Id="695480121" Language="SFX">
+							<ShortName>CG-6.wav</ShortName>
+							<Path>SFX\CG-6_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1865626269" Name="CG6Over" ObjectPath="\Events\Default Work Unit\CG\CG6Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="97531917" Name="DIA_A" ObjectPath="\Events\Default Work Unit\UI\DIA_A" DurationType="OneShot" DurationMin="0.629961" DurationMax="0.629961">
 					<IncludedMemoryFiles>
 						<File Id="907025861" Language="SFX">
@@ -288,9 +327,6 @@
 							<Path>SFX\dia2_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="97531918" Name="DIA_B" ObjectPath="\Events\Default Work Unit\UI\DIA_B" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<IncludedMemoryFiles>
@@ -299,9 +335,6 @@
 							<Path>SFX\dia2_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="445985469" Name="Die" ObjectPath="\Events\Default Work Unit\Player\Die" DurationType="OneShot" DurationMin="7.925333" DurationMax="7.925333">
 					<IncludedMemoryFiles>
@@ -395,9 +428,6 @@
 							<Path>SFX\UI5_385B4DAC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="824317709" Name="MainTheme" ObjectPath="\Events\Default Work Unit\UI\MainTheme" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -449,9 +479,6 @@
 							<Path>SFX\HIT_Impact_Strings_High_01_BD753F3E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="1517054675" Name="Meet_Monster" ObjectPath="\Events\Default Work Unit\Monster\Meet_Monster" DurationType="OneShot" DurationMin="1.401531" DurationMax="1.401531">
 					<IncludedMemoryFiles>
@@ -460,9 +487,6 @@
 							<Path>SFX\HIT_Impact_Strings_Low_02_11DAAF11.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="757741878" Name="MeetingGirl" ObjectPath="\Events\Default Work Unit\Event\MeetingGirl" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4046753069" Name="Menu_confirm" ObjectPath="\Events\Default Work Unit\UI\Menu_confirm" DurationType="OneShot" DurationMin="0.343836" DurationMax="0.343836">
@@ -472,9 +496,6 @@
 							<Path>SFX\UI_94A07B20.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="1952436935" Name="Menu_enter" ObjectPath="\Events\Default Work Unit\UI\Menu_enter" DurationType="OneShot" DurationMin="0.335207" DurationMax="0.335207">
 					<IncludedMemoryFiles>
@@ -483,9 +504,6 @@
 							<Path>SFX\UIA_E140843C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="3663878895" Name="Menu_exit" ObjectPath="\Events\Default Work Unit\UI\Menu_exit" DurationType="OneShot" DurationMin="0.398058" DurationMax="0.398058">
 					<IncludedMemoryFiles>
@@ -494,9 +512,6 @@
 							<Path>SFX\UIA_ADD0799B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="1557303174" Name="Menu_negative" ObjectPath="\Events\Default Work Unit\UI\Menu_negative" DurationType="OneShot" DurationMin="0.385707" DurationMax="0.385707">
 					<IncludedMemoryFiles>
@@ -505,9 +520,6 @@
 							<Path>SFX\UIB_8DEBC95A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="2366330294" Name="Menu_positive" ObjectPath="\Events\Default Work Unit\UI\Menu_positive" DurationType="OneShot" DurationMin="0.334279" DurationMax="0.334279">
 					<IncludedMemoryFiles>
@@ -516,9 +528,6 @@
 							<Path>SFX\UIB_37A6A1A0.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="355512275" Name="Menu_switch" ObjectPath="\Events\Default Work Unit\UI\Menu_switch" DurationType="OneShot" DurationMin="0.362553" DurationMax="0.362553">
 					<IncludedMemoryFiles>
@@ -527,9 +536,6 @@
 							<Path>SFX\UI_558A39C8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="2934429447" Name="Monster_burn" ObjectPath="\Events\Default Work Unit\Monster\Monster_burn" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -538,9 +544,6 @@
 							<Path>SFX\campfire_733BE17E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="2063961778" Name="MonsterStopBurn" ObjectPath="\Events\Default Work Unit\Monster\MonsterStopBurn" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4090421712" Name="Neiberhood" ObjectPath="\Events\Default Work Unit\Amb\Neiberhood" DurationType="Infinite">
@@ -565,9 +568,6 @@
 							<Path>SFX\pickup_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
-					</AuxBusSends>
 				</Event>
 				<Event Id="3360399063" Name="PlayerInHallway" ObjectPath="\Events\Default Work Unit\Event\PlayerInHallway" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3914199708" Name="PlayerInTheLight" ObjectPath="\Events\Default Work Unit\Event\PlayerInTheLight" DurationType="OneShot" DurationMin="6.451572" DurationMax="6.451572">
@@ -625,7 +625,350 @@
 					</AuxBusSends>
 				</Event>
 				<Event Id="3795890362" Name="ScenReloaded" ObjectPath="\Events\Default Work Unit\Event\ScenReloaded" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3394774657" Name="School_indoor" ObjectPath="\Events\Default Work Unit\Amb\School_indoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3582189342" Name="School_indoorF1" ObjectPath="\Events\Default Work Unit\Amb\School_indoorF1" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="114835131" Language="SFX">
+							<ShortName>女笑6.L.wav</ShortName>
+							<Path>SFX\女笑6.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="139778442" Language="SFX">
+							<ShortName>女笑5.L.wav</ShortName>
+							<Path>SFX\女笑5.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="160353160" Language="SFX">
+							<ShortName>女笑4.L.wav</ShortName>
+							<Path>SFX\女笑4.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="311113761" Language="SFX">
+							<ShortName>女笑1.L.wav</ShortName>
+							<Path>SFX\女笑1.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="425832618" Language="SFX">
+							<ShortName>女笑3.L.wav</ShortName>
+							<Path>SFX\女笑3.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="492091717" Language="SFX">
+							<ShortName>轻音乐1-ProQ3_01-03.wav</ShortName>
+							<Path>SFX\轻音乐1-ProQ3_01-03_B12E335B.wem</Path>
+						</File>
+						<File Id="542964492" Language="SFX">
+							<ShortName>女笑2.L.wav</ShortName>
+							<Path>SFX\女笑2.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="944470100" Language="SFX">
+							<ShortName>女笑9.L.wav</ShortName>
+							<Path>SFX\女笑9.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="986786550" Language="SFX">
+							<ShortName>安静的室内quiet-room-1.wav</ShortName>
+							<Path>SFX\安静的室内quiet-room-1_3EE7B9B8.wem</Path>
+						</File>
+						<File Id="1036149262" Language="SFX">
+							<ShortName>女笑7.L.wav</ShortName>
+							<Path>SFX\女笑7.L_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3582189341" Name="School_indoorF2" ObjectPath="\Events\Default Work Unit\Amb\School_indoorF2" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="5943815" Language="SFX">
+							<ShortName>gigL2_3.wav</ShortName>
+							<Path>SFX\gigL2_3_37AE9D3D.wem</Path>
+						</File>
+						<File Id="24592900" Language="SFX">
+							<ShortName>gigL2_4.wav</ShortName>
+							<Path>SFX\gigL2_4_37AE9D3D.wem</Path>
+						</File>
+						<File Id="34750672" Language="SFX">
+							<ShortName>gigL2_5.wav</ShortName>
+							<Path>SFX\gigL2_5_37AE9D3D.wem</Path>
+						</File>
+						<File Id="56629835" Language="SFX">
+							<ShortName>gigL2_7.wav</ShortName>
+							<Path>SFX\gigL2_7_37AE9D3D.wem</Path>
+						</File>
+						<File Id="223738525" Language="SFX">
+							<ShortName>gigL2_1.wav</ShortName>
+							<Path>SFX\gigL2_1_37AE9D3D.wem</Path>
+						</File>
+						<File Id="408139578" Language="SFX">
+							<ShortName>gigL2_6.wav</ShortName>
+							<Path>SFX\gigL2_6_37AE9D3D.wem</Path>
+						</File>
+						<File Id="443630261" Language="SFX">
+							<ShortName>安静的室内quiet-room-1.wav</ShortName>
+							<Path>SFX\安静的室内quiet-room-1_7D5C39CD.wem</Path>
+						</File>
+						<File Id="492091717" Language="SFX">
+							<ShortName>轻音乐1-ProQ3_01-03.wav</ShortName>
+							<Path>SFX\轻音乐1-ProQ3_01-03_B12E335B.wem</Path>
+						</File>
+						<File Id="493676949" Language="SFX">
+							<ShortName>gigL2_8.wav</ShortName>
+							<Path>SFX\gigL2_8_37AE9D3D.wem</Path>
+						</File>
+						<File Id="698533343" Language="SFX">
+							<ShortName>gigL2_9.wav</ShortName>
+							<Path>SFX\gigL2_9_37AE9D3D.wem</Path>
+						</File>
+						<File Id="782549171" Language="SFX">
+							<ShortName>gigL2_10.wav</ShortName>
+							<Path>SFX\gigL2_10_37AE9D3D.wem</Path>
+						</File>
+						<File Id="983090788" Language="SFX">
+							<ShortName>gigL2_2.wav</ShortName>
+							<Path>SFX\gigL2_2_37AE9D3D.wem</Path>
+						</File>
+						<File Id="1043372650" Language="SFX">
+							<ShortName>gigL2_11.wav</ShortName>
+							<Path>SFX\gigL2_11_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3582189340" Name="School_indoorF3" ObjectPath="\Events\Default Work Unit\Amb\School_indoorF3" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="11390277" Language="SFX">
+							<ShortName>gigL2.5_08.wav</ShortName>
+							<Path>SFX\gigL2.5_08_37AE9D3D.wem</Path>
+						</File>
+						<File Id="65996777" Language="SFX">
+							<ShortName>gigL2.5_04.wav</ShortName>
+							<Path>SFX\gigL2.5_04_37AE9D3D.wem</Path>
+						</File>
+						<File Id="66480656" Language="SFX">
+							<ShortName>gigL2.5_06.wav</ShortName>
+							<Path>SFX\gigL2.5_06_37AE9D3D.wem</Path>
+						</File>
+						<File Id="125928927" Language="SFX">
+							<ShortName>安静的室内quiet-room-1.wav</ShortName>
+							<Path>SFX\安静的室内quiet-room-1_686828B2.wem</Path>
+						</File>
+						<File Id="265853147" Language="SFX">
+							<ShortName>gigL2.5_07.wav</ShortName>
+							<Path>SFX\gigL2.5_07_37AE9D3D.wem</Path>
+						</File>
+						<File Id="455880278" Language="SFX">
+							<ShortName>gigL2.5_02.wav</ShortName>
+							<Path>SFX\gigL2.5_02_37AE9D3D.wem</Path>
+						</File>
+						<File Id="492091717" Language="SFX">
+							<ShortName>轻音乐1-ProQ3_01-03.wav</ShortName>
+							<Path>SFX\轻音乐1-ProQ3_01-03_B12E335B.wem</Path>
+						</File>
+						<File Id="604745855" Language="SFX">
+							<ShortName>gigL2.5_03.wav</ShortName>
+							<Path>SFX\gigL2.5_03_37AE9D3D.wem</Path>
+						</File>
+						<File Id="765076568" Language="SFX">
+							<ShortName>gigL2.5_01.wav</ShortName>
+							<Path>SFX\gigL2.5_01_37AE9D3D.wem</Path>
+						</File>
+						<File Id="788240265" Language="SFX">
+							<ShortName>gigL2.5_09.wav</ShortName>
+							<Path>SFX\gigL2.5_09_37AE9D3D.wem</Path>
+						</File>
+						<File Id="840322324" Language="SFX">
+							<ShortName>gigL2.5_11.wav</ShortName>
+							<Path>SFX\gigL2.5_11_37AE9D3D.wem</Path>
+						</File>
+						<File Id="855828903" Language="SFX">
+							<ShortName>gigL2.5_10.wav</ShortName>
+							<Path>SFX\gigL2.5_10_37AE9D3D.wem</Path>
+						</File>
+						<File Id="1047586333" Language="SFX">
+							<ShortName>gigL2.5_05.wav</ShortName>
+							<Path>SFX\gigL2.5_05_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="4209585920" Name="School_indoorFcrazy" ObjectPath="\Events\Default Work Unit\Amb\School_indoorFcrazy" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="5943815" Language="SFX">
+							<ShortName>gigL2_3.wav</ShortName>
+							<Path>SFX\gigL2_3_37AE9D3D.wem</Path>
+						</File>
+						<File Id="24592900" Language="SFX">
+							<ShortName>gigL2_4.wav</ShortName>
+							<Path>SFX\gigL2_4_37AE9D3D.wem</Path>
+						</File>
+						<File Id="34750672" Language="SFX">
+							<ShortName>gigL2_5.wav</ShortName>
+							<Path>SFX\gigL2_5_37AE9D3D.wem</Path>
+						</File>
+						<File Id="43833644" Language="SFX">
+							<ShortName>gigL1.5__08.wav</ShortName>
+							<Path>SFX\gigL1.5__08_37AE9D3D.wem</Path>
+						</File>
+						<File Id="56629835" Language="SFX">
+							<ShortName>gigL2_7.wav</ShortName>
+							<Path>SFX\gigL2_7_37AE9D3D.wem</Path>
+						</File>
+						<File Id="65996777" Language="SFX">
+							<ShortName>gigL2.5_04.wav</ShortName>
+							<Path>SFX\gigL2.5_04_37AE9D3D.wem</Path>
+						</File>
+						<File Id="114835131" Language="SFX">
+							<ShortName>女笑6.L.wav</ShortName>
+							<Path>SFX\女笑6.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="137710163" Language="SFX">
+							<ShortName>gigL1.5__05.wav</ShortName>
+							<Path>SFX\gigL1.5__05_37AE9D3D.wem</Path>
+						</File>
+						<File Id="139778442" Language="SFX">
+							<ShortName>女笑5.L.wav</ShortName>
+							<Path>SFX\女笑5.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="160353160" Language="SFX">
+							<ShortName>女笑4.L.wav</ShortName>
+							<Path>SFX\女笑4.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="161102907" Language="SFX">
+							<ShortName>gigL3_05.wav</ShortName>
+							<Path>SFX\gigL3_05_37AE9D3D.wem</Path>
+						</File>
+						<File Id="223738525" Language="SFX">
+							<ShortName>gigL2_1.wav</ShortName>
+							<Path>SFX\gigL2_1_37AE9D3D.wem</Path>
+						</File>
+						<File Id="236648943" Language="SFX">
+							<ShortName>安静的室内quiet-room-1.wav</ShortName>
+							<Path>SFX\安静的室内quiet-room-1_15A561F1.wem</Path>
+						</File>
+						<File Id="255510497" Language="SFX">
+							<ShortName>gigL3_03.wav</ShortName>
+							<Path>SFX\gigL3_03_37AE9D3D.wem</Path>
+						</File>
+						<File Id="260253333" Language="SFX">
+							<ShortName>gigL1.5__09.wav</ShortName>
+							<Path>SFX\gigL1.5__09_37AE9D3D.wem</Path>
+						</File>
+						<File Id="311113761" Language="SFX">
+							<ShortName>女笑1.L.wav</ShortName>
+							<Path>SFX\女笑1.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="408139578" Language="SFX">
+							<ShortName>gigL2_6.wav</ShortName>
+							<Path>SFX\gigL2_6_37AE9D3D.wem</Path>
+						</File>
+						<File Id="425832618" Language="SFX">
+							<ShortName>女笑3.L.wav</ShortName>
+							<Path>SFX\女笑3.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="455880278" Language="SFX">
+							<ShortName>gigL2.5_02.wav</ShortName>
+							<Path>SFX\gigL2.5_02_37AE9D3D.wem</Path>
+						</File>
+						<File Id="473678573" Language="SFX">
+							<ShortName>gigL1.5__11.wav</ShortName>
+							<Path>SFX\gigL1.5__11_37AE9D3D.wem</Path>
+						</File>
+						<File Id="493676949" Language="SFX">
+							<ShortName>gigL2_8.wav</ShortName>
+							<Path>SFX\gigL2_8_37AE9D3D.wem</Path>
+						</File>
+						<File Id="542964492" Language="SFX">
+							<ShortName>女笑2.L.wav</ShortName>
+							<Path>SFX\女笑2.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="604745855" Language="SFX">
+							<ShortName>gigL2.5_03.wav</ShortName>
+							<Path>SFX\gigL2.5_03_37AE9D3D.wem</Path>
+						</File>
+						<File Id="620903717" Language="SFX">
+							<ShortName>gigL1.5__06.wav</ShortName>
+							<Path>SFX\gigL1.5__06_37AE9D3D.wem</Path>
+						</File>
+						<File Id="664403547" Language="SFX">
+							<ShortName>gigL1.5__01.wav</ShortName>
+							<Path>SFX\gigL1.5__01_37AE9D3D.wem</Path>
+						</File>
+						<File Id="698533343" Language="SFX">
+							<ShortName>gigL2_9.wav</ShortName>
+							<Path>SFX\gigL2_9_37AE9D3D.wem</Path>
+						</File>
+						<File Id="764135171" Language="SFX">
+							<ShortName>gigL3_04.wav</ShortName>
+							<Path>SFX\gigL3_04_37AE9D3D.wem</Path>
+						</File>
+						<File Id="764609102" Language="SFX">
+							<ShortName>gigL1.5__02.wav</ShortName>
+							<Path>SFX\gigL1.5__02_37AE9D3D.wem</Path>
+						</File>
+						<File Id="765076568" Language="SFX">
+							<ShortName>gigL2.5_01.wav</ShortName>
+							<Path>SFX\gigL2.5_01_37AE9D3D.wem</Path>
+						</File>
+						<File Id="782549171" Language="SFX">
+							<ShortName>gigL2_10.wav</ShortName>
+							<Path>SFX\gigL2_10_37AE9D3D.wem</Path>
+						</File>
+						<File Id="840322324" Language="SFX">
+							<ShortName>gigL2.5_11.wav</ShortName>
+							<Path>SFX\gigL2.5_11_37AE9D3D.wem</Path>
+						</File>
+						<File Id="926425494" Language="SFX">
+							<ShortName>gigL3_01.wav</ShortName>
+							<Path>SFX\gigL3_01_37AE9D3D.wem</Path>
+						</File>
+						<File Id="950014314" Language="SFX">
+							<ShortName>gigL1.5__03.wav</ShortName>
+							<Path>SFX\gigL1.5__03_37AE9D3D.wem</Path>
+						</File>
+						<File Id="952497228" Language="SFX">
+							<ShortName>DONG.wav</ShortName>
+							<Path>SFX\DONG_B12E335B.wem</Path>
+						</File>
+						<File Id="952564939" Language="SFX">
+							<ShortName>gigL1.5__10.wav</ShortName>
+							<Path>SFX\gigL1.5__10_37AE9D3D.wem</Path>
+						</File>
+						<File Id="975286283" Language="SFX">
+							<ShortName>gigL1.5__04.wav</ShortName>
+							<Path>SFX\gigL1.5__04_37AE9D3D.wem</Path>
+						</File>
+						<File Id="983090788" Language="SFX">
+							<ShortName>gigL2_2.wav</ShortName>
+							<Path>SFX\gigL2_2_37AE9D3D.wem</Path>
+						</File>
+						<File Id="990704384" Language="SFX">
+							<ShortName>FX_Heartbeat_03.wav</ShortName>
+							<Path>SFX\FX_Heartbeat_03_B12E335B.wem</Path>
+						</File>
+						<File Id="1032950375" Language="SFX">
+							<ShortName>gigL1.5__07.wav</ShortName>
+							<Path>SFX\gigL1.5__07_37AE9D3D.wem</Path>
+						</File>
+						<File Id="1035805301" Language="SFX">
+							<ShortName>gigL3_02.wav</ShortName>
+							<Path>SFX\gigL3_02_37AE9D3D.wem</Path>
+						</File>
+						<File Id="1036149262" Language="SFX">
+							<ShortName>女笑7.L.wav</ShortName>
+							<Path>SFX\女笑7.L_37AE9D3D.wem</Path>
+						</File>
+						<File Id="1043372650" Language="SFX">
+							<ShortName>gigL2_11.wav</ShortName>
+							<Path>SFX\gigL2_11_37AE9D3D.wem</Path>
+						</File>
+						<File Id="1047586333" Language="SFX">
+							<ShortName>gigL2.5_05.wav</ShortName>
+							<Path>SFX\gigL2.5_05_37AE9D3D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
+					</AuxBusSends>
+				</Event>
 				<Event Id="201640464" Name="School_outdoor" ObjectPath="\Events\Default Work Unit\Amb\School_outdoor" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\Monster\StopAll" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="518172181" Name="StopCombat" ObjectPath="\Events\Default Work Unit\Monster\StopCombat" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
