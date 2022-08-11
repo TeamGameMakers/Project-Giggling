@@ -43,6 +43,8 @@ namespace UI.Inventory
             EventCenter.Instance.AddEventListener<float>("UpdateHealth", UpdateHealth);
             EventCenter.Instance.AddEventListener<float>("UpdateStamina", UpdateStamina);
             EventCenter.Instance.AddFuncListener<InventoryDataSO>("GetInventoryData", ProvideInventoryData);
+            EventCenter.Instance.AddEventListener("PickUpKey_1", PickUpKey_1);
+            EventCenter.Instance.AddEventListener("PickUpKey_2", PickUpKey_2);
         }
 
         private void Update()
@@ -58,6 +60,8 @@ namespace UI.Inventory
             EventCenter.Instance.RemoveEventListener<float>("UpdateHealth", UpdateHealth);
             EventCenter.Instance.RemoveEventListener<float>("UpdateStamina", UpdateStamina);
             EventCenter.Instance.RemoveFuncListener<InventoryDataSO>("GetInventoryData", ProvideInventoryData);
+            EventCenter.Instance.RemoveEventListener("PickUpKey_1", PickUpKey_1);
+            EventCenter.Instance.RemoveEventListener("PickUpKey_2", PickUpKey_2);
         }
 
         private void OnDestroy()
@@ -124,6 +128,9 @@ namespace UI.Inventory
 
             return _data.powerRemaining > 0;
         }
+
+        private void PickUpKey_1() => _data.hasKey1 = true;
+        private void PickUpKey_2() => _data.hasKey2 = true;
 
         public void OnKeyClick(ItemDataSO keyData)
         {

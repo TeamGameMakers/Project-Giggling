@@ -42,15 +42,3 @@ MonoBehaviour:
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 21300000, guid: 00f794429a07e1241aa38cde2786d7e2, type: 3}
     choices: []
-  - text: "\u5C0F\u9759\uFF01\u4F60\u8981\u53BB\u4EC0\u4E48\u5730\u65B9\uFF01"
-    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
-    rightSprite: {fileID: 0}
-    choices: []
-  - text: "\u602A\u7269......\uFF1F\u662F\u628A\u6211\u5F53\u6210\u90A3\u4E9B\u9ED1\u4E4E\u4E4E\u7684\u4E1C\u897F\u4E86\u5417\uFF0C\u8FD9\u4E5F\u80FD\u770B\u9519\uFF1F"
-    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
-    rightSprite: {fileID: 0}
-    choices: []
-  - text: "\u4E0D\u7BA1\u4E86\uFF0C\u5148\u8FFD\u4E0A\u5979\u518D\u8BF4\u3002"
-    leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
-    rightSprite: {fileID: 0}
-    choices: []

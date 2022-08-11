@@ -65,14 +65,17 @@ namespace Characters.Player
             MoveState = new PlayerMoveState(this, "move");
             StateMachine.Initialize(IdleState);
 
-            EventCenter.Instance.AddFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
-            
             // 手电筒
             _flashLight.pointLightOuterRadius = data.lightRadius;
             _flashLight.pointLightOuterAngle = data.lightAngle;
             _flashLight.pointLightInnerAngle = data.lightAngle - 10;
 
             // 注册拾取事件
+            RegisterEvent();
+        }
+
+        private void OnEnable()
+        {
             RegisterEvent();
         }
 
@@ -106,7 +109,6 @@ namespace Characters.Player
             EventCenter.Instance.RemoveEventListener(PickFlashLightEvent, PickFlashLight);
             EventCenter.Instance.RemoveFuncListener(GetPlayerPositionEvent, GetPlayerPosition);
             EventCenter.Instance.RemoveFuncListener(EventGetPlayerFlashLight, GetPlayerFlashLight);
-
         }
 
         private void FlashLightControl()
@@ -245,9 +247,10 @@ namespace Characters.Player
         
         private void RegisterEvent()
         {
+            EventCenter.Instance.AddFuncListener<Collider2D, bool>("LightOnMonster", LightOnMonster);
             EventCenter.Instance.AddEventListener(PickFlashLightEvent, PickFlashLight);
-            EventCenter.Instance.AddFuncListener<string>(GetPlayerPositionEvent, GetPlayerPosition);
-            EventCenter.Instance.AddFuncListener<bool>(EventGetPlayerFlashLight, GetPlayerFlashLight);
+            EventCenter.Instance.AddFuncListener(GetPlayerPositionEvent, GetPlayerPosition);
+            EventCenter.Instance.AddFuncListener(EventGetPlayerFlashLight, GetPlayerFlashLight);
         }
     }
 }
