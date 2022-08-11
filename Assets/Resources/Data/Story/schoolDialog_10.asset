@@ -22,7 +22,7 @@ MonoBehaviour:
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u5982\u679C\u771F\u7684\u60F3\u62EF\u6551\u5C0F\u9759\u7684\u8BDD\u3002"
+  - text: "\u5982\u679C\u771F\u7684\u60F3\u62EF\u6551\u5C0F\u9759\u7684\u8BDD\uFF0C\u90A3\u5C31\u53EA\u6709\u60F3\u529E\u6CD5\u89E3\u51B3\u6389\u90A3\u4E2A\u602A\u7269\u2014\u2014\u7528\u6211\u624B\u91CC\u7684\u5149\u8292\u3002"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
