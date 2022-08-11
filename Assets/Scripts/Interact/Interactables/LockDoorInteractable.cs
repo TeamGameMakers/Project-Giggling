@@ -23,7 +23,11 @@ namespace Interact
             base.Start();
 
             if (SaveManager.GetBool(SaveKey))
+            {
+                if (inventoryData == null)
+                    inventoryData = EventCenter.Instance.FuncTrigger<InventoryDataSO>("GetInventoryData");
                 Open();
+            }
         }
 
         public override void Interact(Interactor interactor)

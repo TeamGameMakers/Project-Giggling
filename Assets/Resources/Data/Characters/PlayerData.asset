@@ -21,7 +21,7 @@ MonoBehaviour:
   stamina: 5
   staminaSpeed: 1
   canSprint: 1
-  hasFlashLight: 1
+  hasFlashLight: 0
   powerUsingSpeed: 1
   lightRadius: 3
   lightAngle: 100

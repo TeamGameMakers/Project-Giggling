@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Base.Scene;
 using GM;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -29,6 +30,19 @@ namespace UI
                 case "CreditsBtn":
                     AkSoundEngine.PostEvent("Menu_exit", gameObject);
                     SwitchPanel(2);
+                    break;
+                case "QuitBtn":
+                    AkSoundEngine.PostEvent("Menu_exit", gameObject);
+                    if (SceneLoader.CurrentScene == "00_Phase_0")
+                    {
+                        UIManager.Instance.HidePanel("SettingPanel", true);
+                        return;
+                    }
+                    UIManager.Instance.HidePanel("StartPanel", true);
+                    UIManager.Instance.HidePanel("GamePanel", true);
+                    UIManager.Instance.HidePanel("Status Panel", true);
+                    UIManager.Instance.HidePanel("SettingPanel", true);
+                    SceneLoader.LoadScene("00_Phase_0");
                     break;
             }
         }
