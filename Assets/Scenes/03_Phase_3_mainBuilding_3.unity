@@ -1761,7 +1761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 674880858522946508, guid: 2a9363f4adcfb20448aaa519479a98f4, type: 3}
       propertyPath: m_Name
-      value: "\u5C45\u6C11\u9632\u76D7\u95E8 \u5173"
+      value: Door_Phase3M3
       objectReference: {fileID: 0}
     - target: {fileID: 674880858522946511, guid: 2a9363f4adcfb20448aaa519479a98f4, type: 3}
       propertyPath: m_RootOrder
@@ -1806,6 +1806,10 @@ PrefabInstance:
     - target: {fileID: 674880858522946511, guid: 2a9363f4adcfb20448aaa519479a98f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674880858685754293, guid: 2a9363f4adcfb20448aaa519479a98f4, type: 3}
+      propertyPath: m_Name
+      value: Door_Phase3M3_itrt
       objectReference: {fileID: 0}
     - target: {fileID: 674880858685754295, guid: 2a9363f4adcfb20448aaa519479a98f4, type: 3}
       propertyPath: needKey
