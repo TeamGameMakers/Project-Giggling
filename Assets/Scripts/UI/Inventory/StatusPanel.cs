@@ -28,9 +28,14 @@ namespace UI.Inventory
             base.Awake();
             Init();
             _data = Instantiate(_data);
+        }
+
+        protected override void Start()
+        {
+            base.Start();
             
             // 读档
-            var data = SaveManager.GetValue(this.GetInstanceID().ToString());
+            var data = SaveManager.GetValue(GetInstanceID().ToString());
             if (!string.IsNullOrEmpty(data)) 
                 JsonUtility.FromJsonOverwrite(data, _data);
         }

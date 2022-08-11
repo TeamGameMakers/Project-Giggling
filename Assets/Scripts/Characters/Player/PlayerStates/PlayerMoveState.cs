@@ -5,7 +5,7 @@ namespace Characters.Player
     public class PlayerMoveState: PlayerState
     {
         private readonly int _animHashFloatX = Animator.StringToHash("velocityX");
-        private readonly int _animHashFloatY = Animator.StringToHash("velocityY");
+        public readonly int animHashFloatY = Animator.StringToHash("velocityY");
         
         public PlayerMoveState(Characters.Player.Player player, string name) : base(player, name) { }
 
@@ -34,12 +34,12 @@ namespace Characters.Player
                 if (_core.Movement.CurrentVelocityNorm != Vector2.zero)
                 {
                     _anim.SetFloat(_animHashFloatX, _core.Movement.CurrentVelocityNorm.x);
-                    _anim.SetFloat(_animHashFloatY, _core.Movement.CurrentVelocityNorm.y);
+                    _anim.SetFloat(animHashFloatY, _core.Movement.CurrentVelocityNorm.y);
                 }
                 else
                 {
                     _anim.SetFloat(_animHashFloatX, InputHandler.NormInputX);
-                    _anim.SetFloat(_animHashFloatY, InputHandler.NormInputY);
+                    _anim.SetFloat(animHashFloatY, InputHandler.NormInputY);
                 }
             }
         }

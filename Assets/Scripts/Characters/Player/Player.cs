@@ -22,6 +22,7 @@ namespace Characters.Player
         private Light2D _flashLight;
         private bool _powerRemaining;
         private List<Collider2D> _monstersColl;
+        private SpriteRenderer _sprite;
 
         public PlayerDataSO data;
         public RuntimeAnimatorController playerWithFlashLight;
@@ -38,6 +39,7 @@ namespace Characters.Player
             Anim = GetComponent<Animator>();
             Core = GetComponentInChildren<GameCore>();
             _flashLight = transform.GetChild(2).GetComponent<Light2D>();
+            _sprite = GetComponent<SpriteRenderer>();
 
             StateMachine = new PlayerStateMachine();
             _monstersColl = new List<Collider2D>();
@@ -143,6 +145,8 @@ namespace Characters.Player
                 EventCenter.Instance.EventTrigger("UseBattery");
                 InputHandler.UseReloadInput();
             }
+            
+            _sprite.sortingLayerName = Anim.GetFloat(MoveState.animHashFloatY) > 0 ? "PlayerUnLit" : "PlayerLit";
             
             if (_flashLight.enabled)
                 _powerRemaining = EventCenter.Instance.

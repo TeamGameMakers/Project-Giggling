@@ -178,6 +178,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	435933024	flashlight	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\flashlight_FF4ACD97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Flashlight_on\flashlight		7524
 	435978576	box（1）音效	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box（1）音效_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_defeat\box（1）音效		93212
 	443630261	安静的室内quiet-room-1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的室内quiet-room-1_7D5C39CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF2\安静的室内quiet-room-1		448614
+	447560423	CG6音频	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG6音频_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG6音频		3076290
 	455071581	foorstep_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_07D4C345.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_04		2340
 	455880278	gigL2_5_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_02_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_02		21762
 	456608687	box_try	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box_try_87B27235.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_try\box_try		6082
@@ -202,7 +203,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	664403547	gigL1_5__01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__01_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__01		15722
 	671765230	UI	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UI_94A07B20.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_confirm\UI		6530
 	693161991	foorstep_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_4C441086.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_02		2539
-	695480121	CG-6	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG-6_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG-6		1385697
 	698533343	gigL2_9	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_9_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_9		23919
 	730887965	monstermove4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove4		17458
 	742460950	cameraon	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraon_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\cameraon		12781
