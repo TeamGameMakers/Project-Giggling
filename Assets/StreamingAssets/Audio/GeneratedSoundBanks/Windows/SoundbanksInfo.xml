@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="3060443183">
+		<SoundBank Id="2858921253" Language="SFX" Hash="2634127030">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
