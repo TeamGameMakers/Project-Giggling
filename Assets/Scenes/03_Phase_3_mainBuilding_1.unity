@@ -2032,6 +2032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u7CBE\u82F1\u602A"
       objectReference: {fileID: 0}
+    - target: {fileID: 6777335383442565037, guid: 1f717c75f7ab1494cbc88a59cf2d3775, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6777335383442565038, guid: 1f717c75f7ab1494cbc88a59cf2d3775, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4024,16 +4028,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -4, y: 22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 2, y: 22, z: 0}
     second:
       serializedVersion: 2
@@ -4116,13 +4110,13 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 137
+  - m_RefCount: 136
     m_Data: {fileID: 11400000, guid: 4c296e85d818c334baa3b2771b779895, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 137
+  - m_RefCount: 136
     m_Data: {fileID: -7582206684034428104, guid: d963c2e36bad73d45b78ae38318a789b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 137
+  - m_RefCount: 136
     m_Data:
       e00: 1
       e01: 0
@@ -4141,7 +4135,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 137
+  - m_RefCount: 136
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4224,10 +4218,12 @@ CompositeCollider2D:
       - X: -40000000
         Y: 240000000
       - X: -40000000
-        Y: 220000000
-      - X: -30000000
-        Y: 220000000
-      - X: -30000000
+        Y: 230000100
+      - X: -29999959
+        Y: 230000100
+      - X: -29999900
+        Y: 230000041
+      - X: -29999900
         Y: 230000000
       - X: 20000000
         Y: 230000000
@@ -4340,9 +4336,7 @@ CompositeCollider2D:
       - {x: 3, y: 22.000029}
       - {x: 2.999971, y: 24}
       - {x: -4, y: 23.999971}
-      - {x: -3.999971, y: 22}
-      - {x: -3, y: 22.000029}
-      - {x: -2.9999707, y: 23}
+      - {x: -3.999971, y: 23.00001}
       - {x: 2, y: 22.999971}
       - {x: 2.0000293, y: 21}
       - {x: 8, y: 20.999971}
@@ -5172,6 +5166,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1355178976355672119, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355178976355672125, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fe7442e807dcb3e42849b54435f3691c, type: 2}
     - target: {fileID: 4541978140360759992, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_Intensity
       value: 0.5

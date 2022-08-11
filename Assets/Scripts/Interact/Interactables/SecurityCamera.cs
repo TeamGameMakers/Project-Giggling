@@ -73,6 +73,7 @@ namespace Interact
             _followCamera.m_Follow = GameManager.Player;
             _followCamera.m_Lens.OrthographicSize = 3;
             AkSoundEngine.PostEvent("CameraExit", gameObject);
+            AkSoundEngine.PostEvent("CaremaStop", gameObject);
         }
 
         public override void Interact(Interactor interactor)
