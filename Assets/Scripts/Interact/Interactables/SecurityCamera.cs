@@ -1,16 +1,28 @@
 using UnityEngine;
 using Data;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace Interact
 {
     public class SecurityCamera: Interactable
     {
         private bool _interacting;
-        
+        private Light2D _light;
+        private Interactor _interactor;
+        private bool _isRotating;
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            _light = GetComponentInChildren<Light2D>();
+        }
+
         protected override void Start()
         {
             base.Start();
             _interacting = false;
+            _light.enabled = false;
         }
 
         protected override void Update()
@@ -29,27 +41,42 @@ namespace Interact
         {
             var eulerAngle = new Vector3(0.0f, 0.0f,
                 -InputHandler.NormInputX * ((SecurityCameraDataSO)_data).rotationSpeed * Time.deltaTime);
-            
-            var maxAngle = ((SecurityCameraDataSO)_data).maxAngle;
 
-            if (transform.eulerAngles.z >= maxAngle && transform.eulerAngles.z >= 0 && InputHandler.NormInputX < 0)
-                eulerAngle = Vector3.zero;
-            else if (360 - transform.eulerAngles.z >= maxAngle && transform.eulerAngles.z > 0 && InputHandler.NormInputX > 0)
-                eulerAngle = Vector3.zero;
+            _light.transform.Rotate(eulerAngle);
 
-            transform.Rotate(eulerAngle);
+            if (!_isRotating && InputHandler.NormInputX != 0)
+            {
+                _isRotating = true;
+                AkSoundEngine.PostEvent("CameraLoop", gameObject);
+            }
+            else if (_isRotating && InputHandler.NormInputX == 0)
+            {
+                _isRotating = false;
+                AkSoundEngine.PostEvent("CaremaStop", gameObject);
+            }
         }
 
         private void ExitCameraControl()
         {
             InputHandler.SwitchToPlayer();
             _interacting = false;
+            _light.enabled = false;
+            
+            _spriteRenderer.gameObject.SetActive(true);
+            _interactor.gameObject.SetActive(true);
+            AkSoundEngine.PostEvent("CameraExit", gameObject);
         }
 
         public override void Interact(Interactor interactor)
         {
+            _interactor = interactor;
             InputHandler.SwitchToCamera();
             _interacting = true;
+            _light.enabled = true;
+            
+            _spriteRenderer.gameObject.SetActive(false);
+            _interactor.gameObject.SetActive(false);
+            AkSoundEngine.PostEvent("CameraStart", gameObject);
         }
     }
 }

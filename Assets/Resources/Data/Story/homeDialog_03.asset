@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plotName: 
   sections:
-  - text: "\u6211\u53EB\u963F\u7B11\u5417\u2026\u2026\u5979\u662F\u2026\u2026"
+  - text: "\u201C\u963F\u7B11\u201D\uFF1F\u8FD9\u662F\u6211\u7684\u540D\u5B57\u5417\uFF1F\u90A3\u4E48\u5979\u662F......"
     leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u5C0F\u9759\uFF1F\u8111\u6D77\u91CC\u7A81\u7136\u51FA\u73B0\u4E86\u8FD9\u4E2A\u540D\u5B57\u3002"
+  - text: "\u201C\u5C0F\u9759\u201D\uFF1F\u4E3A\u4EC0\u4E48\u6211\u7684\u8111\u6D77\u91CC\u4F1A\u51FA\u73B0\u8FD9\u4E2A\u540D\u5B57\uFF1F"
     leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u6211\u548C\u5979\u662F\u5F88\u597D\u7684\u670B\u53CB\u5417\uFF1F"
+  - text: "\u6211\u4EEC\u66FE\u7ECF\u662F\u597D\u670B\u53CB\u5417\uFF1F"
     leftSprite: {fileID: -7423440921397165710, guid: f861c22441f3ecd4b9cf4ac9b807f86f, type: 3}
     rightSprite: {fileID: 0}
     choices: []

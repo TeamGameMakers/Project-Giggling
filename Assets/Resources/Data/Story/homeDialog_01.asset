@@ -18,19 +18,19 @@ MonoBehaviour:
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u5C0F\u9759\u2026\u2026\u5979\u548C\u6211\u90FD\u662F\u8FD9\u573A\u706B\u707E\u7684\u5E78\u5B58\u8005\u2026\u2026"
+  - text: "\u5C0F\u9759\u548C\u6211\u90FD\u662F\u8FD9\u573A\u706B\u707E\u7684\u5E78\u5B58\u8005\u3002"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u53EF\u5177\u4F53\u8FD9\u573A\u706B\u707E\u53D1\u751F\u4E86\u4EC0\u4E48\u2026\u2026"
+  - text: "\u8FD9\u573A\u706B\u707E\u91CC\u7A76\u7ADF\u53D1\u751F\u4E86\u4EC0\u4E48\uFF1F"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u53EF\u6076\uFF0C\u5176\u4ED6\u7684\u4E8B\u60C5\u8FD8\u662F\u60F3\u4E0D\u8D77\u6765\u3002"
+  - text: "\u53EF\u6076\uFF0C\u8FD8\u662F\u60F3\u4E0D\u8D77\u6765\uFF01"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []
-  - text: "\u4E5F\u8BB8\uFF0C\u53BB\u5B66\u6821\u770B\u770B\u2014\u2014\u80FD\u591F\u60F3\u8D77\u6765\u4EC0\u4E48\u3002"
+  - text: "\u6216\u8BB8\u6211\u8BE5\u53BB\u5B66\u6821\u770B\u770B\uFF0C\u5E94\u8BE5\u80FD\u60F3\u8D77\u6765\u4E9B\u4EC0\u4E48\u3002"
     leftSprite: {fileID: 0}
     rightSprite: {fileID: 0}
     choices: []

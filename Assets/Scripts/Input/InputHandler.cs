@@ -153,7 +153,6 @@ public class InputHandler : SingletonMono<InputHandler>
     {
         if (context.action.name != "Rotate") return;
         NormInputX = Mathf.RoundToInt(context.ReadValue<float>());
-        Debug.Log(NormInputX);
     }
 
     private void OnExitInput(InputAction.CallbackContext context)

@@ -15,14 +15,14 @@ MonoBehaviour:
   monsterType: 1
   isDead: 0
   fadeSpeed: 0.5
-  walkSpeed: 2
-  chaseSpeed: 3
+  walkSpeed: 2.5
+  chaseSpeed: 3.5
   hitSpeed: 1
-  healthPoint: 500
+  healthPoint: 20
   catchDistance: 1
-  checkRadius: 4
+  checkRadius: 1.73
   checkAngle: 180
   checkLayer:
     serializedVersion: 2
     m_Bits: 128
-  _patrolStopTime: 2
+  _patrolStopTime: 3
