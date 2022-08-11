@@ -19,7 +19,7 @@
 				<AuxBus Id="695384145" Name="RVB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\RVB"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2858921253" Language="SFX" Hash="2634127030">
+		<SoundBank Id="2858921253" Language="SFX" Hash="3206901445">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllInOne</ObjectPath>
 			<ShortName>AllInOne</ShortName>
 			<Path>AllInOne.bnk</Path>
@@ -311,11 +311,11 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1539269826" Name="CG5Over" ObjectPath="\Events\Default Work Unit\CG\CG5Over" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="949461151" Name="CG6" ObjectPath="\Events\Default Work Unit\CG\CG6" DurationType="OneShot" DurationMin="79.32" DurationMax="79.32">
+				<Event Id="949461151" Name="CG6" ObjectPath="\Events\Default Work Unit\CG\CG6" DurationType="OneShot" DurationMin="182.160004" DurationMax="182.160004">
 					<IncludedMemoryFiles>
-						<File Id="695480121" Language="SFX">
-							<ShortName>CG-6.wav</ShortName>
-							<Path>SFX\CG-6_37AE9D3D.wem</Path>
+						<File Id="447560423" Language="SFX">
+							<ShortName>CG6音频.wav</ShortName>
+							<Path>SFX\CG6音频_37AE9D3D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
