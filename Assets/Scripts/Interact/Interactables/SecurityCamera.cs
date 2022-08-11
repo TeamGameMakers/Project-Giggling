@@ -1,6 +1,8 @@
 using UnityEngine;
 using Data;
 using UnityEngine.Experimental.Rendering.Universal;
+using Cinemachine;
+using GM;
 
 namespace Interact
 {
@@ -10,12 +12,16 @@ namespace Interact
         private Light2D _light;
         private Interactor _interactor;
         private bool _isRotating;
+        private CinemachineVirtualCamera _followCamera;
+
+        [SerializeField] private float _size = 5;
 
         protected override void Awake()
         {
             base.Awake();
 
             _light = GetComponentInChildren<Light2D>();
+            _followCamera = FindObjectOfType<CinemachineVirtualCamera>();
         }
 
         protected override void Start()
@@ -64,6 +70,8 @@ namespace Interact
             
             _spriteRenderer.gameObject.SetActive(true);
             _interactor.gameObject.SetActive(true);
+            _followCamera.m_Follow = GameManager.Player;
+            _followCamera.m_Lens.OrthographicSize = 3;
             AkSoundEngine.PostEvent("CameraExit", gameObject);
         }
 
@@ -76,6 +84,8 @@ namespace Interact
             
             _spriteRenderer.gameObject.SetActive(false);
             _interactor.gameObject.SetActive(false);
+            _followCamera.m_Follow = transform;
+            _followCamera.m_Lens.OrthographicSize = _size;
             AkSoundEngine.PostEvent("CameraStart", gameObject);
         }
     }

@@ -16,5 +16,5 @@ MonoBehaviour:
   checkLayer:
     serializedVersion: 2
     m_Bits: 128
-  rotationSpeed: 30
+  rotationSpeed: 50
   maxAngle: 60
