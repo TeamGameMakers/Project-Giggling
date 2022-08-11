@@ -12,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	712161704	Run			\Default Work Unit\Player\Run	
 	750193097	C_dead			\Default Work Unit\Monster\C_dead	
 	757741878	MeetingGirl			\Default Work Unit\Event\MeetingGirl	
+	787601361	CG2Over			\Default Work Unit\CG\CG2Over	
 	824317709	MainTheme			\Default Work Unit\UI\MainTheme	
 	949461144	CG1			\Default Work Unit\CG\CG1	
 	949461146	CG3			\Default Work Unit\CG\CG3	
@@ -20,21 +21,25 @@ Event	ID	Name			Wwise Object Path	Notes
 	949461149	CG4			\Default Work Unit\CG\CG4	
 	949461151	CG6			\Default Work Unit\CG\CG6	
 	996361111	B_move			\Default Work Unit\Monster\B_move	
+	1105774063	CG4Over			\Default Work Unit\CG\CG4Over	
 	1126494853	Flashlight_off			\Default Work Unit\Interact\Flashlight_off	
 	1144085426	B_dead			\Default Work Unit\Monster\B_dead	
 	1300721799	Readloadflashlight			\Default Work Unit\Event\Readloadflashlight	
 	1466384055	Interact			\Default Work Unit\UI\Interact	
 	1517054675	Meet_Monster			\Default Work Unit\Monster\Meet_Monster	
+	1539269826	CG5Over			\Default Work Unit\CG\CG5Over	
 	1557303174	Menu_negative			\Default Work Unit\UI\Menu_negative	
 	1568083719	TV			\Default Work Unit\Event\TV	
 	1636873064	StopWatchCatHole			\Default Work Unit\Event\StopWatchCatHole	
 	1691311397	B_humble			\Default Work Unit\Monster\B_humble	
+	1865626269	CG6Over			\Default Work Unit\CG\CG6Over	
 	1952436935	Menu_enter			\Default Work Unit\UI\Menu_enter	
 	2033671033	Flashlight_on			\Default Work Unit\Interact\Flashlight_on	
 	2063961778	MonsterStopBurn			\Default Work Unit\Monster\MonsterStopBurn	
 	2108779966	Walk			\Default Work Unit\Player\Walk	
 	2189595490	Battery_ranout			\Default Work Unit\Event\Battery_ranout	
 	2198133169	Hallway			\Default Work Unit\Amb\Hallway	
+	2267950358	CG1Over			\Default Work Unit\CG\CG1Over	
 	2295356976	WatchCatHole			\Default Work Unit\Event\WatchCatHole	
 	2366330294	Menu_positive			\Default Work Unit\UI\Menu_positive	
 	2393108978	A_move			\Default Work Unit\Monster\A_move	
@@ -48,10 +53,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	3110322898	Box_try			\Default Work Unit\Interact\Box_try	
 	3181406844	Home			\Default Work Unit\Amb\Home	
 	3360399063	PlayerInHallway			\Default Work Unit\Event\PlayerInHallway	
-	3394774657	School_indoor			\Default Work Unit\Amb\School_indoor	
+	3433025436	CG3Over			\Default Work Unit\CG\CG3Over	
 	3460616907	Box_open			\Default Work Unit\Interact\Box_open	
 	3473477823	PlayerOutOfLight			\Default Work Unit\Event\PlayerOutOfLight	
 	3520101518	C_humble			\Default Work Unit\Monster\C_humble	
+	3582189340	School_indoorF3			\Default Work Unit\Amb\School_indoorF3	
+	3582189341	School_indoorF2			\Default Work Unit\Amb\School_indoorF2	
+	3582189342	School_indoorF1			\Default Work Unit\Amb\School_indoorF1	
 	3637334656	CameraExit			\Default Work Unit\Interact\CameraExit	
 	3663878895	Menu_exit			\Default Work Unit\UI\Menu_exit	
 	3704654688	GigglingA			\Default Work Unit\Amb\GigglingA	
@@ -64,6 +72,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4090421712	Neiberhood			\Default Work Unit\Amb\Neiberhood	
 	4143224900	CameraStart			\Default Work Unit\Interact\CameraStart	
 	4169407224	CaremaStop			\Default Work Unit\Interact\CaremaStop	
+	4209585920	School_indoorFcrazy			\Default Work Unit\Amb\School_indoorFcrazy	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
@@ -77,107 +86,172 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	43324707	Wwise Harmonizer (Custom)	Wwise Harmonizer			
+	60019656	Holy (Custom)	Wwise RoomVerb			
+	112428973	Holy (Custom)	Wwise RoomVerb			
 	172764292	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	217166637	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	309008155	Holy (Custom)	Wwise RoomVerb			
 	365179698	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	384431373	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	562712896	Holy (Custom)	Wwise RoomVerb			
+	650756639	Holy (Custom)	Wwise RoomVerb			
+	726296189	Holy (Custom)	Wwise RoomVerb			
+	863862496	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
+	894877703	Holy (Custom)	Wwise RoomVerb			
 	940901792	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	969731116	Wwise Harmonizer (Custom)	Wwise Harmonizer			
 	992902880	Small_Tiled_Room1	Wwise Matrix Reverb			
+	1005960573	Holy (Custom)	Wwise RoomVerb			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	19039677	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\New Sound SFX\Wwise Silence	
+	132123131	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sound SFX\Wwise Silence	
+	154157217	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sound SFX\Wwise Silence	
+	163160187	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF2\MainTheme\New Sequence Container\New Sound SFX\Wwise Silence	
 	259869310	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\laugh\New Sound SFX\Wwise Silence	
 	284367929	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sound SFX\Wwise Silence	
 	416921500	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\New Sound SFX\Wwise Silence	
+	474758363	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\New Sound SFX\Wwise Silence	
+	475762130	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\New Sound SFX\Wwise Silence	
+	685131291	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF2\MainTheme\New Sound SFX\Wwise Silence	
 	799961009	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\New Sound SFX\Wwise Silence	
 	891006214	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\New Sound SFX\Wwise Silence	
+	894925840	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sound SFX\Wwise Silence	
 	956362929	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\New Sound SFX\Wwise Silence	
 	994736092	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\New Sound SFX\Wwise Silence	
+	1002163908	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\New Sound SFX\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	5943815	gigL2_3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_3_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_3		19404
+	11390277	gigL2_5_08	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_08_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_08		24509
+	24592900	gigL2_4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_4		13494
 	26485943	Siege Latch Medium 中等打开门栓 (5)	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\Siege Latch Medium 中等打开门栓 (5)_D068A185.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_defeat\Siege Latch Medium 中等打开门栓 (5)		11539
 	26805767	foorstep_05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_3B10BFFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_05		2187
 	29525048	UIB	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UIB_37A6A1A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_positive\UIB		4256
+	34750672	gigL2_5	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_5_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_5		20362
 	36187219	norm5	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm5_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm5		18979
 	36439070	主界面 修改延音	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\主界面 修改延音_45CF8C74.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\MainTheme\主界面 修改延音		780437
+	43833644	gigL1_5__08	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__08_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__08		23193
+	56629835	gigL2_7	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_7_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_7		14841
+	65996777	gigL2_5_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_04_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_04		15597
+	66480656	gigL2_5_06	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_06_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_06		29852
 	83893701	norm3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm3_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm3		17281
 	91579748	foorstep_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_CE74F46C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_02		1787
 	95841558	FX_Heartbeat_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Heartbeat_04_D77CFB62.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\FX_Heartbeat_01		241146
 	108767914	FX_Tail_Reverb_Metal_C	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Tail_Reverb_Metal_C_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\FX_Tail_Reverb_Metal_C		110600
 	109042881	normdie1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\normdie1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_dead\C_dead\normdie1		18505
-	114835131	女笑6_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑6.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑6_L		29987
+	114835131	女笑6_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑6.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑6_L		29987
 	119944362	monstermove3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove3_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove3		15544
-	139778442	女笑5_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑5.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑5_L		20825
-	160353160	女笑4_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑4.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑4_L		13259
+	125928927	安静的室内quiet-room-1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的室内quiet-room-1_686828B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\安静的室内quiet-room-1		448614
+	137710163	gigL1_5__05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__05_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__05		18706
+	139778442	女笑5_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑5.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑5_L		20825
+	160353160	女笑4_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑4.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑4_L		13259
+	161102907	gigL3_05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL3_05_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\3\gigL3_05		20108
 	175446988	monster humble5	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monster humble5_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\laugh\monsterhumble\monster humble5		33641
 	179713164	reloadflashlight-ProQ3_01-02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\reloadflashlight-ProQ3_01-02_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\Readloadflashlight\reloadflashlight-ProQ3_01-02		10587
 	182132559	UIB	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UIB_8DEBC95A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_negative\UIB		4973
 	204547779	bossxiao1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\laugh\bossxiao1		28263
 	205193523	elidie2-API2500_01-01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\elidie2-API2500_01-01_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_dead\B_dead\elidie2-API2500_01-01		26122
+	223738525	gigL2_1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_1		16270
+	236648943	安静的室内quiet-room-1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的室内quiet-room-1_15A561F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\安静的室内quiet-room-1		448614
 	237975842	monstermove1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove1		15607
+	244255942	CG55	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG55_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG55		914955
+	255510497	gigL3_03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL3_03_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\3\gigL3_03		21414
+	260253333	gigL1_5__09	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__09_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__09		23177
+	265853147	gigL2_5_07	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_07_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_07		15398
+	268696100	CG--2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG--2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG--2		1106893
 	272239073	ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)_DB9FC224.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\PlayerInTheLight\ESE - QUANTUM - RISER - KP - Wind Linear - (Distorted)		80129
 	289930816	安静的城市quiet-town-1~1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的城市quiet-town-1~1_C4391C88.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Neiberhood\安静的城市quiet-town-1~1		365205
 	290433308	HIT_Impact_Strings_High_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\HIT_Impact_Strings_High_01_BD753F3E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Meet_Boss\HIT_Impact_Strings_High_01		45431
 	307519476	monstermove2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove2		15698
-	311113761	女笑1_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑1.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑1_L		16218
+	311113761	女笑1_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑1.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑1_L		16218
 	319647007	foorstep_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_190D39D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_01		2431
 	320501718	UI5	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UI5_385B4DAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Interact\UI5		3382
 	323504067	foorstep	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_3D2EBEE8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep		2263
+	330711621	CG44	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG44_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG44		773755
 	383509589	foorstep_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_A6876B39.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_01		2018
 	386274291	box(2)音效	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box(2)音效_142CBF49.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_open\box(2)音效		61674
 	391013323	UIA	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UIA_ADD0799B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_exit\UIA		5526
-	425832618	女笑3_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑3.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑3_L		18698
+	408139578	gigL2_6	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_6_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_6		29809
+	425832618	女笑3_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑3.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑3_L		18698
 	428266586	bossxiao3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao3_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\laugh\bossxiao3		29372
 	435933024	flashlight	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\flashlight_FF4ACD97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Flashlight_on\flashlight		7524
 	435978576	box（1）音效	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box（1）音效_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_defeat\box（1）音效		93212
+	443630261	安静的室内quiet-room-1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的室内quiet-room-1_7D5C39CD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF2\安静的室内quiet-room-1		448614
 	455071581	foorstep_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_07D4C345.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_04		2340
+	455880278	gigL2_5_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_02_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_02		21762
 	456608687	box_try	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box_try_87B27235.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_try\box_try		6082
 	459516214	foorstep_03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_433FE177.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_03		2589
 	467759605	HIT_Impact_Strings_Low_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\HIT_Impact_Strings_Low_02_11DAAF11.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Meet_Monster\HIT_Impact_Strings_Low_02		42097
+	473678573	gigL1_5__11	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__11_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__11		39538
+	492091717	轻音乐1-ProQ3_01-03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\轻音乐1-ProQ3_01-03_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\轻音乐1-ProQ3_01-03		1050113
 	493571395	bossxiao4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\A_humble\bosshuumble\laugh\laugh\bossxiao4		37392
+	493676949	gigL2_8	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_8_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_8		25207
 	504295279	09 Wood Door 9-ProQ3_01-08_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\09 Wood Door 9-ProQ3_01-08.L_DEE761DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Door_notopen\09 Wood Door 9-ProQ3_01-08_L		9555
 	508397187	cameraloop	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraloop_7513D50B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\CameraLoop\cameraloop		14935
 	525487108	norm6	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm6_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm6		20047
-	542964492	女笑2_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑2.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑2_L		22842
+	542964492	女笑2_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑2.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑2_L		22842
 	548706003	norm2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm2		16242
 	567522708	bossxiao2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\bossxiao2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\bossxiao2		51136
 	585872743	电视新闻-ProQ3_01-01_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\电视新闻-ProQ3_01-01.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\TV\电视新闻-ProQ3_01-01_L		312199
+	604745855	gigL2_5_03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_03_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_03		21112
 	612751255	monster humble4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monster humble4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\laugh\monsterhumble\monster humble4		39343
+	620903717	gigL1_5__06	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__06_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__06		29039
 	633066304	norm4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\norm4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_humble\normhumble\laugh\normhumble\norm4		18882
 	660499722	monster humble1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monster humble1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\laugh\monsterhumble\monster humble1		33478
+	664403547	gigL1_5__01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__01_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__01		15722
 	671765230	UI	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UI_94A07B20.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_confirm\UI		6530
 	693161991	foorstep_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_4C441086.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_02		2539
+	695480121	CG-6	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG-6_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG-6		1385697
+	698533343	gigL2_9	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_9_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_9		23919
 	730887965	monstermove4	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monstermove4_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_move\monstermove\monstermove4		17458
 	742460950	cameraon	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraon_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\cameraon		12781
+	764135171	gigL3_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL3_04_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\3\gigL3_04		15766
+	764609102	gigL1_5__02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__02_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__02		20142
+	765076568	gigL2_5_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_01_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_01		17875
 	765971540	flashlight	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\flashlight_7204055F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Flashlight_off\flashlight		5380
+	782549171	gigL2_10	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_10_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_10		23222
+	788240265	gigL2_5_09	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_09_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_09		24556
 	792198012	ESE - QUANTUM - HIT - JC - Rapture - (Dark)	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\ESE - QUANTUM - HIT - JC - Rapture - (Dark)_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Death\ESE - QUANTUM - HIT - JC - Rapture - (Dark)		111617
 	793351484	elidie1-API2500_01-01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\elidie1-API2500_01-01_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_dead\B_dead\elidie1-API2500_01-01		20981
-	808740979	CG1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG1		600151
 	820978956	CLOCK	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CLOCK_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\CLOCK		114554
 	826203035	normdie2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\normdie2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\C_dead\C_dead\normdie2		28782
+	840322324	gigL2_5_11	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_11_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_11		42253
 	843862000	foorstep	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_2DF8D0FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep		1903
 	847359609	camerastart	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\camerastart_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStart\CameraOn\CameraLoop\camerastart		5367
+	855828903	gigL2_5_10	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_10_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_10		22541
 	861140438	WULA	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\WULA_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\WULA		234345
 	862300579	box_open	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\box_open_2FC200CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Box_open\box_open		14964
+	863787881	CG--1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG--1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG--1		569715
 	898281037	FX_Heartbeat_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Heartbeat_04_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\FX_Heartbeat_04		240802
-	907025861	dia2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\dia2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\DIA_B\dia2		1784
-	944470100	女笑9_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑9.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑9_L		24094
+	907025861	dia2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\dia2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\DIA_A\dia2		1784
+	919107567	CG-3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\CG-3_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\CG\CG-3		1770489
+	926425494	gigL3_01	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL3_01_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\3\gigL3_01		18237
+	944470100	女笑9_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑9.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑9_L		24094
 	947507966	安静的室内quiet-room-1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的室内quiet-room-1_08018C5F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Home\安静的室内quiet-room-1		448614
+	950014314	gigL1_5__03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__03_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__03		19577
 	952497228	DONG	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\DONG_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\DONG		64132
+	952564939	gigL1_5__10	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__10_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__10		21976
 	957534811	dooropen	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\dooropen_A2F2FA84.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Door_open\dooropen		17797
 	958072331	UI	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UI_558A39C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_switch\UI		6483
 	959696462	foorstep_03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_29B45C7B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_03		2630
 	964886069	cameraoff_1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\cameraoff.1_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\CameraStop\cameraoff_1		13035
+	975286283	gigL1_5__04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__04_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__04		15061
 	979659455	foorstep_04	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_B685C6E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Run\foorstep_04		2231
+	983090788	gigL2_2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_2		22799
+	986786550	安静的室内quiet-room-1	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\安静的室内quiet-room-1_3EE7B9B8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\安静的室内quiet-room-1		448614
+	990704384	FX_Heartbeat_03	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\FX_Heartbeat_03_B12E335B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\MonsterChase\FX_Heartbeat_03		226966
 	998919376	monster humble2	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monster humble2_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\laugh\monsterhumble\monster humble2		27139
 	1002573543	foorstep_05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\foorstep_3C40E311.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Walk\foorstep_05		2490
 	1015811826	campfire	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\campfire_733BE17E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\Monster_burn\campfire		254817
 	1031345722	ZOOM0057_TrLR	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\ZOOM0057_TrLR_97213BF5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Event\Hallway_footstep\ZOOM0057_TrLR		504194
-	1036149262	女笑7_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑7.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\GigglingA\MainTheme\New Sequence Container\xiao\女笑7_L		15011
+	1032950375	gigL1_5__07	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL1.5__07_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\1-5\gigL1_5__07		14565
+	1035805301	gigL3_02	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL3_02_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\3\gigL3_02		22581
+	1036149262	女笑7_L	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\女笑7.L_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF1\MainTheme\New Sequence Container\xiao\女笑7_L		15011
+	1043372650	gigL2_11	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2_11_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorFcrazy\MainTheme\New Sequence Container\xiao\2\gigL2_11		42807
 	1046309437	pickup	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\pickup_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pickup\pickup		30959
 	1046951459	nightamb	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\nightamb_D779D24F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\Neiberhood\nightamb		166081
+	1047586333	gigL2_5_05	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\gigL2.5_05_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Amb\School_indoorF3\MainTheme\New Sequence Container\2-5\gigL2_5_05		20229
 	1055902572	UIA	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\UIA_E140843C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Menu_enter\UIA		6801
 	1063521378	monster humble3	G:\demo\Wwise_Project\Project_Giggling\.cache\Windows\SFX\monster humble3_37AE9D3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Monster\B_humble\monsterhumble\laugh\monsterhumble\monster humble3		36122
 
