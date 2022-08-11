@@ -13,7 +13,10 @@ namespace SceneSpecific
             
             // 没见到女主才调用
             if (SaveManager.GetBool("MeetGirl"))
+            {
                 AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
+                AkSoundEngine.PostEvent("School_outdoor", gameObject);
+            }
             else
                 AkSoundEngine.PostEvent("Neiberhood", gameObject);
         }
