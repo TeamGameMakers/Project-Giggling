@@ -1,4 +1,3 @@
-using System;
 using Data.Story;
 using Save;
 using Story;
@@ -44,7 +43,7 @@ namespace SceneTrigger
             }
         }
 
-        protected void StartStory()
+        protected virtual void StartStory()
         {
             StoryManager.Instance.StartStory(plot);
             if (triggerOnce && used)

@@ -1,6 +1,7 @@
 using Base.Event;
 using Data;
 using Save;
+using UI;
 using UnityEngine;
 
 namespace Interact
@@ -59,6 +60,11 @@ namespace Interact
         {
             doorRenderer.sprite = openSprite;
             blockCollider.enabled = false;
+            // 把 UI 上的钥匙失活
+            if (needKey == 1)
+                inventoryData.hasKey1 = false;
+            else
+                inventoryData.hasKey2 = false;
             // 自身交互关闭
             gameObject.SetActive(false);
         }

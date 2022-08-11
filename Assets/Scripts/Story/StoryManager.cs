@@ -1,3 +1,4 @@
+using System;
 using Base;
 using Base.Mono;
 using Data.Story;
@@ -27,11 +28,15 @@ namespace Story
         
         // 用于播放音效的物体
         private GameObject m_akObj;
+        
+        // 剧情结束回调，该方法执行过一次后就清空
+        private Action m_finishCallback;
 
-        public void StartStory(PlotDataSO plot)
+        public void StartStory(PlotDataSO plot, Action finishCallback = null)
         {
             // 创建必要组件
             PlotProcessor pp = new PlotProcessor(panelName);
+            m_finishCallback += finishCallback;
             // 显示 UI 面板
             UIManager.Instance.ShowPanel<StoryPanel>(panelName, callBack: panel => {
                 // 组件注册
@@ -80,6 +85,9 @@ namespace Story
             MonoManager.Instance.RemoveUpdateListener(InputDetection);
             // 关闭 UI 面板
             UIManager.Instance.HidePanel(panelName, true);
+            
+            m_finishCallback?.Invoke();
+            m_finishCallback = null;
         }
         
         // 能否正常推进
