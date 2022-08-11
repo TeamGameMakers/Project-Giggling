@@ -1,3 +1,4 @@
+using GM;
 using Story;
 using UnityEngine.Playables;
 
@@ -16,7 +17,9 @@ namespace SceneTrigger
 
         protected virtual void FinishPlot()
         {
+            GameManager.SwitchGameState(GameState.CG);
             director.Play();
+            director.stopped += playableDirector => GameManager.BackGameState();
         }
     }
 }

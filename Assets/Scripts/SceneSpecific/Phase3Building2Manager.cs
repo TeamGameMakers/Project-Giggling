@@ -8,29 +8,23 @@ namespace SceneSpecific
         protected override void Start()
         {
             base.Start();
+            Debug.Log("进入第三幕第二层");
             
-            AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
             // 检查进入的层数
             string str = SaveManager.GetValue("ReachLayer");
-            // 没有存过
-            if (string.IsNullOrEmpty(str))
+            int floor = int.Parse(str);
+            
+            // 比较层数
+            if (floor < 2)
             {
-                SaveManager.Register("ReachLayer", "1");
-                AkSoundEngine.PostEvent("School_indoorF1", gameObject);
+                SaveManager.Register("ReachLayer", 2);
+                floor = 2;
             }
-            // 存过了则播放
-            else
-            {
-                int floor = int.Parse(str);
-                // 比较层数
-                if (floor < 2)
-                {
-                    SaveManager.Register("ReachLayer", "2");
-                    floor = 2;
-                }
-                Debug.Log($"播放 {floor} 层音效");
-                AkSoundEngine.PostEvent("School_indoorF" + floor, gameObject);
-            }
+            Debug.Log($"播放 {floor} 层音效");
+            AkSoundEngine.PostEvent("School_indoorF" + floor, gameObject);
+            
+            if (SaveManager.GetBool("MeetGirl"))
+                AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
         }
     }
 }

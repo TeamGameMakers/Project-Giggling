@@ -186,7 +186,11 @@ namespace Save
             }
             
             Type type = obj.GetType();
-            if (type.IsValueType)
+            if (type == typeof(string))
+            {
+                Data.Add(key, obj as string);
+            }
+            else if (type.IsValueType)
             {
                 Data.Add(key, obj.ToString());
             }
