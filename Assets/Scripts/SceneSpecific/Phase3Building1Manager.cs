@@ -12,26 +12,30 @@ namespace SceneSpecific
             base.Start();
             Debug.Log("进入第三幕第一层");
 
-            // 检查进入的层数
-            string str = SaveManager.GetValue("ReachLayer");
-            
-            // 没有存过
-            if (string.IsNullOrEmpty(str))
+            if (SaveManager.GetBool("MeetGirl"))
             {
-                SaveManager.Register("ReachLayer", 1);
-                Debug.Log("第一层储存了ReachLayer:" + SaveManager.GetValue("ReachLayer"));
-                AkSoundEngine.PostEvent("School_indoorF1", gameObject);
+                AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
             }
-            // 存过了则播放
             else
             {
-                int floor = int.Parse(str);
-                Debug.Log($"播放 {floor} 层音效");
-                AkSoundEngine.PostEvent("School_indoorF" + floor, gameObject);
-            }
+                // 检查进入的层数
+                string str = SaveManager.GetValue("ReachLayer");
             
-            if (SaveManager.GetBool("MeetGirl"))
-                AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
+                // 没有存过
+                if (string.IsNullOrEmpty(str))
+                {
+                    SaveManager.Register("ReachLayer", 1);
+                    Debug.Log("第一层储存了ReachLayer:" + SaveManager.GetValue("ReachLayer"));
+                    AkSoundEngine.PostEvent("School_indoorF1", gameObject);
+                }
+                // 存过了则播放
+                else
+                {
+                    int floor = int.Parse(str);
+                    Debug.Log($"播放 {floor} 层音效");
+                    AkSoundEngine.PostEvent("School_indoorF" + floor, gameObject);
+                }
+            }
         }
     }
 }

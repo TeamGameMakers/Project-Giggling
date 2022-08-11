@@ -11,7 +11,7 @@ namespace Interact
     {
         public ItemDataSO item;
 
-        public string SaveKey => "pick_item_" + gameObject.GetInstanceID();
+        public string SaveKey => "pick_item_" + gameObject.name;
 
         [Tooltip("是否检查能否拾取")]
         public bool checkPickable = false;
