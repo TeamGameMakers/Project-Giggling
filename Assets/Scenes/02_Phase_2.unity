@@ -20861,7 +20861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plotEvent: cg_streetDialog_05
-  wwiseEvent: 
+  wwiseEvent: CG3
+  wwiseStopEvent: CG3Over
 --- !u!114 &500086143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24516,11 +24517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1355178976355672118, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1355178976355672118, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.91
+      value: -3.7
       objectReference: {fileID: 0}
     - target: {fileID: 1355178976355672118, guid: 1466cf02e31429141893e9fb6b159789, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25921,7 +25922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plotEvent: cg_streetDialog_04
-  wwiseEvent: 
+  wwiseEvent: CG2
+  wwiseStopEvent: CG2Over
 --- !u!114 &1446451712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33671,7 +33673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558240295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -2.91, z: -10}
+  m_LocalPosition: {x: -0.2, y: -3.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435659148}
@@ -35672,7 +35674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852418230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -2.91, z: -10}
+  m_LocalPosition: {x: -0.2, y: -3.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

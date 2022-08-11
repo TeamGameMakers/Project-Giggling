@@ -9059,6 +9059,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: schoolCG_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7336005083196959451, guid: 23a67bdad6d1fb24eaf9216aee381417, type: 3}
+      propertyPath: wwiseEvent
+      value: CG4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336005083196959451, guid: 23a67bdad6d1fb24eaf9216aee381417, type: 3}
+      propertyPath: wwiseStopEvent
+      value: CG4Over
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336005083196959454, guid: 23a67bdad6d1fb24eaf9216aee381417, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 1401297542}
     - target: {fileID: 7336005083196959455, guid: 23a67bdad6d1fb24eaf9216aee381417, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9262,6 +9274,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2097461464}
     m_Modifications:
+    - target: {fileID: 1761779021455369257, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: wwiseEvent
+      value: CG5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761779021455369257, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: wwiseStopEvent
+      value: CG5Over
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761779021455369260, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 1401297542}
     - target: {fileID: 1761779021455369261, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
       propertyPath: m_RootOrder
       value: 1
