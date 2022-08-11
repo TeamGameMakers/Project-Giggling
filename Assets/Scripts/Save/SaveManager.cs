@@ -232,6 +232,9 @@ namespace Save
                 RegisterBool("hasFlashLight");
             }
             
+            // 存储玩家数据
+            EventCenter.Instance.EventTrigger("SaveStatusData");
+            
             BeforeSaveActions?.Invoke();
 
             // --持久化--

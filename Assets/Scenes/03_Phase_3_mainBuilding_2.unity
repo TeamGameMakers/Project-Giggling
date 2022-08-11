@@ -5137,6 +5137,10 @@ PrefabInstance:
       value: CG4Over
       objectReference: {fileID: 0}
     - target: {fileID: 7336005083196959454, guid: 23a67bdad6d1fb24eaf9216aee381417, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 6a4c139605a52eb4587148b8e0e92a61, type: 3}
+    - target: {fileID: 7336005083196959454, guid: 23a67bdad6d1fb24eaf9216aee381417, type: 3}
       propertyPath: m_TargetCamera
       value: 
       objectReference: {fileID: 1401297542}
@@ -5363,6 +5367,10 @@ PrefabInstance:
       propertyPath: wwiseStopEvent
       value: CG5Over
       objectReference: {fileID: 0}
+    - target: {fileID: 1761779021455369260, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: db89645d2fe1ea548829676ab7c1f496, type: 3}
     - target: {fileID: 1761779021455369260, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
       propertyPath: m_TargetCamera
       value: 

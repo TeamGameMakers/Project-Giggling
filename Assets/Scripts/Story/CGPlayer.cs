@@ -17,6 +17,8 @@ namespace Story
         public string wwiseStopEvent;
         
         private VideoPlayer m_player;
+
+        public GameObject background;
         
         private void Awake()
         {
@@ -33,12 +35,18 @@ namespace Story
             {
                 m_player.started += source => {
                     if (!string.IsNullOrEmpty(wwiseEvent))
+                    {
                         AkSoundEngine.PostEvent(wwiseEvent, gameObject);
+                    }
+                    if (background != null)
+                        background.SetActive(true);
                 }; 
                     
                 m_player.loopPointReached += source => {
                     GameManager.BackGameState();
                     SaveManager.RegisterBool(SaveKey);
+                    if (background != null)
+                        background.SetActive(false);
                     if (!string.IsNullOrEmpty(wwiseStopEvent))
                         AkSoundEngine.PostEvent(wwiseStopEvent, gameObject);
                     if (string.IsNullOrEmpty(plotEvent))

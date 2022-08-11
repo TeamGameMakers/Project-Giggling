@@ -20,7 +20,6 @@ namespace SceneTrigger
 
         protected override void StartStory()
         {
-            base.StartStory();
             StoryManager.Instance.StartStory(plot, FinishPlot);
             if (triggerOnce && used)
                 Destroy(gameObject);
@@ -35,12 +34,10 @@ namespace SceneTrigger
             player.loopPointReached += source => {
                 RootCanvas.Instance.ShowAll();
                 UIManager.Instance.ShowPanel<FaderPanel>("FaderPanel", "", UILayer.Top, panel => {
-                    panel.fader.Alpha = 0;
-                    panel.fader.Fade(1, f => {
-                        SceneLoader.LoadScene("00_Phase_0");
-                        panel.fader.Fade(0, f1 => {
-                            UIManager.Instance.HidePanel("FaderPanel", true);
-                        });
+                    panel.fader.Alpha = 1;
+                    SceneLoader.LoadScene("00_Phase_0");
+                    panel.fader.Fade(0, f1 => {
+                        UIManager.Instance.HidePanel("FaderPanel", true);
                     });
                 });
             };

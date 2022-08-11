@@ -17,7 +17,7 @@ namespace Interact
         
         public GameObject pinLock;
 
-        public string SaveKey => "SafeBoxUsed_" + GetInstanceID();
+        public string SaveKey => "SafeBoxUsed_" + gameObject.name;
 
         protected string successEvent = "PinLockSuccessEvent";
         protected string failEvent = "PinLockFailEvent";
@@ -83,6 +83,7 @@ namespace Interact
             {
                 GameObject btr = Instantiate(battery, generateRoot);
                 btr.transform.position = generatePosition[i].position;
+                btr.gameObject.name += "_" + gameObject.name + "_" + i;
             }
             
             DisableSelf();

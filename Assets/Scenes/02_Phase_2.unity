@@ -20885,7 +20885,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500086140}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8326a30fb5f0e294382660958556659b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 242956b86f90d3841a0f194b5cf8ba63, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1852418232}
@@ -25394,6 +25394,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3888148961117137352, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
+      propertyPath: ShowId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3888148961117137352, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 1852418232}
@@ -25946,7 +25950,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446451709}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: fad78b0aa8fb5f946aec083cb1af9d3e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3a2aa41d12a22f243aef3a0a8691f85c, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1852418232}
@@ -33652,7 +33656,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1199839544}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 3
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -35650,7 +35654,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -37189,11 +37193,11 @@ PrefabInstance:
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -7142593387730105476, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
     - target: {fileID: 315402509796217631, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -37201,7 +37205,7 @@ PrefabInstance:
     - target: {fileID: 3659641877580508718, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -7142593387730105476, guid: 14c0630f2f4d2b4409440b5fecd0bc07, type: 2}
     - target: {fileID: 3888148961117137352, guid: 4227d1a40bee7024a82c820521da2e18, type: 3}
       propertyPath: num
       value: 1
