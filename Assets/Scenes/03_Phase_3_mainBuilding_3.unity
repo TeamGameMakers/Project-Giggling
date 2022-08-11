@@ -2660,6 +2660,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636908390}
     m_Modifications:
+    - target: {fileID: 1761779021455369257, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: wwiseEvent
+      value: CG5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761779021455369257, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: wwiseStopEvent
+      value: CG5Over
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761779021455369260, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 1401297542}
     - target: {fileID: 1761779021455369261, guid: f11afadf43f3e7042ac1e36a15754a1d, type: 3}
       propertyPath: m_RootOrder
       value: 1

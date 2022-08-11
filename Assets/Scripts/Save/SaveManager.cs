@@ -3,6 +3,7 @@ using System.IO;
 using Base.Event;
 using Base.Persistence;
 using Base.Scene;
+using GM;
 using UnityEngine;
 
 namespace Save
@@ -217,7 +218,7 @@ namespace Save
             Data.Add("SceneName", SceneLoader.CurrentScene);
             
             // 记录玩家位置，要获取玩家位置
-            string playerPos = EventCenter.Instance.FuncTrigger<string>("GetPlayerPosition");
+            string playerPos = JsonUtility.ToJson(GameManager.Player.position);
             Data.Add("PlayerPosition", playerPos);
             
             // 记录玩家手电筒

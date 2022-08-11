@@ -14,6 +14,7 @@ namespace Story
         public string plotEvent;
 
         public string wwiseEvent;
+        public string wwiseStopEvent;
         
         private VideoPlayer m_player;
         
@@ -38,6 +39,8 @@ namespace Story
                 m_player.loopPointReached += source => {
                     GameManager.BackGameState();
                     SaveManager.RegisterBool(SaveKey);
+                    if (!string.IsNullOrEmpty(wwiseStopEvent))
+                        AkSoundEngine.PostEvent(wwiseStopEvent, gameObject);
                     if (string.IsNullOrEmpty(plotEvent))
                         gameObject.SetActive(false);
                 };
