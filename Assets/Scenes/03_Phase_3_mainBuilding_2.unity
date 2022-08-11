@@ -5081,7 +5081,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1900620797}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 3
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -5215,7 +5215,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -5261,6 +5261,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1830752059}
     m_Modifications:
+    - target: {fileID: 8625632545739285608, guid: 72bf5a8e6df835144a6efd52bcf06ecd, type: 3}
+      propertyPath: afterPickEvent
+      value: PickUpKey_2
+      objectReference: {fileID: 0}
     - target: {fileID: 8625632545739285613, guid: 72bf5a8e6df835144a6efd52bcf06ecd, type: 3}
       propertyPath: m_Name
       value: "\u94A5\u5319_schooleElement_08"
@@ -6402,7 +6406,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
