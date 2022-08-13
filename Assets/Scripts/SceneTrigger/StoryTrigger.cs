@@ -1,6 +1,7 @@
 using Data.Story;
 using Save;
 using Story;
+using UI;
 using UnityEngine;
 
 namespace SceneTrigger
@@ -13,12 +14,22 @@ namespace SceneTrigger
 
         protected bool inTiming = false;
         protected float curTime = 0;
+
+        protected bool inLoading = false;
         
         protected virtual void Update()
         {
             if (inTiming)
             {
+                // 不在加载界面中时才计时
+                if (inLoading)
+                {
+                    inLoading = UIManager.Instance.panelContainer.ContainsKey("LoadingPanel");
+                    return;
+                }
+
                 curTime += Time.deltaTime;
+                
                 if (curTime >= delay)
                 {
                     inTiming = false;
@@ -35,6 +46,8 @@ namespace SceneTrigger
                 if (delay != 0)
                 {
                     inTiming = true;
+                    // 检查是否在加载界面
+                    inLoading = UIManager.Instance.panelContainer.ContainsKey("LoadingPanel");
                 }
                 else
                 {
