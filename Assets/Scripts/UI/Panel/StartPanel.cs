@@ -78,7 +78,8 @@ namespace UI
 
         protected void EnterLoadingPanel(string scene)
         {
-            UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel" , "", UILayer.System, panel => {
+            Debug.LogWarning("开始进入场景:" + scene);
+            UIManager.Instance.ShowPanel<LoadingPanel>("LoadingPanel" , "", UILayer.Top, panel => {
                 panel.LoadScene(scene);
             });
             UIManager.Instance.HidePanel("StartPanel", true);

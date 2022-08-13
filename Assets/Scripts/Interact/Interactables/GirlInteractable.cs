@@ -67,7 +67,7 @@ namespace Interact
             UIManager.Instance.HidePanel("FaderPanel", true);
             
             AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
-            StoryManager.Instance.StartStory(afterPlot);
+            StoryManager.Instance.StartStory(afterPlot, () => SaveManager.Save());
         }
     }
 }
