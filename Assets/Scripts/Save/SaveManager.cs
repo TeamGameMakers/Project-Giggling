@@ -225,12 +225,13 @@ namespace Save
             string playerPos = JsonUtility.ToJson(GameManager.Player.position);
             Data.Add("PlayerPosition", playerPos);
             
+            // 在获取时就会记录
             // 记录玩家手电筒
-            bool hasFlashLight = EventCenter.Instance.FuncTrigger<bool>("GetPlayerFlashLight");
-            if (hasFlashLight)
-            {
-                RegisterBool("hasFlashLight");
-            }
+            // bool hasFlashLight = EventCenter.Instance.FuncTrigger<bool>("GetPlayerFlashLight");
+            // if (hasFlashLight)
+            // {
+            //     RegisterBool("hasFlashLight");
+            // }
             
             // 存储玩家数据
             EventCenter.Instance.EventTrigger("SaveStatusData");

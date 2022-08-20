@@ -228,6 +228,7 @@ namespace Characters.Player
         {
             Debug.Log("玩家获得手电筒");
             data.hasFlashLight = true;
+            SaveManager.RegisterBool("hasFlashLight");
         }
 
         public bool HasFlashLight()

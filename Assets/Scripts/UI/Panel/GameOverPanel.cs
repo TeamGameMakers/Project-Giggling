@@ -31,7 +31,7 @@ namespace UI
 
             AkSoundEngine.PostEvent("Die", gameObject);
             // 把玩家给失活
-            GameObject.FindWithTag("Player").SetActive(false);
+            GameObject.FindWithTag("Player")?.SetActive(false);
         }
 
         protected virtual void Update()
