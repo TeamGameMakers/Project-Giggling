@@ -186,7 +186,11 @@ namespace Save
             }
             
             Type type = obj.GetType();
-            if (type.IsValueType)
+            if (type == typeof(string))
+            {
+                Data.Add(key, obj as string);
+            }
+            else if (type.IsValueType)
             {
                 Data.Add(key, obj.ToString());
             }
@@ -227,6 +231,9 @@ namespace Save
             {
                 RegisterBool("hasFlashLight");
             }
+            
+            // 存储玩家数据
+            EventCenter.Instance.EventTrigger("SaveStatusData");
             
             BeforeSaveActions?.Invoke();
 

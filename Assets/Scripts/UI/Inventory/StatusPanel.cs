@@ -28,9 +28,14 @@ namespace UI.Inventory
             base.Awake();
             Init();
             _data = Instantiate(_data);
+        }
+
+        protected override void Start()
+        {
+            base.Start();
             
             // 读档
-            var data = SaveManager.GetValue(this.GetInstanceID().ToString());
+            var data = SaveManager.GetValue("Status");
             if (!string.IsNullOrEmpty(data)) 
                 JsonUtility.FromJsonOverwrite(data, _data);
         }
@@ -45,6 +50,7 @@ namespace UI.Inventory
             EventCenter.Instance.AddFuncListener<InventoryDataSO>("GetInventoryData", ProvideInventoryData);
             EventCenter.Instance.AddEventListener("PickUpKey_1", PickUpKey_1);
             EventCenter.Instance.AddEventListener("PickUpKey_2", PickUpKey_2);
+            EventCenter.Instance.AddEventListener("SaveStatusData", SaveStatusData);
         }
 
         private void Update()
@@ -62,15 +68,9 @@ namespace UI.Inventory
             EventCenter.Instance.RemoveFuncListener<InventoryDataSO>("GetInventoryData", ProvideInventoryData);
             EventCenter.Instance.RemoveEventListener("PickUpKey_1", PickUpKey_1);
             EventCenter.Instance.RemoveEventListener("PickUpKey_2", PickUpKey_2);
+            EventCenter.Instance.RemoveEventListener("SaveStatusData", SaveStatusData);
         }
 
-        private void OnDestroy()
-        {
-            // 存档
-            var data = JsonUtility.ToJson(_data);
-            SaveManager.Register(this.GetInstanceID().ToString(), data);
-        }
-        
         private void Init()
         {
             _batteryNum = GetControl<TextMeshProUGUI>("Number");
@@ -111,6 +111,13 @@ namespace UI.Inventory
 
             _data.batteryNum += num;
             return true;
+        }
+
+        private void SaveStatusData()
+        {
+            // 存档
+            var data = JsonUtility.ToJson(_data);
+            SaveManager.Register("Status", data);
         }
 
         private void UseBattery()

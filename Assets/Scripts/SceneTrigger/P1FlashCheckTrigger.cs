@@ -15,9 +15,6 @@ namespace SceneTrigger
         protected override void Start()
         {
             base.Start();
-            // 检查手电筒状态设置初始状态
-            if (CheckTrigger())
-                Destroy(gameObject);
         }
 
         protected override bool CheckTrigger()

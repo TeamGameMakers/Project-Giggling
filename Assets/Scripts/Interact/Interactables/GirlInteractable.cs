@@ -23,6 +23,17 @@ namespace Interact
             coll = GetComponent<Collider2D>();
         }
 
+        protected override void Start()
+        {
+            base.Start();
+            // 读取存档
+            if (SaveManager.GetBool("MeetGirl"))
+            {
+                renderer.enabled = false;
+                coll.enabled = false;
+            }
+        }
+
         public override void Interact(Interactor interactor)
         {
             StoryManager.Instance.StartStory(plot, FinishPlot);
@@ -55,7 +66,8 @@ namespace Interact
             yield return panel.fader.FadeCoroutine(0);
             UIManager.Instance.HidePanel("FaderPanel", true);
             
-            StoryManager.Instance.StartStory(afterPlot);
+            AkSoundEngine.PostEvent("School_indoorFcrazy", gameObject);
+            StoryManager.Instance.StartStory(afterPlot, () => SaveManager.Save());
         }
     }
 }

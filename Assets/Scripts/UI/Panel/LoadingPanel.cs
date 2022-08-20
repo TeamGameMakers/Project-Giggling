@@ -83,7 +83,7 @@ namespace UI
             yield return panelFader.FadeCoroutine(0);
             
             // 关闭自己
-            UIManager.Instance.HidePanel("LoadingPanel");
+            UIManager.Instance.HidePanel("LoadingPanel", true);
         }
     }
 }

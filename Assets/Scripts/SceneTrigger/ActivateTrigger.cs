@@ -26,7 +26,7 @@ namespace SceneTrigger
         protected virtual void HandleSelf()
         {
             bool rec = SaveManager.GetBool(detectKey);
-            Debug.Log("HandleSelf: " + rec);
+            Debug.Log("Activate 处理游戏对象: " + handleObj.name);
             if (rec)
             {
                 if (handleObj == null)

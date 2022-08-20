@@ -8,7 +8,7 @@ namespace Interact
 {
     public class LockDoorInteractable : Interactable
     {
-        public string SaveKey => "unlock_" + gameObject.GetInstanceID();
+        public string SaveKey => "unlock_" + gameObject.name;
 
         public SpriteRenderer doorRenderer;
         public Sprite openSprite;
@@ -23,7 +23,11 @@ namespace Interact
             base.Start();
 
             if (SaveManager.GetBool(SaveKey))
+            {
+                if (inventoryData == null)
+                    inventoryData = EventCenter.Instance.FuncTrigger<InventoryDataSO>("GetInventoryData");
                 Open();
+            }
         }
 
         public override void Interact(Interactor interactor)
